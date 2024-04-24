@@ -1,0 +1,982 @@
+﻿<object stamp="44c9b81e-9fe2-4e62-b1f9-b9e25c11d8fd_1678116538156" type="DataSource" version="9.0">
+    <property name="objectId" value="f8556398-0dc1-4eda-b83d-2a4b04a594a0" valueType="string"/>
+    <property name="branchId" value="63fa0e79-2f54-410a-b939-634c9e9fc492" valueType="string"/>
+    <property name="name" value="FINACLE_SALDOSDCH" valueType="string"/>
+    <property name="description" value="Sábana de Datos básicos y Saldos de Cartera Hipotecaria" valueType="string"/>
+    <property name="hosting" value="INTERNAL" valueType="string"/>
+    <property name="dbSource" valueType="url">DBSource["SHDATASP"{2cd42932-215e-44fa-a8c0-33ab9aaf6d3e}]</property>
+    <property name="defaultVisibilityInModel" value="true" valueType="boolean"/>
+    <property name="dataStructure" value="FLAT" valueType="string"/>
+    <property name="layout" valueType="table">
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="93ea5ff0-09c7-49b5-9ad0-70f295d01850" valueType="string"/>
+            <property name="name" value="asof_date" valueType="string"/>
+            <property name="description" value="Instance Date" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="15e06c67-1c88-474b-8cc9-e9c755e210b7" valueType="string"/>
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="version" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="1d274fac-86ed-4aa3-819a-637d142a264d" valueType="string"/>
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="filing_version" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="88dc3c99-8362-4af9-8b80-4db15791247b" valueType="string"/>
+            <property name="name" value="axiom_index" valueType="string"/>
+            <property name="description" value="Axiom Index" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="2abb09a5-1e86-463c-9270-ed62e4d3d34f" valueType="string"/>
+            <property name="name" value="FECCORTINFO" valueType="string"/>
+            <property name="description" value="Fecha de corte de la información" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="68b2362e-5d50-4cb6-825e-cfc64aac7004" valueType="string"/>
+            <property name="name" value="NUMCRED" valueType="string"/>
+            <property name="description" value="Número Que Identifica El Producto, Es Decir El Número De La Cuenta" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="20" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="449a1810-5432-4571-a7e6-e8046d6d5270" valueType="string"/>
+            <property name="name" value="NUMCREDORG" valueType="string"/>
+            <property name="description" value="Número de Crédito Original" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="20" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="50359310-c056-4f5b-b7fd-b29653d451f7" valueType="string"/>
+            <property name="name" value="CLASCAR" valueType="string"/>
+            <property name="description" value="Identifica Si La Cartera Es Comercial (Constructor y Diferente de Vivienda), Vivienda, Microcrédito y Consumo." valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="5" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="82276ab9-6d55-481f-aea1-5361c00a4086" valueType="string"/>
+            <property name="name" value="CODPROD" valueType="string"/>
+            <property name="description" value="Código De Producto" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="5" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="60701965-0762-43cf-982b-950dab5eaf4a" valueType="string"/>
+            <property name="name" value="CODMONEDA" valueType="string"/>
+            <property name="description" value="Código Que Identifica Si Es UVR o Pesos: COP - UVR" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="3" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="2644ac57-2073-4ace-8f94-5eda9bfb6b5d" valueType="string"/>
+            <property name="name" value="TASANEGEA" valueType="string"/>
+            <property name="description" value="Tasa de interes negociada efectiva anual" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0.0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="8a08d5ac-ec5e-4fec-94fb-7ff753bfb854" valueType="string"/>
+            <property name="name" value="TASACLIEA" valueType="string"/>
+            <property name="description" value="Tasa de interes del cliente efectiva anual" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0.0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="84a8da09-539e-4ec7-a727-b8306881fbcd" valueType="string"/>
+            <property name="name" value="CREDEMP" valueType="string"/>
+            <property name="description" value="Marca Que Permite Filtrar Los Créditos De Empleados" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="1" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="c4003911-a394-4d10-8a57-371021bf43f4" valueType="string"/>
+            <property name="name" value="FECIDESEMB" valueType="string"/>
+            <property name="description" value="Fecha de desembolso inicial" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="382d3c59-6a98-4700-974e-c9e74ae18de2" valueType="string"/>
+            <property name="name" value="NUMPORT" valueType="string"/>
+            <property name="description" value="Número Portafolio Titularización" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="12" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="eca80a39-b75d-4d5e-8f40-ba79e2a0ebea" valueType="string"/>
+            <property name="name" value="FECVENCCRE" valueType="string"/>
+            <property name="description" value="Fecha de vencimiento definitivo del crédito" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="10" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="57398e13-5781-4996-b7cc-b5a64c78ddb6" valueType="string"/>
+            <property name="name" value="SALCAPVIG" valueType="string"/>
+            <property name="description" value="Saldo capital vigente activo" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="510d969f-7330-48a9-9833-ae5ee50abdee" valueType="string"/>
+            <property name="name" value="TASACOBEA" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0.0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="5ee594df-da84-43d2-81ca-b937a4d85169" valueType="string"/>
+            <property name="name" value="ESTADOCRE" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="1" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="810aacc4-f32d-44bc-b029-195c60b76d4d" valueType="string"/>
+            <property name="name" value="MODCRED" valueType="string"/>
+            <property name="description" value="Modalidad del crédito" valueType="string"/>
+            <property name="title" value="MODCRED" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="5" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="ecec8192-a6ed-4892-8d24-0537861abc2a" valueType="string"/>
+            <property name="name" value="VALIDESCOP" valueType="string"/>
+            <property name="description" value="Valor inicial desembolsado en pesos" valueType="string"/>
+            <property name="title" value="VALIDESCOP" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="00621755-359a-44cd-8feb-5ee42bae75a1" valueType="string"/>
+            <property name="name" value="PLAZO" valueType="string"/>
+            <property name="description" value="Plazo" valueType="string"/>
+            <property name="title" value="PLAZO" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="653caf31-b91b-43f0-83ae-ac8c76d3bf22" valueType="string"/>
+            <property name="name" value="TIPO_ID" valueType="string"/>
+            <property name="description" value="Tipo identificación del cliente" valueType="string"/>
+            <property name="title" value="TIPO_ID" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="20" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="40df41d6-91ae-44dd-a7f4-b0ee8b627605" valueType="string"/>
+            <property name="name" value="NUMERO_ID" valueType="string"/>
+            <property name="description" value="Numero de identificación del cliente" valueType="string"/>
+            <property name="title" value="NUM_ID" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="20" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="2581a227-1878-4b35-8881-81777fa71355" valueType="string"/>
+            <property name="name" value="NOMBRE_CLIENTE" valueType="string"/>
+            <property name="description" value="Nombre completo del cliente" valueType="string"/>
+            <property name="title" value="NOMBRE_CLIENTE" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="200" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="ffca3f27-8e0c-44c3-bfa8-49219d951571" valueType="string"/>
+            <property name="name" value="entity" valueType="string"/>
+            <property name="description" value="Entidad" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="20" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="'Banco'" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="e1c7dc66-9c36-4f52-8c5a-5deea37ba773" valueType="string"/>
+            <property name="name" value="loaded_on" valueType="string"/>
+            <property name="description" value="Fecha De Carga" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="2e35562c-8183-4e4c-be8a-5082d8c2cc48" valueType="string"/>
+            <property name="name" value="source_name" valueType="string"/>
+            <property name="description" value="Nombre De Fuente" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="30" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="'SALDOSMCH'" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="keyFields" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{88dc3c99-8362-4af9-8b80-4db15791247b}]</property>
+        </object>
+    </property>
+    <property name="index" valueType="table">
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="true" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["NUMCRED"{68b2362e-5d50-4cb6-825e-cfc64aac7004}]</property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="createIndexOnKeyFields" value="true" valueType="boolean"/>
+    <property name="indexOnKeyFieldsClustered" value="true" valueType="boolean"/>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="columnStorage" value="true" valueType="boolean"/>
+    <property name="internalSourceTablePrefix" value="FINACLE_SALDOSDCH_" valueType="string"/>
+    <property name="asOfDateField" valueType="url">DataSource[this].layout["asof_date"{93ea5ff0-09c7-49b5-9ad0-70f295d01850}]</property>
+    <property name="instanceKeys" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["version"{15e06c67-1c88-474b-8cc9-e9c755e210b7}]</property>
+        </object>
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["filing_version"{1d274fac-86ed-4aa3-819a-637d142a264d}]</property>
+        </object>
+    </property>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="validations" valueType="table"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="readOnlyAdjustment" value="false" valueType="boolean"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="loaders" valueType="table">
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="99c46635-a360-411d-85b8-436d543e75a8" valueType="string"/>
+            <property name="name" value="New_Scenario_1" valueType="string"/>
+            <property name="loaderType" value="fileLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="FileLoaderParameters" version="3.0">
+                    <property name="delimiter" value="|" valueType="string"/>
+                    <property name="skipRows" value="0" valueType="integer"/>
+                    <property name="newlineConversion" value="none" valueType="string"/>
+                    <property name="targetEncoding" value="WE8ISO8859P1" valueType="string"/>
+                    <property name="convertEncoding" value="false" valueType="boolean"/>
+                    <property name="loaderEnumerationField" valueType="object">
+                        <object type="DataSource:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{88dc3c99-8362-4af9-8b80-4db15791247b}]</property>
+                        </object>
+                    </property>
+                    <property name="trailingNullCols" value="true" valueType="boolean"/>
+                    <property name="loadSheetName" value="" valueType="string"/>
+                    <property name="columnHeadersFromFile" value="false" valueType="boolean"/>
+                    <property name="maxErrors" value="1" valueType="integer"/>
+                    <property name="maxMessagesInTaskLog" value="100" valueType="integer"/>
+                    <property name="doNotFailIfRejected" value="false" valueType="boolean"/>
+                    <property name="parameterIsNotAFile" value="false" valueType="boolean"/>
+                    <property name="codeWillCreateFile" value="false" valueType="boolean"/>
+                    <property name="loaderControlFile" value="" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["FECCORTINFO"{2abb09a5-1e86-463c-9270-ed62e4d3d34f}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["NUMCRED"{68b2362e-5d50-4cb6-825e-cfc64aac7004}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["NUMCREDORG"{449a1810-5432-4571-a7e6-e8046d6d5270}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="3" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CLASCAR"{50359310-c056-4f5b-b7fd-b29653d451f7}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="28" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CODPROD"{82276ab9-6d55-481f-aea1-5361c00a4086}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="29" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CODMONEDA"{60701965-0762-43cf-982b-950dab5eaf4a}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="32" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["TASANEGEA"{2644ac57-2073-4ace-8f94-5eda9bfb6b5d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="50" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["TASACLIEA"{8a08d5ac-ec5e-4fec-94fb-7ff753bfb854}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="52" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CREDEMP"{84a8da09-539e-4ec7-a727-b8306881fbcd}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="70" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["FECIDESEMB"{c4003911-a394-4d10-8a57-371021bf43f4}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="110" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["NUMPORT"{382d3c59-6a98-4700-974e-c9e74ae18de2}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="139" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["FECVENCCRE"{eca80a39-b75d-4d5e-8f40-ba79e2a0ebea}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="231" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["SALCAPVIG"{57398e13-5781-4996-b7cc-b5a64c78ddb6}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="245" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["TASACOBEA"{510d969f-7330-48a9-9833-ae5ee50abdee}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="54" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["ESTADOCRE"{5ee594df-da84-43d2-81ca-b937a4d85169}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="159" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["MODCRED"{810aacc4-f32d-44bc-b029-195c60b76d4d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="37" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["VALIDESCOP"{ecec8192-a6ed-4892-8d24-0537861abc2a}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="112" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["PLAZO"{00621755-359a-44cd-8feb-5ee42bae75a1}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="34" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["TIPO_ID"{653caf31-b91b-43f0-83ae-ac8c76d3bf22}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="8" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["NUMERO_ID"{40df41d6-91ae-44dd-a7f4-b0ee8b627605}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="9" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["NOMBRE_CLIENTE"{2581a227-1878-4b35-8881-81777fa71355}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="10" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="withJournal" value="false" valueType="boolean"/>
+                    <property name="loadingStatement" value="APPEND" valueType="string"/>
+                </object>
+            </property>
+            <property name="loaderActions" valueType="table">
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="14a67904-c682-4a56-ace4-f6ce84ea12cf" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="update " valueType="string"/>
+                        </object>
+                        <object type="SQLConstant" version="1.0">
+                            <property name="name" value="table_name" valueType="string"/>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" set &#xa;source_name = '" valueType="string"/>
+                        </object>
+                        <object type="SQLFormula" version="1.0">
+                            <property name="expression" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="@TASK.getKeyParameters().getProperty(&quot;loadFrom&quot;).substring(@TASK.getKeyParameters().getProperty(&quot;loadFrom&quot;).lastIndexOf(&quot;/&quot;) + 1, @TASK.getKeyParameters().getProperty(&quot;loadFrom&quot;).lastIndexOf(&quot;.&quot;))" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="'" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  20/JUL2020  - JUGALVIS&#xa;Descripción/Objetivo: Sabana que contiene la informacion de Hipotecario&#xa;Información de Origen: //app/interfaces/FINACLE_SALDOSDCH_YYYY-MM-DD.TXT&#xa;Entidad: Banco&#xa;&#xa;-----------------------------------------------------------------------------------------------------------------------------------------------------------&#xa;================================================================================================= =&#xa;Modificación: 01-NOV-2020&#xa;Analista: JUGALVIS&#xa;Detalle: Se crean los siguientes campos para el formato 088:&#xa;&#xa;MODCRED&#xa;VALIDESCOP&#xa;PLAZO&#xa;TIPO_ID&#xa;NUM_ID&#xa;NOMBRE_CLIENTE&#xa;&#xa;================================================================================================= =&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

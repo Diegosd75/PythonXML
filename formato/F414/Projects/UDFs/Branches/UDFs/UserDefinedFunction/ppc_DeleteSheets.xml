@@ -1,0 +1,233 @@
+<object stamp="5668344d-8214-49e8-9335-90ca1666556e_1636533152814" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="457a0426-f8e9-4fd2-8de0-c3eb1edfdef0" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_DeleteSheets" valueType="string"/>
+    <property name="description" value="2021.11.08" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="DS_task" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="DS_jbook" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="DS_maskSheet" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.11.08&#xa;Delete sheets&#xa;Input variables:&#xa;DS_task - system variable &quot;task&quot;;&#xa;DS_jbook - system variable &quot;jbook&quot;;&#xa;DS_maskSheet - mask sheet&#xa;-->&#xa;trace(&quot;#!#!#! ppc_DeleteSheets. Started #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_DeleteSheets. Copyright by AXIOM SL, Igor Kirilyuk, 2021.11.08 #!#!#!&quot;);&#xa;&#xa;var DS_startDate = new(&quot;java.util.Date&quot;);&#xa;&#xa;&lt;if> DS_task != null&#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;var DS_infoCell = null;&#x9;&#x9;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCDelimiter&quot;), null);&#xa;&#x9;&#x9;var DS_separatorListSheets = if((DS_infoCell != null) and !DS_jbook.getText(DS_infoCell.get(0), DS_infoCell.get(1), DS_infoCell.get(2)).trim().isEmpty(), DS_jbook.getText(DS_infoCell.get(0), DS_infoCell.get(1), DS_infoCell.get(2)), &quot;,&quot;);&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. The sheet list section symbol - '&quot; + DS_separatorListSheets + &quot;' #!#!#!&quot;);&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;RewriteNameCells&quot;), null);&#xa;&#x9;&#x9;var DS_rewriteNameCells = if((DS_infoCell != null) and &quot;YES&quot;.equals(DS_jbook.getText(DS_infoCell.get(0), DS_infoCell.get(1), DS_infoCell.get(2)).trim().toUpperCase()), true, false);&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Flag name cell for recalc name cells is &quot; + if(DS_rewriteNameCells, &quot;TRUE&quot;, &quot;FALSE&quot;) + &quot; (RewriteNameCells) #!#!#!&quot;);&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;var DS_nameCellForRemoveRow = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;nameCellForRemoveRow&quot;), null);&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Determining cell position to delete rows or cell names of table(s) (nameCellForRemoveRow): &quot; + if(DS_nameCellForRemoveRow != null, &quot;TRUE&quot;, &quot;FALSE&quot;) + &quot; #!#!#!&quot;);&#xa;&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Get parameters PPC table ExtendedRows #!#!#!&quot;);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendRows_start&quot;), null);&#xa;&#x9;&#x9;var DS_indexSheetPPCTableExtendRows = if(DS_infoCell != null, DS_infoCell.get(0), -1);&#xa;&#x9;&#x9;var DS_startRowPPCTableExtendRows = if(DS_infoCell != null, DS_infoCell.get(1), -1);&#xa;&#x9;&#x9;var DS_startColPPCTableExtendRows = if(DS_infoCell != null, DS_infoCell.get(2), -1);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendRows_stop&quot;), null);&#xa;&#x9;&#x9;var DS_stopRowPPCTableExtendRows = if(DS_infoCell != null, DS_infoCell.get(1), DS_startRowPPCTableExtendRows);&#xa;&#x9;&#x9;&lt;if> (DS_indexSheetPPCTableExtendRows != -1) and (DS_startRowPPCTableExtendRows != -1)&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;DS_jbook.setSheet(DS_indexSheetPPCTableExtendRows);&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexRow = DS_stopRowPPCTableExtendRows &lt;comma/> indexRow &amp;gt;= DS_startRowPPCTableExtendRows &lt;comma/> indexRow--&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexMask = 0 &lt;comma/> indexMask &amp;lt; DS_maskSheet.split(DS_separatorListSheets).size() &lt;comma/> indexMask++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> ((DS_jbook.getText(DS_indexSheetPPCTableExtendRows, indexRow, DS_startColPPCTableExtendRows).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0) or (DS_jbook.getText(DS_indexSheetPPCTableExtendRows, indexRow, DS_startColPPCTableExtendRows + 1).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0)) and (DS_jbook.getText(DS_indexSheetPPCTableExtendRows, indexRow, DS_startColPPCTableExtendRows).indexOf(&quot;#&quot;) == -1)&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setText(DS_indexSheetPPCTableExtendRows, indexRow, DS_startColPPCTableExtendRows, &quot;#&quot; + DS_jbook.getText(DS_indexSheetPPCTableExtendRows, indexRow, DS_startColPPCTableExtendRows).trim());&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#x9;&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Get parameters PPC table ExtendCols #!#!#!&quot;);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendCols_start&quot;), null);&#xa;&#x9;&#x9;var DS_indexSheetPPCTableExtendCols = if(DS_infoCell != null, DS_infoCell.get(0), -1);&#xa;&#x9;&#x9;var DS_startRowPPCTableExtendCols = if(DS_infoCell != null, DS_infoCell.get(1), -1);&#xa;&#x9;&#x9;var DS_startColPPCTableExtendCols = if(DS_infoCell != null, DS_infoCell.get(2), -1);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendCols_stop&quot;), null);&#xa;&#x9;&#x9;var DS_stopRowPPCTableExtendCols = if(DS_infoCell != null, DS_infoCell.get(1), DS_startRowPPCTableExtendCols);&#xa;&#x9;&#x9;&lt;if> (DS_indexSheetPPCTableExtendCols != -1) and (DS_startRowPPCTableExtendCols != -1)&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;DS_jbook.setSheet(DS_indexSheetPPCTableExtendCols);&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexRow = DS_stopRowPPCTableExtendCols &lt;comma/> indexRow &amp;gt;= DS_startRowPPCTableExtendCols &lt;comma/> indexRow--&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexMask = 0 &lt;comma/> indexMask &amp;lt; DS_maskSheet.split(DS_separatorListSheets).size() &lt;comma/> indexMask++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> ((DS_jbook.getText(DS_indexSheetPPCTableExtendCols, indexRow, DS_startColPPCTableExtendCols).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0) or (DS_jbook.getText(DS_indexSheetPPCTableExtendCols, indexRow, DS_startColPPCTableExtendCols + 1).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0)) and (DS_jbook.getText(DS_indexSheetPPCTableExtendCols, indexRow, DS_startColPPCTableExtendCols).trim().indexOf(&quot;#&quot;) == -1)&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setText(DS_indexSheetPPCTableExtendCols, indexRow, DS_startColPPCTableExtendCols, &quot;#&quot; + DS_jbook.getText(DS_indexSheetPPCTableExtendCols, indexRow, DS_startColPPCTableExtendCols).trim());&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Get parameters PPC table ExtendColsEX #!#!#!&quot;);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendColsEX_start&quot;), null);&#xa;&#x9;&#x9;var DS_indexSheetPPCTableExtendColsEX = if(DS_infoCell != null, DS_infoCell.get(0), -1);&#xa;&#x9;&#x9;var DS_startRowPPCTableExtendColsEX = if(DS_infoCell != null, DS_infoCell.get(1), -1);&#xa;&#x9;&#x9;var DS_startColPPCTableExtendColsEX = if(DS_infoCell != null, DS_infoCell.get(2), -1);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendColsEX_stop&quot;), null); &#xa;&#x9;&#x9;var DS_stopRowPPCTableExtendColsEX = if(DS_infoCell != null, DS_infoCell.get(1), DS_startRowPPCTableExtendColsEX);&#xa;&#x9;&#x9;&lt;if> (DS_indexSheetPPCTableExtendColsEX != -1) and (DS_startRowPPCTableExtendColsEX != -1)&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;DS_jbook.setSheet(DS_indexSheetPPCTableExtendColsEX);&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexRow = DS_stopRowPPCTableExtendColsEX &lt;comma/> indexRow &amp;gt;= DS_startRowPPCTableExtendColsEX &lt;comma/> indexRow--&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexMask = 0 &lt;comma/> indexMask &amp;lt; DS_maskSheet.split(DS_separatorListSheets).size() &lt;comma/> indexMask++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> ((DS_jbook.getText(DS_indexSheetPPCTableExtendColsEX, indexRow, DS_startColPPCTableExtendColsEX).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0) or (DS_jbook.getText(DS_indexSheetPPCTableExtendColsEX, indexRow, DS_startColPPCTableExtendColsEX + 1).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0)) and (DS_jbook.getText(DS_indexSheetPPCTableExtendColsEX, indexRow, DS_startColPPCTableExtendColsEX).trim().indexOf(&quot;#&quot;) == -1)&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setText(DS_indexSheetPPCTableExtendColsEX, indexRow, DS_startColPPCTableExtendColsEX, &quot;#&quot; + DS_jbook.getText(DS_indexSheetPPCTableExtendColsEX, indexRow, DS_startColPPCTableExtendColsEX).trim());&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Get parameters PPC table ExtendBlocks #!#!#!&quot;);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendBlocks_start&quot;), null);&#xa;&#x9;&#x9;var DS_indexSheetPPCTableExtendBlocks = if(DS_infoCell != null, DS_infoCell.get(0), -1);&#xa;&#x9;&#x9;var DS_startRowPPCTableExtendBlocks = if(DS_infoCell != null, DS_infoCell.get(1), -1);&#xa;&#x9;&#x9;var DS_startColPPCTableExtendBlocks = if(DS_infoCell != null, DS_infoCell.get(2), -1);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendBlocks_stop&quot;), null);&#xa;&#x9;&#x9;var DS_stopRowPPCTableExtendBlocks = if(DS_infoCell != null, DS_infoCell.get(1), DS_startRowPPCTableExtendBlocks);&#xa;&#x9;&#x9;&lt;if> (DS_indexSheetPPCTableExtendBlocks != -1) and (DS_startRowPPCTableExtendBlocks != -1)&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;DS_jbook.setSheet(DS_indexSheetPPCTableExtendBlocks);&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexRow = DS_stopRowPPCTableExtendBlocks &lt;comma/> indexRow &amp;gt;= DS_startRowPPCTableExtendBlocks &lt;comma/> indexRow--&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexMask = 0 &lt;comma/> indexMask &amp;lt; DS_maskSheet.split(DS_separatorListSheets).size() &lt;comma/> indexMask++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> ((DS_jbook.getText(DS_indexSheetPPCTableExtendBlocks, indexRow, DS_startColPPCTableExtendBlocks).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0) or (DS_jbook.getText(DS_indexSheetPPCTableExtendBlocks, indexRow, DS_startColPPCTableExtendBlocks + 1).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0)) and (DS_jbook.getText(DS_indexSheetPPCTableExtendBlocks, indexRow, DS_startColPPCTableExtendBlocks).trim().indexOf(&quot;#&quot;) == -1)&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setText(DS_indexSheetPPCTableExtendBlocks, indexRow, DS_startColPPCTableExtendBlocks, &quot;#&quot; + DS_jbook.getText(DS_indexSheetPPCTableExtendBlocks, indexRow, DS_startColPPCTableExtendBlocks).trim());&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Get parameters PPC table ExtendBlockInBlockEX #!#!#!&quot;);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendBlockInBlock_start&quot;), null);&#xa;&#x9;&#x9;var DS_indexSheetPPCTableExtendBlockInBlock = if(DS_infoCell != null, DS_infoCell.get(0), -1);&#xa;&#x9;&#x9;var DS_startRowPPCTableExtendBlockInBlock = if(DS_infoCell != null, DS_infoCell.get(1), -1);&#xa;&#x9;&#x9;var DS_startColPPCTableExtendBlockInBlock = if(DS_infoCell != null, DS_infoCell.get(2), -1);&#xa;&#x9;&#x9;DS_infoCell = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPCExtendBlockInBlock_stop&quot;), null);&#xa;&#x9;&#x9;var DS_stopRowPPCTableExtendBlockInBlock = if(DS_infoCell != null, DS_infoCell.get(1), DS_startRowPPCTableExtendBlockInBlock);&#xa;&#x9;&#x9;&lt;if> (DS_indexSheetPPCTableExtendBlockInBlock != -1) and (DS_startRowPPCTableExtendBlockInBlock != -1)&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;DS_jbook.setSheet(DS_indexSheetPPCTableExtendBlockInBlock);&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexRow = DS_stopRowPPCTableExtendBlockInBlock &lt;comma/> indexRow &amp;gt;= DS_startRowPPCTableExtendBlockInBlock &lt;comma/> indexRow--&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexMask = 0 &lt;comma/> indexMask &amp;lt; DS_maskSheet.split(DS_separatorListSheets).size() &lt;comma/> indexMask++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> ((DS_jbook.getText(DS_indexSheetPPCTableExtendBlockInBlock, indexRow, DS_startColPPCTableExtendBlockInBlock).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0) or (DS_jbook.getText(DS_indexSheetPPCTableExtendBlockInBlock, indexRow, DS_startColPPCTableExtendBlockInBlock + 1).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0)) and (DS_jbook.getText(DS_indexSheetPPCTableExtendBlockInBlock, indexRow, DS_startColPPCTableExtendBlockInBlock).trim().indexOf(&quot;#&quot;) == -1)&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setText(DS_indexSheetPPCTableExtendBlockInBlock, indexRow, DS_startColPPCTableExtendBlockInBlock, &quot;#&quot; + DS_jbook.getText(DS_indexSheetPPCTableExtendBlockInBlock, indexRow, DS_startColPPCTableExtendBlockInBlock).trim());&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#x9;&#x9;&#x9;&#xa;&#xa;&#x9;&#x9;var DS_indexSheet = DS_jbook.getNumSheets() - 1;&#xa;&#x9;&#x9;&lt;for>  &lt;comma/> DS_indexSheet &amp;gt;= 0 &lt;comma/> &#xa;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;DS_jbook.setSheet(DS_indexSheet);&#xa;&#x9;&#x9;&#x9;&#x9;var DS_flagDeleteSheet = false;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexMask = 0 &lt;comma/> indexMask &amp;lt; DS_maskSheet.split(DS_separatorListSheets).size() &lt;comma/> indexMask++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> DS_jbook.getSheetName(DS_indexSheet).indexOf(DS_maskSheet.split(DS_separatorListSheets).get(indexMask).trim()) &amp;gt;= 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_flagDeleteSheet = true;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#xa;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;if> DS_flagDeleteSheet&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Delete sheet &quot; + DS_jbook.getSheetName(DS_indexSheet) + &quot; #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> (DS_jbook.getLastRow() != -1) and (DS_jbook.getLastCol() != -1)&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Cleaning work range and set condition formattinf to NULL for sheet &quot; + DS_jbook.getSheetName(DS_indexSheet) + &quot; #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;try>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setSelection(0, 0, DS_jbook.getLastRow(), DS_jbook.getLastCol());&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setConditionalFormats(null);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setSelection(0, 0, 0, 0);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.clearRange(0, 0, DS_jbook.getLastRow(), DS_jbook.getLastCol(), DS_jbook.eClearAll);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;catch> var ex &lt;/catch>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Error cleaning work range and set condition formattinf to NULL for sheet &quot; + DS_jbook.getSheetName(DS_indexSheet) + &quot; #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/try>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;try>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Delete sheet &quot; + DS_jbook.getSheetName(DS_indexSheet) + &quot; ... #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.deleteSheets(DS_indexSheet, 1);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Delete sheet complite #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;catch> var ex &lt;/catch>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Error delete sheet &quot; + DS_jbook.getSheetName(DS_indexSheet) + &quot; #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/try>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;DS_indexSheet = DS_indexSheet - 1;&#xa;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;DS_nameCellForRemoveRow = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;nameCellForRemoveRow&quot;), null);&#x9;&#xa;&#x9;&#x9;&lt;if> DS_rewriteNameCells &#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Run recalculation spreadsheets ... #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;DS_jbook.recalc();&#xa;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Delete names from removed sheets ... #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;var DS_VectorNames = DS_jbook.getDefinedNames().clone();&#xa;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Count total names ... (&quot; + DS_VectorNames.size() + &quot;) #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexVectorNames = 0 &lt;comma/> indexVectorNames &amp;lt; DS_VectorNames.size() &lt;comma/> indexVectorNames++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> DS_jbook.lookupDefinedName(DS_VectorNames.get(indexVectorNames).name) != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> DS_VectorNames.get(indexVectorNames).value != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, DS_VectorNames.get(indexVectorNames).value.split(&quot;:&quot;).get(0)) != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setDefinedNameLocal(DS_VectorNames.get(indexVectorNames).name, DS_VectorNames.get(indexVectorNames).value);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;try>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> DS_nameCellForRemoveRow != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setCellName(DS_VectorNames.get(indexVectorNames).name, DS_nameCellForRemoveRow.get(0), DS_nameCellForRemoveRow.get(1), DS_nameCellForRemoveRow.get(2));&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;catch> var ex &lt;/catch>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Error remove name &quot; + DS_VectorNames.get(indexVectorNames).name + &quot; position to nameCellForRemoveRow cell #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/try>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;try>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.deleteDefinedName(DS_VectorNames.get(indexVectorNames).name);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;catch> var ex &lt;/catch>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Error delete name &quot; + DS_VectorNames.get(indexVectorNames).name + &quot; #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/try>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;try>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> DS_nameCellForRemoveRow != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.setCellName(DS_VectorNames.get(indexVectorNames).name, DS_nameCellForRemoveRow.get(0), DS_nameCellForRemoveRow.get(1), DS_nameCellForRemoveRow.get(2));&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;catch> var ex &lt;/catch>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Error remove name &quot; + DS_VectorNames.get(indexVectorNames).name + &quot; position to nameCellForRemoveRow cell #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/try>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;try>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.deleteDefinedName(DS_VectorNames.get(indexVectorNames).name);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;catch> var ex &lt;/catch>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Error delete name &quot; + DS_VectorNames.get(indexVectorNames).name + &quot; #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/try>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&lt;else>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;if> " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RewriteServiceNameCells"{96ec65f8-3a53-4ed0-af30-7d26b2bb6930}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_task, DS_jbook);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Delete service names from removed sheets PPC ... #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var DS_VectorNames = &quot;PPCExtendRows_start,PPCExtendRows_stop,PPCExtendColsEX_start,PPCExtendColsEX_stop,PPCExtendCols_start,PPCExtendCols_stop,PPCExtendBlocks_start,PPCExtendBlocks_stop,PPCExtendBlockInBlock_start,PPCExtendBlockInBlock_stop,PPCDelimiter,nameCellForRemoveRow,RewriteNameCells,nameCellForRecalc,nameCellForCondFormat&quot;.split(&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Count total service names ... (&quot; + DS_VectorNames.size() + &quot;) #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexVectorNames = 0 &lt;comma/> indexVectorNames &amp;lt; DS_VectorNames.size() &lt;comma/> indexVectorNames++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> DS_jbook.lookupDefinedName(DS_VectorNames.get(indexVectorNames)) != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;try>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DS_jbook.deleteDefinedName(DS_VectorNames.get(indexVectorNames));&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;catch> var ex &lt;/catch>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_DeleteSheets. Error delete name &quot; + DS_VectorNames.get(indexVectorNames) + &quot; #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/try>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/else>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#xa;&#x9;&#x9;&#x9;&lt;/else>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#xa;&#x9;&#x9;DS_nameCellForRemoveRow = if(" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;PPC!A1&quot;) != null, " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_jbook, &quot;nameCellForRemoveRow&quot;), null);&#x9;&#xa;&#x9;&#x9;&lt;if> DS_nameCellForRemoveRow != null&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;DS_jbook.setCellName(&quot;nameCellForRemoveRow&quot;, DS_nameCellForRemoveRow.get(0), DS_nameCellForRemoveRow.get(1), DS_nameCellForRemoveRow.get(2));&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#x9;&#xa;trace(&quot;#!#!#! ppc_DeleteSheets. &quot; + " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RunTime"{01bdef00-6989-424b-84f9-c81ca2885e47}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DS_startDate, new(&quot;java.util.Date&quot;)) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_DeleteSheets. Finished #!#!#!&quot;);" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

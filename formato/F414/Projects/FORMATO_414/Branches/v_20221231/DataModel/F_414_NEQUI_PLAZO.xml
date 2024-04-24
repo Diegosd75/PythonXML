@@ -1,0 +1,139 @@
+﻿<object stamp="f4b5839d-8501-4f58-8f72-0810158005d2_1651261720062" type="DataModel" version="2.0">
+    <property name="objectId" value="8ec39f56-b6d3-4556-9aeb-9ec958465ef4" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_NEQUI_PLAZO" valueType="string"/>
+    <property name="description" value="se crea modelo para poder filtrar la informacion de Plazo" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="3e6c8933-a6e5-4acd-8434-75fd1b134b72" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_NEQUI" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="9483d001-2c79-49ef-a3ce-b58828596281" valueType="string"/>
+                    <property name="name" value="TR_PARAMETROS" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TR_PARAMETROS" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TR_PARAMETROS]"{Aggregation[f8f82689-2410-430e-9da3-b96c68344d86]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table">
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_PARAMETROS"{9483d001-2c79-49ef-a3ce-b58828596281}].dataSource.layout["VALOR"{bc2db705-5034-428d-9055-68e3945be0db}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" >= TO_CHAR(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{3e6c8933-a6e5-4acd-8434-75fd1b134b72}].dataSource.layout["PLAZO_FINAL"{d34c2336-999a-455d-a75d-7bfa511d29af}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=") OR " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_PARAMETROS"{9483d001-2c79-49ef-a3ce-b58828596281}].dataSource.layout["VALOR"{bc2db705-5034-428d-9055-68e3945be0db}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" &lt;= TO_CHAR(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{3e6c8933-a6e5-4acd-8434-75fd1b134b72}].dataSource.layout["PLAZO_FINAL"{d34c2336-999a-455d-a75d-7bfa511d29af}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=") OR " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_PARAMETROS"{9483d001-2c79-49ef-a3ce-b58828596281}].dataSource.layout["VARIABLE"{5948239b-6ef3-4314-97d3-4bb1c5b97226}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{3e6c8933-a6e5-4acd-8434-75fd1b134b72}].dataSource.layout["VARIABLE"{6f725bec-5055-470f-a581-3d046cdff732}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="&#xa;" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table"/>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: se crea modelo para poder filtrar la informacion de Plazo" valueType="string"/>
+        </object>
+    </property>
+</object>

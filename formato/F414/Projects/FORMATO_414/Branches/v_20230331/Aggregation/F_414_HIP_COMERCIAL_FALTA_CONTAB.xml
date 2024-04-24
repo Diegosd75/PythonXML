@@ -1,0 +1,195 @@
+﻿<object stamp="6b243658-838f-4fa7-a0e6-1a8b060cf223_1653514889624" type="Aggregation" version="7.0">
+    <property name="objectId" value="60951513-f9ed-4739-bcec-b8cbebcc6c3a" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_HIP_COMERCIAL_FALTA_CONTAB" valueType="string"/>
+    <property name="description" value="Faltantes en la contabilidad del frente Hipotecario" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="b5aad406-6275-439d-b817-e832eae93c03" valueType="string"/>
+            <property name="name" value="FECCORTINFO" valueType="string"/>
+            <property name="description" value="Fecha de corte de la información" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="03ccdd77-bda3-4774-a980-1295616fd21b" valueType="string"/>
+            <property name="name" value="NUMCRED" valueType="string"/>
+            <property name="description" value="Número Que Identifica El Producto, Es Decir El Número De La Cuenta" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FECCORTINFO"{b5aad406-6275-439d-b817-e832eae93c03}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}].hierarchy["root"{c39bc74a-7e3a-42c4-a196-5707e15bec46}].dataSource.layout["FECCORTINFO"{d27bdabd-13e7-47a1-95bf-21691d16cc35}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NUMCRED"{03ccdd77-bda3-4774-a980-1295616fd21b}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}].hierarchy["root"{c39bc74a-7e3a-42c4-a196-5707e15bec46}].dataSource.layout["NUMCRED"{f4d9ebfc-5d0a-42b9-96be-6a4c7deecf0c}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="OR" valueType="string"/>
+                    <children>
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularExpression" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}].hierarchy["FINACLE_SALDOSDCH"{f1943e88-6d83-4926-97b1-c1de8eb78de3}].dataSource.layout["NUMCRED"{68b2362e-5d50-4cb6-825e-cfc64aac7004}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IS" valueType="string"/>
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NULL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularExpression" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}].hierarchy["PRESTAMOS_HIP_COMERCIAL"{a901580b-5cab-48ed-baf7-11919c01730d}].dataSource.layout["NUMCRED"{13bf8330-b6bb-40ff-859a-13697718c980}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IS" valueType="string"/>
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NULL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}].hierarchy["FINACLE_SALDOSDCH"{f1943e88-6d83-4926-97b1-c1de8eb78de3}].dataSource.layout["ESTADOCRE"{5ee594df-da84-43d2-81ca-b937a4d85169}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="NOT IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="C" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="X" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_MVTOSDCH_SALDOSDCH"{a9212cfb-9149-4957-9625-a51a30ebe7f7}].hierarchy["FINACLE_SALDOSDCH"{f1943e88-6d83-4926-97b1-c1de8eb78de3}].dataSource.layout["CREDEMP"{84a8da09-539e-4ec7-a727-b8306881fbcd}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="!=" valueType="string"/>
+                                    <property name="value" value="X" valueType="string"/>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 12/05/2022 - sergigon&#xa;Descripción:&#xa;- Se consolidan las obligaciones que no registran en la contabilidad&#xa;--------------------------------------------------------------------------------------------------------------------------------------------" valueType="string"/>
+        </object>
+    </property>
+</object>

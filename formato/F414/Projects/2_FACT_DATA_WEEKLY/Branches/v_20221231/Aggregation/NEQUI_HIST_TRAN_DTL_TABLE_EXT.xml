@@ -1,0 +1,121 @@
+﻿<object stamp="14834a48-acb5-49aa-8569-3ccf32af5e1e_1668524647176" type="Aggregation" version="7.0">
+    <property name="objectId" value="93eceac7-e965-4239-aa6f-5834c4b1c91f" valueType="string"/>
+    <property name="branchId" value="8db122bf-f144-4290-a7ca-7dd596001456" valueType="string"/>
+    <property name="name" value="NEQUI_HIST_TRAN_DTL_TABLE_EXT" valueType="string"/>
+    <property name="description" value="REVERSOS_CONTABLES_NEQUI" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["NEQUI_HIST_TRAN_DTL_TABLE_EXT"{3672079b-2ba6-42ef-b100-633534db7fc6}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="6bc6bc41-e134-4953-a99b-45f038e5b0da" valueType="string"/>
+            <property name="name" value="FRENTE_INF" valueType="string"/>
+            <property name="description" value="Frente de información" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="FRENTE_INF" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="ecf88dd1-d24c-41b3-b5e6-6086384d4db9" valueType="string"/>
+            <property name="name" value="VL_REVERSO_CONTABLE" valueType="string"/>
+            <property name="description" value="VL_REVERSO_CONTABLE" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INF"{6bc6bc41-e134-4953-a99b-45f038e5b0da}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["NEQUI_HIST_TRAN_DTL_TABLE_EXT"{3672079b-2ba6-42ef-b100-633534db7fc6}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="'NEQUI'" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["VL_REVERSO_CONTABLE"{ecf88dd1-d24c-41b3-b5e6-6086384d4db9}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["NEQUI_HIST_TRAN_DTL_TABLE_EXT"{3672079b-2ba6-42ef-b100-633534db7fc6}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["NEQUI_HIST_TRAN_DTL_TABLE_EXT"{3672079b-2ba6-42ef-b100-633534db7fc6}].hierarchy["root"{3b2b668e-8b0a-4f13-877b-c85a590048d1}].dataSource.layout["TRAN_AMT"{4eb1da54-4555-4235-8606-528865cf6373}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHDATASP"{2cd42932-215e-44fa-a8c0-33ab9aaf6d3e}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 15/11/2022 - caalmosq&#x9;&#xa;Descripción: Se consolida la informacion de reversos nequi" valueType="string"/>
+        </object>
+    </property>
+</object>

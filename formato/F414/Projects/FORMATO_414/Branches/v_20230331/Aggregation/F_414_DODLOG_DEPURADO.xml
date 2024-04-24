@@ -1,0 +1,204 @@
+﻿<object stamp="51471a74-91b8-40ff-b205-aa2079a015fd_1683209385338" type="Aggregation" version="7.0">
+    <property name="objectId" value="171f7e06-f315-4139-8fff-c28baab606b2" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_DODLOG_DEPURADO" valueType="string"/>
+    <property name="description" value="AGG en donde se aplana la info de la agg F_414_DOLOG_GRAL" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="7a6337b4-90d0-4f6e-b6b0-1a0e0830dc97" valueType="string"/>
+            <property name="name" value="CODIGO_APLICACION" valueType="string"/>
+            <property name="description" value="Codigo_aplicacion" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="ea0e93bb-78f4-4145-8267-36174bc9f02b" valueType="string"/>
+            <property name="name" value="NUMERO_DE_CUENTA" valueType="string"/>
+            <property name="description" value="Número_de_cuenta" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="581ecb55-011d-4fff-8c82-818460bfab90" valueType="string"/>
+            <property name="name" value="SALDO_CAUSACION_TOTAL" valueType="string"/>
+            <property name="description" value="Saldo causacion total" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="21ed8c39-dfcd-4d63-8e99-bbd39f595369" valueType="string"/>
+            <property name="name" value="TASA_POR_CAUSACION_TOTAL" valueType="string"/>
+            <property name="description" value="Tasa Por Causación total" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="6b16b6ec-b2aa-46bc-84e4-d2db7e0b54e0" valueType="string"/>
+            <property name="name" value="TASA_EFECTIVA_ANUAL" valueType="string"/>
+            <property name="description" value="Tasa Efectiva Anual" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CODIGO_APLICACION"{7a6337b4-90d0-4f6e-b6b0-1a0e0830dc97}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}].hierarchy["Aggregation"{ad68578c-3287-4314-a527-d77dfae4926e}].dataSource.layout["CODIGO_APLICACION"{7a6337b4-90d0-4f6e-b6b0-1a0e0830dc97}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NUMERO_DE_CUENTA"{ea0e93bb-78f4-4145-8267-36174bc9f02b}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}].hierarchy["Aggregation"{ad68578c-3287-4314-a527-d77dfae4926e}].dataSource.layout["NUMERO_DE_CUENTA"{ea0e93bb-78f4-4145-8267-36174bc9f02b}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["SALDO_CAUSACION_TOTAL"{581ecb55-011d-4fff-8c82-818460bfab90}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}].hierarchy["Aggregation"{ad68578c-3287-4314-a527-d77dfae4926e}].dataSource.layout["SALDO_CAUSACION_TOTAL"{581ecb55-011d-4fff-8c82-818460bfab90}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["TASA_POR_CAUSACION_TOTAL"{21ed8c39-dfcd-4d63-8e99-bbd39f595369}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}].hierarchy["Aggregation"{ad68578c-3287-4314-a527-d77dfae4926e}].dataSource.layout["TASA_POR_CAUSACION_TOTAL"{21ed8c39-dfcd-4d63-8e99-bbd39f595369}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["TASA_EFECTIVA_ANUAL"{6b16b6ec-b2aa-46bc-84e4-d2db7e0b54e0}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DODLOG_GRAL]"{Aggregation[ad68578c-3287-4314-a527-d77dfae4926e]}].hierarchy["Aggregation"{ad68578c-3287-4314-a527-d77dfae4926e}].dataSource.layout["TASA_EFECTIVA_PONDERADA"{26a117b7-69ef-413e-9e09-2ad63788214e}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  30/03/2023  - mruenes&#xa;Descripción:  Se crea AGG en donde se aplana la info de la agg F_414_DOLOG_GRAL" valueType="string"/>
+        </object>
+    </property>
+</object>

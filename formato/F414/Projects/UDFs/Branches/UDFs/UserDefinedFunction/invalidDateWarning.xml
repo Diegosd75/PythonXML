@@ -1,0 +1,29 @@
+<object stamp="b42bd127-693a-4880-9bd5-1e94f1182038_1467829054464" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="95a5495f-892e-420d-be56-0b6234ba4cde" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="invalidDateWarning" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_table_name" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_check_field_name" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_invalid_field_name" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="sourceTable(&quot;AXSL!AXSL:ds1&quot;);&#xa;var invalidValuesList = select(&quot;SELECT &quot; + var_invalid_field_name + &quot;, COUNT(*) FROM &quot; + var_table_name + &quot; WHERE &quot; + var_check_field_name + &quot; = to_date('19001010', 'YYYYMMDD') GROUP BY &quot; + var_invalid_field_name);&#xa;&lt;for> var invalidValuesList_CNT = 0 &lt;comma/> invalidValuesList_CNT &amp;lt; invalidValuesList.size() &lt;comma/> invalidValuesList_CNT++&#xa;&#x9;&lt;do>&#xa;&#x9;&#x9;warningMessage(&quot;Invalid date in field &quot; + var_invalid_field_name + &quot;(&quot; + invalidValuesList.get(invalidValuesList_CNT).get(1) + &quot;): &quot; + invalidValuesList.get(invalidValuesList_CNT).get(0));&#xa;&#x9;&lt;/do>&#xa;&lt;/for>&#xa;;1" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

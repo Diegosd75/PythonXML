@@ -1,0 +1,70 @@
+﻿<object stamp="fea4b9aa-3875-4beb-b30d-155620c1bbfe_1683207859940" type="DataModel" version="2.0">
+    <property name="objectId" value="ea67f72a-d0d9-4597-b982-710accfb1dc9" valueType="string"/>
+    <property name="branchId" value="63fa0e79-2f54-410a-b939-634c9e9fc492" valueType="string"/>
+    <property name="name" value="DODLOG" valueType="string"/>
+    <property name="description" value="Modela con información del DODLOG" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="f2355376-e851-415c-8cf8-f38330f04b3e" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Archivo maestro para la causación, contabilización y posterior cobro del interés de sobre giro al cliente" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["DODLOG"{5247775e-9e0d-4bb7-b99a-c723a4a4d6d0}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha creación: 27/03/2023 - mruenes.&#xa;Descripción: Se crea modelo que contiene la información del DODLOG.&#xa;---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" valueType="string"/>
+        </object>
+    </property>
+</object>

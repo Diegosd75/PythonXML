@@ -1,0 +1,107 @@
+﻿<object stamp="78f9bcfd-aead-4f6d-9cb0-cad8e535c84c_1691084816432" type="DataModel" version="2.0">
+    <property name="objectId" value="2778d0f3-1c62-466c-b752-bbc6b8cd87fa" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_TIPO_GARANTIA" valueType="string"/>
+    <property name="description" value="se crea modelo para dejar de manera trasversal el tipo de garantia" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="3e6c8933-a6e5-4acd-8434-75fd1b134b72" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Fuente XXGAR: Garantias cerradas" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:XXGAR"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:2f37ec7f-6765-4bfa-91fe-70488a4cec70}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="6f3ca087-021b-4e52-8f8a-ee0ce5a58ee6" valueType="string"/>
+                    <property name="name" value="XGAR" valueType="string"/>
+                    <property name="description" value="Garantias conexion directa" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:XGAR"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:d3b814c1-2631-42c6-9e93-8e34d3bb9477}]</property>
+                    <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:XGAR"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:d3b814c1-2631-42c6-9e93-8e34d3bb9477}].layout["XGNOCO"{f6ebe5a1-93ec-420d-93ed-5d140c237066}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:XXGAR"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:2f37ec7f-6765-4bfa-91fe-70488a4cec70}].layout["xxnoco"{ff313a5a-059b-4f7b-a96d-8e25259f64af}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: se crea modelo para poder tomar la identificacion, sexo, y demas datos del cliente" valueType="string"/>
+        </object>
+    </property>
+</object>

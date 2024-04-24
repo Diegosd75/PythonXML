@@ -1,0 +1,27 @@
+﻿<object stamp="f191aab7-664c-46c9-a418-a8eaf39d1344_1656002551858" type="EmailTemplate" version="1.0">
+    <property name="name" value="Alertas_F_414" valueType="string"/>
+    <property name="description" value="inconsistencias de de la fuente LSFR473SBF formato_414" valueType="string"/>
+    <property name="objectId" value="d6d2f76a-802d-4ff9-a60c-c7732e5eeaab" valueType="string"/>
+    <property name="projectId" value="EmailTemplates" valueType="string"/>
+    <property name="branchId" value="EmailTemplates" valueType="string"/>
+    <property name="subject" value="'Fuente LSFR473SBF sin actualizar ' +$Projecto" valueType="string"/>
+    <property name="body" value="'Cordial Saludo, &#xa;&#xa;La fuente LSFR473SBF no contiene información para el corte ¿DD-MM-AAAA¿, por favor nos confirman si para la semana de corte no se presentaron obligaciones con cambio de modalidad a Arrendamiento Financiero. ' + $Projecto+ ' con fecha de Ejecucion: ' + $asof_date&#xa;" valueType="string"/>
+    <property name="isHTML" value="PLAIN" valueType="string"/>
+    <property name="variables" valueType="table">
+        <object type="EmailTemplate:variable" version="1.0">
+            <property name="name" value="Branch_s" valueType="string"/>
+            <property name="description" value="branchs" valueType="string"/>
+            <property name="id" value="d4eb2c32-bbc6-43c0-a394-207f6bdf1974" valueType="string"/>
+        </object>
+        <object type="EmailTemplate:variable" version="1.0">
+            <property name="name" value="Projecto" valueType="string"/>
+            <property name="description" value="Proyecto" valueType="string"/>
+            <property name="id" value="1699a55d-fc0e-40b8-837d-a66c988c447b" valueType="string"/>
+        </object>
+        <object type="EmailTemplate:variable" version="1.0">
+            <property name="name" value="asof_date" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="id" value="640393e7-b294-4895-b702-ffb3d7254f9a" valueType="string"/>
+        </object>
+    </property>
+</object>

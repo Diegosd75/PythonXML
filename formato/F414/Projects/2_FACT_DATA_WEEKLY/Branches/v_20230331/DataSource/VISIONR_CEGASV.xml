@@ -1,0 +1,1077 @@
+﻿<object stamp="d33dcffc-c949-4f60-a021-a7d98b505fca_1657287979043" type="DataSource" version="9.0">
+    <property name="objectId" value="02344969-59e8-4890-8668-05a2db461742" valueType="string"/>
+    <property name="branchId" value="63fa0e79-2f54-410a-b939-634c9e9fc492" valueType="string"/>
+    <property name="name" value="VISIONR_CEGASV" valueType="string"/>
+    <property name="description" value="Archivo de Garantías idóneas asignadas en detalle (obligaciones vs garantías). En este archivo está el detalle de la distribución de las garantías entre las diferentes obligaciones." valueType="string"/>
+    <property name="hosting" value="INTERNAL" valueType="string"/>
+    <property name="dbSource" valueType="url">DBSource["SHDATASP"{2cd42932-215e-44fa-a8c0-33ab9aaf6d3e}]</property>
+    <property name="defaultVisibilityInModel" value="true" valueType="boolean"/>
+    <property name="dataStructure" value="FLAT" valueType="string"/>
+    <property name="layout" valueType="table">
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="11395582-27d1-43d8-9298-748afa579f16" valueType="string"/>
+            <property name="name" value="asof_date" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="f9b1b6dd-67a1-4854-8241-6f6f64913a3e" valueType="string"/>
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="836062de-0fa2-48ff-9f75-ced243fcde33" valueType="string"/>
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="397d6705-5ec7-4ee1-b8c3-3c90cd856fb9" valueType="string"/>
+            <property name="name" value="CEAC72" valueType="string"/>
+            <property name="description" value="Obligación" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="50" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="83ca8f03-7b64-48f2-a30b-9954954c77fa" valueType="string"/>
+            <property name="name" value="CEAG72" valueType="string"/>
+            <property name="description" value="Valor cubierto" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="e81d2eb2-0bc5-4276-a571-fb4fbda3ea71" valueType="string"/>
+            <property name="name" value="CEAP72" valueType="string"/>
+            <property name="description" value="Aplicativo" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="3" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="c20c4d3f-9ae1-4fff-8631-61f4b15d3eb1" valueType="string"/>
+            <property name="name" value="CEAV72" valueType="string"/>
+            <property name="description" value="Fecha ultimo avalúo" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="fc29b798-212d-41ae-89b2-50405121da87" valueType="string"/>
+            <property name="name" value="CEAV72_TXT" valueType="string"/>
+            <property name="description" value="Fecha ultimo avalúo" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="10" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="efe1a44f-cd53-45a6-8fb5-c73812b16c92" valueType="string"/>
+            <property name="name" value="CECL72" valueType="string"/>
+            <property name="description" value="Clasificación......." valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="3" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="9be9e9a7-71d2-4391-be15-d5e691b638dd" valueType="string"/>
+            <property name="name" value="CEFC72" valueType="string"/>
+            <property name="description" value="Moneda" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="3" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="e075dca0-68ab-4935-8d80-cf27c0bd53ba" valueType="string"/>
+            <property name="name" value="CEFC72_MOD" valueType="string"/>
+            <property name="description" value="Moneda modificado" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="3" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="d3c50e70-cd9a-4eee-85ec-8f88bd5c896d" valueType="string"/>
+            <property name="name" value="CENG72" valueType="string"/>
+            <property name="description" value="Numero de la Garantía" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="11" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="1b368254-1cb4-4cb0-8ab2-59e68cbdb182" valueType="string"/>
+            <property name="name" value="CENK72" valueType="string"/>
+            <property name="description" value="Llave del Nombre...." valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="15" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="2d45c6f6-64ef-4c4b-b61b-9e08ec0ff0fd" valueType="string"/>
+            <property name="name" value="CERT72" valueType="string"/>
+            <property name="description" value="Porcentaje Garantía." valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="4807c933-716e-4fae-a6c0-843f66839389" valueType="string"/>
+            <property name="name" value="CESK72" valueType="string"/>
+            <property name="description" value="Saldo .............." valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="2270e67a-5228-43bb-9140-85249cd548ca" valueType="string"/>
+            <property name="name" value="CET172" valueType="string"/>
+            <property name="description" value="PDI" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="076314a5-2322-4bf8-a4d4-dd2598b15301" valueType="string"/>
+            <property name="name" value="CET272" valueType="string"/>
+            <property name="description" value="Porc Cubrimien Garan" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="379a5636-b5bc-4e77-957a-8a8128bf1c3c" valueType="string"/>
+            <property name="name" value="CETG72" valueType="string"/>
+            <property name="description" value="Tipo de garantía" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="6" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="ca0b2c80-abb3-48b5-91de-7702a8993ffa" valueType="string"/>
+            <property name="name" value="CEVG72" valueType="string"/>
+            <property name="description" value="Valor de la garantía" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="d5742477-62d1-4cab-ab49-7f67af4ce8b6" valueType="string"/>
+            <property name="name" value="AX_PDI" valueType="string"/>
+            <property name="description" value="AX_PDI" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0.0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="149f6b49-cc7e-48b2-9ac1-d4ee2e8adeef" valueType="string"/>
+            <property name="name" value="entity" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="30" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="'Banco'" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="42fd30af-9390-48a2-980b-0210d1299d02" valueType="string"/>
+            <property name="name" value="loaded_on" valueType="string"/>
+            <property name="description" value="Loaded on" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="sysdate" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="cb957f61-7034-47a3-b078-48c1fae62801" valueType="string"/>
+            <property name="name" value="source_name" valueType="string"/>
+            <property name="description" value="source name" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="70" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="'VISONR_CEGASV'" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="50327586-74ce-4205-9418-23485906b557" valueType="string"/>
+            <property name="name" value="axiom_index" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="keyFields" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{50327586-74ce-4205-9418-23485906b557}]</property>
+        </object>
+    </property>
+    <property name="index" valueType="table">
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CEAC72"{397d6705-5ec7-4ee1-b8c3-3c90cd856fb9}]</property>
+                </object>
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CEAP72"{e81d2eb2-0bc5-4276-a571-fb4fbda3ea71}]</property>
+                </object>
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CEFC72_MOD"{e075dca0-68ab-4935-8d80-cf27c0bd53ba}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CENG72"{d3c50e70-cd9a-4eee-85ec-8f88bd5c896d}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CETG72"{379a5636-b5bc-4e77-957a-8a8128bf1c3c}]</property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="createIndexOnKeyFields" value="true" valueType="boolean"/>
+    <property name="indexOnKeyFieldsClustered" value="true" valueType="boolean"/>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="internalSourceTablePrefix" value="VISONR_CEGASV_" valueType="string"/>
+    <property name="asOfDateField" valueType="url">DataSource[this].layout["asof_date"{11395582-27d1-43d8-9298-748afa579f16}]</property>
+    <property name="instanceKeys" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["version"{f9b1b6dd-67a1-4854-8241-6f6f64913a3e}]</property>
+        </object>
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["filing_version"{836062de-0fa2-48ff-9f75-ced243fcde33}]</property>
+        </object>
+    </property>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="computeStatistics" value="NONE" valueType="string"/>
+    <property name="validations" valueType="table"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="readOnlyAdjustment" value="false" valueType="boolean"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="loaders" valueType="table">
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="0a8eb75f-0dcd-4be1-8fec-9a7ba343dc1f" valueType="string"/>
+            <property name="name" value="New_Scenario_1" valueType="string"/>
+            <property name="loaderType" value="tableLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="TableLoaderParameters" version="2.0">
+                    <property name="loaderEnumerationField" valueType="object">
+                        <object type="DataSource:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{50327586-74ce-4205-9418-23485906b557}]</property>
+                        </object>
+                    </property>
+                    <property name="loaderSelectDistinct" value="false" valueType="boolean"/>
+                    <property name="loaderCondition" valueType="table"/>
+                    <property name="dbSourceToLoadFrom" valueType="url">DBSource["BANKVISION_NACIONAL_VISIONR"{ad5dc5bb-1a09-4db2-aaec-adfb0f68a49f}]</property>
+                    <property name="tableLoadingMethod" value="direct" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CEAC72"{397d6705-5ec7-4ee1-b8c3-3c90cd856fb9}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CEAC72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CEAG72"{83ca8f03-7b64-48f2-a30b-9954954c77fa}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CEAG72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CEAP72"{e81d2eb2-0bc5-4276-a571-fb4fbda3ea71}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="TRIM(CEAP72)" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CEAV72_TXT"{fc29b798-212d-41ae-89b2-50405121da87}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CEAV72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CECL72"{efe1a44f-cd53-45a6-8fb5-c73812b16c92}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="TRIM(CECL72)" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CEFC72"{9be9e9a7-71d2-4391-be15-d5e691b638dd}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CEFC72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CENG72"{d3c50e70-cd9a-4eee-85ec-8f88bd5c896d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CENG72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CENK72"{1b368254-1cb4-4cb0-8ab2-59e68cbdb182}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CENK72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CERT72"{2d45c6f6-64ef-4c4b-b61b-9e08ec0ff0fd}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CERT72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CESK72"{4807c933-716e-4fae-a6c0-843f66839389}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CESK72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CET172"{2270e67a-5228-43bb-9140-85249cd548ca}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CET172" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CET272"{076314a5-2322-4bf8-a4d4-dd2598b15301}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CET272" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CETG72"{379a5636-b5bc-4e77-957a-8a8128bf1c3c}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="TRIM(CETG72)" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CEVG72"{ca0b2c80-abb3-48b5-91de-7702a8993ffa}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CEVG72" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="loadingStatement" value="APPEND" valueType="string"/>
+                </object>
+            </property>
+            <property name="loaderActions" valueType="table">
+                <object type="LoaderAction:actionCombine" version="2.0">
+                    <property name="id" value="16209077-0f6f-4830-be6b-6ed0c4f54555" valueType="string"/>
+                    <property name="column" valueType="object">
+                        <object type="DataSource:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataSource[this].layout["CEFC72_MOD"{e075dca0-68ab-4935-8d80-cf27c0bd53ba}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN CEFC72='   ' THEN 'L' ELSE 'E' END" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="ef3360b4-5afe-4de7-b3e5-a30139f974ec" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="UPDATE " valueType="string"/>
+                        </object>
+                        <object type="SQLConstant" version="1.0">
+                            <property name="name" value="table_name" valueType="string"/>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" SET CEAV72 = &#xa;CASE WHEN CEAV72_TXT LIKE '________' &#xa;&#x9;AND " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 5, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" > 0 &#xa;&#x9;AND " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 5, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" &lt; 13&#xa;&#x9;AND 1 = &#xa;&#x9;CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 5, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" IN (1, 3, 5, 7, 8, 10, 12) &#xa;&#x9;THEN &#xa;&#x9;&#x9;CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 7, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" > 0 AND " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 7, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" &lt;= 31&#xa;&#x9;&#x9;THEN 1&#xa;&#x9;&#x9;ELSE 0 &#xa;&#x9;&#x9;END&#xa;&#x9;ELSE &#xa;&#x9;&#x9;CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 5, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" IN (4, 6, 9, 11) &#xa;&#x9;&#x9;THEN  &#xa;&#x9;&#x9;&#x9;CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 7, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" > 0 AND " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 7, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" &lt;= 30&#xa;&#x9;&#x9;&#x9;THEN 1&#xa;&#x9;&#x9;&#x9;ELSE 0 &#xa;&#x9;&#x9;&#x9;END&#xa;&#x9;&#x9;ELSE &#xa;&#x9;&#x9;&#x9;CASE WHEN&#xa;&#x9;&#x9;&#x9;&#x9;mod(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 1, 4)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=", 4) = 0 &#xa;&#x9;&#x9;&#x9;THEN &#xa;&#x9;&#x9;&#x9;&#x9;CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 7, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" > 0 AND " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 7, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" &lt;= 29&#xa;&#x9;&#x9;&#x9;&#x9;THEN 1&#xa;&#x9;&#x9;&#x9;&#x9;ELSE 0 &#xa;&#x9;&#x9;&#x9;&#x9;END &#xa;&#x9;&#x9;&#x9;ELSE &#xa;&#x9;&#x9;&#x9;&#x9;CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 7, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" > 0 AND " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="substr(CEAV72_TXT, 7, 2)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" &lt;= 28&#xa;&#x9;&#x9;&#x9;&#x9;THEN 1&#xa;&#x9;&#x9;&#x9;&#x9;ELSE 0 &#xa;&#x9;&#x9;&#x9;&#x9;END &#xa;&#x9;&#x9;&#x9;END&#xa;&#x9;&#x9;END&#xa;&#x9;END&#xa;THEN to_date(CEAV72_TXT, 'YYYYMMDD') &#xa;ELSE &#xa;&#x9;CASE WHEN CEAV72_TXT != 0 &#xa;&#x9;THEN to_date('19001010', 'YYYYMMDD')&#xa;&#x9;END&#xa;END " valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="ae910a32-07d8-4a62-b402-ffd0bb1fd9c5" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="SELECT " valueType="string"/>
+                        </object>
+                        <object type="SQLFormula" version="1.0">
+                            <property name="expression" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:udfReference" version="1.0">
+                                            <property name="value" valueType="url">UserDefinedFunction["UDFs:invalidDateWarning"{UDFs:95a5495f-892e-420d-be56-0b6234ba4cde}]</property>
+                                        </object>
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="(@table_name, &quot;CEAV72&quot;, &quot;CEAV72_TXT&quot;)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" FROM DUAL" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="7240970b-e663-49a2-a824-e8df5c0d6123" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="DELETE FROM " valueType="string"/>
+                        </object>
+                        <object type="SQLConstant" version="1.0">
+                            <property name="name" value="table_name" valueType="string"/>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" WHERE CEAV72 = to_date('19001010', 'YYYYMMDD')" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="81a424d7-3d81-46a8-9efd-0b0cfed1520c" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="UPDATE " valueType="string"/>
+                        </object>
+                        <object type="SQLConstant" version="1.0">
+                            <property name="name" value="table_name" valueType="string"/>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" &#xa;SET AX_PDI =  CEVG72 * CET172" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 10/06/2022 - caalmosq&#xa;Descripción:&#xa;- Archivo de Garantías idóneas asignadas en detalle (obligaciones vs garantías). En este archivo está el detalle de la distribución de las garantías entre las diferentes obligaciones." valueType="string"/>
+        </object>
+    </property>
+</object>

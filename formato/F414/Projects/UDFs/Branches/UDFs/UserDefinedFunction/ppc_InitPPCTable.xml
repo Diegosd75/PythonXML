@@ -1,0 +1,49 @@
+<object stamp="cb6129bf-1d13-43dc-8038-601cba6d9b98_1616436370497" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="1373985a-c6a7-4179-858a-6b774df6a31f" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_InitPPCTable" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="IPPCT_object" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="IPPCT_mode" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Uploading PPC tables to list&#xa;Input variables:&#xa;IPPCT_object - &#xa;IPPCT_mode - &#xa;-->&#xa;trace(&quot;#!#!#! ppc_InitPPCTable. Started #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_InitPPCTable. Copyright by AXIOM SL, Igor Kirilyuk, 2021.02.14 #!#!#!&quot;);&#xa;&#xa;var IPPCT_startDate = new(&quot;java.util.Date&quot;);&#xa;&#xa;var IPPCT_nameCellStartTable;&#xa;var IPPCT_nameCellStopTable;&#xa;var IPPCT_countColumnToTable;&#xa;&lt;case>&#xa;&#x9;IPPCT_mode == 1&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_InitPPCTable. Table: ExtendRows #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStartTable = &quot;PPCExtendRows_start&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStopTable = &quot;PPCExtendRows_stop&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_countColumnToTable = 16;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&lt;/then>&#xa;&#x9;IPPCT_mode == 2&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_InitPPCTable. Table: ExtendCols #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStartTable = &quot;PPCExtendCols_start&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStopTable = &quot;PPCExtendCols_stop&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_countColumnToTable = 11;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&lt;/then>&#xa;&#x9;IPPCT_mode == 3&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_InitPPCTable. Table: ExtendColsEX #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStartTable = &quot;PPCExtendColsEX_start&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStopTable = &quot;PPCExtendColsEX_stop&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_countColumnToTable = 16;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&lt;/then>&#xa;&#x9;IPPCT_mode == 4&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_InitPPCTable. Table: ExtendBlocks #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStartTable = &quot;PPCExtendBlocks_start&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStopTable = &quot;PPCExtendBlocks_stop&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_countColumnToTable = 7;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&lt;/then>&#xa;&#x9;IPPCT_mode == 5&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_InitPPCTable. Table: ExtendBlockInBlockEX #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStartTable = &quot;PPCExtendBlockInBlock_start&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_nameCellStopTable = &quot;PPCExtendBlockInBlock_stop&quot;;&#xa;&#x9;&#x9;&#x9;IPPCT_countColumnToTable = 10;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&lt;/then>&#xa;&lt;/case>&#x9;&#xa;&#xa;var IPPCT_infoCell;&#xa;IPPCT_infoCell = " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(IPPCT_object, IPPCT_nameCellStartTable);&#xa;var IPPCT_indexSheet = if(IPPCT_infoCell != null, IPPCT_infoCell.get(0), -1);&#xa;var IPPCT_indexStartRow = if(IPPCT_infoCell != null, IPPCT_infoCell.get(1), -1);&#xa;var IPPCT_indexStartColumn = if(IPPCT_infoCell != null, IPPCT_infoCell.get(2), -1);&#xa;IPPCT_infoCell = " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(IPPCT_object, IPPCT_nameCellStopTable);&#xa;var IPPCT_indexStopRow = if(IPPCT_infoCell != null, IPPCT_infoCell.get(1), IPPCT_indexStartRow);&#xa;&#xa;var IPPCT_jbook = " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_JBookReference"{7fbc704a-06a1-4928-851f-2fd097a63b7d}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(IPPCT_object);  &#xa;var IPPCT_listRowPPCTable = list();&#xa;&lt;if> (IPPCT_indexSheet != -1) and (IPPCT_indexStartRow != -1)&#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;&lt;for> var indexRow = IPPCT_indexStartRow &lt;comma/> indexRow &amp;lt;= IPPCT_indexStopRow &lt;comma/> indexRow++&#xa;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;var IPPCT_listColumnPPCTable = list();&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexColumn = IPPCT_indexStartColumn &lt;comma/> indexColumn &amp;lt;= (IPPCT_indexStartColumn + IPPCT_countColumnToTable) &lt;comma/> indexColumn++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;IPPCT_listColumnPPCTable.add(IPPCT_jbook.getText(IPPCT_indexSheet, indexRow, indexColumn).trim());&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;if> (!IPPCT_listColumnPPCTable.get(0).startsWith(&quot;#&quot;)) and (!IPPCT_listColumnPPCTable.get(0).isEmpty())&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;IPPCT_listRowPPCTable.add(IPPCT_listColumnPPCTable);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&lt;/for>&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#x9;&#xa;&#xa;trace(&quot;#!#!#! ppc_InitPPCTable. Count record into the PPC table: &quot; + IPPCT_listRowPPCTable.size() + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_InitPPCTable. &quot; + " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RunTime"{01bdef00-6989-424b-84f9-c81ca2885e47}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(IPPCT_startDate, new(&quot;java.util.Date&quot;)) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_InitPPCTable. Finished #!#!#!&quot;);&#xa;; IPPCT_listRowPPCTable" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

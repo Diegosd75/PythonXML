@@ -1,0 +1,17 @@
+<object stamp="f5cd8f26-4641-4086-9b81-1a66fc6d1f85_1650383983519" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="ac16647e-fdb9-4439-b534-bda4ae83ed1b" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="FILE_OUTPUT" valueType="string"/>
+    <property name="description" value="FILE_OUTPUT" valueType="string"/>
+    <property name="arguments" valueType="table"/>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="FileFolderService_1('FILE_OUTPUT').getRootPath()" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="libraries" valueType="table"/>
+</object>

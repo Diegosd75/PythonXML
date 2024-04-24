@@ -1,0 +1,176 @@
+﻿<object stamp="93a45b53-f128-4301-a02f-459a4b679b73_1668524711726" type="DataSource" version="9.0">
+    <property name="objectId" value="7c7292dc-f568-4661-b222-fd7117ea0bb6" valueType="string"/>
+    <property name="branchId" value="8db122bf-f144-4290-a7ca-7dd596001456" valueType="string"/>
+    <property name="name" value="NEQUI_HIST_TRAN_DTL_TABLE_EXT" valueType="string"/>
+    <property name="description" value="Nequi - Tabla maestra de transacciones" valueType="string"/>
+    <property name="hosting" value="EXTERNAL" valueType="string"/>
+    <property name="dbSource" valueType="url">DBSource["FINACLE_FINBDSDB_TBAADM"{4b6e8611-ae85-4558-b7bd-ebd8e94975a6}]</property>
+    <property name="defaultVisibilityInModel" value="true" valueType="boolean"/>
+    <property name="dataStructure" value="FLAT" valueType="string"/>
+    <property name="layout" valueType="table">
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="e9698cc5-cdac-44bb-a2a9-d5e26ab1bb70" valueType="string"/>
+            <property name="name" value="axiom_index" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="75d09dc7-3bec-431d-be47-ffc48620c288" valueType="string"/>
+            <property name="name" value="TRAN_DATE" valueType="string"/>
+            <property name="description" value="Fecha de transaccion" valueType="string"/>
+            <property name="title" value="TRAN_DATE" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="6d113baa-9fc3-4e15-9615-58163e3248a1" valueType="string"/>
+            <property name="name" value="PART_TRAN_TYPE" valueType="string"/>
+            <property name="description" value="tipo de transaccion" valueType="string"/>
+            <property name="title" value="PART_TRAN_TYPE" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="1" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="ef41b90f-bbcc-4d72-9a32-aaae762288df" valueType="string"/>
+            <property name="name" value="GL_SUB_HEAD_CODE" valueType="string"/>
+            <property name="description" value="Codigo del GL de la contabilidad" valueType="string"/>
+            <property name="title" value="GL_SUB_HEAD_CODE" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="5" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="4eb1da54-4555-4235-8606-528865cf6373" valueType="string"/>
+            <property name="name" value="TRAN_AMT" valueType="string"/>
+            <property name="description" value="monto de la transaccion" valueType="string"/>
+            <property name="title" value="TRAN_AMT" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="43250acb-a395-4330-807d-430f3f8ca0c4" valueType="string"/>
+            <property name="name" value="BANK_ID" valueType="string"/>
+            <property name="description" value="identificador del banco" valueType="string"/>
+            <property name="title" value="BANK_ID" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="8" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="98e3fdeb-c301-4810-8ea3-798d785c7c1b" valueType="string"/>
+            <property name="name" value="USER_PART_TRAN_CODE" valueType="string"/>
+            <property name="description" value="codigo de la transacion" valueType="string"/>
+            <property name="title" value="USER_PART_TRAN_CODE" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="10" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="keyFields" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{e9698cc5-cdac-44bb-a2a9-d5e26ab1bb70}]</property>
+        </object>
+    </property>
+    <property name="index" valueType="table"/>
+    <property name="createIndexOnKeyFields" value="true" valueType="boolean"/>
+    <property name="indexOnKeyFieldsClustered" value="true" valueType="boolean"/>
+    <property name="storageType" value="PERMANENT" valueType="string"/>
+    <property name="externalSourceTableName" value="HIST_TRAN_DTL_TABLE" valueType="string"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="validations" valueType="table"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="readOnlyAdjustment" value="false" valueType="boolean"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="loaders" valueType="table">
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="438b3302-145f-4f0c-8fde-8ad12ef791dc" valueType="string"/>
+            <property name="name" value="New_Scenario_1" valueType="string"/>
+            <property name="loaderType" value="emptyLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="DefaultLoaderParameters" version="1.0"/>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 11/15/2022 - Dasierra&#xa;Descripción: DataSource external de nequi historico&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

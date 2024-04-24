@@ -1,0 +1,25 @@
+<object stamp="92222eae-144a-4b28-a1bf-4e570459bdd0_1627383860739" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="bcc991db-7e5c-4a82-8574-8f254ff2e73d" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_GetColumnIndex" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="GCI_jbook" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="GCI_charColumn" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Get index column&#xa;Input variables:&#xa;GCI_jbook - &#xa;GCI_charColumn - &#xa;-->&#xa;; class(&quot;com.axiomsl.free_form_report.setup.ReportDataSet&quot;).resolveCellReference(GCI_jbook.getSheetName(0) + &quot;!$&quot; + GCI_charColumn + &quot;$1&quot;, GCI_jbook, true, -1).get(2)&#xa;" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

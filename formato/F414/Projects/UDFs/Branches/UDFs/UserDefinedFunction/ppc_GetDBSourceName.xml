@@ -1,0 +1,27 @@
+<object stamp="6e8ab93b-5bec-4c70-9596-207d4eacd185_1635406283096" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="05ede375-85ea-4342-9969-016136e1e39a" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_GetDBSourceName" valueType="string"/>
+    <property name="description" value="2021.10.21" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="GDBSN_task" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.10.21&#xa;Get dbSource name&#xa;Input variables:&#xa;GDBSN_task - &#xa;-->&#xa;trace(&quot;#!#!#! ppc_GetDBSourceName. Started #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_GetDBSourceName. Copyright by AXIOM SL, Igor Kirilyuk, 2021.10.21 #!#!#!&quot;);&#xa;&#xa;var GDBSN_startDate = new(&quot;java.util.Date&quot;);&#xa;&#xa;var GDBSN_dbSourceName = null;&#xa;var GDBSN_branch = null;&#xa;var GDBSN_project = null;&#xa;var GDBSN_object = null;&#xa;&#xa;var GDBSN_targetObject = if(GDBSN_task instanceof &quot;com.axiomsl.task.api.Task_1&quot;, GDBSN_task.getUnderlyingObjectRef().getTargetObject(), GDBSN_task);&#xa;&#xa;&lt;if> GDBSN_targetObject.propertyIsSet(&quot;dbSource&quot;)&#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;GDBSN_dbSourceName = GDBSN_targetObject.getReference(&quot;dbSource&quot;).getTargetObjectName();&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#xa;&lt;if> GDBSN_dbSourceName == null AND GDBSN_targetObject.propertyIsSet(&quot;dbSourceForResults&quot;)&#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;GDBSN_dbSourceName = GDBSN_targetObject.getReference(&quot;dbSourceForResults&quot;).getTargetObjectName();&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#xa;&lt;if> GDBSN_dbSourceName == null &#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;GDBSN_branch = axiomObjectManager.locate(ObjectID.createId(&quot;Branch&quot;, null, GDBSN_targetObject.getProperty(&quot;branchId&quot;)), axiomEnvironment);&#xa;&#x9;&#x9;&lt;if> GDBSN_branch.propertyIsSet(&quot;defaultDBSource&quot;)&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;GDBSN_dbSourceName = GDBSN_branch.getReference(&quot;defaultDBSource&quot;).getTargetObjectName();&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#xa;&lt;if> GDBSN_dbSourceName == null &#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;GDBSN_project = axiomObjectManager.locate(ObjectID.createId(&quot;Project&quot;, null, GDBSN_branch.getProperty(&quot;projectId&quot;)), axiomEnvironment);&#xa;&#x9;&#x9;&lt;if> GDBSN_project.propertyIsSet(&quot;defaultDBSource&quot;)&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;GDBSN_dbSourceName = GDBSN_project.getReference(&quot;defaultDBSource&quot;).getTargetObjectName();&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#xa;&lt;!-- Should be removed in v10 Start&#xa;&lt;if> GDBSN_dbSourceName == null &#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;GDBSN_object = axiomObjectManager.locate(ObjectID.createNameId(&quot;DBSource&quot;, null, default_db_source()), axiomEnvironment);&#xa;&#x9;&#x9;&lt;if> GDBSN_object != null&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;GDBSN_dbSourceName = GDBSN_object.getName();&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#xa;Should be removed in v10 Finish -->&#xa;trace(&quot;#!#!#! ppc_GetDBSourceName. DBSource name - &quot; + if(GDBSN_dbSourceName != null, GDBSN_dbSourceName, &quot;NULL&quot;) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_GetDBSourceName. &quot; + " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RunTime"{01bdef00-6989-424b-84f9-c81ca2885e47}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(GDBSN_startDate, new(&quot;java.util.Date&quot;)) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_GetDBSourceName. Finished #!#!#!&quot;);&#xa;;GDBSN_dbSourceName" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

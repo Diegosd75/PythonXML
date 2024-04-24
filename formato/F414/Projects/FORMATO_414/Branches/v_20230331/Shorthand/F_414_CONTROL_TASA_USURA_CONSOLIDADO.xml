@@ -1,0 +1,246 @@
+<object stamp="a0dd7fbc-96d0-4846-a077-63599c75da45_1667597801903" type="Shorthand" version="2.0">
+    <property name="objectId" value="0b230234-c6da-4cf3-98b1-3402f1e3d541" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_CONTROL_TASA_USURA_CONSOLIDADO" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_TARJETAS"{ff244326-d921-429e-b95d-2649fc16b684}]</property>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="CONSOLIDADO" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["TIPO_CREDITO"{07df2157-8d16-4f55-a25f-a001bd36de5b}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="1" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["PRODUCTO_CREDITO"{281a9588-873e-4afa-9980-ccc0e40d5b78}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="109" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}].hierarchy["LCHG"{1bd83067-698d-46ec-ab3f-7373fa691513}].dataSource.layout["LCCDLC"{d6938aaa-5926-4846-bc78-0c0f812665b5}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="MAM" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["TIPO_CREDITO"{07df2157-8d16-4f55-a25f-a001bd36de5b}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="7" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}].hierarchy["LCHG"{1bd83067-698d-46ec-ab3f-7373fa691513}].dataSource.layout["LCCDLC"{d6938aaa-5926-4846-bc78-0c0f812665b5}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="MU4" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:list" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["TIPO_CREDITO"{07df2157-8d16-4f55-a25f-a001bd36de5b}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="values" valueType="table">
+                                                <object type="Condition:list:value" version="1.0">
+                                                    <property name="value" value="1" valueType="string"/>
+                                                </object>
+                                                <object type="Condition:list:value" version="1.0">
+                                                    <property name="value" value="3" valueType="string"/>
+                                                </object>
+                                                <object type="Condition:list:value" version="1.0">
+                                                    <property name="value" value="4" valueType="string"/>
+                                                </object>
+                                                <object type="Condition:list:value" version="1.0">
+                                                    <property name="value" value="5" valueType="string"/>
+                                                </object>
+                                                <object type="Condition:list:value" version="1.0">
+                                                    <property name="value" value="6" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["PRODUCTO_CREDITO"{281a9588-873e-4afa-9980-ccc0e40d5b78}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="109" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_CONSOLIDADO"{3031a43d-aef6-43ad-a7b7-a409de1f0473}].hierarchy["LCHG"{1bd83067-698d-46ec-ab3f-7373fa691513}].dataSource.layout["LCCDLC"{d6938aaa-5926-4846-bc78-0c0f812665b5}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="MU1" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="TARJETAS" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_TARJETAS"{ff244326-d921-429e-b95d-2649fc16b684}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_TARJETAS"{ff244326-d921-429e-b95d-2649fc16b684}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["TIPO_CREDITO"{6060d23e-eaba-49be-a961-56b791d63f61}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="3" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="4" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="5" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="6" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA_TARJETAS"{ff244326-d921-429e-b95d-2649fc16b684}].hierarchy["LCHG"{1bd83067-698d-46ec-ab3f-7373fa691513}].dataSource.layout["LCCDLC"{d6938aaa-5926-4846-bc78-0c0f812665b5}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="MU1" valueType="string"/>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

@@ -1,0 +1,94 @@
+﻿<object stamp="cb815bec-f93d-41f1-bd0a-af7233f08793_1668810668197" type="Shorthand" version="2.0">
+    <property name="objectId" value="649ff33e-223b-4f36-83db-e1bda18d24bf" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_DEP_DDLYL" valueType="string"/>
+    <property name="description" value="SE CREA FILTRO PARA OBTENER LA INFORMACION DE DEPOSITOS" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_DEP_DDLYBL"{0bda7cf1-85ad-4512-a413-9884cf0747b7}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: SE CREA FILTRO PARA OBTENER LA INFORMACION DE DEPOSITOS" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="DEPOSITOS_DDLYBL" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_DEP_DDLYBL"{0bda7cf1-85ad-4512-a413-9884cf0747b7}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_DEP_DDLYBL"{0bda7cf1-85ad-4512-a413-9884cf0747b7}].hierarchy["CXREF_VISONR"{c75d397e-e469-46db-b01c-6c88f8ebc742}].dataSource.layout["CXCDAR"{0ba3c47e-5fb6-4ab1-aa8d-347758a9065e}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="D" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="T" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_DEP_DDLYBL"{0bda7cf1-85ad-4512-a413-9884cf0747b7}].hierarchy["CXREF_VISONR"{c75d397e-e469-46db-b01c-6c88f8ebc742}].dataSource.layout["CXNOPT"{a8f0d0b8-83c3-4380-be46-b2df8d61ac41}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="!=" valueType="string"/>
+                                    <property name="value" value="1" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_DEP_DDLYBL"{0bda7cf1-85ad-4512-a413-9884cf0747b7}].hierarchy["DBAL"{866145f8-a1e9-444e-bf2c-aa9a427d9e76}].dataSource.layout["DMAPCD"{3cec812a-442d-49b0-b1a1-8e0e8063bf27}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="D" valueType="string"/>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

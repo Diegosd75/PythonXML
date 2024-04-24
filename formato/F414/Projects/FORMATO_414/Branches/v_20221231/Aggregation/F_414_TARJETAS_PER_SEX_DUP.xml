@@ -1,0 +1,205 @@
+﻿<object stamp="5a69578f-ba0f-45d9-827e-8d3afbcc5829_1656431044646" type="Aggregation" version="7.0">
+    <property name="objectId" value="c1a6f627-be1f-4d08-9709-678bf7cd4b0c" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_TARJETAS_PER_SEX_DUP" valueType="string"/>
+    <property name="description" value="Agregación para encontrar tarjetas con mas de una llave del nombre en CXREF" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="a07a03b5-dba0-40f6-a9f3-ed4f418d72c8" valueType="string"/>
+            <property name="name" value="ATPT1_002" valueType="string"/>
+            <property name="description" value="Número de cuenta" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="NOT_NULLABLE" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="7e154215-b7aa-49c8-bb12-6d257999df3f" valueType="string"/>
+            <property name="name" value="CTATJ_002" valueType="string"/>
+            <property name="description" value="Número tarjeta" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="da66bb4c-da5c-413e-924a-2910214fed8f" valueType="string"/>
+            <property name="name" value="CNAMK_DUP" valueType="string"/>
+            <property name="description" value="Llave de nombre duplicados" valueType="string"/>
+            <property name="aggrMethod" value="COUNT_DISTINCT" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table">
+        <object type="Aggregation:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ATPT1_002"{a07a03b5-dba0-40f6-a9f3-ed4f418d72c8}]</property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ATPT1_002"{a07a03b5-dba0-40f6-a9f3-ed4f418d72c8}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}].hierarchy["root"{b65e3ca0-777c-42e4-b60f-99237dfa1bae}].dataSource.layout["ATPT1_002"{84eeb639-2966-44f0-8b82-4e01b3a73f58}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CTATJ_002"{7e154215-b7aa-49c8-bb12-6d257999df3f}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="LTRIM(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}].hierarchy["root"{b65e3ca0-777c-42e4-b60f-99237dfa1bae}].dataSource.layout["CTATJ_002"{7c02264d-6fbe-49fd-bc18-e31081b3692c}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'0')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="20" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["CNAMK_DUP"{da66bb4c-da5c-413e-924a-2910214fed8f}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}].hierarchy["TIPO_PERSONA_SEXO"{30fa5a86-947b-4fda-a3f9-5de28524e654}].dataSource.layout["CXNAMK"{5c336c96-5874-4fa9-b99d-66c76acb7339}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="Condition:list" version="1.0">
+                            <property name="field" valueType="object">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}].hierarchy["TIPO_PERSONA_SEXO"{30fa5a86-947b-4fda-a3f9-5de28524e654}].dataSource.layout["CXCDAP"{c5dad1cf-a34f-4b3a-beef-26a623a152fa}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="operation" value="IN" valueType="string"/>
+                            <property name="values" valueType="table">
+                                <object type="Condition:list:value" version="1.0">
+                                    <property name="value" value="M" valueType="string"/>
+                                </object>
+                                <object type="Condition:list:value" version="1.0">
+                                    <property name="value" value="K" valueType="string"/>
+                                </object>
+                                <object type="Condition:list:value" version="1.0">
+                                    <property name="value" value="V" valueType="string"/>
+                                </object>
+                            </property>
+                        </objectNode>
+                        <objectNode type="Condition:singularConcrete" version="1.0">
+                            <property name="field" valueType="object">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["F_414_TARJETAS_PER_SEX"{fa33b3aa-a47b-4de4-ba72-a169bffe2bf9}].hierarchy["TIPO_PERSONA_SEXO"{30fa5a86-947b-4fda-a3f9-5de28524e654}].dataSource.layout["CXCDAR"{0ba3c47e-5fb6-4ab1-aa8d-347758a9065e}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="operation" value="=" valueType="string"/>
+                            <property name="value" value="T" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 16/06/2022 - sergigon&#xa;Descripción:&#xa;- Se crea Agg para identificar tarjetas que tengan asociado mas de una llave del nombre (cliente) en CXREF." valueType="string"/>
+        </object>
+    </property>
+</object>

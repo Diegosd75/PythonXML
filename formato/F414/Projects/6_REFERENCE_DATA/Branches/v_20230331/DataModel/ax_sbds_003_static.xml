@@ -1,0 +1,34 @@
+<object stamp="340fded5-561d-4ac3-81f3-86d704096d80_1676939829971" type="DataModel" version="2.0">
+    <property name="objectId" value="a40779c7-b999-4144-9490-b8bd9d14062b" valueType="string"/>
+    <property name="branchId" value="d815d827-3160-4110-8313-d0cc75d0231f" valueType="string"/>
+    <property name="name" value="ax_sbds_003_static" valueType="string"/>
+    <property name="description" value="ax_sbds_003_static" valueType="string"/>
+    <property name="isPermanent" value="true" valueType="boolean"/>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="083c99c2-b046-4faa-8b9f-43d6cf2855b3" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Insumo de datos de informe F-238" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["ax_sbds_003_static"{3c903bad-d844-48e1-8fa2-9e77d12afaae}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="LATEST" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table"/>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+</object>

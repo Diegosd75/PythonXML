@@ -1,0 +1,195 @@
+﻿<object stamp="98ea2a83-1f58-45bb-933a-3b2969e729d0_1676939818111" type="DataSource" version="9.0">
+    <property name="objectId" value="f97728a0-957c-4b7f-b2a7-9c1c402c9f18" valueType="string"/>
+    <property name="branchId" value="d815d827-3160-4110-8313-d0cc75d0231f" valueType="string"/>
+    <property name="name" value="TM_PLANES_MARCACION_04" valueType="string"/>
+    <property name="description" value="Contiene los planes para la marcación del producto cosechas" valueType="string"/>
+    <property name="hosting" value="INTERNAL" valueType="string"/>
+    <property name="dbSource" valueType="url">DBSource["SHMIGRAP"{8fd66b4e-bd84-4509-8eaf-10fad0fa2e33}]</property>
+    <property name="defaultVisibilityInModel" value="true" valueType="boolean"/>
+    <property name="dataStructure" value="FLAT" valueType="string"/>
+    <property name="layout" valueType="table">
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="c00bdf10-58ce-49fc-8961-ba381962b44d" valueType="string"/>
+            <property name="name" value="axiom_index" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="41abb9b5-a6d6-4173-9137-4a958deabd83" valueType="string"/>
+            <property name="name" value="PLAN" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="10" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="4248b96f-c3a4-4c10-a1fd-2344c251d7a7" valueType="string"/>
+            <property name="name" value="UNIDAD_CAPTURA" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="2" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="keyFields" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["PLAN"{41abb9b5-a6d6-4173-9137-4a958deabd83}]</property>
+        </object>
+    </property>
+    <property name="index" valueType="table"/>
+    <property name="createIndexOnKeyFields" value="true" valueType="boolean"/>
+    <property name="indexOnKeyFieldsClustered" value="true" valueType="boolean"/>
+    <property name="storageType" value="PERMANENT" valueType="string"/>
+    <property name="internalSourceTablePrefix" value="TR_PLANES_MARCACION_" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="computeStatistics" value="NONE" valueType="string"/>
+    <property name="validations" valueType="table"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="readOnlyAdjustment" value="false" valueType="boolean"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="loaders" valueType="table">
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="9f3c12da-851d-49b9-8684-fedb3ba7cb5b" valueType="string"/>
+            <property name="name" value="New_Scenario_1" valueType="string"/>
+            <property name="loaderType" value="fileLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="FileLoaderParameters" version="3.0">
+                    <property name="delimiter" value="\t" valueType="string"/>
+                    <property name="skipRows" value="1" valueType="integer"/>
+                    <property name="newlineConversion" value="none" valueType="string"/>
+                    <property name="targetEncoding" value="utf8" valueType="string"/>
+                    <property name="convertEncoding" value="false" valueType="boolean"/>
+                    <property name="loaderEnumerationField" valueType="object">
+                        <object type="DataSource:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{c00bdf10-58ce-49fc-8961-ba381962b44d}]</property>
+                        </object>
+                    </property>
+                    <property name="trailingNullCols" value="true" valueType="boolean"/>
+                    <property name="loadSheetName" value="" valueType="string"/>
+                    <property name="columnHeadersFromFile" value="false" valueType="boolean"/>
+                    <property name="maxErrors" value="1" valueType="integer"/>
+                    <property name="maxMessagesInTaskLog" value="100" valueType="integer"/>
+                    <property name="doNotFailIfRejected" value="false" valueType="boolean"/>
+                    <property name="parameterIsNotAFile" value="false" valueType="boolean"/>
+                    <property name="codeWillCreateFile" value="false" valueType="boolean"/>
+                    <property name="loaderControlFile" value="" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["PLAN"{41abb9b5-a6d6-4173-9137-4a958deabd83}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["UNIDAD_CAPTURA"{4248b96f-c3a4-4c10-a1fd-2344c251d7a7}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="withJournal" value="false" valueType="boolean"/>
+                    <property name="loadingStatement" value="APPEND" valueType="string"/>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="85eb1cc4-f707-4913-a426-e95a4fd324da" valueType="string"/>
+            <property name="name" value="ConexionDirectaMigracion" valueType="string"/>
+            <property name="loaderType" value="tableLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="TableLoaderParameters" version="2.0">
+                    <property name="loaderSelectDistinct" value="false" valueType="boolean"/>
+                    <property name="loaderCondition" valueType="table"/>
+                    <property name="dbSourceToLoadFrom" valueType="url">DBSource["CV9_PROD_CNXREPLP"{cf52ab4b-cbab-40f6-97d4-57749cd0811f}]</property>
+                    <property name="tableLoadingMethod" value="direct" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["axiom_index"{c00bdf10-58ce-49fc-8961-ba381962b44d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="axiom_index" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["PLAN"{41abb9b5-a6d6-4173-9137-4a958deabd83}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="PLAN" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["UNIDAD_CAPTURA"{4248b96f-c3a4-4c10-a1fd-2344c251d7a7}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="UNIDAD_CAPTURA" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="true" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha: 2020/08/03&#xa;Configurador: Allan Echavarria&#xa;Descripción: Creación de tabla para la administración de los planes de SUFI" valueType="string"/>
+        </object>
+    </property>
+</object>

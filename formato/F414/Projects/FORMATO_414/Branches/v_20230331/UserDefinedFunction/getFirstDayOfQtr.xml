@@ -1,0 +1,21 @@
+<object stamp="1560609f-5477-41e2-8f0d-fabd3fb3dcef_1428965452636" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="31d1dd35-8124-4133-bc51-5810412febf8" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="getFirstDayOfQtr" valueType="string"/>
+    <property name="description" value="getFirstDayOfQtr" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="current_date" valueType="string"/>
+            <property name="description" value="current_date" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="var c2 := class(&quot;java.util.Calendar&quot;).getInstance();&#xa;c2.setTime(current_date);&#xa;var year:=c2.get(c2.YEAR);&#xa;var month:=c2.get(c2.MONTH);&#xa;var quarter:= ((month)/3)+1;&#xa;var new_month:=(quarter*3)-3;&#xa;c2.set(year, new_month, 1);&#xa;c2.getTime();" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

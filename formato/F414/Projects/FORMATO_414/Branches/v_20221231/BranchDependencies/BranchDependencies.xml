@@ -1,0 +1,55 @@
+<object stamp="57242ae9-81d9-42e8-9d93-66f231b8ecbd_1687465401770" type="BranchDependencies" version="2.0">
+    <property name="name" value="BranchDependencies" valueType="string"/>
+    <property name="description" value="Branch Dependencies" valueType="string"/>
+    <property name="objectId" value="BranchDependencies" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="dependencies" valueType="table">
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5" valueType="string"/>
+            <property name="name" value="fd_m" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="branch" valueType="url">Branch["3_FACT_DATA_MONTHLY!v_20221231"{cc80f320-0e4a-44c5-aa83-c0fbe40dd26f}]</property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="36e4b463-866f-49b6-8c90-b991aae603ad" valueType="string"/>
+            <property name="name" value="prev_f414" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="branch" valueType="url">Branch["FORMATO_414!v_20220930"{1e3d268c-c6f1-4f3d-b5cd-1930c0c5bfcf}]</property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="fa9a2d4e-cf9e-40ed-8cb1-1a36191d6101" valueType="string"/>
+            <property name="name" value="fd_m_dinamic_fut" valueType="string"/>
+            <property name="description" value="Fact Data Monthly - Dinamico" valueType="string"/>
+            <property name="branch" valueType="url">Branch["3_FACT_DATA_MONTHLY!v_20221231"{cc80f320-0e4a-44c5-aa83-c0fbe40dd26f}]</property>
+            <property name="branchExpression" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:udfReference" version="1.0">
+                            <property name="value" valueType="url">UserDefinedFunction["UDFs:getBranchIDbyName_D_Prev_Fut"{UDFs:0433e607-31d1-4d5c-ba3e-20a0833934ff}]</property>
+                        </object>
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="('3_FACT_DATA_MONTHLY', TIME_TAG,1)" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="UDFs" valueType="string"/>
+            <property name="name" value="UDFs" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="branch" valueType="url">Branch["UDFs!UDFs"{UDFs}]</property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="1de6ee41-f0de-4956-8634-1a9327feacbd" valueType="string"/>
+            <property name="name" value="EmailTemplates" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="branch" valueType="url">Branch["EmailTemplates!EmailTemplates"{EmailTemplates}]</property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+    </property>
+</object>

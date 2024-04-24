@@ -1,0 +1,34 @@
+﻿<object stamp="ab1cac58-8346-491f-b41a-b58fbd114a13_1676021129453" type="DataModel" version="2.0">
+    <property name="objectId" value="ea1b552a-6be1-4b24-b29f-5b2d65c15bab" valueType="string"/>
+    <property name="branchId" value="a98444b1-3095-4c2b-8454-f1a7c2a459fb" valueType="string"/>
+    <property name="name" value="TR_PARAMETROS_414" valueType="string"/>
+    <property name="description" value="TR_PARAMETROS_414" valueType="string"/>
+    <property name="isPermanent" value="true" valueType="boolean"/>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="c60c942c-a12e-48d8-a1ff-99a6904485db" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Tabla parametrica para identificar: Tipo persona, sexo, plazo, prodcuto crédito, garantía, entre otros" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["TR_PARAMETROS_F414"{8c728223-60bd-4f5e-bf97-e882d690bcc7}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table"/>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+</object>

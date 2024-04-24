@@ -1,0 +1,230 @@
+﻿<object stamp="29b1f0d3-c4c9-480a-8f63-b634b659cfb7_1657218883820" type="WorkFlow" version="9.0">
+    <property name="objectId" value="801d9a44-814a-4763-b30f-ee101b52adc1" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_SABANA_FACTORING" valueType="string"/>
+    <property name="description" value="Flujo donde se ejecuta toda la sabana de factoring lt, proveedor y pagador" valueType="string"/>
+    <property name="modules" valueType="table">
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="8bcec1dd-9ad4-45fa-8f12-accf1e54465b" valueType="string"/>
+            <property name="description" value="F_414_SABANA_FACTORING_LT" valueType="string"/>
+            <property name="id" value="8bcec1dd-9ad4-45fa-8f12-accf1e54465b" valueType="string"/>
+            <property name="taskType" value="WorkFlow" valueType="string"/>
+            <property name="underlyingObject" valueType="url">WorkFlow["F_414_SABANA_FACTORING_LT"{673d6251-4166-451c-b5aa-5ed81fd417cc}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="WorkFlow:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="keyVariables" valueType="table"/>
+                    <property name="nonKeyVariables" valueType="table"/>
+                    <property name="inMemoryExecution" value="false" valueType="boolean"/>
+                    <property name="alwaysRestartAllModules" value="false" valueType="boolean"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table"/>
+            <property name="locationX" value="25.0" valueType="double"/>
+            <property name="locationY" value="93.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="e1c0cda9-c8e0-4d8d-a7b1-f3ad20ec9b1e" valueType="string"/>
+            <property name="description" value="F_414_SABANA_FACTORING_PRO" valueType="string"/>
+            <property name="id" value="e1c0cda9-c8e0-4d8d-a7b1-f3ad20ec9b1e" valueType="string"/>
+            <property name="taskType" value="WorkFlow" valueType="string"/>
+            <property name="underlyingObject" valueType="url">WorkFlow["F_414_SABANA_FACTORING_PRO"{4644ffc6-2821-4490-97bd-2eccb5369874}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="WorkFlow:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="keyVariables" valueType="table"/>
+                    <property name="nonKeyVariables" valueType="table"/>
+                    <property name="inMemoryExecution" value="false" valueType="boolean"/>
+                    <property name="alwaysRestartAllModules" value="false" valueType="boolean"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="8bcec1dd-9ad4-45fa-8f12-accf1e54465b" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="384.0" valueType="double"/>
+            <property name="locationY" value="93.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="e1ff5167-1222-4174-a210-6cb7b2fd0b2d" valueType="string"/>
+            <property name="description" value="F_414_SABANA_FACTORING_PGD" valueType="string"/>
+            <property name="id" value="e1ff5167-1222-4174-a210-6cb7b2fd0b2d" valueType="string"/>
+            <property name="taskType" value="WorkFlow" valueType="string"/>
+            <property name="underlyingObject" valueType="url">WorkFlow["F_414_SABANA_FACTORING_PGD"{84abf7f9-ce16-4d00-b04a-71eef574a112}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="WorkFlow:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="keyVariables" valueType="table"/>
+                    <property name="nonKeyVariables" valueType="table"/>
+                    <property name="inMemoryExecution" value="false" valueType="boolean"/>
+                    <property name="alwaysRestartAllModules" value="false" valueType="boolean"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="e1c0cda9-c8e0-4d8d-a7b1-f3ad20ec9b1e" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="770.0" valueType="double"/>
+            <property name="locationY" value="94.0" valueType="double"/>
+        </object>
+    </property>
+    <property name="archivalProperties" valueType="object">
+        <object type="ArchivalProperties" version="4.0">
+            <property name="archivalFrequencies" valueType="table"/>
+            <property name="archivalProfileIsMandatory" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="iterators" valueType="table"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="alwaysRestartAllModules" value="false" valueType="boolean"/>
+    <property name="inMemoryExecution" value="false" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación:&#x9;05-apr-2022&#xa;Analista:&#x9;caalmosq&#xa;Objetivo:&#x9;Flujo donde se ejecuta toda la sabana de factoring lt, proveedor y pagador" valueType="string"/>
+        </object>
+    </property>
+    <property name="isOverwriteOnImport" value="true" valueType="boolean"/>
+</object>

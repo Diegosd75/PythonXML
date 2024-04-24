@@ -1,0 +1,92 @@
+﻿<object stamp="e3efa646-5e6a-45f1-acbb-2b3abf3ae3cf_1654803350879" type="Shorthand" version="2.0">
+    <property name="objectId" value="948f1275-a686-49ac-a685-0f750b371f08" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_EXCLUIR_BANCO" valueType="string"/>
+    <property name="description" value="se crea filtro para excluir los nit de la tabla parametrica" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_OBLIGACIONES_BANCO"{152fe44d-5bc9-465c-b0ed-dc5d8d822995}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción:&#xa;se crea filtro para excluir los nit de la tabla parametrica" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="BANCO" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_OBLIGACIONES_BANCO"{152fe44d-5bc9-465c-b0ed-dc5d8d822995}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularExpression" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_OBLIGACIONES_BANCO"{152fe44d-5bc9-465c-b0ed-dc5d8d822995}].hierarchy["root"{abbcb52b-0d3b-4b6e-bf4a-f78f522430c8}].dataSource.layout["CNNOSS"{9969177c-59db-45da-b98b-136ccf111f08}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="(select VALOR from " valueType="string"/>
+                                        </object>
+                                        <object type="SQLFormula" version="1.0">
+                                            <property name="expression" valueType="object">
+                                                <object type="ASLExpression" version="1.0">
+                                                    <property name="expression" valueType="table">
+                                                        <object type="ASLExpression:part" version="1.0">
+                                                            <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" where FUENTE = 'NIT_FILIAL' AND PARAMETRO ='EXCLUIR' AND CAMPO = 'CNNOSS')" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_OBLIGACIONES_BANCO"{152fe44d-5bc9-465c-b0ed-dc5d8d822995}].hierarchy["root"{abbcb52b-0d3b-4b6e-bf4a-f78f522430c8}].dataSource.layout["LMAMTC_SIN_NOVACION"{90b7ce0a-7263-4884-8421-231633f1386c}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="!=" valueType="string"/>
+                                    <property name="value" value="0.0" valueType="string"/>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

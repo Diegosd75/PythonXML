@@ -1,0 +1,1304 @@
+﻿<object stamp="c343329e-25d9-4886-bf7c-912fa4df2cb2_1657649018868" type="WorkFlow" version="9.0">
+    <property name="objectId" value="4644ffc6-2821-4490-97bd-2eccb5369874" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_SABANA_FACTORING_PRO" valueType="string"/>
+    <property name="description" value="FLUJO DONDE SE EJECUTA LA SABANA DE FACORING PROVEEDOR" valueType="string"/>
+    <property name="modules" valueType="table">
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="507df694-7f11-4aca-8e9d-280b67c2e160" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PROVEEDOR" valueType="string"/>
+            <property name="id" value="507df694-7f11-4aca-8e9d-280b67c2e160" valueType="string"/>
+            <property name="taskType" value="RegisterModelInstance" valueType="string"/>
+            <property name="underlyingObject" valueType="url">DataModel["F_414_FACTORING_PROVEEDOR"{1555d7ce-058d-47cf-9d0d-cd597f74f55c}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="RegisterModelInstance:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="sourceDates" valueType="table">
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="root" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="MCFDC" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="MCHOB" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="SCGNI" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table"/>
+            <property name="locationX" value="340.0" valueType="double"/>
+            <property name="locationY" value="61.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="550784a2-5455-4b02-868d-ca859fc67711" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PROVEEDOR" valueType="string"/>
+            <property name="id" value="550784a2-5455-4b02-868d-ca859fc67711" valueType="string"/>
+            <property name="taskType" value="Aggregation" valueType="string"/>
+            <property name="underlyingObject" valueType="url">Aggregation["F_414_FACTORING_PROVEEDOR"{6e84534d-2e0e-4a67-8a60-be52da45a459}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="Aggregation:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="F_414_FACTORING_PROVEEDOR" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="507df694-7f11-4aca-8e9d-280b67c2e160" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="674.0" valueType="double"/>
+            <property name="locationY" value="61.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="f2c74464-0fdb-4a99-9713-4a63ad008068" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PROV_PER_SEX" valueType="string"/>
+            <property name="id" value="f2c74464-0fdb-4a99-9713-4a63ad008068" valueType="string"/>
+            <property name="taskType" value="RegisterModelInstance" valueType="string"/>
+            <property name="underlyingObject" valueType="url">DataModel["F_414_FACTORING_PROV_PER_SEX"{9d932f43-f895-48ef-b278-f54ebc63f2f5}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="RegisterModelInstance:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="sourceDates" valueType="table">
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="root" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="CNAME" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="550784a2-5455-4b02-868d-ca859fc67711" valueType="string"/>
+                    <property name="lineConnectors" valueType="table">
+                        <object type="WorkFlow:lineConnector" version="1.0">
+                            <property name="locationX" value="982.0" valueType="double"/>
+                            <property name="locationY" value="156.0" valueType="double"/>
+                        </object>
+                        <object type="WorkFlow:lineConnector" version="1.0">
+                            <property name="locationX" value="5.0" valueType="double"/>
+                            <property name="locationY" value="164.0" valueType="double"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="locationX" value="32.0" valueType="double"/>
+            <property name="locationY" value="171.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="4d2fc5fa-08f7-4500-a90d-50faa1cd8086" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_PER_SEX" valueType="string"/>
+            <property name="id" value="4d2fc5fa-08f7-4500-a90d-50faa1cd8086" valueType="string"/>
+            <property name="taskType" value="Aggregation" valueType="string"/>
+            <property name="underlyingObject" valueType="url">Aggregation["F_414_FACTORING_PRO_PER_SEX"{e5986ae9-ba0e-46d5-8b5e-adb37b3cc6a9}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="Aggregation:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="F_414_FACTORING_PROV_PER_SEX" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="f2c74464-0fdb-4a99-9713-4a63ad008068" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="396.0" valueType="double"/>
+            <property name="locationY" value="171.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="38b06230-766d-45e4-b867-369277b0239d" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_TR" valueType="string"/>
+            <property name="id" value="38b06230-766d-45e4-b867-369277b0239d" valueType="string"/>
+            <property name="taskType" value="RegisterModelInstance" valueType="string"/>
+            <property name="underlyingObject" valueType="url">DataModel["F_414_FACTORING_PRO_TR"{ddb11e60-86cf-41b7-a08e-b3720c3bdc11}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="RegisterModelInstance:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="sourceDates" valueType="table">
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="root" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="TR_PARAMETROS_F414" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="4d2fc5fa-08f7-4500-a90d-50faa1cd8086" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="748.0" valueType="double"/>
+            <property name="locationY" value="171.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="49135244-73c9-4c22-bc6d-4466f23d77d6" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_TR" valueType="string"/>
+            <property name="id" value="49135244-73c9-4c22-bc6d-4466f23d77d6" valueType="string"/>
+            <property name="taskType" value="Aggregation" valueType="string"/>
+            <property name="underlyingObject" valueType="url">Aggregation["F_414_FACTORING_PRO_TR"{aae20f15-6171-4fc1-911c-c3e92e62ff98}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="Aggregation:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="F_414_FACTORING_PRO_TR" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="38b06230-766d-45e4-b867-369277b0239d" valueType="string"/>
+                    <property name="lineConnectors" valueType="table">
+                        <object type="WorkFlow:lineConnector" version="1.0">
+                            <property name="locationX" value="1025.0" valueType="double"/>
+                            <property name="locationY" value="266.0" valueType="double"/>
+                        </object>
+                        <object type="WorkFlow:lineConnector" version="1.0">
+                            <property name="locationX" value="12.0" valueType="double"/>
+                            <property name="locationY" value="271.0" valueType="double"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="locationX" value="37.0" valueType="double"/>
+            <property name="locationY" value="277.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="7ea3407f-2d6b-462a-89b2-7e83bd126823" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_EMP" valueType="string"/>
+            <property name="id" value="7ea3407f-2d6b-462a-89b2-7e83bd126823" valueType="string"/>
+            <property name="taskType" value="RegisterModelInstance" valueType="string"/>
+            <property name="underlyingObject" valueType="url">DataModel["F_414_FACTORING_PRO_EMP"{8fe43616-175b-4d1e-925c-14a48b28987c}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="RegisterModelInstance:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="sourceDates" valueType="table">
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="root" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="TAMANO_EMPRESA" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="TR_PARAMETROS_F414" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="49135244-73c9-4c22-bc6d-4466f23d77d6" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="342.0" valueType="double"/>
+            <property name="locationY" value="277.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="aab6c70d-4956-47f5-bc32-bc73f577dd93" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_EMP" valueType="string"/>
+            <property name="id" value="aab6c70d-4956-47f5-bc32-bc73f577dd93" valueType="string"/>
+            <property name="taskType" value="Aggregation" valueType="string"/>
+            <property name="underlyingObject" valueType="url">Aggregation["F_414_FACTORING_PRO_EMP"{ea8cb21d-4e28-45d9-b61d-6b66fea71618}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="Aggregation:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="F_414_FACTORING_PRO_EMP" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table">
+                        <object type="Variable:valueFormula" version="1.0">
+                            <property name="name" value="SECTOR_NA" valueType="string"/>
+                            <property name="formula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="select(&quot;select distinct SECTOR_SFC from &quot; + sourceTable(&quot;fd_m:fd_w:fd_d:ref_data:TR_SECTOR_SFC&quot;, TIME_TAG) + &quot; WHERE SECTOR_CUSTOMER = 'N/A' &quot;)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="7ea3407f-2d6b-462a-89b2-7e83bd126823" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="725.0" valueType="double"/>
+            <property name="locationY" value="277.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="2d7df119-db73-4163-9a93-8966be9051d6" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO" valueType="string"/>
+            <property name="id" value="2d7df119-db73-4163-9a93-8966be9051d6" valueType="string"/>
+            <property name="taskType" value="Portfolio" valueType="string"/>
+            <property name="underlyingObject" valueType="url">Portfolio["F_414_FACTORING_PRO"{3423aedf-895d-47a7-bd45-028849f7c0d2}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="Portfolio:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="Aggregation[F_414_FACTORING_PRO_EMP]" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="Aggregation[F_414_FACTORING_PRO_GAR]" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="Aggregation[F_414_FACTORING_PRO_TR]" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="610175cf-261b-47ea-84de-f6fe0a305e4c" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="725.0" valueType="double"/>
+            <property name="locationY" value="393.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="30c99f7d-ce25-4fbc-85a3-8cf5de506906" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_GAR" valueType="string"/>
+            <property name="id" value="30c99f7d-ce25-4fbc-85a3-8cf5de506906" valueType="string"/>
+            <property name="taskType" value="RegisterModelInstance" valueType="string"/>
+            <property name="underlyingObject" valueType="url">DataModel["F_414_FACTORING_PRO_GAR"{c056764e-8768-48ea-b85c-c7f163b88f55}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="RegisterModelInstance:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="sourceDates" valueType="table">
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="root" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="XXGAR" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="CEGASV" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="XOWBN" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="RegisterModelInstance:sourceDateEntryValueFormula" version="1.0">
+                            <property name="alias" value="TR_PARAMETROS_F414" valueType="string"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="aab6c70d-4956-47f5-bc32-bc73f577dd93" valueType="string"/>
+                    <property name="lineConnectors" valueType="table">
+                        <object type="WorkFlow:lineConnector" version="1.0">
+                            <property name="locationX" value="1011.0" valueType="double"/>
+                            <property name="locationY" value="372.0" valueType="double"/>
+                        </object>
+                        <object type="WorkFlow:lineConnector" version="1.0">
+                            <property name="locationX" value="12.0" valueType="double"/>
+                            <property name="locationY" value="383.0" valueType="double"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="locationX" value="38.0" valueType="double"/>
+            <property name="locationY" value="394.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="610175cf-261b-47ea-84de-f6fe0a305e4c" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_GAR" valueType="string"/>
+            <property name="id" value="610175cf-261b-47ea-84de-f6fe0a305e4c" valueType="string"/>
+            <property name="taskType" value="Aggregation" valueType="string"/>
+            <property name="underlyingObject" valueType="url">Aggregation["F_414_FACTORING_PRO_GAR"{59060321-c711-4247-82e5-5be4f5e802bc}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="Aggregation:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="F_414_FACTORING_PRO_GAR" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="30c99f7d-ce25-4fbc-85a3-8cf5de506906" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="352.0" valueType="double"/>
+            <property name="locationY" value="394.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="ed38b928-3f28-4156-96de-fd41cf556952" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_TOTAL" valueType="string"/>
+            <property name="id" value="ed38b928-3f28-4156-96de-fd41cf556952" valueType="string"/>
+            <property name="taskType" value="Aggregation" valueType="string"/>
+            <property name="underlyingObject" valueType="url">Aggregation["F_414_FACTORING_PRO_TOTAL"{b41d403a-2ab3-478b-93c3-61abe31ede81}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="Aggregation:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="Aggregation[F_414_FACTORING_PRO_DETALLE]" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="86b9d1e5-c5a6-4345-8979-3db494ca0660" valueType="string"/>
+                    <property name="lineConnectors" valueType="table"/>
+                </object>
+            </property>
+            <property name="locationX" value="523.0" valueType="double"/>
+            <property name="locationY" value="501.0" valueType="double"/>
+        </object>
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="86b9d1e5-c5a6-4345-8979-3db494ca0660" valueType="string"/>
+            <property name="description" value="F_414_FACTORING_PRO_DETALLE" valueType="string"/>
+            <property name="id" value="86b9d1e5-c5a6-4345-8979-3db494ca0660" valueType="string"/>
+            <property name="taskType" value="Aggregation" valueType="string"/>
+            <property name="underlyingObject" valueType="url">Aggregation["F_414_FACTORING_PRO_DETALLE"{6e4b0643-f056-4925-9e5c-70607e638df7}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="Aggregation:workflowDelegate" version="1.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="Portfolio[F_414_FACTORING_PRO].Aggregation[F_414_FACTORING_PRO_EMP]" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="Portfolio[F_414_FACTORING_PRO].Aggregation[F_414_FACTORING_PRO_GAR]" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="Portfolio[F_414_FACTORING_PRO].Aggregation[F_414_FACTORING_PRO_TR]" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table"/>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table">
+                <object type="WorkFlow:parentModule" version="1.0">
+                    <property name="id" value="2d7df119-db73-4163-9a93-8966be9051d6" valueType="string"/>
+                    <property name="lineConnectors" valueType="table">
+                        <object type="WorkFlow:lineConnector" version="1.0">
+                            <property name="locationX" value="965.0" valueType="double"/>
+                            <property name="locationY" value="488.0" valueType="double"/>
+                        </object>
+                        <object type="WorkFlow:lineConnector" version="1.0">
+                            <property name="locationX" value="13.0" valueType="double"/>
+                            <property name="locationY" value="496.0" valueType="double"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="locationX" value="38.0" valueType="double"/>
+            <property name="locationY" value="502.0" valueType="double"/>
+        </object>
+    </property>
+    <property name="archivalProperties" valueType="object">
+        <object type="ArchivalProperties" version="4.0">
+            <property name="archivalFrequencies" valueType="table"/>
+            <property name="archivalProfileIsMandatory" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="iterators" valueType="table"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="alwaysRestartAllModules" value="false" valueType="boolean"/>
+    <property name="inMemoryExecution" value="false" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 31/05/2022 - caalmosq&#xa;Descripción:FLUJO DONDE SE EJECUTA LA SABANA DE FACORING PROVEEDOR&#xa;" valueType="string"/>
+        </object>
+    </property>
+    <property name="isOverwriteOnImport" value="true" valueType="boolean"/>
+</object>

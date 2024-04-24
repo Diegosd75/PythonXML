@@ -1,0 +1,31 @@
+<object stamp="b366cac4-cce8-4115-a348-f84c945d1bca_1616083996554" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="1db7a4eb-bf3a-41c4-82f8-b5f1b904e1fa" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_ListParametersPPCTable" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="LPPPCT_PPCTable" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="LPPPCT_mode" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Get list PPC table parameters &#xa;Input variables:&#xa;LPPPCT_PPCTable - export tables with leaf PPC;&#xa;LPPPCT_mode - &#xa;Return:&#xa;HashMap&lt;indexPPCTable, HashMap&lt;nameParameter, valueParameter>>&#xa;-->&#xa;trace(&quot;#!#!#! ppc_ListParametersPPCTable. Started #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_ListParametersPPCTable. Copyright by AXIOM SL, Igor Kirilyuk, 2021.02.14 #!#!#!&quot;);&#xa;&#xa;var LPPPCT_startDate = new(&quot;java.util.Date&quot;);&#xa;&#xa;var LPPPCT_ColumnListParameters;&#xa;&lt;case>&#xa;&#x9;LPPPCT_mode == 1&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_ListParametersPPCTable. Table: ExtendRows #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;LPPPCT_ColumnListParameters = 16;&#xa;&#x9;&#x9;&lt;/then>&#xa;&#x9;LPPPCT_mode == 2&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_ListParametersPPCTable. Table: ExtendCols #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;LPPPCT_ColumnListParameters = 11;&#xa;&#x9;&#x9;&lt;/then>&#xa;&#x9;LPPPCT_mode == 3&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_ListParametersPPCTable. Table: ExtendColsEX #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;LPPPCT_ColumnListParameters = 16;&#xa;&#x9;&#x9;&lt;/then>&#xa;&#x9;LPPPCT_mode == 4&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_ListParametersPPCTable. Table: ExtendBlocks #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;LPPPCT_ColumnListParameters = 7;&#xa;&#x9;&#x9;&lt;/then>&#xa;&#x9;LPPPCT_mode == 5&#xa;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_ListParametersPPCTable. Table: ExtendBlockInBlockEX #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;LPPPCT_ColumnListParameters = 10;&#xa;&#x9;&#x9;&lt;/then>&#xa;&lt;/case>&#xa;&#xa;var LPPPCT_listParametersPPCTable = Map();&#xa;&lt;for> var indexPPCTable = 0 &lt;comma/> indexPPCTable &amp;lt; LPPPCT_PPCTable.size() &lt;comma/> indexPPCTable++&#xa;&#x9;&lt;do>&#xa;&#x9;&#x9;var LPPPCT_listParameters = Map();&#xa;&#x9;&#x9;var LPPPCT_parameters = LPPPCT_PPCTable.get(indexPPCTable).get(LPPPCT_ColumnListParameters);&#xa;&#x9;&#x9;&lt;if> (LPPPCT_parameters != null) and (!LPPPCT_parameters.isEmpty())&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexParameters = 0 &lt;comma/> indexParameters &amp;lt; LPPPCT_parameters.split(&quot;,&quot;).size() &lt;comma/> indexParameters++&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var LPPPCT_nameParameters = LPPPCT_parameters.split(&quot;,&quot;).get(indexParameters).split(&quot;:&quot;).get(0).trim().toUpperCase();&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var LPPPCT_valueParameters = if(LPPPCT_parameters.split(&quot;,&quot;).get(indexParameters).split(&quot;:&quot;).size() &amp;gt;= 2, LPPPCT_parameters.split(&quot;,&quot;).get(indexParameters).split(&quot;:&quot;).get(1).trim().toUpperCase(), null);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;LPPPCT_listParameters.put(LPPPCT_nameParameters, LPPPCT_valueParameters);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#x9;&#x9;LPPPCT_listParametersPPCTable.put(indexPPCTable, LPPPCT_listParameters);&#xa;&#x9;&lt;/do>&#xa;&lt;/for>&#x9;&#xa;trace(&quot;#!#!#! ppc_ListParametersPPCTable. &quot; + " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RunTime"{01bdef00-6989-424b-84f9-c81ca2885e47}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(LPPPCT_startDate, new(&quot;java.util.Date&quot;)) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_ListParametersPPCTable. Finished #!#!#!&quot;);&#xa;; LPPPCT_listParametersPPCTable" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

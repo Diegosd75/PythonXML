@@ -1,0 +1,313 @@
+﻿<object stamp="68682a07-2a51-4015-89d8-87b6fb1fa01c_1666711507929" type="DataModel" version="2.0">
+    <property name="objectId" value="5db30201-7435-4efe-9d4b-2dad40df0671" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_INFORMACION_LEASING" valueType="string"/>
+    <property name="description" value="Modelo con el cruce de informacion de leasing" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="1abd7844-3709-462c-90c0-a3c6e4f061b8" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Leasing -  Maestro de operaciones" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="9534b2c5-8744-42c7-a37b-914b534a5272" valueType="string"/>
+                    <property name="name" value="SBMAECLBF" valueType="string"/>
+                    <property name="description" value="Leasing - Maestro de clientes" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:LEASING_SBMAECLBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:7c17cc86-95b9-401e-b4c4-62206996f90a}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:LEASING_SBMAECLBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:7c17cc86-95b9-401e-b4c4-62206996f90a}].layout["SCLNCLAVE"{ffecb1ea-8b41-4f16-9c3a-b32d107f15c1}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["PMPNROAUX"{9f053c48-5f4c-4bda-b00d-831b892b653d}]</property>
+                        </object>
+                    </property>
+                    <children>
+                        <objectNode type="DataModel:node" version="1.0">
+                            <property name="id" value="a1c55d74-eceb-4dc7-a188-aca5ad9c64e9" valueType="string"/>
+                            <property name="name" value="TR_TIPOID" valueType="string"/>
+                            <property name="description" value="Tabla de homologación tipo documento Leasing  a TipoId Banco (CNAME)" valueType="string"/>
+                            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_TIPOID_LEASING"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:fb86e576-e8c4-432f-aca9-b40db50b413e}]</property>
+                            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                            <property name="additionalConstraint" valueType="table"/>
+                            <property name="additionalJoinExpression" valueType="table"/>
+                            <property name="instanceSelectionRule" valueType="object">
+                                <object type="InstanceSelectionRule" version="1.0">
+                                    <property name="instanceDateRule" valueType="object">
+                                        <object type="InstanceSelectionRule:rule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                    <property name="instanceKeyRules" valueType="table">
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="version" valueType="string"/>
+                                        </object>
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="join" valueType="table">
+                                <object type="DataModel:node:join" version="1.0">
+                                    <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_TIPOID_LEASING"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:fb86e576-e8c4-432f-aca9-b40db50b413e}].layout["SCLTIPIDEN"{fe62810e-2b9c-48e1-bb3e-9e0d6abaefe6}]</property>
+                                    <property name="parentField" valueType="url">DataSource["fd_m:fd_w:LEASING_SBMAECLBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:7c17cc86-95b9-401e-b4c4-62206996f90a}].layout["SCLTIPIDEN"{938672a7-2cef-48eb-abe0-40425c1ce866}]</property>
+                                </object>
+                            </property>
+                        </objectNode>
+                    </children>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="55b4483c-0585-48e4-9653-0f08944a6830" valueType="string"/>
+                    <property name="name" value="LSMAEPRBF1" valueType="string"/>
+                    <property name="description" value="Tabla maestra de contratos 1." valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF1"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:05e2fbb0-72f2-4f7c-95f0-2a12a2687780}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF1"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:05e2fbb0-72f2-4f7c-95f0-2a12a2687780}].layout["PMPNOPER1"{b13b5ac4-8bad-4578-b053-df88eb471cd3}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["PMPNOPER"{6b4d9b20-7a7f-41a5-910f-e27c94d77620}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="c54fc6cd-2b61-47ca-8bc5-02854d0f7d57" valueType="string"/>
+                    <property name="name" value="LSMAEPRBF" valueType="string"/>
+                    <property name="description" value="Leasing -  Maestro de operaciones" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}]</property>
+                    <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table">
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["LSMAEPRBF"{c54fc6cd-2b61-47ca-8bc5-02854d0f7d57}].dataSource.layout["PMPESTADO"{3c342e1c-0613-4c66-ad75-84b8fb3c5352}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != '11'" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["PMPNOPER"{6b4d9b20-7a7f-41a5-910f-e27c94d77620}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["PMPNOPERAN"{3eef24c2-ae18-4eae-a5ad-0190d1928771}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["PMPSUC"{b711f2d4-2b5c-4108-8266-12300f2e1716}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["PMPSUCANT"{00212715-7b17-46d9-b689-7dfe7403a9bb}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["PMPLINEA"{be995160-9e99-43a7-a20f-9f54b8aedf41}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["PMPLINEAAN"{d6696142-2902-4d42-9de5-87c0b4340eb2}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="24c488ed-5cfd-489a-ad3b-1bb7761ea475" valueType="string"/>
+                    <property name="name" value="LSENDBASBF" valueType="string"/>
+                    <property name="description" value="Datos basicos endeudamiento de leasing" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:LEASING_LSENDBASBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:2e778747-0c43-4477-bf5c-0550920f37aa}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="LPAD(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPNOPER"{6b4d9b20-7a7f-41a5-910f-e27c94d77620}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=", LENGTH(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPNOPER"{6b4d9b20-7a7f-41a5-910f-e27c94d77620}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")-2) =  " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["LSENDBASBF"{24c488ed-5cfd-489a-ad3b-1bb7761ea475}].dataSource.layout["DBANOPER"{21d4e425-9d01-4874-a72f-9f2fd8999668}]</property>
+                        </object>
+                    </property>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table"/>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="61b28994-0fff-45ca-9fe3-206be7439080" valueType="string"/>
+                    <property name="name" value="LSFR473SBF" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_LEASING_LSFR473SBF" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_LEASING_LSFR473SBF]"{Aggregation[c6b83fdb-1660-4056-beb3-fe566803d2f3]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_LEASING_LSFR473SBF]"{Aggregation[c6b83fdb-1660-4056-beb3-fe566803d2f3]}].layout["FRNOPER"{c82d0460-9493-461f-8348-437bc6626065}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:LEASING_LSMAEPRBF"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:9b31c676-1dd5-4f84-b280-50c572d6b2d0}].layout["AX_PMPNOPER"{4dded5ce-00de-4b8b-880e-2bf1a1a95e67}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  10-06-2022  - caalmosq&#xa;Descripción/Objetivo: Modelo con el cruce de informacion de leasing&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

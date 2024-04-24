@@ -1,0 +1,163 @@
+﻿<object stamp="bb103dde-a32b-4d42-b966-debe373b6a55_1657206519073" type="Aggregation" version="7.0">
+    <property name="objectId" value="807a3d74-5acd-4346-b666-ce93f21c9d17" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_VISIONR_CEXOWBN" valueType="string"/>
+    <property name="description" value="Se crea Agg con la informacion de garantías abierta por Nit" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_VISIONR_CEXOWBN"{e5c32851-a1d5-4138-b285-1f8027ecf85c}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="c2aaa17a-d867-4799-91c5-283f6f99e860" valueType="string"/>
+            <property name="name" value="XOCDOB" valueType="string"/>
+            <property name="description" value="COD_PROPIETARIO_BENEFICIARIO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="NOT_NULLABLE" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="c6edf16b-ca74-41d3-8822-be2b35d88e4f" valueType="string"/>
+            <property name="name" value="XONOTX" valueType="string"/>
+            <property name="description" value="NIT CLIENTE" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="e6783743-c845-4902-9b3a-8d0eff112d4c" valueType="string"/>
+            <property name="name" value="AX_XONOTX" valueType="string"/>
+            <property name="description" value="NIT CLIENTE SIN CERO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="NOT_NULLABLE" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table">
+        <object type="Aggregation:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["AX_XONOTX"{e6783743-c845-4902-9b3a-8d0eff112d4c}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["XOCDOB"{c2aaa17a-d867-4799-91c5-283f6f99e860}]</property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["XOCDOB"{c2aaa17a-d867-4799-91c5-283f6f99e860}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_VISIONR_CEXOWBN"{e5c32851-a1d5-4138-b285-1f8027ecf85c}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_VISIONR_CEXOWBN"{e5c32851-a1d5-4138-b285-1f8027ecf85c}].hierarchy["root"{79258dd6-36a3-4d9e-92b1-b5dd36cc942e}].dataSource.layout["XOCDOB"{6cdc2477-692f-44c0-a0fe-a2ecc0b8e53a}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["XONOTX"{c6edf16b-ca74-41d3-8822-be2b35d88e4f}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_VISIONR_CEXOWBN"{e5c32851-a1d5-4138-b285-1f8027ecf85c}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_VISIONR_CEXOWBN"{e5c32851-a1d5-4138-b285-1f8027ecf85c}].hierarchy["root"{79258dd6-36a3-4d9e-92b1-b5dd36cc942e}].dataSource.layout["XONOTX"{1b416f18-3ec6-426c-89ae-49a29bea5095}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["AX_XONOTX"{e6783743-c845-4902-9b3a-8d0eff112d4c}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_VISIONR_CEXOWBN"{e5c32851-a1d5-4138-b285-1f8027ecf85c}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_VISIONR_CEXOWBN"{e5c32851-a1d5-4138-b285-1f8027ecf85c}].hierarchy["root"{79258dd6-36a3-4d9e-92b1-b5dd36cc942e}].dataSource.layout["AX_XONOTX"{ce7b052d-5d44-465b-8620-9fd13da7a9e7}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: 17-may-2022&#xa;Analista: caalmosq&#xa;Objetivo: Se crea Agg con la informacion de garantías abierta por Nit" valueType="string"/>
+        </object>
+    </property>
+</object>

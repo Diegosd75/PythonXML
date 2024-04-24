@@ -1,0 +1,49 @@
+<object stamp="880312e8-8887-4db8-83ce-a49b0dfe23d2_1616598799434" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="df026824-76f3-4253-8620-4d1e263b0532" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_RewriteNameCells" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="RNC_task" valueType="string"/>
+            <property name="description" value="system veriable &quot;task&quot;" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="RNC_jbook" valueType="string"/>
+            <property name="description" value="system veriable &quot;jbook&quot;" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Overwriting cell names when adding or deleting rows with FreeFormReport&#xa;Input variables:&#xa;RNC_task - &#xa;RNC_jbook - &#xa;-->&#xa;trace(&quot;#!#!#! ppc_RewriteNameCells. Started #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_RewriteNameCells. Copyright by AXIOM SL, Igor Kirilyuk, 2021.02.14 #!#!#!&quot;);&#xa;&#xa;var RNC_startDate = new(&quot;java.util.Date&quot;);&#xa;&#xa;&lt;if> (RNC_task != null) and (RNC_task.getEndTime() == null)&#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;var RNC_VectorNames = RNC_jbook.getDefinedNames().clone();&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_RewriteNameCells. Count names: &quot; + RNC_VectorNames.size() + &quot; #!#!#!&quot;);&#xa;&#x9;&#x9;&lt;for> var indexVectorNames = 0 &lt;comma/> indexVectorNames &amp;lt; RNC_VectorNames.size() &lt;comma/> indexVectorNames++&#xa;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;var RNC_infoCell;&#xa;&#x9;&#x9;&#x9;&#x9;RNC_infoCell = " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(RNC_jbook, RNC_VectorNames.get(indexVectorNames).name);&#xa;&#x9;&#x9;&#x9;&#x9;&lt;if> RNC_infoCell != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var RNC_nameCell = RNC_jbook.getCellName(RNC_infoCell.get(0), RNC_infoCell.get(1), RNC_infoCell.get(2));&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> RNC_nameCell == null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RNC_jbook.setCellName(RNC_VectorNames.get(indexVectorNames).name, RNC_infoCell.get(0), RNC_infoCell.get(1), RNC_infoCell.get(2));&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> !RNC_nameCell.equals(RNC_VectorNames.get(indexVectorNames).name)&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var RNC_listName = list();&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RNC_listName.add(RNC_VectorNames.get(indexVectorNames).name);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;for>  &lt;comma/> RNC_nameCell != null &lt;comma/>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RNC_listName.add(RNC_nameCell);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RNC_infoCell = " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(RNC_jbook, RNC_nameCell);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> RNC_infoCell != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RNC_nameCell = if(RNC_nameCell.equals(RNC_jbook.getCellName(RNC_infoCell.get(0), RNC_infoCell.get(1), RNC_infoCell.get(2))), null, RNC_jbook.getCellName(RNC_infoCell.get(0), RNC_infoCell.get(1), RNC_infoCell.get(2)));&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_RewriteNameCells. Information for cell &quot; + RNC_nameCell + &quot; not found. #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!--RNC_jbook.deleteDefinedName(RNC_nameCell);-->&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RNC_nameCell = null;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;for> var indexListName = RNC_listName.size() - 1 &lt;comma/> indexListName &amp;gt;= 0 &lt;comma/> indexListName--&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RNC_infoCell = " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(RNC_jbook, RNC_listName.get(indexListName));&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;if> RNC_infoCell != null&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RNC_jbook.setCellName(RNC_listName.get(indexListName), RNC_infoCell.get(0), RNC_infoCell.get(1), RNC_infoCell.get(2));&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_RewriteNameCells. Information for cell &quot; + RNC_listName.get(indexListName) + &quot; not found. #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!--RNC_jbook.deleteDefinedName(RNC_listName.get(indexListName));-->&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/for>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;else>&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_RewriteNameCells. Information for cell &quot; + RNC_VectorNames.get(indexVectorNames).name + &quot; not found. #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!--RNC_jbook.deleteDefinedName(RNC_VectorNames.get(indexVectorNames).name);-->&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/else>&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/if>&#xa;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&lt;/for>&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#x9;&#xa;trace(&quot;#!#!#! ppc_RewriteNameCells. &quot; + " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RunTime"{01bdef00-6989-424b-84f9-c81ca2885e47}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(RNC_startDate, new(&quot;java.util.Date&quot;)) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_RewriteNameCells. Finished #!#!#!&quot;);&#xa;" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

@@ -1,0 +1,159 @@
+﻿<object stamp="44cbf563-2a10-4c5f-a03b-69fe4399f28a_1691084055406" type="Aggregation" version="7.0">
+    <property name="objectId" value="c75a3c4a-404f-41e4-a198-6dc114866b61" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_TARJETAS_TDCFFPASIS_ESTADOS" valueType="string"/>
+    <property name="description" value="TARJETAS_TDCFFPASIS - Estados de transacción" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="df3144ee-83ab-47e4-9072-6416e0baf38f" valueType="string"/>
+            <property name="name" value="PSVALOR" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="381397a7-6d83-4520-a581-d8882d85e7b1" valueType="string"/>
+            <property name="name" value="PSPARAM" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="8e136920-50d9-4db9-ab85-93a9e3bb7b62" valueType="string"/>
+            <property name="name" value="PSCONSEC" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PSVALOR"{df3144ee-83ab-47e4-9072-6416e0baf38f}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="TRIM(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}].hierarchy["root"{3b8a0ccd-85ca-4fb8-8bb7-2f296b8c25be}].dataSource.layout["PSVALOR"{cd3291e3-5462-45ef-8f3d-65bb5986b064}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PSPARAM"{381397a7-6d83-4520-a581-d8882d85e7b1}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}].hierarchy["root"{3b8a0ccd-85ca-4fb8-8bb7-2f296b8c25be}].dataSource.layout["PSPARAM"{ec80165d-3dfe-4df6-aaca-eeb35cb27608}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PSCONSEC"{8e136920-50d9-4db9-ab85-93a9e3bb7b62}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}].hierarchy["root"{3b8a0ccd-85ca-4fb8-8bb7-2f296b8c25be}].dataSource.layout["PSCONSEC"{c07ec97f-8cb9-46aa-bc76-5c519ea923c4}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                            <property name="shorthand" valueType="url">Shorthand["F_414_TARJETAS"{5df3dd38-09ea-4536-8c84-9dcb2b32ec60}]</property>
+                            <property name="operation" value="=" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 31/05/2022 - sergigon&#xa;Descripción:&#xa;- Se crea Agg para cargar datos para el filtro (SELECT PSVALOR FROM TDCLIBRAMD.TDCFFPASIS WHERE PSPARAM = 'F088TRNEXC' AND PSCONSEC IN(1,2)) " valueType="string"/>
+        </object>
+    </property>
+</object>

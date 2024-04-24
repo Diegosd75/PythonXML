@@ -1,0 +1,25 @@
+<object stamp="03a17451-9730-4c75-80eb-3a8c97fc6236_1614177839423" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="cb5f4816-3c56-49ee-b78c-68dd79722210" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_ObjectEquals" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="OE_object1" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="OE_object2" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;A comparison of two objects&#xa;Input variables:&#xa;OE_object1&#xa;OE_object2&#xa;-->&#xa;; (OE_object1 == OE_object2) or ((OE_object1 != null) and (OE_object1.equals(OE_object2)))" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

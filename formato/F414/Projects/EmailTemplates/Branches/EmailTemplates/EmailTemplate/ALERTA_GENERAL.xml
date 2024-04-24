@@ -1,0 +1,37 @@
+﻿<object stamp="10326fc9-6dc9-446c-a664-f5ee81f242d6_1605050552759" type="EmailTemplate" version="1.0">
+    <property name="name" value="ALERTA_GENERAL" valueType="string"/>
+    <property name="description" value="planilla de envio de alerta general para casos generales" valueType="string"/>
+    <property name="objectId" value="c5c56aa7-cec0-4ee6-9154-e3e7c5c3e20b" valueType="string"/>
+    <property name="projectId" value="EmailTemplates" valueType="string"/>
+    <property name="branchId" value="EmailTemplates" valueType="string"/>
+    <property name="subject" value="'ALERTA - EJECUCION finalizo en estado WARNING - Proyecto: ' + $Projecto_mail +''" valueType="string"/>
+    <property name="body" value="'Mensaje automático AXIOM Server: PRODUCCION &#xa;&#xa;FECHA DE CORTE (asof_date):  ' + $asof_date_mail + '  &#xa;DESCRIPCION: &#xa; ' + $Mensaje_Personal + '&#xa;&#xa; - Para mayor detalle diríjase al aplicativo AXIOM CV la siguiente ubicacion :&#xa;PROJECT:  ' + $Projecto_mail + '&#xa;BRANCH: ' + $Branch_mail + '&#xa;WORK FLOW:  '+ $WF_mail + ''" valueType="string"/>
+    <property name="isHTML" value="PLAIN" valueType="string"/>
+    <property name="variables" valueType="table">
+        <object type="EmailTemplate:variable" version="1.0">
+            <property name="name" value="asof_date_mail" valueType="string"/>
+            <property name="description" value="as of date" valueType="string"/>
+            <property name="id" value="cc920499-84e4-4d9d-8fc0-8e197ef12a17" valueType="string"/>
+        </object>
+        <object type="EmailTemplate:variable" version="1.0">
+            <property name="name" value="Mensaje_Personal" valueType="string"/>
+            <property name="description" value="Mensaje Personalizado" valueType="string"/>
+            <property name="id" value="d85bed1a-337b-420a-904a-63a4b94508bf" valueType="string"/>
+        </object>
+        <object type="EmailTemplate:variable" version="1.0">
+            <property name="name" value="Projecto_mail" valueType="string"/>
+            <property name="description" value="Projecto_mail" valueType="string"/>
+            <property name="id" value="e11e3d8a-54ed-4e79-9446-b465a2eda01c" valueType="string"/>
+        </object>
+        <object type="EmailTemplate:variable" version="1.0">
+            <property name="name" value="Branch_mail" valueType="string"/>
+            <property name="description" value="Branch_mail" valueType="string"/>
+            <property name="id" value="0741c9cf-547e-49a2-8e86-87c8579987fd" valueType="string"/>
+        </object>
+        <object type="EmailTemplate:variable" version="1.0">
+            <property name="name" value="WF_mail" valueType="string"/>
+            <property name="description" value="nombre WF" valueType="string"/>
+            <property name="id" value="21ad67a6-a9cb-4e1c-b1d4-23f2fcb0c620" valueType="string"/>
+        </object>
+    </property>
+</object>

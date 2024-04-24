@@ -1,0 +1,30 @@
+<object stamp="7edd6ce8-b151-4850-9c4e-acc6318b26a2_1662762328814" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="62f01511-b9f3-425b-a58d-063114183750" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="GetPrevFridayCalendar" valueType="string"/>
+    <property name="description" value="Obtiene el viernes calendario anterior a la fecha de entrada." valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="TIME_TAG" valueType="string"/>
+            <property name="description" value="TIME_TAG tag" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="current_date2" valueType="string"/>
+            <property name="description" value="Current day" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="dependencia" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="var FormatoFechaA := new(&quot;java.text.SimpleDateFormat&quot;, &quot;dd-MMM-yyyy&quot;);&#xa;var fechaEjec := FormatoFechaA.format(current_date2);&#xa;var fechaResultante;&#xa;&#xa;var listaDiasHabiles:= select(&quot;SELECT DATE_ALL FROM &quot; + sourceTableLatest(+dependencia+':Calendar-Days[CALENDAR_FESTIVOS_COLOMBIA]', TIME_TAG) +&quot; WHERE BUSI_DAYS='&quot; + fechaEjec + &quot;'&quot;);&#xa;&#xa;var dayOfWeekString:=formatDate(current_date2,&quot;EEEE&quot;);&#xa;&#x9;&#x9;fechaResultante:=case(dayOfWeekString==&quot;Saturday&quot;, dateAdd(current_date2,&quot;day&quot;,-1),&#xa;&#x9;&#x9;&#x9;dayOfWeekString==&quot;Sunday&quot;, dateAdd(current_date2,&quot;day&quot;,-2),&#xa;&#x9;&#x9;&#x9;dayOfWeekString==&quot;Monday&quot;, dateAdd(current_date2,&quot;day&quot;,-3),&#xa;&#x9;&#x9;&#x9;dayOfWeekString==&quot;Tuesday&quot;,dateAdd(current_date2,&quot;day&quot;,-4),&#xa;&#x9;&#x9;&#x9;dayOfWeekString==&quot;Wednesday&quot;,dateAdd(current_date2,&quot;day&quot;,-5),&#xa;&#x9;&#x9;&#x9;dayOfWeekString==&quot;Thursday&quot;,dateAdd(current_date2,&quot;day&quot;,-6),&#xa;&#x9;&#x9;&#x9;dayOfWeekString==&quot;Friday&quot;,dateAdd(current_date2,&quot;day&quot;,-7));&#xa;&#x9;&#x9;&#xa;trace('#### fechaResultante: '+fechaResultante);&#xa;fechaResultante;" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="libraries" valueType="table"/>
+</object>

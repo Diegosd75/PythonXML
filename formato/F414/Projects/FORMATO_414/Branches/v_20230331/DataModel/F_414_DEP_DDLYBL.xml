@@ -1,0 +1,216 @@
+﻿<object stamp="de152f9d-70ba-4193-980f-cfbc35a791e4_1684500336178" type="DataModel" version="2.0">
+    <property name="objectId" value="0bda7cf1-85ad-4512-a413-9884cf0747b7" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_DEP_DDLYBL" valueType="string"/>
+    <property name="description" value="cruce de tablas para obtener la infromación de las cuentas en sobregiro" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="92c2ae50-1eac-41cf-815c-370a40d1f95a" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_DDLYBL" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_DDLYBL]"{Aggregation[5714eeea-14ab-43dd-802d-8997919f2417]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="3cb0dd83-cec3-4f78-bcf0-d491c3d23748" valueType="string"/>
+                    <property name="name" value="DEPOSITOS_LCHG" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_DEPOSITOS_LCHG" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_DEPOSITOS_LCHG]"{Aggregation[4510c147-8c2a-4441-ad7f-0ced8cc399db]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_DEPOSITOS_LCHG]"{Aggregation[4510c147-8c2a-4441-ad7f-0ced8cc399db]}].layout["asof_date"{asofdate_4510c147-8c2a-4441-ad7f-0ced8cc399db}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_DDLYBL]"{Aggregation[5714eeea-14ab-43dd-802d-8997919f2417]}].layout["asof_date"{asofdate_5714eeea-14ab-43dd-802d-8997919f2417}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="c75d397e-e469-46db-b01c-6c88f8ebc742" valueType="string"/>
+                    <property name="name" value="CXREF_VISONR" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TIPO_PERSONA_SEXO" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CXCDAP"{c5dad1cf-a34f-4b3a-beef-26a623a152fa}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_DDLYBL]"{Aggregation[5714eeea-14ab-43dd-802d-8997919f2417]}].layout["DBAPCD"{db7afa1b-e0a6-4ca4-bc2f-5a8db40c6e56}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CXNOAC"{82676aba-f252-4ff2-85e2-ab3fb30bdb86}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_DDLYBL]"{Aggregation[5714eeea-14ab-43dd-802d-8997919f2417]}].layout["DBACCT"{1240a65c-f01f-46ad-b7cc-5cf1f3f49ab6}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="866145f8-a1e9-444e-bf2c-aa9a427d9e76" valueType="string"/>
+                    <property name="name" value="DBAL" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_BVD_DBAL" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_BVD_DBAL]"{Aggregation[e56aba89-1054-49b7-837f-164e26edc60b]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_BVD_DBAL]"{Aggregation[e56aba89-1054-49b7-837f-164e26edc60b]}].layout["DMACCT"{936b9421-3c04-435e-82df-f0afcdc082cc}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_DDLYBL]"{Aggregation[5714eeea-14ab-43dd-802d-8997919f2417]}].layout["DBACCT"{1240a65c-f01f-46ad-b7cc-5cf1f3f49ab6}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="e7fa54f4-7222-4036-9499-15f16df2c1ba" valueType="string"/>
+                    <property name="name" value="DODLOG" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_DODLOG_DEPURADO" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_DODLOG_DEPURADO]"{Aggregation[171f7e06-f315-4139-8fff-c28baab606b2]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_DODLOG_DEPURADO]"{Aggregation[171f7e06-f315-4139-8fff-c28baab606b2]}].layout["NUMERO_DE_CUENTA"{ea0e93bb-78f4-4145-8267-36174bc9f02b}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_DDLYBL]"{Aggregation[5714eeea-14ab-43dd-802d-8997919f2417]}].layout["DBACCT"{1240a65c-f01f-46ad-b7cc-5cf1f3f49ab6}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="fecha: 31/03/2023 - mruenes&#xa;Descripción: Se agrega cruce del DODLOG al modelo y se cambia fuente de cruce en el cruce del dbal&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

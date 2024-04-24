@@ -1,0 +1,27 @@
+<object stamp="0b54962e-c2cc-428d-bfb2-7b1c5dfda583_1634125279314" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="7d42feca-2f13-4a91-a7a2-539466209b3d" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_DisableAutoRecalc" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="DAR_jbook" valueType="string"/>
+            <property name="description" value="system variable &quot;jbook&quot;" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Disabling automatic recalculation on FreeFormReport formulas used to build dynamic reports&#xa;Input variables:&#xa;DAR_jbook - &#xa;-->&#xa;trace(&quot;#!#!#! ppc_DisableAutoRecalc. Started #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_DisableAutoRecalc. Copyright by AXIOM SL, Igor Kirilyuk, 2021.02.14 #!#!#!&quot;);&#xa;&#xa;var DAR_startDate = new(&quot;java.util.Date&quot;);&#xa;&#xa;DAR_jbook.getLock();&#xa;DAR_jbook.setAutoRecalc(false);&#x9;&#xa;&#xa;trace(&quot;#!#!#! ppc_DisableAutoRecalc. &quot; + " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RunTime"{01bdef00-6989-424b-84f9-c81ca2885e47}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(DAR_startDate, new(&quot;java.util.Date&quot;)) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_DisableAutoRecalc. Finished #!#!#!&quot;);" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

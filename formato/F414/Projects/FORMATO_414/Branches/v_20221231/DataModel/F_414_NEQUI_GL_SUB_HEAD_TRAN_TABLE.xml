@@ -1,0 +1,75 @@
+<object stamp="3e5f2d66-0b15-4472-bc0a-e1dfb8e39f90_1657052399239" type="DataModel" version="2.0">
+    <property name="objectId" value="05282691-1dfc-42b6-b039-e2aafc82ab9f" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_NEQUI_GL_SUB_HEAD_TRAN_TABLE" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="9b872810-374d-4199-a959-f259db904f38" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Nequi - Tabla maestra de contabilidad" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:NEQUI_GL_SUB_HEAD_TRAN_TABLE"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:4cd66c6d-ce1a-4650-83b9-88071cb382f5}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table">
+        <object type="DataModel:streamKey" version="1.0">
+            <property name="streamKeyName" value="entity" valueType="string"/>
+            <property name="streamKeyColumn" valueType="object">
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{9b872810-374d-4199-a959-f259db904f38}].dataSource.layout["entity"{1bc589e7-8fff-4355-a251-a5ad5f1b4947}]</property>
+                </object>
+            </property>
+            <property name="additionalStreamColumns" valueType="table"/>
+        </object>
+    </property>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+</object>

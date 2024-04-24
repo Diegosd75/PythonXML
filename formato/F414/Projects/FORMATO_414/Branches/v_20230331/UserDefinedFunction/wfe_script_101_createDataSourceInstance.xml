@@ -1,0 +1,48 @@
+<object stamp="056e8716-1523-4d5b-afa3-e2f6a86ed9b5_1649797780673" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="96061cea-b4cf-4742-bd80-fc949cbcda97" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="wfe_script_101_createDataSourceInstance" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_sS101CDSI_project_name" valueType="string"/>
+            <property name="description" value="Project name" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_sS101CDSI_branch_name" valueType="string"/>
+            <property name="description" value="Branch name" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_sS101CDSI_object_name" valueType="string"/>
+            <property name="description" value="DataSource name" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_sS101CDSI_asOfDate" valueType="string"/>
+            <property name="description" value="Instance asOfDate" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_sS101CDSI_key_names" valueType="string"/>
+            <property name="description" value="List of key names separated by comma" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_sS101CDSI_key_values" valueType="string"/>
+            <property name="description" value="List of key values separated by comma" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="var_sS101CDSI_overwrite_exists" valueType="string"/>
+            <property name="description" value="Overwrite('Y') exists instance or not('N')" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["wfe_s101_createDataSourceInstance"{11b903f6-accf-456f-8e94-349e7664ad7b}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(var_sS101CDSI_project_name, var_sS101CDSI_branch_name, var_sS101CDSI_object_name, var_sS101CDSI_asOfDate, var_sS101CDSI_key_names, var_sS101CDSI_key_values, var_sS101CDSI_overwrite_exists, 'N');" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

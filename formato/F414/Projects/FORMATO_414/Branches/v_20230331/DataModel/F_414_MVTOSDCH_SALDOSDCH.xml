@@ -1,0 +1,142 @@
+﻿<object stamp="2bd39f2f-5af1-49cf-9bbd-12f6b9b41429_1691085871511" type="DataModel" version="2.0">
+    <property name="objectId" value="a9212cfb-9149-4957-9625-a51a30ebe7f7" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_MVTOSDCH_SALDOSDCH" valueType="string"/>
+    <property name="description" value="Movimientos diarios" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="c39bc74a-7e3a-42c4-a196-5707e15bec46" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_HIP_COMERCIAL_MVTOSDCH" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_HIP_COMERCIAL_MVTOSDCH]"{Aggregation[e687a3a4-4ffc-459b-ad73-7a78b96a26fc]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="f1943e88-6d83-4926-97b1-c1de8eb78de3" valueType="string"/>
+                    <property name="name" value="FINACLE_SALDOSDCH" valueType="string"/>
+                    <property name="description" value="Sábana de Datos básicos y Saldos de Cartera Hipotecaria" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:FINACLE_SALDOSDCH"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:f8556398-0dc1-4eda-b83d-2a4b04a594a0}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:FINACLE_SALDOSDCH"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:f8556398-0dc1-4eda-b83d-2a4b04a594a0}].layout["NUMCRED"{68b2362e-5d50-4cb6-825e-cfc64aac7004}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_HIP_COMERCIAL_MVTOSDCH]"{Aggregation[e687a3a4-4ffc-459b-ad73-7a78b96a26fc]}].layout["NUMCRED"{f4d9ebfc-5d0a-42b9-96be-6a4c7deecf0c}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="a901580b-5cab-48ed-baf7-11919c01730d" valueType="string"/>
+                    <property name="name" value="PRESTAMOS_HIP_COMERCIAL" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_HIP_COMERCIAL_PERS_SEX" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_HIP_COMERCIAL_PERS_SEX]"{Aggregation[73354bea-e386-41a8-922a-003835f8f55c]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_HIP_COMERCIAL_PERS_SEX]"{Aggregation[73354bea-e386-41a8-922a-003835f8f55c]}].layout["NUMCRED"{13bf8330-b6bb-40ff-859a-13697718c980}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_HIP_COMERCIAL_MVTOSDCH]"{Aggregation[e687a3a4-4ffc-459b-ad73-7a78b96a26fc]}].layout["NUMCRED"{f4d9ebfc-5d0a-42b9-96be-6a4c7deecf0c}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 24/05/2022 - sergigon&#xa;Descripción: &#xa;- Modelo de datos para identificar las obligaciones contabilizadas" valueType="string"/>
+        </object>
+    </property>
+</object>

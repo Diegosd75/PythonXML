@@ -1,0 +1,243 @@
+﻿<object stamp="cf9be9ff-94b4-4b1d-bdbc-4b388b4f2095_1654602370101" type="Aggregation" version="7.0">
+    <property name="objectId" value="b06f97d4-c756-4574-be4c-158ecd1f2c87" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_HIP_COMERCIAL_CONTAB" valueType="string"/>
+    <property name="description" value="validación contable del frente Hipotecario" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="ec738dd2-a41c-45e6-9b8f-e34adae47ab7" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="222f3d44-bb96-4c43-957d-be47fe20d887" valueType="string"/>
+            <property name="name" value="NUMCRED" valueType="string"/>
+            <property name="description" value="Número Que Identifica El Producto, Es Decir El Número De La Cuenta" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="ce83e15a-2fe2-4694-89b9-c615e0e55bc3" valueType="string"/>
+            <property name="name" value="FECIDESEMB" valueType="string"/>
+            <property name="description" value="Fecha de desembolso inicial" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="72616bd3-3788-4e18-8d6d-63462e82f6ce" valueType="string"/>
+            <property name="name" value="VALOR_SALDOSDCH" valueType="string"/>
+            <property name="description" value="Valor Transacción SALDOSDCH" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="VALOR_SALDOSDCH" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="51e63b14-9f35-454b-8114-73b589cdfbcb" valueType="string"/>
+            <property name="name" value="VALOR_MVTOSDCH" valueType="string"/>
+            <property name="description" value="Valor Transacción MVTOSDCH" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="VALOR_MVTOSDCH" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="b8b4fbb7-dfa4-4965-a969-b4ebc772b73b" valueType="string"/>
+            <property name="name" value="DIFERENCIA" valueType="string"/>
+            <property name="description" value="DIFERENCIA" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["VALOR_SALDOSDCH"{72616bd3-3788-4e18-8d6d-63462e82f6ce}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value="  - " valueType="string"/>
+                </object>
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["VALOR_MVTOSDCH"{51e63b14-9f35-454b-8114-73b589cdfbcb}]</property>
+                </object>
+            </property>
+            <property name="valueType" value="FLOAT" valueType="string"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="DIFERENCIA" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INFO"{ec738dd2-a41c-45e6-9b8f-e34adae47ab7}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}].hierarchy["root"{b65e3ca0-777c-42e4-b60f-99237dfa1bae}].dataSource.layout["FRENTE_INFO"{d228c35a-1093-4006-85d2-03568a3604ff}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NUMCRED"{222f3d44-bb96-4c43-957d-be47fe20d887}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}].hierarchy["root"{b65e3ca0-777c-42e4-b60f-99237dfa1bae}].dataSource.layout["NUMCRED"{13bf8330-b6bb-40ff-859a-13697718c980}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FECIDESEMB"{ce83e15a-2fe2-4694-89b9-c615e0e55bc3}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}].hierarchy["root"{b65e3ca0-777c-42e4-b60f-99237dfa1bae}].dataSource.layout["FECIDESEMB"{23fe95c8-9250-453e-9186-a27d6ecfd22b}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["VALOR_SALDOSDCH"{72616bd3-3788-4e18-8d6d-63462e82f6ce}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}].hierarchy["root"{b65e3ca0-777c-42e4-b60f-99237dfa1bae}].dataSource.layout["VALIDESCOP"{cd964ea0-f01b-4d03-9874-a8337796e3b1}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["VALOR_MVTOSDCH"{51e63b14-9f35-454b-8114-73b589cdfbcb}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_HIP_COMERCIAL_CONTAB"{9d28a3dd-4e9f-49fb-8ec8-bb1026d8fc01}].hierarchy["FINACLE_MVTOSDCH"{3ebd2850-6b4a-4add-a3fd-2f60efbb90ce}].dataSource.layout["VALOR_TRANS_PESOS"{b2336328-42e1-4c2d-93c9-edadfca1e05a}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",0)" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="FLOAT" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 12/05/2022 - sergigon&#xa;Descripción:&#xa;- Se obtiene la información contable para el frente Hipotecario&#xa;--------------------------------------------------------------------------------------------------------------------------------------------" valueType="string"/>
+        </object>
+    </property>
+</object>

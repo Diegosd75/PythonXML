@@ -1,0 +1,25 @@
+<object stamp="a86cc2de-94df-4b1d-849d-62dd63d95bf2_1616594982863" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="01bdef00-6989-424b-84f9-c81ca2885e47" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_RunTime" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="RT_startDate" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="RT_stopDate" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Run time &#xa;Input variables:&#xa;RT_startDate - start date;&#xa;RT_stopDate - stop date. &#xa;-->&#xa;var RT_milliseconds = (RT_stopDate.getTime() - RT_startDate.getTime()).intValue();&#xa;var RT_seconds = (RT_milliseconds/1000%60).intValue();&#xa;var RT_minutes = (RT_milliseconds/(60*1000)).intValue();&#xa;var RT_hours = (RT_milliseconds/(60*60*1000)).intValue();&#xa;var RT_days = (RT_milliseconds/(24*60*60*1000)).intValue();&#xa;&#xa;var listObject = list();&#xa;listObject.add(RT_days);&#xa;listObject.add(RT_hours);&#xa;listObject.add(RT_minutes);&#xa;listObject.add(RT_seconds);&#xa;listObject.add(RT_milliseconds);&#xa;;&quot;Run time: &quot; + new(&quot;java.util.Formatter&quot;).format(&quot;%1$d day(s) %2$02d:%3$02d:%4$02d.%5$04d&quot;, listObject.toArray(class(&quot;java.lang.reflect.Array&quot;).newInstance(class(&quot;java.lang.Object&quot;), 1)));&#xa;" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

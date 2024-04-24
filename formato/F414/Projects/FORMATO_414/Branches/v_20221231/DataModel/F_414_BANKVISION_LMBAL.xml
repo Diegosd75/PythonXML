@@ -1,0 +1,356 @@
+﻿<object stamp="b75988eb-763d-456d-8016-77d7852bea0d_1667246136364" type="DataModel" version="2.0">
+    <property name="objectId" value="93afeec3-1fb0-4b41-9759-c83188585c35" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_BANKVISION_LMBAL" valueType="string"/>
+    <property name="description" value="Se crea modelo con el cruce de informacion de banco" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="abbcb52b-0d3b-4b6e-bf4a-f78f522430c8" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_LMBAL" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="4dcc93a5-e03c-4936-a130-da3ce3815558" valueType="string"/>
+                    <property name="name" value="CXREF" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TIPO_PERSONA_SEXO" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CXNOAC"{82676aba-f252-4ff2-85e2-ab3fb30bdb86}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["LMNOAC"{991a8410-758f-46a6-b7fc-ebcc422d7a02}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CXNOPT"{a8f0d0b8-83c3-4380-be46-b2df8d61ac41}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["LMNOPT"{9f473046-31d0-45a7-81cd-016bafbd27ec}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="384d81be-e6be-4bff-9c29-0ad9157d9cfa" valueType="string"/>
+                    <property name="name" value="LPHIS" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_BANKVISON_SUM_LPHIS" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_BANKVISON_SUM_LPHIS]"{Aggregation[0d9ce09a-5051-4870-8b85-4ce5d2527470]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_BANKVISON_SUM_LPHIS]"{Aggregation[0d9ce09a-5051-4870-8b85-4ce5d2527470]}].layout["LPHNAC"{42265eb5-8f03-43f9-924c-4a260117c36a}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["LMNOAC"{991a8410-758f-46a6-b7fc-ebcc422d7a02}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="b9bcce7e-c88b-4c52-9dc6-c13fa53ff178" valueType="string"/>
+                    <property name="name" value="MARCACION_03" valueType="string"/>
+                    <property name="description" value="Contiene los planes para la marcación del producto cosechas" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TM_PLANES_MARCACION_03"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:0d040398-84f0-46ff-9bb5-15d2a52cc6d1}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TM_PLANES_MARCACION_03"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:0d040398-84f0-46ff-9bb5-15d2a52cc6d1}].layout["PLAN"{41abb9b5-a6d6-4173-9137-4a958deabd83}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["LMCDPL"{110704f0-5f8a-49aa-9596-0d81007e28b8}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="5c790241-72f7-42ce-91c4-cdc88f0f286f" valueType="string"/>
+                    <property name="name" value="MARCACION_04" valueType="string"/>
+                    <property name="description" value="Contiene los planes para la marcación del producto cosechas" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TM_PLANES_MARCACION_04"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:f97728a0-957c-4b7f-b2a7-9c1c402c9f18}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TM_PLANES_MARCACION_04"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:f97728a0-957c-4b7f-b2a7-9c1c402c9f18}].layout["PLAN"{41abb9b5-a6d6-4173-9137-4a958deabd83}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["LMCDPL"{110704f0-5f8a-49aa-9596-0d81007e28b8}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="9b2fa710-ab6b-4def-aac1-fb59ba43c73c" valueType="string"/>
+                    <property name="name" value="TR_BAJOMONTO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_BAJOMONTO_PLANES"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:1dfadf7e-9d23-44e1-81e3-959fd88c356b}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_BAJOMONTO_PLANES"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:1dfadf7e-9d23-44e1-81e3-959fd88c356b}].layout["CODIGO"{41abb9b5-a6d6-4173-9137-4a958deabd83}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["LMCDPL"{110704f0-5f8a-49aa-9596-0d81007e28b8}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="6ca674eb-c517-4814-a890-fd52ae0fd0cf" valueType="string"/>
+                    <property name="name" value="VIVIENDA" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PLANES_EMPLEADOS_VIVIENDA"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:b4bc0faf-8ef5-4f21-9d84-e7370b5fcd70}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PLANES_EMPLEADOS_VIVIENDA"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:b4bc0faf-8ef5-4f21-9d84-e7370b5fcd70}].layout["CODIGO"{41abb9b5-a6d6-4173-9137-4a958deabd83}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["LMCDPL"{110704f0-5f8a-49aa-9596-0d81007e28b8}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="61987573-264e-4607-bd7a-a421353111da" valueType="string"/>
+                    <property name="name" value="SALARIO_MINIMO" valueType="string"/>
+                    <property name="description" value="La fuente que contenga información referente salarios mínimos legales mensuales" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_SALARIO_MINIMO"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8e226aa6-0b8a-42bc-b020-3bf06cf104b5}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_SALARIO_MINIMO"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8e226aa6-0b8a-42bc-b020-3bf06cf104b5}].layout["ano"{1aa90b53-a596-496a-993f-147ea73bec4e}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["AX_LMDTNT_ANIO"{a1949f8d-5e87-42d9-bd93-2f3651844297}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="c46cb9d5-5557-4fd2-89fd-578431c08926" valueType="string"/>
+                    <property name="name" value="TM_VARIACION" valueType="string"/>
+                    <property name="description" value="Tabla de variacion UVR" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:TM_VARIACION_UVR"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:b7bf6bc6-8706-40b3-89c2-4c90f8434e32}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:TM_VARIACION_UVR"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:b7bf6bc6-8706-40b3-89c2-4c90f8434e32}].layout["AX_FECHA"{ddccfecb-4664-4694-b586-aa6a18ef3204}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_LMBAL]"{Aggregation[58f44170-6d2d-40ac-8324-23e48bb149a8]}].layout["AX_LMDTNT_DATE"{4d3aef59-6655-470a-8b2c-8ba40d1ea689}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: 17-06-2022&#xa;Analista: CAALMOSQ&#xa;Objetivo: Presentar la información de la fuente: fd_m:fd_w:fd_d:LMBAL, se debe tomar la fecha de corte + 1 (sábado) y cruzarla con las tablas&#xa;&#xa;&#xa;&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

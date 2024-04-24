@@ -1,0 +1,153 @@
+﻿<object stamp="57d8230a-135d-4f36-bfd8-3389edd24390_1668810410263" type="WorkFlow" version="9.0">
+    <property name="objectId" value="6ade3035-df88-461a-9cab-1fe9797f250a" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_REPORT" valueType="string"/>
+    <property name="description" value="FF donde se ejecuta la salida de Tasas de interés activas por tipo de crédito. Reporte y envío" valueType="string"/>
+    <property name="modules" valueType="table">
+        <object type="WorkFlow:taskModule" version="2.0">
+            <property name="name" value="6a98cf58-665a-4b7a-910a-e0f880f5bf61" valueType="string"/>
+            <property name="description" value="F_414" valueType="string"/>
+            <property name="id" value="6a98cf58-665a-4b7a-910a-e0f880f5bf61" valueType="string"/>
+            <property name="taskType" value="FreeFormReport" valueType="string"/>
+            <property name="underlyingObject" valueType="url">FreeFormReport["F_414"{9cb0b6ce-59a2-4a64-831d-56e08cc104b2}]</property>
+            <property name="asOfDateFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="moduleDelegate" valueType="object">
+                <object type="FreeFormReport:workflowDelegate" version="2.0">
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="InstanceKeyValueFormula" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValueFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="$filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="modelInstances" valueType="table">
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="fd_m:fd_w:fd_d:ref_data:ax_sbds_003_static" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="ModelBasedObject:taskModelInstanceReferenceWithFormula" version="1.0">
+                            <property name="model" value="Aggregation[F_414]" valueType="string"/>
+                            <property name="isIncluded" value="true" valueType="boolean"/>
+                            <property name="instanceDateAndKeysValuesFormula" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="TIME_TAG" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="streams" valueType="table"/>
+                    <property name="variables" valueType="table"/>
+                    <property name="files" valueType="table">
+                        <object type="FreeFormReport:fileFormula" version="2.0">
+                            <property name="folder" valueType="url">FileFolder["FILE_OUTPUT"{0fcb4ff5-76ee-4b80-a035-f68fbd8c012c}]</property>
+                            <property name="fileName" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="&quot;/414/0107-I08&quot;+DATE_STRING+&quot;.txt&quot;" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="fileType" value="Elec_Subm" valueType="string"/>
+                        </object>
+                        <object type="FreeFormReport:fileFormula" version="2.0">
+                            <property name="folder" valueType="url">FileFolder["FILE_OUTPUT"{0fcb4ff5-76ee-4b80-a035-f68fbd8c012c}]</property>
+                            <property name="fileName" valueType="object">
+                                <object type="ASLExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="ASLExpression:part" version="1.0">
+                                            <property name="expression" value="&quot;/414/FORMATO_414_&quot;+$Compania+DATE_STRING+&quot;.xls&quot;" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="fileType" value="Excel" valueType="string"/>
+                            <property name="printScenario" value="Default" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="archivalFrequency" valueType="object">
+                        <object type="ASLExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="ASLExpression:part" version="1.0">
+                                    <property name="expression" value="ARCHIVAL_FREQUENCY" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="parentModules" valueType="table"/>
+            <property name="locationX" value="126.0" valueType="double"/>
+            <property name="locationY" value="106.0" valueType="double"/>
+        </object>
+    </property>
+    <property name="archivalProperties" valueType="object">
+        <object type="ArchivalProperties" version="4.0">
+            <property name="archivalFrequencies" valueType="table"/>
+            <property name="archivalProfileIsMandatory" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="iterators" valueType="table">
+        <object type="WorkFlow:iterator" version="1.0">
+            <property name="name" value="Compania" valueType="string"/>
+            <property name="valuesListFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table">
+                        <object type="ASLExpression:part" version="1.0">
+                            <property name="expression" value="select(&quot;select distinct entity from &quot; + sourceTable(&quot;fd_m:fd_w:fd_d:ref_data:ax_sbds_003_static&quot;, TIME_TAG) + &quot; WHERE formato='414' &quot;)" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="runIteratorsInParallel" value="false" valueType="boolean"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="alwaysRestartAllModules" value="false" valueType="boolean"/>
+    <property name="inMemoryExecution" value="false" valueType="boolean"/>
+    <property name="isOverwriteOnImport" value="true" valueType="boolean"/>
+</object>

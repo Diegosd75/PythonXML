@@ -1,0 +1,80 @@
+﻿<object stamp="d076c5e7-c92b-4558-80ad-e8a447bec390_1684397380203" type="DataModel" version="2.0">
+    <property name="objectId" value="6c209707-d979-4b7e-9723-5648d869470d" valueType="string"/>
+    <property name="branchId" value="4b1fd139-e637-46c6-952c-4f85cc5f64d8" valueType="string"/>
+    <property name="name" value="BVD_DBAL" valueType="string"/>
+    <property name="description" value="Modelo de archivo que contiene  información de depósitos del Banco." valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Fuente de datos para FORMATO_338.Archivo que contiene  información de depósitos del Banco." valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["BVD_DBAL"{720aff89-21f5-4795-8244-6c1b7d35cda5}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table">
+        <object type="DataModel:streamKey" version="1.0">
+            <property name="streamKeyName" value="entity" valueType="string"/>
+            <property name="streamKeyColumn" valueType="object">
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["entity"{72885d8d-ace9-46ba-8fdf-27196a4c029e}]</property>
+                </object>
+            </property>
+            <property name="additionalStreamColumns" valueType="table"/>
+        </object>
+    </property>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="&#xa;Fecha modificación: 06-04-2023 - mruenes&#xa;Descripción: &#xa;-Se crea modelo de archivo que contiene  información de depósitos del Banco.&#xa;-----------------------------------------------------------------------------------------------------------------------------------------------------------&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

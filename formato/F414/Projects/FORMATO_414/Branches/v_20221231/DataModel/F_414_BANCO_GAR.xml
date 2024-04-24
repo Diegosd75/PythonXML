@@ -1,0 +1,212 @@
+﻿<object stamp="2ae6fd5a-0d38-41a3-aa9e-dfd4559e2860_1657209157837" type="DataModel" version="2.0">
+    <property name="objectId" value="f8d8e8ba-6e4a-43e0-b37b-5be171f84698" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_BANCO_GAR" valueType="string"/>
+    <property name="description" value="se crea modelo para obtener la informacion de las garantias banco" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="db29117e-81f1-4287-b780-67ffd563eae5" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_BANKVISION" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_BANKVISION]"{Aggregation[0473ac37-4893-4ce8-a86e-7b11f3f1505f]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="e274ec03-b315-4c80-b3a6-205d14ef02dd" valueType="string"/>
+                    <property name="name" value="XXGAR" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TIPO_GARANTIA" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TIPO_GARANTIA]"{Aggregation[c6ed61f5-816e-4368-91e3-3619db546b35]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_GARANTIA]"{Aggregation[c6ed61f5-816e-4368-91e3-3619db546b35]}].layout["xxnoan"{c98940e4-d773-4858-811e-3178c9530fca}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_BANKVISION]"{Aggregation[0473ac37-4893-4ce8-a86e-7b11f3f1505f]}].layout["LMNOAC"{14b80a21-0cc8-4328-817f-2e8b7a16de28}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="e6286886-b7a1-46ed-8187-095a29317f07" valueType="string"/>
+                    <property name="name" value="CEAC72" valueType="string"/>
+                    <property name="description" value="Archivo de Garantías idóneas asignadas en detalle (obligaciones vs garantías). En este archivo está el detalle de la distribución de las garantías entre las diferentes obligaciones." valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:VISIONR_CEGASV"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:02344969-59e8-4890-8668-05a2db461742}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:VISIONR_CEGASV"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:02344969-59e8-4890-8668-05a2db461742}].layout["CEAC72"{397d6705-5ec7-4ee1-b8c3-3c90cd856fb9}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_BANKVISION]"{Aggregation[0473ac37-4893-4ce8-a86e-7b11f3f1505f]}].layout["LMNOAC"{14b80a21-0cc8-4328-817f-2e8b7a16de28}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="10b778c7-f638-4290-8070-c3d170ddb8e4" valueType="string"/>
+                    <property name="name" value="XOWBN" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_VISIONR_CEXOWBN" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_VISIONR_CEXOWBN]"{Aggregation[807a3d74-5acd-4346-b666-ce93f21c9d17]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_VISIONR_CEXOWBN]"{Aggregation[807a3d74-5acd-4346-b666-ce93f21c9d17]}].layout["AX_XONOTX"{e6783743-c845-4902-9b3a-8d0eff112d4c}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_BANKVISION]"{Aggregation[0473ac37-4893-4ce8-a86e-7b11f3f1505f]}].layout["CNNOSS"{9969177c-59db-45da-b98b-136ccf111f08}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="579e4836-f161-4657-ac42-b26f6b04b336" valueType="string"/>
+                    <property name="name" value="TR_PARAMETROS_F414" valueType="string"/>
+                    <property name="description" value="Tabla parametrica para identificar: Tipo persona, sexo, plazo, prodcuto crédito, garantía, entre otros" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8c728223-60bd-4f5e-bf97-e882d690bcc7}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8c728223-60bd-4f5e-bf97-e882d690bcc7}].layout["entity"{eefd15ab-8f5d-41ae-bf9e-75db4698572e}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_BANKVISION]"{Aggregation[0473ac37-4893-4ce8-a86e-7b11f3f1505f]}].layout["entity"{99e2ceec-5e01-4668-acfb-e80da57fccb2}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: &#x9;10-abr-2022&#xa;Analista:&#x9;caalmosq&#xa;Objetivo: se crea modelo para obtener la informacion de las garantias banco" valueType="string"/>
+        </object>
+    </property>
+</object>

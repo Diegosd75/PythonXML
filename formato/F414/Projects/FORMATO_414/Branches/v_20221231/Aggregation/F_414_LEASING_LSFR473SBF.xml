@@ -1,0 +1,144 @@
+﻿<object stamp="99d8a4ea-6276-4551-bf48-4d4581697bf4_1655328923833" type="Aggregation" version="7.0">
+    <property name="objectId" value="c6b83fdb-1660-4056-beb3-fe566803d2f3" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_LEASING_LSFR473SBF" valueType="string"/>
+    <property name="description" value="Carga de datos de la tabla LEASING_LSFR473SBF" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_LEASING_LSFR473SBF"{f3a78132-b7d2-4d30-844e-dfc7d27c71d2}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="c82d0460-9493-461f-8348-437bc6626065" valueType="string"/>
+            <property name="name" value="FRNOPER" valueType="string"/>
+            <property name="description" value="Contrato" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="ac7e41c4-2563-4e01-a7e4-95e1a3ed2ca7" valueType="string"/>
+            <property name="name" value="FRNIT" valueType="string"/>
+            <property name="description" value="NIT" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="096e3d3d-4de6-47e8-92d3-30cb294898a4" valueType="string"/>
+            <property name="name" value="FRCLASIF" valueType="string"/>
+            <property name="description" value="Clasificación" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRNOPER"{c82d0460-9493-461f-8348-437bc6626065}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_LEASING_LSFR473SBF"{f3a78132-b7d2-4d30-844e-dfc7d27c71d2}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_LEASING_LSFR473SBF"{f3a78132-b7d2-4d30-844e-dfc7d27c71d2}].hierarchy["root"{e88af1d5-ba4f-4f5b-94b9-5195d7b4c9ea}].dataSource.layout["FRNOPER"{45daad04-35e5-40ae-b723-1f4b65d417fb}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRNIT"{ac7e41c4-2563-4e01-a7e4-95e1a3ed2ca7}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_LEASING_LSFR473SBF"{f3a78132-b7d2-4d30-844e-dfc7d27c71d2}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_LEASING_LSFR473SBF"{f3a78132-b7d2-4d30-844e-dfc7d27c71d2}].hierarchy["root"{e88af1d5-ba4f-4f5b-94b9-5195d7b4c9ea}].dataSource.layout["FRNIT"{0ff36cfb-4c15-4e16-a714-362a98644bb7}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRCLASIF"{096e3d3d-4de6-47e8-92d3-30cb294898a4}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_LEASING_LSFR473SBF"{f3a78132-b7d2-4d30-844e-dfc7d27c71d2}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_LEASING_LSFR473SBF"{f3a78132-b7d2-4d30-844e-dfc7d27c71d2}].hierarchy["root"{e88af1d5-ba4f-4f5b-94b9-5195d7b4c9ea}].dataSource.layout["FRCLASIF"{65b3675e-d70a-475d-8098-9c3fd06f744e}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  10-06-2022  - caalmosq&#xa;Descripción/Objetivo: Carga de datos de la tabla LEASING_LSFR473SBF" valueType="string"/>
+        </object>
+    </property>
+</object>

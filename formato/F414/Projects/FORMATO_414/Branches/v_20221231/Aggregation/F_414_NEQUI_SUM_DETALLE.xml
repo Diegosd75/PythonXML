@@ -1,0 +1,118 @@
+﻿<object stamp="87fad118-8c47-4175-bb9f-894ab946c57f_1654601746335" type="Aggregation" version="7.0">
+    <property name="objectId" value="a12869c0-f0b5-4334-b51f-f8a907b9cc9b" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_NEQUI_SUM_DETALLE" valueType="string"/>
+    <property name="description" value="agregacion con la suma del detalle de nequi" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_PRESTAMOS_NEQUI]"{Aggregation[8ca6edaf-3c1f-4ce5-9884-26ee3f5c79d4]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="01a2046b-f83d-4110-a6ab-7fc517914e8b" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="b187977e-3612-4ef9-991e-a4b18ede9e74" valueType="string"/>
+            <property name="name" value="DISB_AMT" valueType="string"/>
+            <property name="description" value="monto desembolsado en el prestamo" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="DISB_AMT" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INFO"{01a2046b-f83d-4110-a6ab-7fc517914e8b}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_PRESTAMOS_NEQUI]"{Aggregation[8ca6edaf-3c1f-4ce5-9884-26ee3f5c79d4]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_PRESTAMOS_NEQUI]"{Aggregation[8ca6edaf-3c1f-4ce5-9884-26ee3f5c79d4]}].hierarchy["Aggregation"{8ca6edaf-3c1f-4ce5-9884-26ee3f5c79d4}].dataSource.layout["FRENTE_INFO"{75a40636-5e0b-4ff9-a0dc-e78e0ceeca07}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["DISB_AMT"{b187977e-3612-4ef9-991e-a4b18ede9e74}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_PRESTAMOS_NEQUI]"{Aggregation[8ca6edaf-3c1f-4ce5-9884-26ee3f5c79d4]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_PRESTAMOS_NEQUI]"{Aggregation[8ca6edaf-3c1f-4ce5-9884-26ee3f5c79d4]}].hierarchy["Aggregation"{8ca6edaf-3c1f-4ce5-9884-26ee3f5c79d4}].dataSource.layout["DISB_AMT"{fc364ad8-8f25-4fc6-861a-5c1a7ba2b07b}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 14/05/2022 - caalmosq&#x9;&#xa;Descripción: agregacion con la suma del detalle de nequi" valueType="string"/>
+        </object>
+    </property>
+</object>

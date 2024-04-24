@@ -1,0 +1,61 @@
+﻿<object stamp="d013bc2c-8149-4df1-bb7c-510320ded1f0_1652893276649" type="Shorthand" version="2.0">
+    <property name="objectId" value="c47d8054-3569-45d9-872d-dbb225197f6e" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_LCHG" valueType="string"/>
+    <property name="description" value="SE CREA FILTRO PARA OBTENER LA INFORMACION DE DEPOSITOS" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: SE CREA FILTRO PARA OBTENER LA INFORMACION DE DEPOSITOS" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="DEPOSITOS_LCHG" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}].hierarchy["root"{96f87f5c-8edc-4c5e-a80c-11dca532097e}].dataSource.layout["LCCDLC"{d6938aaa-5926-4846-bc78-0c0f812665b5}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="MU1" valueType="string"/>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

@@ -1,0 +1,158 @@
+﻿<object stamp="c44d046a-95f4-4333-b191-04aba9979c32_1655505016330" type="DataModel" version="2.0">
+    <property name="objectId" value="2eb288ec-a390-475a-abe7-0acb82c8a607" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_LEASING_PER_SEX" valueType="string"/>
+    <property name="description" value="Modelo con el cruce de informacion de leasing con informacion del cname" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="1abd7844-3709-462c-90c0-a3c6e4f061b8" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_INFORMACION_LEASING" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_INFORMACION_LEASING]"{Aggregation[07054fd5-6fab-43a7-aeb0-a86219efdf44]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="9534b2c5-8744-42c7-a37b-914b534a5272" valueType="string"/>
+                    <property name="name" value="CNAME" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TIPO_PERSONA_SEXO" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CNNOSS"{8ac41641-a84d-4a65-b7d3-314fcc7261dd}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_INFORMACION_LEASING]"{Aggregation[07054fd5-6fab-43a7-aeb0-a86219efdf44]}].layout["NIT_SIN_DV"{b9567399-1a48-46ea-bd9e-ea698a53c279}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CNCDTI"{c2ea18f0-9200-47ce-83f8-fe40ee69ccf2}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_INFORMACION_LEASING]"{Aggregation[07054fd5-6fab-43a7-aeb0-a86219efdf44]}].layout["TIPOID_CNAME"{5fdbded8-28e2-40c5-a57e-9cff8c470ea3}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="2edfdf55-b737-4ad6-8cae-5af256262f2f" valueType="string"/>
+                    <property name="name" value="LEASING_AOPERATIVO" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F088_LEASING_AOPERATIVO" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_LEASING_AOPERATIVO]"{Aggregation[27284fcf-4a9e-4dcd-8420-9abdb43de831]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_LEASING_AOPERATIVO]"{Aggregation[27284fcf-4a9e-4dcd-8420-9abdb43de831]}].layout["PMPLINEA"{d6635a0d-ebc5-4148-becd-8506a62b328c}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_INFORMACION_LEASING]"{Aggregation[07054fd5-6fab-43a7-aeb0-a86219efdf44]}].layout["PMPLINEA"{513b88d6-c2b0-4fc0-9c1c-ac3ae8961614}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_LEASING_AOPERATIVO]"{Aggregation[27284fcf-4a9e-4dcd-8420-9abdb43de831]}].layout["PMPNOPER"{fe54d294-ccd5-4cce-a04c-d629871ddf17}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_INFORMACION_LEASING]"{Aggregation[07054fd5-6fab-43a7-aeb0-a86219efdf44]}].layout["PMPNOPER"{182d4c16-2702-42ad-9b1a-5fded9c7ca50}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_LEASING_AOPERATIVO]"{Aggregation[27284fcf-4a9e-4dcd-8420-9abdb43de831]}].layout["PMPNROAUX"{53c3a1f6-b30d-4dab-ad9a-5c537809e214}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_INFORMACION_LEASING]"{Aggregation[07054fd5-6fab-43a7-aeb0-a86219efdf44]}].layout["PMPNROAUX"{0ed94a93-1af4-4e92-b626-4c3046a4ba40}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_LEASING_AOPERATIVO]"{Aggregation[27284fcf-4a9e-4dcd-8420-9abdb43de831]}].layout["FRCLASIF"{61e9b366-2509-4a56-8f25-26b2740961f0}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_INFORMACION_LEASING]"{Aggregation[07054fd5-6fab-43a7-aeb0-a86219efdf44]}].layout["FRCLASIF"{1f277f6a-2e2a-4c41-a87d-4ce1ca224f3c}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  10-06-2022  - caalmosq&#xa;Descripción Modelo con el cruce de informacion de leasing con informacion del cname&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

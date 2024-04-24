@@ -1,0 +1,137 @@
+﻿<object stamp="e77cf060-3066-4f3b-a0b6-0f275d15fa77_1691084059456" type="DataModel" version="2.0">
+    <property name="objectId" value="c5893b78-eb75-4fed-95e3-7f6f41ffae31" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_TARJETAS_TDCFFAMPJ2_TDCFFATPT1" valueType="string"/>
+    <property name="description" value="Ampliar la información de la Agg F_414_TARJETAS_TDCFFATPT1_ATPT1_2" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="1f0b50fd-cd7e-4e70-8d85-4b41acec1e85" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Tarjetas - Archivo de Sub-Planes, transacciones con saldos por diferir" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:TDCFFAMPJ2"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a242c875-2093-42b4-a9c6-0529e45e2dcb}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="95553b23-8cf5-4b8a-8e2d-e4904b7dee94" valueType="string"/>
+                    <property name="name" value="TDCFFATPT1_ATPT1" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TARJETAS_TDCFFATPT1_ATPT1_2" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TARJETAS_TDCFFATPT1_ATPT1_2]"{Aggregation[fe716383-8346-4513-a385-98d826a950fc]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_TDCFFATPT1_ATPT1_2]"{Aggregation[fe716383-8346-4513-a385-98d826a950fc]}].layout["ATPT1_001"{c982f825-8ef9-4dfa-8b4f-3d71c98e147e}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:TDCFFAMPJ2"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a242c875-2093-42b4-a9c6-0529e45e2dcb}].layout["AMPJ2_001"{eed96dd4-4cae-4be6-a294-4b5c6ed93c2e}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_TDCFFATPT1_ATPT1_2]"{Aggregation[fe716383-8346-4513-a385-98d826a950fc]}].layout["ATPT1_002"{78ebf81a-f8e1-4756-88a2-2e16d9ce4f79}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:TDCFFAMPJ2"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a242c875-2093-42b4-a9c6-0529e45e2dcb}].layout["AMPJ2_002"{1b40f86e-2a5a-476a-9cdc-f7140c26d492}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_TDCFFATPT1_ATPT1_2]"{Aggregation[fe716383-8346-4513-a385-98d826a950fc]}].layout["ATPT1_006"{18f24a9f-8fdf-4284-98d2-082320ca0ae9}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:TDCFFAMPJ2"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a242c875-2093-42b4-a9c6-0529e45e2dcb}].layout["AMPJ2_011"{d66c4dc4-f2be-4307-b8fc-b740c57de037}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_TDCFFATPT1_ATPT1_2]"{Aggregation[fe716383-8346-4513-a385-98d826a950fc]}].layout["ATPT1_011"{d9355f75-c806-4a06-bb47-dbab252b2c15}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:TDCFFAMPJ2"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a242c875-2093-42b4-a9c6-0529e45e2dcb}].layout["AMPJ2_013"{97c201a8-f191-4367-a5d0-f51216207ad9}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_TDCFFATPT1_ATPT1_2]"{Aggregation[fe716383-8346-4513-a385-98d826a950fc]}].layout["ATPT1_016"{d74935a7-36ae-4e11-9fa5-05c722fe494c}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:TDCFFAMPJ2"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a242c875-2093-42b4-a9c6-0529e45e2dcb}].layout["AMPJ2_007"{c56521e9-6073-4a63-8cb3-e847ac3d448a}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_TDCFFATPT1_ATPT1_2]"{Aggregation[fe716383-8346-4513-a385-98d826a950fc]}].layout["ATPT1_039"{3de9d439-1c01-4498-8395-504f1866389a}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:TDCFFAMPJ2"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a242c875-2093-42b4-a9c6-0529e45e2dcb}].layout["AMPJ2_028"{b359c738-e4fe-4382-a15d-5b18d0226274}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table">
+        <object type="DataModel:streamKey" version="1.0">
+            <property name="streamKeyName" value="entity" valueType="string"/>
+            <property name="streamKeyColumn" valueType="object">
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{1f0b50fd-cd7e-4e70-8d85-4b41acec1e85}].dataSource.layout["entity"{c7f54ee2-4f6a-4401-8b33-c432d2386aa7}]</property>
+                </object>
+            </property>
+            <property name="additionalStreamColumns" valueType="table"/>
+        </object>
+    </property>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 31/05/2022 - sergigon&#xa;Descripción:&#xa;- Modelo de cruce de la tabla TDCFFAMPJ2 con la Agg F_414_TARJETAS_TDCFFATPT1_ATPT1_2 para traer infromación transacciónal de tarjetas de crédito." valueType="string"/>
+        </object>
+    </property>
+</object>

@@ -1,0 +1,150 @@
+﻿<object stamp="34948726-da95-45c7-8ae6-2b6c24b63eac_1657053956047" type="DataModel" version="2.0">
+    <property name="objectId" value="0b269c96-a404-4b46-999f-426a7cd7d12e" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_TARJETAS" valueType="string"/>
+    <property name="description" value="Modelo de datos para el frente Tarjetas" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="b65e3ca0-777c-42e4-b60f-99237dfa1bae" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_TARJETAS_PER_SEX" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TARJETAS_PER_SEX]"{Aggregation[35d1951d-7825-462b-a9c9-88440657e879]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="962d04fb-c789-4e65-83a5-9296492a74e7" valueType="string"/>
+                    <property name="name" value="TR_PARAMETROS" valueType="string"/>
+                    <property name="description" value="Tabla parametrica para identificar: Tipo persona, sexo, plazo, prodcuto crédito, garantía, entre otros" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8c728223-60bd-4f5e-bf97-e882d690bcc7}]</property>
+                    <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8c728223-60bd-4f5e-bf97-e882d690bcc7}].layout["entity"{eefd15ab-8f5d-41ae-bf9e-75db4698572e}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_PER_SEX]"{Aggregation[35d1951d-7825-462b-a9c9-88440657e879]}].layout["entity"{b5008b59-ba1b-4a49-bb4c-c07f3e4447a8}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="a7cf4de7-75de-464b-b69f-e0c8f9a18682" valueType="string"/>
+                    <property name="name" value="TR_SALARIO_MINIMO" valueType="string"/>
+                    <property name="description" value="La fuente que contenga información referente salarios mínimos legales mensuales" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_SALARIO_MINIMO"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8e226aa6-0b8a-42bc-b020-3bf06cf104b5}]</property>
+                    <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table">
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_SALARIO_MINIMO"{a7cf4de7-75de-464b-b69f-e0c8f9a18682}].dataSource.layout["ano"{1aa90b53-a596-496a-993f-147ea73bec4e}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = extract(year from " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{b65e3ca0-777c-42e4-b60f-99237dfa1bae}].dataSource.layout["asof_date"{asofdate_35d1951d-7825-462b-a9c9-88440657e879}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table"/>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 12/05/2022 - sergigon&#xa;Descripción:&#xa;- Modelo de datos donde se realizan cruces con las diferentes fuentes de información para el frente Hipotecario y Comercial." valueType="string"/>
+        </object>
+    </property>
+</object>

@@ -1,0 +1,1423 @@
+﻿<object stamp="7bf95e70-94a8-4acf-9c5e-50811fc984bb_1659624576555" type="Aggregation" version="7.0">
+    <property name="objectId" value="78df28d6-d8a7-4b0f-bd38-e5afe37dd7c7" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_DETALLE_SUFI" valueType="string"/>
+    <property name="description" value="Generar el detalle para cada operación del frente SUFI" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+        </object>
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+        </object>
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="4c42a34f-21b5-4180-9de6-21e96a552495" valueType="string"/>
+            <property name="name" value="entity" valueType="string"/>
+            <property name="description" value="entity" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="01861758-e17b-418d-b87d-ed4f62ea0eb0" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="Frente de información" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="FRENTE_INFO" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="c7d09ac4-886e-4eb8-8a57-d12fd5f6d53e" valueType="string"/>
+            <property name="name" value="CNCDTI" valueType="string"/>
+            <property name="description" value="Tipo de Identificación" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="CNCDTI" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="4bd4f848-fcdf-45d8-bbdc-6bc24feee1a2" valueType="string"/>
+            <property name="name" value="CNNOSS" valueType="string"/>
+            <property name="description" value="Núm. Identificación." valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="CNNOSS" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="8eab7fa9-bb78-45ff-a407-44afc43aed03" valueType="string"/>
+            <property name="name" value="CNNAME" valueType="string"/>
+            <property name="description" value="Nombre del Cliente" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="CNNAME" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="371bf9f7-40fa-44b9-bbf8-3ed71c9a25b4" valueType="string"/>
+            <property name="name" value="CNCDST" valueType="string"/>
+            <property name="description" value="Estado" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="CNCDST" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="d477a8c9-0639-4f40-aee5-fffb6a690655" valueType="string"/>
+            <property name="name" value="CNCDBI" valueType="string"/>
+            <property name="description" value="Segmento de Mercado" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="CNCDBI" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="c8bb3d9b-9ffc-4c7c-b1fe-1497e1b5acd3" valueType="string"/>
+            <property name="name" value="CNCDVP" valueType="string"/>
+            <property name="description" value="COdigo de Importancia" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="CNCDVP" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="3d0e575d-3e2d-4250-bc67-08ecb84ebf64" valueType="string"/>
+            <property name="name" value="L01NPR" valueType="string"/>
+            <property name="description" value="Número de Colocación" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="L01NPR" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="faae07e5-18c9-4211-ba14-7ebee056e03d" valueType="string"/>
+            <property name="name" value="L36PLA" valueType="string"/>
+            <property name="description" value="Plazo (puedo sacar la subcta) ordinario, plazo en días" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="L36PLA" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="fa2a00b7-bc2a-466a-b9a1-84dacb9335fc" valueType="string"/>
+            <property name="name" value="L04NCU" valueType="string"/>
+            <property name="description" value="Número cuotas" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="L04NCU" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="117f2c89-43c8-4241-9bd5-51cc93da40d3" valueType="string"/>
+            <property name="name" value="L13VEV" valueType="string"/>
+            <property name="description" value="Tasa Efectiva" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="L13VEV" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="853b66a4-fa8c-4405-8c09-19fd51c445dd" valueType="string"/>
+            <property name="name" value="S08ICC" valueType="string"/>
+            <property name="description" value="Ind. Clase Cartera" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="S08ICC" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="e9929a4a-3945-4c15-90e5-c9691979ca51" valueType="string"/>
+            <property name="name" value="S08TPD" valueType="string"/>
+            <property name="description" value="Tipo Producto" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="S08TPD" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="8b0a377a-da5b-4784-ac76-d0081e5260dd" valueType="string"/>
+            <property name="name" value="S08NTR" valueType="string"/>
+            <property name="description" value="Número de Producto" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="S08NTR" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="15f4abd5-0da5-44d5-85f5-dd4c1885779e" valueType="string"/>
+            <property name="name" value="L36FDE" valueType="string"/>
+            <property name="description" value="Fecha desembolso" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="L36FDE" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="87214a60-9fcc-4f4c-a573-7952a885a1f6" valueType="string"/>
+            <property name="name" value="PLAZO" valueType="string"/>
+            <property name="description" value="PLAZO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="PLAZO" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="f5e54e8c-455c-4af6-9601-09ce96b71b2b" valueType="string"/>
+            <property name="name" value="TASA_EFECTIVA" valueType="string"/>
+            <property name="description" value="TASA_EFECTIVA" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="TASA_EFECTIVA" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="7dfcbe0a-a9a2-4481-8395-b700034478a5" valueType="string"/>
+            <property name="name" value="SEGMENTO" valueType="string"/>
+            <property name="description" value="SEGMENTO" valueType="string"/>
+            <property name="aggrMethod" value="MAX" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table">
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value="CASE  WHEN " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNCDBI"{d477a8c9-0639-4f40-aee5-fffb6a690655}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" IN ('1', '3', '8', 'C', 'G') AND " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNCDVP"{c8bb3d9b-9ffc-4c7c-b1fe-1497e1b5acd3}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" IN ('1','5','6','7') AND " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PLAZO"{87214a60-9fcc-4f4c-a573-7952a885a1f6}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" > 30 THEN 'PREFERENCIAL'  WHEN " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNCDBI"{d477a8c9-0639-4f40-aee5-fffb6a690655}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" IN ('1', '3', '8', 'C', 'G') AND " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNCDVP"{c8bb3d9b-9ffc-4c7c-b1fe-1497e1b5acd3}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" IN ('1','5','6','7') AND " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PLAZO"{87214a60-9fcc-4f4c-a573-7952a885a1f6}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" &lt;= 30 THEN 'TESORERIA'  ELSE  'ORDINARIO' END" valueType="string"/>
+                </object>
+            </property>
+            <property name="valueType" value="VARCHAR" valueType="string"/>
+            <property name="valueSize" value="20" valueType="integer"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="a110c4dc-7f40-4883-b829-4e533839cadb" valueType="string"/>
+            <property name="name" value="L36VDE" valueType="string"/>
+            <property name="description" value="Valor desembolso" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table">
+        <object type="Aggregation:syntheticField" version="3.0">
+            <property name="id" value="68203db9-bf4c-46df-ae56-d19cdc617018" valueType="string"/>
+            <property name="name" value="TASA_PONDERADA" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="formula" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["TASA_EFECTIVA"{f5e54e8c-455c-4af6-9601-09ce96b71b2b}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" * " valueType="string"/>
+                </object>
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["L36VDE"{a110c4dc-7f40-4883-b829-4e533839cadb}]</property>
+                </object>
+            </property>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="valueType" value="FLOAT" valueType="string"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["entity"{4c42a34f-21b5-4180-9de6-21e96a552495}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["entity"{e6a5a710-ddd7-43bc-a637-2b0c29ae921f}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["entity"{f57f9027-37f7-4beb-931f-e88902626f30}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["entity"{f5a880df-3840-4c5f-8321-46f06e04a9a6}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INFO"{01861758-e17b-418d-b87d-ed4f62ea0eb0}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="'SUFI'" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="'SUFI'" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="'SUFI'" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNCDTI"{c7d09ac4-886e-4eb8-8a57-d12fd5f6d53e}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL( " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["CLIENTES_CNAME"{0aab5b59-b575-4b46-8ff8-a729bf902c50}].dataSource.layout["CNCDTI"{21e27c9c-a0e4-472b-8b17-5a8cb64c42f6}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="," valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["C40TID"{728c317b-0b31-4061-9c08-dd20c2c8c786}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL( " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["CLIENTES_CNAME"{9fc80214-c5d0-40bc-8d18-64c6cdc5b3d5}].dataSource.layout["CNCDTI"{21e27c9c-a0e4-472b-8b17-5a8cb64c42f6}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="," valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["C40TID"{ae7e7ad1-5233-48ab-9485-0afda0cfd29a}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["CNCDTI"{566048a7-6b6e-49d3-afe5-61d1c261ab67}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNNOSS"{4bd4f848-fcdf-45d8-bbdc-6bc24feee1a2}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["CLIENTES_CNAME"{0aab5b59-b575-4b46-8ff8-a729bf902c50}].dataSource.layout["CNNOSS"{2970f3db-aaf6-4d48-bfa4-3430bdb021e2}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="," valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["AX_L01NID"{bb764aa6-4cc5-4471-9bf3-9be6521de5f4}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="20" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["CLIENTES_CNAME"{9fc80214-c5d0-40bc-8d18-64c6cdc5b3d5}].dataSource.layout["CNNOSS"{2970f3db-aaf6-4d48-bfa4-3430bdb021e2}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="," valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["AX_L01NID"{f1786980-6890-40f3-b31b-9362c89f98d6}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="20" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["CNNOSS"{b58afb27-dfdd-4c2d-9274-adc912c1ac0b}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNNAME"{8eab7fa9-bb78-45ff-a407-44afc43aed03}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["CLIENTES_CNAME"{0aab5b59-b575-4b46-8ff8-a729bf902c50}].dataSource.layout["CNNAME"{371a20ed-6ac6-4d33-b3cb-24eaee4deaa5}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="," valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["C40NOM"{11da706f-2ab5-4f89-a8a3-6b65be521daf}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="100" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["CLIENTES_CNAME"{9fc80214-c5d0-40bc-8d18-64c6cdc5b3d5}].dataSource.layout["CNNAME"{371a20ed-6ac6-4d33-b3cb-24eaee4deaa5}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="," valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["C40NOM"{ee593805-5ca6-4cbe-9af3-48bab2d8b8a5}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="100" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["CNNAME"{c02b84c8-6c6a-43f5-9c73-a09b1f5cc4b3}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNCDST"{371bf9f7-40fa-44b9-bbf8-3ed71c9a25b4}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["CLIENTES_CNAME"{0aab5b59-b575-4b46-8ff8-a729bf902c50}].dataSource.layout["CNCDST"{0fe12c10-4ce0-42b1-af33-5d23ac7e1ba3}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'1')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["CLIENTES_CNAME"{9fc80214-c5d0-40bc-8d18-64c6cdc5b3d5}].dataSource.layout["CNCDST"{0fe12c10-4ce0-42b1-af33-5d23ac7e1ba3}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'1')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["CNCDST"{6701c745-cf7e-4611-97d5-fc260c7d521a}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNCDBI"{d477a8c9-0639-4f40-aee5-fffb6a690655}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["CLIENTES_CNAME"{0aab5b59-b575-4b46-8ff8-a729bf902c50}].dataSource.layout["CNCDBI"{09b4e4b0-26d3-4ed0-ae0f-a2d9b276a809}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'0')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["CLIENTES_CNAME"{9fc80214-c5d0-40bc-8d18-64c6cdc5b3d5}].dataSource.layout["CNCDBI"{09b4e4b0-26d3-4ed0-ae0f-a2d9b276a809}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'0')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["CNCDBI"{7226f08f-8f82-4a56-ab67-a606533e81a7}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CNCDVP"{c8bb3d9b-9ffc-4c7c-b1fe-1497e1b5acd3}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["CLIENTES_CNAME"{0aab5b59-b575-4b46-8ff8-a729bf902c50}].dataSource.layout["CNCDVP"{08219d65-ac03-40cb-a84c-e9277f9bb4b1}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'0')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="NVL(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["CLIENTES_CNAME"{9fc80214-c5d0-40bc-8d18-64c6cdc5b3d5}].dataSource.layout["CNCDVP"{08219d65-ac03-40cb-a84c-e9277f9bb4b1}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'0')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["CNCDVP"{360c51da-14aa-4482-9f26-4a42ecc924fa}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["L01NPR"{3d0e575d-3e2d-4250-bc67-08ecb84ebf64}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L01NPR"{3a68b97a-22da-40aa-97fe-2fb419be3ffa}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L01NPR"{d53b2b6e-1661-459c-b7a8-403a192e382c}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L01NPR"{92453f46-1457-435d-b694-c031af906de4}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["L36PLA"{faae07e5-18c9-4211-ba14-7ebee056e03d}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L36PLA"{f564beb0-c2a8-4453-86de-bfd578af3fa2}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L36PLA"{a64bbefa-8048-4ba1-bf15-bcb095932eae}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L36PLA"{16780fda-04ca-43c6-93bf-72c06e29c45b}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["L04NCU"{fa2a00b7-bc2a-466a-b9a1-84dacb9335fc}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L04NCU"{63f5ef0d-33aa-41b9-8b32-ec459ad89681}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L04NCU"{002cab7e-d4ae-442d-89f3-df6c73e807fa}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L04NCU"{5c95ee20-0f5b-41c3-a3f0-a9d08bf7f29d}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["L13VEV"{117f2c89-43c8-4241-9bd5-51cc93da40d3}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L13VEV"{0e259cc4-55b9-4c5e-89b0-8bbf4ef13198}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L13VEV"{7650783b-76be-4e6b-b69b-9b9c9c7761e5}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L13VEV"{6e5c9e37-5bec-4680-8007-dc368dadd440}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["S08ICC"{853b66a4-fa8c-4405-8c09-19fd51c445dd}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["S08ICC"{8ab7ba4f-eb2b-4f1b-9945-d86a88fc28be}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["S08ICC"{bc1e5781-3735-4946-9f94-1811d9c328b7}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["S08ICC"{2470c60f-a2b0-4593-b447-cc9aa7ef5c73}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["S08TPD"{e9929a4a-3945-4c15-90e5-c9691979ca51}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["S08TPD"{79babf27-5b0e-4078-9522-44b09f1006e0}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["S08TPD"{dd8c1787-212d-418b-bbb0-f1d4f57f8154}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["S08TPD"{d23566c6-e75c-4ac3-8c0d-55f22af2da95}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["S08NTR"{8b0a377a-da5b-4784-ac76-d0081e5260dd}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["S08NTR"{f5c6045b-e05d-47dd-8a9c-303e5615b35e}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["S08NTR"{b8679187-a689-4cb6-a483-054462d041c9}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="0" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="INTEGER" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["L36FDE"{15f4abd5-0da5-44d5-85f5-dd4c1885779e}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L36FDE"{e8ec132f-4191-4442-b7f1-16433681af78}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L36FDE"{ed8b0bc8-6e34-41aa-93f2-928a7d188f7f}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L36FDE"{55b87306-861d-47bc-870c-d7793e4735fd}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PLAZO"{87214a60-9fcc-4f4c-a573-7952a885a1f6}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L36PLA"{f564beb0-c2a8-4453-86de-bfd578af3fa2}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != 0 THEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L36PLA"{f564beb0-c2a8-4453-86de-bfd578af3fa2}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" ELSE " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L04NCU"{63f5ef0d-33aa-41b9-8b32-ec459ad89681}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" * 30 END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="INTEGER" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L36PLA"{a64bbefa-8048-4ba1-bf15-bcb095932eae}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != 0 THEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L36PLA"{a64bbefa-8048-4ba1-bf15-bcb095932eae}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" ELSE " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L04NCU"{002cab7e-d4ae-442d-89f3-df6c73e807fa}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" * 30 END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="INTEGER" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L36PLA"{16780fda-04ca-43c6-93bf-72c06e29c45b}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != 0 THEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L36PLA"{16780fda-04ca-43c6-93bf-72c06e29c45b}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" ELSE " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L04NCU"{5c95ee20-0f5b-41c3-a3f0-a9d08bf7f29d}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" * 30 END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="INTEGER" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["TASA_EFECTIVA"{f5e54e8c-455c-4af6-9601-09ce96b71b2b}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L13VEV"{0e259cc4-55b9-4c5e-89b0-8bbf4ef13198}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" NOT IN(0 , -1) THEN ( " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L13VEV"{0e259cc4-55b9-4c5e-89b0-8bbf4ef13198}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" * 100) ELSE 0 END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="FLOAT" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L13VEV"{7650783b-76be-4e6b-b69b-9b9c9c7761e5}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" NOT IN(0 , -1) THEN ( " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L13VEV"{7650783b-76be-4e6b-b69b-9b9c9c7761e5}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" * 100) ELSE 0 END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="FLOAT" valueType="string"/>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L13VEV"{6e5c9e37-5bec-4680-8007-dc368dadd440}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" NOT IN(0 , -1)  THEN (" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L13VEV"{6e5c9e37-5bec-4680-8007-dc368dadd440}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" * 100)  ELSE 0 END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="FLOAT" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["L36VDE"{a110c4dc-7f40-4883-b829-4e533839cadb}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CNAME"{0f9eb05b-08a7-41d2-97d2-aa365582ce53}].hierarchy["root"{b9473ba9-7a8d-4528-8dec-7a2428b2830f}].dataSource.layout["L36VDE"{524b6a50-e868-4840-a00e-fd4386a28aee}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_REVERSOS_CNAME"{db947e0f-7164-430b-ada5-ba716b8a25bc}].hierarchy["root"{85d1a0df-682d-404b-90c6-f24e361bc31d}].dataSource.layout["L36VDE"{f80edc64-a95a-4798-96da-1e75bbcbb541}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TM_DESEMBOLSOS_SUFI]"{Aggregation[ab0aee0b-db80-43b9-a64d-65cebe258c0b]}].hierarchy["Aggregation"{ab0aee0b-db80-43b9-a64d-65cebe258c0b}].dataSource.layout["L36VDE"{93e5cac3-15d3-4cd9-ab5c-949de9334f72}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="true" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: &#x9;04-MAY-2022&#xa;Analista:&#x9;CAALMOSQ&#xa;Objetivo:&#x9;Generar el detalle para cada operación del frente SUFI&#xa;======================================================================================================================================&#xa;&#xa;Fecha Modificación: 04/08/2022 - dasierra&#xa;Descripción:&#xa;Se agrupan por el monto." valueType="string"/>
+        </object>
+    </property>
+</object>

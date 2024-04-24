@@ -1,0 +1,85 @@
+﻿<object stamp="5dd259cb-88f3-4ff6-ba91-5132e3a331c1_1691084054145" type="Shorthand" version="2.0">
+    <property name="objectId" value="5df3dd38-09ea-4536-8c84-9dcb2b32ec60" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_TARJETAS" valueType="string"/>
+    <property name="description" value="Filtros generales para el frente Tarjetas" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 08/06/2022 - sergigon&#xa;Descripción: Se crea Shorthand transversal para tarjetas.&#xa;- Nodo TDCFFATPT1 aplica para el  modelo F_414_TARJETAS_TDCFFATPT1&#xa;- Nodo TDCFFPASIS aplica para la fuente TDCFFPASIS." valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="TDCFFPASIS" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}].hierarchy["root"{3b8a0ccd-85ca-4fb8-8bb7-2f296b8c25be}].dataSource.layout["PSPARAM"{ec80165d-3dfe-4df6-aaca-eeb35cb27608}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="F088TRNEXC" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["fd_m:fd_w:TDCFFPASIS"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:970e7136-0251-4f74-ac68-023bd9002236}].hierarchy["root"{3b8a0ccd-85ca-4fb8-8bb7-2f296b8c25be}].dataSource.layout["PSCONSEC"{c07ec97f-8cb9-46aa-bc76-5c519ea923c4}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="2" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

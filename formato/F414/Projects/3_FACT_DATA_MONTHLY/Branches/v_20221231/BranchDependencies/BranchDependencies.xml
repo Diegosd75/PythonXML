@@ -1,0 +1,36 @@
+<object stamp="df491162-1ace-4762-831a-2aa973e09a12_1664482003166" type="BranchDependencies" version="2.0">
+    <property name="name" value="BranchDependencies" valueType="string"/>
+    <property name="description" value="Branch Dependencies" valueType="string"/>
+    <property name="objectId" value="BranchDependencies" valueType="string"/>
+    <property name="branchId" value="cc80f320-0e4a-44c5-aa83-c0fbe40dd26f" valueType="string"/>
+    <property name="dependencies" valueType="table">
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f" valueType="string"/>
+            <property name="name" value="fd_w" valueType="string"/>
+            <property name="description" value="Fact Data weekly" valueType="string"/>
+            <property name="branch" valueType="url">Branch["2_FACT_DATA_WEEKLY!v_20221231"{8db122bf-f144-4290-a7ca-7dd596001456}]</property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="55f43f39-adb9-47fc-b797-39b794705c6d" valueType="string"/>
+            <property name="name" value="prev_qtr_1" valueType="string"/>
+            <property name="description" value="Pervious quarter" valueType="string"/>
+            <property name="branch" valueType="url">Branch["3_FACT_DATA_MONTHLY!v_20220930"{c95672b2-7550-4f5a-8eb6-cf146cc90301}]</property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="UDFs" valueType="string"/>
+            <property name="name" value="UDFs" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="branch" valueType="url">Branch["UDFs!UDFs"{UDFs}]</property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+        <object type="BranchDependencies:dependency" version="2.0">
+            <property name="id" value="EmailTemplates" valueType="string"/>
+            <property name="name" value="EmailTemplates" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="branch" valueType="url">Branch["EmailTemplates!EmailTemplates"{EmailTemplates}]</property>
+            <property name="isFreezingInstances" value="true" valueType="boolean"/>
+        </object>
+    </property>
+</object>

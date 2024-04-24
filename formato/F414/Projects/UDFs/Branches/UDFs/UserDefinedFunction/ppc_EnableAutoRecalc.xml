@@ -1,0 +1,33 @@
+<object stamp="003e60b6-969b-4bd7-8f31-92f4e398f2e6_1616091867252" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="e6244290-cb9a-4662-8047-7e16b5de8770" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_EnableAutoRecalc" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="EAR_jbook" valueType="string"/>
+            <property name="description" value="system variable &quot;jbook&quot;" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Enabling on FreeFormReport Automatic recalculation of formulas used to build dynamic reports&#xa;Input variables:&#xa;EAR_jbook - &#xa;-->&#xa;trace(&quot;#!#!#! ppc_EnableAutoRecalc. Started #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_EnableAutoRecalc. Copyright by AXIOM SL, Igor Kirilyuk, 2021.02.14 #!#!#!&quot;);&#xa;&#xa;var EAR_startDate = new(&quot;java.util.Date&quot;);&#xa;&#xa;EAR_jbook.setAutoRecalc(true);&#xa;EAR_jbook.releaseLock();&#xa;&#xa;var EAR_nameCellForRecalc = " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CellReference"{c683f240-66ab-48e2-b6a5-6958579d8c98}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(EAR_jbook, &quot;nameCellForRecalc&quot;);&#xa;trace(&quot;#!#!#! ppc_EnableAutoRecalc. Determining cell position to run recalculation table(s) (nameCellForRecalc): &quot; + if(EAR_nameCellForRecalc != null, &quot;TRUE&quot;, &quot;FALSE&quot;) + &quot; #!#!#!&quot;);&#xa;&lt;if> EAR_nameCellForRecalc != null&#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;&lt;if> &quot;YES&quot;.equalsIgnoreCase(EAR_jbook.getText(EAR_nameCellForRecalc.get(0), EAR_nameCellForRecalc.get(1), EAR_nameCellForRecalc.get(2)))&#xa;&#x9;&#x9;&#x9;&lt;then>&#xa;&#x9;&#x9;&#x9;&#x9;trace(&quot;#!#!#! ppc_EnableAutoRecalc. Run recalculation table(s) ... #!#!#!&quot;);&#xa;&#x9;&#x9;&#x9;&#x9;EAR_jbook.recalc();&#x9;&#xa;&#x9;&#x9;&#x9;&lt;/then>&#xa;&#x9;&#x9;&lt;/if>&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#xa;&#xa;trace(&quot;#!#!#! ppc_EnableAutoRecalc. &quot; + " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RunTime"{01bdef00-6989-424b-84f9-c81ca2885e47}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(EAR_startDate, new(&quot;java.util.Date&quot;)) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_EnableAutoRecalc. Finished #!#!#!&quot;);&#xa;" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

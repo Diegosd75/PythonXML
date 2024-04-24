@@ -1,0 +1,546 @@
+﻿<object stamp="b618f422-137e-43e8-bd4c-eafc5ae7148f_1667595698259" type="TabularReport" version="8.0">
+    <property name="objectId" value="26bb0754-cb27-482c-8755-91121a16bba0" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_CONTROL_TASA_USURA" valueType="string"/>
+    <property name="description" value="Consolida las diferencias en las Tasas de Usura" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+        </object>
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}]</property>
+        </object>
+    </property>
+    <property name="keyVariables" valueType="table"/>
+    <property name="includeNewModelsInExecution" value="false" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="asOfDate" value="2021-03-26 00:00:00.0" valueType="date"/>
+    <property name="modelDates" valueType="table">
+        <object type="ModelBasedObject:modelInstanceReference" version="1.0">
+            <property name="model" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+            <property name="instanceDateAndKeysValues" valueType="object">
+                <object type="InstanceDateAndKeysValues" version="1.0">
+                    <property name="instanceDate" value="2022-07-01 00:00:00.0" valueType="date"/>
+                    <property name="instanceKeyValues" valueType="table">
+                        <object type="InstanceKeyValue" version="1.0">
+                            <property name="name" value="version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValue" value="0" valueType="string"/>
+                        </object>
+                        <object type="InstanceKeyValue" version="1.0">
+                            <property name="name" value="filing_version" valueType="string"/>
+                            <property name="keyValueType" value="INTEGER" valueType="string"/>
+                            <property name="keyValue" value="0" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="streams" valueType="table"/>
+    <property name="fields" valueType="table">
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="8adbdf8d-99cf-49a1-bdfd-5ddd786bda49" valueType="string"/>
+            <property name="name" value="FechaCorte" valueType="string"/>
+            <property name="description" value="FECHA CORTE" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="19" valueType="integer"/>
+            <property name="valueFormat" value="dd-MMM-yyyy" valueType="string"/>
+            <property name="sortOrder" value="ASCENDING" valueType="string"/>
+            <property name="sortingSequenceNumber" value="0" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="07de3d47-9672-4be8-87f8-591840b394b9" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="26" valueType="integer"/>
+            <property name="sortOrder" value="ASCENDING" valueType="string"/>
+            <property name="sortingSequenceNumber" value="1" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="cb0ba0ff-b64b-4c55-9192-cceb1a95da20" valueType="string"/>
+            <property name="name" value="TIPO_CREDITO" valueType="string"/>
+            <property name="description" value="TIPO_CREDITO" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="17" valueType="integer"/>
+            <property name="valueFormat" value="#,##0.00;(#,##0.00)" valueType="string"/>
+            <property name="sortOrder" value="ASCENDING" valueType="string"/>
+            <property name="sortingSequenceNumber" value="2" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="83d8af98-d632-4c6e-9bed-899555662777" valueType="string"/>
+            <property name="name" value="MONTO" valueType="string"/>
+            <property name="description" value="MONTO" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="47" valueType="integer"/>
+            <property name="valueFormat" value="" valueType="string"/>
+            <property name="sortOrder" value="NONE" valueType="string"/>
+            <property name="sortingSequenceNumber" value="0" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="859af2fd-833d-4384-a23b-568928e64e66" valueType="string"/>
+            <property name="name" value="TASA_PONDE" valueType="string"/>
+            <property name="description" value="TASA EFECTIVA PROMEDIO PONDERADA" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="47" valueType="integer"/>
+            <property name="valueFormat" value="#,##0.00;(#,##0.00)" valueType="string"/>
+            <property name="sortOrder" value="ASCENDING" valueType="string"/>
+            <property name="sortingSequenceNumber" value="3" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="01009668-5757-48b7-b7cf-8ae15d6f2456" valueType="string"/>
+            <property name="name" value="TASA_USURA" valueType="string"/>
+            <property name="description" value="TASA_USURA" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="18" valueType="integer"/>
+            <property name="valueFormat" value="#,##0.00;(#,##0.00)" valueType="string"/>
+            <property name="sortOrder" value="ASCENDING" valueType="string"/>
+            <property name="sortingSequenceNumber" value="4" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="e5839934-908c-4768-8ebb-20246f750ad6" valueType="string"/>
+            <property name="name" value="DIF_TPONDE_TUSURA" valueType="string"/>
+            <property name="description" value="DIFERENCIA" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="24" valueType="integer"/>
+            <property name="valueFormat" value="#,##0.00;(#,##0.00)" valueType="string"/>
+            <property name="sortOrder" value="ASCENDING" valueType="string"/>
+            <property name="sortingSequenceNumber" value="5" valueType="integer"/>
+        </object>
+    </property>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="subTotalFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="mappings" valueType="table">
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["FechaCorte"{8adbdf8d-99cf-49a1-bdfd-5ddd786bda49}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}].hierarchy["Aggregation"{fdf8dd54-4a25-40df-bd67-eb81870e70b7}].dataSource.layout["FechaCorte"{7fcff74c-7808-4123-8fe4-b79f6ec2a449}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}].hierarchy["Aggregation"{7d1fc542-704e-410c-98df-aeb6647d7188}].dataSource.layout["FechaCorte"{7fcff74c-7808-4123-8fe4-b79f6ec2a449}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["FRENTE_INFO"{07de3d47-9672-4be8-87f8-591840b394b9}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}].hierarchy["Aggregation"{fdf8dd54-4a25-40df-bd67-eb81870e70b7}].dataSource.layout["FRENTE_INFO"{73556902-6c26-488b-bd45-e237fdc10199}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}].hierarchy["Aggregation"{7d1fc542-704e-410c-98df-aeb6647d7188}].dataSource.layout["FRENTE_INFO"{73556902-6c26-488b-bd45-e237fdc10199}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["TIPO_CREDITO"{cb0ba0ff-b64b-4c55-9192-cceb1a95da20}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}].hierarchy["Aggregation"{fdf8dd54-4a25-40df-bd67-eb81870e70b7}].dataSource.layout["TIPO_CREDITO"{7ce0a2ae-bea6-4f4b-ab9b-055d0f21aacd}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}].hierarchy["Aggregation"{7d1fc542-704e-410c-98df-aeb6647d7188}].dataSource.layout["TIPO_CREDITO"{7ce0a2ae-bea6-4f4b-ab9b-055d0f21aacd}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["MONTO"{83d8af98-d632-4c6e-9bed-899555662777}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}].hierarchy["Aggregation"{fdf8dd54-4a25-40df-bd67-eb81870e70b7}].dataSource.layout["MONTO"{6600cf45-75d5-45df-b4bd-89861b46cebb}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}].hierarchy["Aggregation"{7d1fc542-704e-410c-98df-aeb6647d7188}].dataSource.layout["MONTO"{6600cf45-75d5-45df-b4bd-89861b46cebb}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["TASA_PONDE"{859af2fd-833d-4384-a23b-568928e64e66}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}].hierarchy["Aggregation"{fdf8dd54-4a25-40df-bd67-eb81870e70b7}].dataSource.layout["TASA_PONDE"{f5583a3f-5cc0-496e-8425-71bb473c7e52}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}].hierarchy["Aggregation"{7d1fc542-704e-410c-98df-aeb6647d7188}].dataSource.layout["TASA_PONDE"{f5583a3f-5cc0-496e-8425-71bb473c7e52}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["TASA_USURA"{01009668-5757-48b7-b7cf-8ae15d6f2456}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}].hierarchy["Aggregation"{fdf8dd54-4a25-40df-bd67-eb81870e70b7}].dataSource.layout["TASA_USURA"{2fd88b9a-f3f8-42a2-9169-72cbaf5fb678}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}].hierarchy["Aggregation"{7d1fc542-704e-410c-98df-aeb6647d7188}].dataSource.layout["TASA_USURA"{2fd88b9a-f3f8-42a2-9169-72cbaf5fb678}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["DIF_TPONDE_TUSURA"{e5839934-908c-4768-8ebb-20246f750ad6}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}].hierarchy["Aggregation"{fdf8dd54-4a25-40df-bd67-eb81870e70b7}].dataSource.layout["DIF_TPONDE_TUSURA"{6ec520c7-647b-4c94-b017-9379f7dbf544}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}].hierarchy["Aggregation"{7d1fc542-704e-410c-98df-aeb6647d7188}].dataSource.layout["DIF_TPONDE_TUSURA"{6ec520c7-647b-4c94-b017-9379f7dbf544}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="TabularReportCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="Condition:singularConcrete" version="1.0">
+                            <property name="field" valueType="object">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA]"{Aggregation[fdf8dd54-4a25-40df-bd67-eb81870e70b7]}].hierarchy["Aggregation"{fdf8dd54-4a25-40df-bd67-eb81870e70b7}].dataSource.layout["DIF_TPONDE_TUSURA"{6ec520c7-647b-4c94-b017-9379f7dbf544}]</property>
+                                        </object>
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONTROL_TASA_USURA_CONSOLIDADO]"{Aggregation[7d1fc542-704e-410c-98df-aeb6647d7188]}].hierarchy["Aggregation"{7d1fc542-704e-410c-98df-aeb6647d7188}].dataSource.layout["DIF_TPONDE_TUSURA"{6ec520c7-647b-4c94-b017-9379f7dbf544}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="operation" value=">=" valueType="string"/>
+                            <property name="value" value="0.02" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="xslTransformationFile" value="" valueType="string"/>
+    <property name="postProcessingCode" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table"/>
+        </object>
+    </property>
+    <property name="stringSubstitutions" valueType="table"/>
+    <property name="additionalStringSubstitutionsScript" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table"/>
+        </object>
+    </property>
+    <property name="xmlHeader" value="" valueType="string"/>
+    <property name="xmlHeaderIsExpression" value="false" valueType="boolean"/>
+    <property name="totalsBeforeDetails" value="false" valueType="boolean"/>
+    <property name="groupHeadersOnEachPage" value="true" valueType="boolean"/>
+    <property name="aggregateRecords" value="true" valueType="boolean"/>
+    <property name="subtotalsInData" value="false" valueType="boolean"/>
+    <property name="printSetup" valueType="object">
+        <object type="TabularReport:printSetup" version="1.0">
+            <property name="fonts" valueType="table">
+                <object type="PrintSetup:font" version="1.0">
+                    <property name="name" value="body" valueType="string"/>
+                    <property name="type" value="PLAIN" valueType="string"/>
+                    <property name="fontName" value="Arial" valueType="string"/>
+                    <property name="size" value="10" valueType="integer"/>
+                </object>
+                <object type="PrintSetup:font" version="1.0">
+                    <property name="name" value="grpHeader" valueType="string"/>
+                    <property name="type" value="PLAIN" valueType="string"/>
+                    <property name="fontName" value="Arial" valueType="string"/>
+                    <property name="size" value="10" valueType="integer"/>
+                </object>
+            </property>
+            <property name="pageSetup" valueType="object">
+                <object type="PrintSetup:pageSetup" version="1.0">
+                    <property name="orientation" value="1" valueType="integer"/>
+                    <property name="size" value="9" valueType="integer"/>
+                    <property name="lm" value="1.0" valueType="double"/>
+                    <property name="rm" value="1.0" valueType="double"/>
+                    <property name="tm" value="2.463155110677083" valueType="double"/>
+                    <property name="bm" value="1.7874755859375" valueType="double"/>
+                </object>
+            </property>
+            <property name="shading" value="true" valueType="boolean"/>
+            <property name="headers" valueType="table">
+                <object type="PrintSetup:header" version="1.0">
+                    <property name="name" value="header1" valueType="string"/>
+                    <property name="font" valueType="object">
+                        <object type="PrintSetup:font" version="1.0">
+                            <property name="name" value="header1" valueType="string"/>
+                            <property name="type" value="BOLD" valueType="string"/>
+                            <property name="fontName" value="Arial" valueType="string"/>
+                            <property name="size" value="9" valueType="integer"/>
+                        </object>
+                    </property>
+                    <property name="align" value="CENTER" valueType="string"/>
+                    <property name="margin" value="1.0" valueType="double"/>
+                    <property name="text" value="" valueType="string"/>
+                </object>
+                <object type="PrintSetup:header" version="1.0">
+                    <property name="name" value="header" valueType="string"/>
+                    <property name="font" valueType="object">
+                        <object type="PrintSetup:font" version="1.0">
+                            <property name="name" value="header" valueType="string"/>
+                            <property name="type" value="BOLD" valueType="string"/>
+                            <property name="fontName" value="Arial" valueType="string"/>
+                            <property name="size" value="9" valueType="integer"/>
+                        </object>
+                    </property>
+                    <property name="align" value="CENTER" valueType="string"/>
+                    <property name="margin" value="1.0" valueType="double"/>
+                    <property name="text" value="Report $report_name as of $exec_date" valueType="string"/>
+                </object>
+                <object type="PrintSetup:header" version="1.0">
+                    <property name="name" value="footer" valueType="string"/>
+                    <property name="font" valueType="object">
+                        <object type="PrintSetup:font" version="1.0">
+                            <property name="name" value="footer" valueType="string"/>
+                            <property name="type" value="ITALIC" valueType="string"/>
+                            <property name="fontName" value="Times New Roman" valueType="string"/>
+                            <property name="size" value="9" valueType="integer"/>
+                        </object>
+                    </property>
+                    <property name="align" value="RIGHT" valueType="string"/>
+                    <property name="margin" value="1.0" valueType="double"/>
+                    <property name="text" value="Report generated on $today\nPage $page" valueType="string"/>
+                </object>
+                <object type="PrintSetup:header" version="1.0">
+                    <property name="name" value="title" valueType="string"/>
+                    <property name="font" valueType="object">
+                        <object type="PrintSetup:font" version="1.0">
+                            <property name="name" value="title" valueType="string"/>
+                            <property name="type" value="PLAIN" valueType="string"/>
+                            <property name="fontName" value="Arial" valueType="string"/>
+                            <property name="size" value="10" valueType="integer"/>
+                        </object>
+                    </property>
+                    <property name="align" value="LEFT" valueType="string"/>
+                    <property name="margin" value="1.64373779296875" valueType="double"/>
+                    <property name="text" value="Report:\t$report_name\nAs of:\t$exec_date" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="variableValuesForPreview" valueType="table"/>
+    <property name="xmlSubmissionFileEncoding" value="UTF8" valueType="string"/>
+    <property name="textSubmissionFileEncoding" value="UTF8" valueType="string"/>
+    <property name="disableDataTypeValidation" value="false" valueType="boolean"/>
+    <property name="schemaBasedXMLGeneration" value="false" valueType="boolean"/>
+    <property name="readyToSignOffVariable" value="" valueType="string"/>
+    <property name="readyToSignOffCompleteValue" value="OK" valueType="string"/>
+    <property name="enableTxtFileDelimiter" value="false" valueType="boolean"/>
+    <property name="loaderBufferSize" value="200" valueType="integer"/>
+    <property name="lineSeparator" value="system" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="false" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="------------------------------------------------------------------------------------------------------------------------------------------------&#xa;Fecha Creación: 04/08/2022 - dasierra&#xa;Descripción:&#xa;Se consolida las diferencias en las Tasas de Usura" valueType="string"/>
+        </object>
+    </property>
+</object>

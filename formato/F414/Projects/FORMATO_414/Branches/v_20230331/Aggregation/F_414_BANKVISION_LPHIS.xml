@@ -1,0 +1,274 @@
+﻿<object stamp="abe8184f-3fff-4306-9ad5-670f2cfc39be_1657208616751" type="Aggregation" version="7.0">
+    <property name="objectId" value="bff8933d-efe3-4b06-99d1-229ef2b2d41e" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_BANKVISION_LPHIS" valueType="string"/>
+    <property name="description" value="se crea agreacion con la informacion del LPHIS" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="e29a51d3-ec08-49a5-854f-395df42cdcb2" valueType="string"/>
+            <property name="name" value="entity" valueType="string"/>
+            <property name="description" value="Entidad" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="bba2cd7f-0d01-4902-8990-d96fc662b56d" valueType="string"/>
+            <property name="name" value="LPHNAC" valueType="string"/>
+            <property name="description" value="LPHNAC" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="ceb27074-5381-44ba-a9b9-4dc2ef64d56e" valueType="string"/>
+            <property name="name" value="LPHNCT" valueType="string"/>
+            <property name="description" value="LPHNCT" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="364a8f13-5a4a-4c10-ad95-c5b7333fa312" valueType="string"/>
+            <property name="name" value="LPHCPD" valueType="string"/>
+            <property name="description" value="LPHCPD" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="e9a6e98f-0159-4d64-b8d0-49e96b1fa11e" valueType="string"/>
+            <property name="name" value="LPHDPR" valueType="string"/>
+            <property name="description" value="LPHDPR" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="82ed4441-64e3-4536-bdb6-3625300e72fe" valueType="string"/>
+            <property name="name" value="LPHNPT" valueType="string"/>
+            <property name="description" value="LPHNPT" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="f2e02f80-3fef-4cd1-8927-7fbdf01e52c7" valueType="string"/>
+            <property name="name" value="LPHAPD" valueType="string"/>
+            <property name="description" value="LPHAPD" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["entity"{e29a51d3-ec08-49a5-854f-395df42cdcb2}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}].hierarchy["root"{36573400-e00d-4d97-b1ad-756cf0bc159d}].dataSource.layout["entity"{c1586a5f-817e-42cc-b5d0-3aec43aa022c}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LPHNAC"{bba2cd7f-0d01-4902-8990-d96fc662b56d}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}].hierarchy["root"{36573400-e00d-4d97-b1ad-756cf0bc159d}].dataSource.layout["LPHNAC"{7925a5af-fc88-4eb5-b3af-b0e7f3409adb}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LPHNCT"{ceb27074-5381-44ba-a9b9-4dc2ef64d56e}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}].hierarchy["root"{36573400-e00d-4d97-b1ad-756cf0bc159d}].dataSource.layout["LPHNCT"{e8b415f9-0fb2-4134-b9a9-fcc1875d3d62}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LPHCPD"{364a8f13-5a4a-4c10-ad95-c5b7333fa312}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}].hierarchy["root"{36573400-e00d-4d97-b1ad-756cf0bc159d}].dataSource.layout["LPHCPD"{a23460b6-507f-4d71-be3d-f2f86a605f66}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LPHDPR"{e9a6e98f-0159-4d64-b8d0-49e96b1fa11e}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}].hierarchy["root"{36573400-e00d-4d97-b1ad-756cf0bc159d}].dataSource.layout["LPHDPR"{786d3acd-9155-4035-b5b9-4550277c2d46}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LPHNPT"{82ed4441-64e3-4536-bdb6-3625300e72fe}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}].hierarchy["root"{36573400-e00d-4d97-b1ad-756cf0bc159d}].dataSource.layout["LPHNPT"{ab668904-b5e0-4ace-a8f1-75ac8eb53712}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["LPHAPD"{f2e02f80-3fef-4cd1-8927-7fbdf01e52c7}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_BANKVISION_LPHIS"{08a6959b-9bb6-4cfc-9e10-c1d3465f9ba8}].hierarchy["root"{36573400-e00d-4d97-b1ad-756cf0bc159d}].dataSource.layout["LPHAPD"{43b6a9e2-1beb-4205-bb45-4883b9e350b7}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                            <property name="shorthand" valueType="url">Shorthand["F_414_BANCO_LPHIS"{6213e4c4-94bc-48b3-a0ed-35beacf0524f}]</property>
+                            <property name="operation" value="=" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: 17-may-2022&#xa;Analista: caalmosq&#xa;Objetivo:se crea agreacion con la informacion del LPHIS&#xa;=======================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

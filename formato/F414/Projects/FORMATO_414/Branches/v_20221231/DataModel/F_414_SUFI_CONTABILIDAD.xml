@@ -1,0 +1,152 @@
+﻿<object stamp="52a75fcd-1b09-4539-99fd-0f3941726e0a_1657052401770" type="DataModel" version="2.0">
+    <property name="objectId" value="d8d126e1-5507-4350-9e21-7b8e4dc1a5e9" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_SUFI_CONTABILIDAD" valueType="string"/>
+    <property name="description" value="modelo de cruce para la contabilidad del frente sufi" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="6b671f59-bc7d-4136-b621-23e21ad1e030" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="SUFI SUFSDAAS_SIIG17 - Contabilidad" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:SUFSDAAS_SIIG17"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:f930ff73-a65e-4ed8-9252-21c70c14501f}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="dc4f3e32-a751-4d82-9c7b-b9b016675031" valueType="string"/>
+                    <property name="name" value="SUFSDAAS_SIIF07" valueType="string"/>
+                    <property name="description" value="SUFI - Información de las transacciones" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:SUFSDAAS_SIIF07"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:3ed5729a-0450-4b42-ab1c-01899808d4d7}]</property>
+                    <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:SUFSDAAS_SIIF07"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:3ed5729a-0450-4b42-ab1c-01899808d4d7}].layout["S07NTR"{fbf2ec00-2412-425c-a208-060adf51a0cc}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:SUFSDAAS_SIIG17"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:f930ff73-a65e-4ed8-9252-21c70c14501f}].layout["G17NOT"{be97e236-68e9-4279-a639-3fe423dadd69}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="efe41246-8779-40df-b019-bb48f3b060ad" valueType="string"/>
+                    <property name="name" value="CUENTAS_CONTABLES" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_F414_PARAMETROS_SUFI"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:bb0c38cb-cda0-499c-891c-a9e0f2da77e9}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_F414_PARAMETROS_SUFI"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:bb0c38cb-cda0-499c-891c-a9e0f2da77e9}].layout["G17NCT"{7d263f53-7d24-4cfc-ac1b-d7cd57f85fea}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:SUFSDAAS_SIIG17"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:f930ff73-a65e-4ed8-9252-21c70c14501f}].layout["G17NCT"{edf67555-430d-468e-9178-7c5afe8d600a}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table">
+        <object type="DataModel:streamKey" version="1.0">
+            <property name="streamKeyName" value="entity" valueType="string"/>
+            <property name="streamKeyColumn" valueType="object">
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["entity"{ae61d59b-6f77-4b13-b43f-20144ccc848e}]</property>
+                </object>
+            </property>
+            <property name="additionalStreamColumns" valueType="table"/>
+        </object>
+    </property>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 31/05/2022 - dasierra&#xa;Descripción: &#xa;Modelo que se crea para la contabilidad del frente sufi" valueType="string"/>
+        </object>
+    </property>
+</object>

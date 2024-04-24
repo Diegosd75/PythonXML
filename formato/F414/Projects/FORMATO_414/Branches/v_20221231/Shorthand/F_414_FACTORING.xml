@@ -1,0 +1,458 @@
+﻿<object stamp="44cdc309-861d-40a4-a222-4c13c8e28ea2_1657296337615" type="Shorthand" version="2.0">
+    <property name="objectId" value="48df8c8c-07df-4385-9565-e13d0d57f672" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_FACTORING" valueType="string"/>
+    <property name="description" value="filtros generales de frente FACTORING" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_FACTORING_LT"{a728178a-a20d-4dba-b5da-843bba4bdea9}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_FACTORING_PP"{7d635c9b-b7e9-4a2a-b969-30a20d45f3eb}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_FACTORING_PAGADOR"{395eff81-7e04-4ae5-ab25-06fdca9f7cb1}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_FACTORING_PROVEEDOR"{1555d7ce-058d-47cf-9d0d-cd597f74f55c}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: filtros generales de frente FACTORING" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="FACTORING_LT" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_FACTORING_LT"{a728178a-a20d-4dba-b5da-843bba4bdea9}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_LT"{a728178a-a20d-4dba-b5da-843bba4bdea9}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["VALUS"{eafbe6f3-8cf8-404a-94ab-a1805bc47ce4}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="0" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_LT"{a728178a-a20d-4dba-b5da-843bba4bdea9}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["ESTADOBLIG"{4458e8e5-2fc5-487b-8bf2-4aa27f7dcb0c}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="V" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="L" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="C" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="TO_DATE(" valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_LT"{a728178a-a20d-4dba-b5da-843bba4bdea9}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["FECHACONTA"{af57a0d4-4a2e-4488-aa81-f911c4edfa9d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=", 'yyyyMMdd') >= (" valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" - 6)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="TO_DATE(" valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_LT"{a728178a-a20d-4dba-b5da-843bba4bdea9}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["FECHACONTA"{af57a0d4-4a2e-4488-aa81-f911c4edfa9d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=", 'yyyyMMdd') &lt;= " valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" " valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_LT"{a728178a-a20d-4dba-b5da-843bba4bdea9}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["GLINEA"{586cd148-c126-4bb0-85b2-bde72285e106}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="LT" valueType="string"/>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="FACTORING_PP" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PP"{7d635c9b-b7e9-4a2a-b969-30a20d45f3eb}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PP"{7d635c9b-b7e9-4a2a-b969-30a20d45f3eb}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["VALUS"{eafbe6f3-8cf8-404a-94ab-a1805bc47ce4}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="0" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PP"{7d635c9b-b7e9-4a2a-b969-30a20d45f3eb}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["ESTADOBLIG"{4458e8e5-2fc5-487b-8bf2-4aa27f7dcb0c}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="V" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="L" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="C" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="TO_DATE(" valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PP"{7d635c9b-b7e9-4a2a-b969-30a20d45f3eb}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["FECHACONTA"{af57a0d4-4a2e-4488-aa81-f911c4edfa9d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=", 'yyyyMMdd') >= (" valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" - 6)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="TO_DATE(" valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PP"{7d635c9b-b7e9-4a2a-b969-30a20d45f3eb}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["FECHACONTA"{af57a0d4-4a2e-4488-aa81-f911c4edfa9d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=", 'yyyyMMdd') &lt;= " valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" " valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="PAGADOR" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PAGADOR"{395eff81-7e04-4ae5-ab25-06fdca9f7cb1}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PAGADOR"{395eff81-7e04-4ae5-ab25-06fdca9f7cb1}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["VALUS"{eafbe6f3-8cf8-404a-94ab-a1805bc47ce4}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="0" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PAGADOR"{395eff81-7e04-4ae5-ab25-06fdca9f7cb1}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["ESTADOBLIG"{4458e8e5-2fc5-487b-8bf2-4aa27f7dcb0c}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="V" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="L" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="C" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="TO_DATE(" valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PAGADOR"{395eff81-7e04-4ae5-ab25-06fdca9f7cb1}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["FECHACONTA"{af57a0d4-4a2e-4488-aa81-f911c4edfa9d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=", 'yyyyMMdd') >= (" valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" - 6)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="TO_DATE(" valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PAGADOR"{395eff81-7e04-4ae5-ab25-06fdca9f7cb1}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["FECHACONTA"{af57a0d4-4a2e-4488-aa81-f911c4edfa9d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=", 'yyyyMMdd') &lt;= " valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" " valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="PROVEEDOR" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PROVEEDOR"{1555d7ce-058d-47cf-9d0d-cd597f74f55c}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PROVEEDOR"{1555d7ce-058d-47cf-9d0d-cd597f74f55c}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["VALUS"{eafbe6f3-8cf8-404a-94ab-a1805bc47ce4}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="0" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PROVEEDOR"{1555d7ce-058d-47cf-9d0d-cd597f74f55c}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["ESTADOBLIG"{4458e8e5-2fc5-487b-8bf2-4aa27f7dcb0c}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="V" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="L" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="C" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="TO_DATE(" valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PROVEEDOR"{1555d7ce-058d-47cf-9d0d-cd597f74f55c}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["FECHACONTA"{af57a0d4-4a2e-4488-aa81-f911c4edfa9d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=", 'yyyyMMdd') >= (" valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" - 6)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="TO_DATE(" valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_FACTORING_PROVEEDOR"{1555d7ce-058d-47cf-9d0d-cd597f74f55c}].hierarchy["root"{1209c20d-15df-43c3-8882-ae3989405d2f}].dataSource.layout["FECHACONTA"{af57a0d4-4a2e-4488-aa81-f911c4edfa9d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=", 'yyyyMMdd') &lt;= " valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" " valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

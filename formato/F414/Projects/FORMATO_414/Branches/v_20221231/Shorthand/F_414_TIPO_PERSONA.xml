@@ -1,0 +1,2104 @@
+﻿<object stamp="c7958bde-bfa7-4bb6-baec-bac07201fdb2_1656988172810" type="Shorthand" version="2.0">
+    <property name="objectId" value="6abaa111-38bd-4034-af46-0a0e06da7fa3" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_TIPO_PERSONA" valueType="string"/>
+    <property name="description" value="filtro creado para identificar el tipo de persona si el Juridica o Natural" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}]</property>
+        </object>
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción:filtro creado para identificar el tipo de persona si el Juridica o Natural" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="NEQUI" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["FUENTE"{1c62e210-2ea9-40ba-8652-7a1610ec5983}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["CAMPO"{99cd8b2d-1226-4302-a7b0-d4fc85ce9f52}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="DOCUMENT_TYPE" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PARAMETRO"{317b5b3b-ed0d-46e7-b6c0-dde4b1e61668}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="HIPOTECARIO" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["CNCDTY"{c3f3cd26-06b5-450e-a533-c225ce307920}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["FUENTE"{f4cd93e8-6dba-4a22-950e-c256c6a4cac7}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["PARAMETRO"{9dba351e-d9b0-4bbd-8cee-8d53ab646a0d}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["CAMPO"{2d6600cf-1754-44a8-9386-e88bc6d4b6bb}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["VARIABLE"{8fe95170-4c4c-4bea-a3cf-39418450d2dd}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["CNCDTY"{c3f3cd26-06b5-450e-a533-c225ce307920}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["FUENTE"{f4cd93e8-6dba-4a22-950e-c256c6a4cac7}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["PARAMETRO"{9dba351e-d9b0-4bbd-8cee-8d53ab646a0d}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["CAMPO"{2d6600cf-1754-44a8-9386-e88bc6d4b6bb}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_HIP_COMERCIAL]"{Aggregation[f2cfaddc-54e7-4cee-ae13-d842b6fc2a94]}].hierarchy["Aggregation"{f2cfaddc-54e7-4cee-ae13-d842b6fc2a94}].dataSource.layout["VARIABLE"{8fe95170-4c4c-4bea-a3cf-39418450d2dd}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="DEPOSITO" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["CNCDTY"{d0209f5f-50f3-47d2-b443-1a1be7abd996}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["FUENTE"{06eab153-5d32-4fb2-8deb-3e09e39053e8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["PARAMETRO"{afaed5d6-00c1-4006-b6ac-32bb64778ce4}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["CAMPO"{2281290b-7211-4e39-881d-66ed52658707}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["VARIABLE"{2caf2346-ff65-4126-b0c9-6df1aa00a4e3}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["CNCDTY"{d0209f5f-50f3-47d2-b443-1a1be7abd996}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["FUENTE"{06eab153-5d32-4fb2-8deb-3e09e39053e8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["PARAMETRO"{afaed5d6-00c1-4006-b6ac-32bb64778ce4}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["CAMPO"{2281290b-7211-4e39-881d-66ed52658707}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DEPOSITOS_TR]"{Aggregation[745d7d0d-605f-456c-bcdb-7af3234c84b2]}].hierarchy["Aggregation"{745d7d0d-605f-456c-bcdb-7af3234c84b2}].dataSource.layout["VARIABLE"{2caf2346-ff65-4126-b0c9-6df1aa00a4e3}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="TARJETAS" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["CNCDTY"{fea34af5-9275-4d56-ab57-d3c98eba3b24}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["FUENTE"{1141ebbe-0498-452a-9535-2b8d11efd411}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["PARAMETRO"{378be20c-cfd4-4b09-bed5-316364a136ce}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["CAMPO"{3e6fffdd-683a-43f3-94a1-7093c04e7513}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["VARIABLE"{6ccc0d82-25b7-471b-ae96-45105867870c}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["CNCDTY"{fea34af5-9275-4d56-ab57-d3c98eba3b24}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["FUENTE"{1141ebbe-0498-452a-9535-2b8d11efd411}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["PARAMETRO"{378be20c-cfd4-4b09-bed5-316364a136ce}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["CAMPO"{3e6fffdd-683a-43f3-94a1-7093c04e7513}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS]"{Aggregation[206e5cc6-4db0-49d6-81ad-511b403724d7]}].hierarchy["Aggregation"{206e5cc6-4db0-49d6-81ad-511b403724d7}].dataSource.layout["VALOR_MIN"{de8eadc8-2d10-4e86-b8c5-f1da2a1db5a1}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="OTROSCOMERCIAL" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="BANCO" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CNCDTY"{474cd878-0e69-48ff-8917-5fc6245aa254}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CNCDTY"{474cd878-0e69-48ff-8917-5fc6245aa254}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="3" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="LEASING" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["CNCDTY"{7eeb863f-f7ca-419d-ae2e-970b049044ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["FUENTE"{5caf5383-eddc-4b9d-802a-2aa5707fa24a}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["PARAMETRO"{63121cd0-dc8e-4502-8bec-096ea6ab3fc3}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["CAMPO"{07befa78-01eb-4a73-8e0f-9f4fc316439d}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["VARIABLE"{daa80da3-08f9-4e0e-b9f2-f69140f622c0}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["CNCDTY"{7eeb863f-f7ca-419d-ae2e-970b049044ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["FUENTE"{5caf5383-eddc-4b9d-802a-2aa5707fa24a}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["PARAMETRO"{63121cd0-dc8e-4502-8bec-096ea6ab3fc3}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["CAMPO"{07befa78-01eb-4a73-8e0f-9f4fc316439d}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_LEASING_TR]"{Aggregation[b1805676-4e54-483c-ad2c-c45445a90b9d]}].hierarchy["Aggregation"{b1805676-4e54-483c-ad2c-c45445a90b9d}].dataSource.layout["VARIABLE"{daa80da3-08f9-4e0e-b9f2-f69140f622c0}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="3" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="SUFI" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["CNCDTY"{8911a2c3-3274-4445-ae08-21bdd2d26d84}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["FUENTE"{a47e37d3-3c2b-42ab-9a48-264c0cfd7756}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["PARAMETRO"{482ccec3-72b0-44da-ae54-2409024c61b9}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["CAMPO"{d4ca5503-2a6b-400a-befb-dab33368d65e}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["VARIABLE"{a259b35e-1da9-4d09-9873-22111da652f2}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["CNCDTY"{8911a2c3-3274-4445-ae08-21bdd2d26d84}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["FUENTE"{a47e37d3-3c2b-42ab-9a48-264c0cfd7756}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["PARAMETRO"{482ccec3-72b0-44da-ae54-2409024c61b9}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["CAMPO"{d4ca5503-2a6b-400a-befb-dab33368d65e}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_SUFI_TR]"{Aggregation[8e7abbae-930e-4571-bb7c-7c34d28f3a23]}].hierarchy["Aggregation"{8e7abbae-930e-4571-bb7c-7c34d28f3a23}].dataSource.layout["VARIABLE"{a259b35e-1da9-4d09-9873-22111da652f2}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="3" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="FACTORING_LT" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["CNCDTY"{4a7a94a6-50e7-4a2b-ae52-bb172146d326}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["FUENTE"{42fad49c-849f-4d74-a04c-9f73ccc3e46f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["PARAMETRO"{3da7c318-de16-4eb6-b3bb-7afde7be51ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["CAMPO"{9f97ba7f-55dc-444e-a917-0b0d3bc6d414}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["VARIABLE"{db87f220-5eb1-42ba-a220-1aded3cc2fd8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["CNCDTY"{4a7a94a6-50e7-4a2b-ae52-bb172146d326}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["FUENTE"{42fad49c-849f-4d74-a04c-9f73ccc3e46f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["PARAMETRO"{3da7c318-de16-4eb6-b3bb-7afde7be51ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["CAMPO"{9f97ba7f-55dc-444e-a917-0b0d3bc6d414}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_LT_TR]"{Aggregation[f68144fc-951c-434f-b160-1bdb8d589b88]}].hierarchy["Aggregation"{f68144fc-951c-434f-b160-1bdb8d589b88}].dataSource.layout["VARIABLE"{db87f220-5eb1-42ba-a220-1aded3cc2fd8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="3" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="FACTORING_PP" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["CNCDTY"{4a7a94a6-50e7-4a2b-ae52-bb172146d326}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["FUENTE"{42fad49c-849f-4d74-a04c-9f73ccc3e46f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["PARAMETRO"{3da7c318-de16-4eb6-b3bb-7afde7be51ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["CAMPO"{9f97ba7f-55dc-444e-a917-0b0d3bc6d414}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["VARIABLE"{db87f220-5eb1-42ba-a220-1aded3cc2fd8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["CNCDTY"{4a7a94a6-50e7-4a2b-ae52-bb172146d326}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["FUENTE"{42fad49c-849f-4d74-a04c-9f73ccc3e46f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["PARAMETRO"{3da7c318-de16-4eb6-b3bb-7afde7be51ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["CAMPO"{9f97ba7f-55dc-444e-a917-0b0d3bc6d414}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PP_TR]"{Aggregation[58598028-bd60-452e-9f5e-fd1316334926]}].hierarchy["Aggregation"{58598028-bd60-452e-9f5e-fd1316334926}].dataSource.layout["VARIABLE"{db87f220-5eb1-42ba-a220-1aded3cc2fd8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="3" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="FACTORING_PRO" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["CNCDTY"{4a7a94a6-50e7-4a2b-ae52-bb172146d326}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["FUENTE"{42fad49c-849f-4d74-a04c-9f73ccc3e46f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["PARAMETRO"{3da7c318-de16-4eb6-b3bb-7afde7be51ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["CAMPO"{9f97ba7f-55dc-444e-a917-0b0d3bc6d414}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["VARIABLE"{db87f220-5eb1-42ba-a220-1aded3cc2fd8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["CNCDTY"{4a7a94a6-50e7-4a2b-ae52-bb172146d326}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["FUENTE"{42fad49c-849f-4d74-a04c-9f73ccc3e46f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["PARAMETRO"{3da7c318-de16-4eb6-b3bb-7afde7be51ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["CAMPO"{9f97ba7f-55dc-444e-a917-0b0d3bc6d414}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PRO_TR]"{Aggregation[aae20f15-6171-4fc1-911c-c3e92e62ff98]}].hierarchy["Aggregation"{aae20f15-6171-4fc1-911c-c3e92e62ff98}].dataSource.layout["VARIABLE"{db87f220-5eb1-42ba-a220-1aded3cc2fd8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="3" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="FACTORING_PGD" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["CNCDTY"{4a7a94a6-50e7-4a2b-ae52-bb172146d326}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_NATURAL' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["FUENTE"{42fad49c-849f-4d74-a04c-9f73ccc3e46f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["PARAMETRO"{3da7c318-de16-4eb6-b3bb-7afde7be51ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_NATURAL" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["CAMPO"{9f97ba7f-55dc-444e-a917-0b0d3bc6d414}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["VARIABLE"{db87f220-5eb1-42ba-a220-1aded3cc2fd8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="N/A" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["CNCDTY"{4a7a94a6-50e7-4a2b-ae52-bb172146d326}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select VALOR from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO ='PERSONA_JURIDICA' AND CAMPO = 'CNCDTY')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["FUENTE"{42fad49c-849f-4d74-a04c-9f73ccc3e46f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="TIPO_PERSONA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["PARAMETRO"{3da7c318-de16-4eb6-b3bb-7afde7be51ad}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="PERSONA_JURIDICA" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["CAMPO"{9f97ba7f-55dc-444e-a917-0b0d3bc6d414}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                            <property name="value" value="CNCDTY" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_FACTORING_PGD_TR]"{Aggregation[872306b6-06c4-41da-8f30-5cc34a57a7be]}].hierarchy["Aggregation"{872306b6-06c4-41da-8f30-5cc34a57a7be}].dataSource.layout["VARIABLE"{db87f220-5eb1-42ba-a220-1aded3cc2fd8}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="!=" valueType="string"/>
+                                            <property name="value" value="3" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

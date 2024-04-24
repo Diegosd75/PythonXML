@@ -1,0 +1,1466 @@
+﻿<object stamp="ef818251-5abf-4ba0-a976-92a062ec30fe_1658717557710" type="Portfolio" version="5.0">
+    <property name="objectId" value="919a3020-62b9-40aa-a9d3-96c5d964fb21" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_NEQUI" valueType="string"/>
+    <property name="description" value="se cra portafolio para identificar los nodos de salida" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}]</property>
+        </object>
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="detailSet" valueType="url"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="createIndexesOnStreamColumns" value="false" valueType="boolean"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Portfolio:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="portfolioResultAlias" value="" valueType="string"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="producingIsRoot" value="false" valueType="boolean"/>
+    <property name="sequence" valueType="table"/>
+    <property name="ignoreErrorsInAggregatedConditoinPlacement" value="false" valueType="boolean"/>
+    <property name="makeAsOfDateColumnNullable" value="false" valueType="boolean"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="allowMultipleNodesPerRecord" value="false" valueType="boolean"/>
+    <property name="executionAlgorithm" value="optimized_for_few_aggregations" valueType="string"/>
+    <property name="levels" valueType="table">
+        <object type="Portfolio:level" version="1.0">
+            <property name="id" value="3d75868d-4a71-4e5d-b600-83e14f8b0376" valueType="string"/>
+            <property name="name" value="unidad_captura_nivel" valueType="string"/>
+            <property name="description" value="Nivel para unidad de captura" valueType="string"/>
+            <property name="defaultValue" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="additionalFields" valueType="table">
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="e5bc090a-cb6f-4c25-bbd5-355fdd9af684" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="100" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="bd46ab5b-7925-4bbf-a29e-8b9472c1c285" valueType="string"/>
+            <property name="name" value="TIPO_ID" valueType="string"/>
+            <property name="description" value="TIPO_IDENTIFICACION" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="100" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="c41db4cc-15e5-45fa-b683-592ac925e970" valueType="string"/>
+            <property name="name" value="NUMERO_ID" valueType="string"/>
+            <property name="description" value="NUMERO_IDENTIFICACION" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="100" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="35c115f3-b405-487a-a9f2-b8562df04c84" valueType="string"/>
+            <property name="name" value="NOMBRE_CLIENTE" valueType="string"/>
+            <property name="description" value="NOMBRE_CLIENTE" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="100" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="2534067c-8d03-4fa7-b40d-823fc980c45e" valueType="string"/>
+            <property name="name" value="MONTO_DESEMBOLSADO" valueType="string"/>
+            <property name="description" value="MONTO_DESEMBOLSADO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0.0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="0070c873-a52f-4eca-9662-91f7c9da211f" valueType="string"/>
+            <property name="name" value="TASA_PONDERADA" valueType="string"/>
+            <property name="description" value="TASA_PONDERADA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0.0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="f31083fa-5df0-4b73-b95f-be8c6a3b5cbf" valueType="string"/>
+            <property name="name" value="MARGEN_UVR" valueType="string"/>
+            <property name="description" value="MARGEN_UVR" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0.0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="edcd8ab9-c78c-4df1-a5c3-59c0fb503a9d" valueType="string"/>
+            <property name="name" value="PLAZO_DIA" valueType="string"/>
+            <property name="description" value="PLAZO_DIA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="1ada8fdf-3c30-44fa-8993-35e97127495d" valueType="string"/>
+            <property name="name" value="TIPO_PERSONA" valueType="string"/>
+            <property name="description" value="TIPO_PERSONA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="42546b78-4bfb-4170-9d4f-516beef43e86" valueType="string"/>
+            <property name="name" value="TIPO_GARANTIA" valueType="string"/>
+            <property name="description" value="TIPO_GARANTIA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="32c93971-7e2f-4e5a-b3b6-cccde4daf69c" valueType="string"/>
+            <property name="name" value="TIPO_SEXO" valueType="string"/>
+            <property name="description" value="TIPO_SEXO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="9873ff7a-e6a9-4105-95a2-c17ca9b7dde4" valueType="string"/>
+            <property name="name" value="TIPO_CREDITO" valueType="string"/>
+            <property name="description" value="TIPO_CREDITO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="5dbe3cde-14fa-4f6d-b669-469b990b64c8" valueType="string"/>
+            <property name="name" value="PRODUCTO_CREDITO" valueType="string"/>
+            <property name="description" value="PRODUCTO_CREDITO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="f1d8fd10-9190-40c4-ab15-dcc51497e101" valueType="string"/>
+            <property name="name" value="PLAZO_CREDITO" valueType="string"/>
+            <property name="description" value="PLAZO_CREDITO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="31a36cd0-c3f1-468c-8d85-645ef18edee7" valueType="string"/>
+            <property name="name" value="TAMANO_EMPRESA" valueType="string"/>
+            <property name="description" value="TAMANO_EMPRESA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="aab2666e-20e0-45e3-8e5b-9fa14e0ed860" valueType="string"/>
+            <property name="name" value="PLAZO" valueType="string"/>
+            <property name="description" value="PLAZO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="Portfolio:rootnode" version="2.0">
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+            <property name="actions" valueType="table"/>
+            <children>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="7993109c-8211-4fe8-93a9-aa21f2c3455a" valueType="string"/>
+                    <property name="name" value="TIPO_PERSONA" valueType="string"/>
+                    <property name="description" value="TIPO_PERSONA" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TIPO_PERSONA"{6abaa111-38bd-4034-af46-0a0e06da7fa3}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{e5bc090a-cb6f-4c25-bbd5-355fdd9af684}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["FRENTE_INFO"{ec738dd2-a41c-45e6-9b8f-e34adae47ab7}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_ID"{bd46ab5b-7925-4bbf-a29e-8b9472c1c285}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_TYPE"{c23eacdf-20d3-4dd6-ace4-ee7c550c3fa3}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NUMERO_ID"{c41db4cc-15e5-45fa-b683-592ac925e970}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_ID"{8398bb9e-8653-4583-a45e-e721fa10ebad}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NOMBRE_CLIENTE"{35c115f3-b405-487a-a9f2-b8562df04c84}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["CNNAME"{b046bc74-6fd2-4126-b687-10549d05bd99}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_PERSONA"{1ada8fdf-3c30-44fa-8993-35e97127495d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["VARIABLE"{6f725bec-5055-470f-a581-3d046cdff732}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MONTO_DESEMBOLSADO"{2534067c-8d03-4fa7-b40d-823fc980c45e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DISB_AMT"{1c472e5b-e010-4575-b43a-fa2bb9ca98b4}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TASA_PONDERADA"{0070c873-a52f-4eca-9662-91f7c9da211f}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["TASA_PONDERADA"{0004b445-b202-46b0-8879-c67f6435e275}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MARGEN_UVR"{f31083fa-5df0-4b73-b95f-be8c6a3b5cbf}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["MARGEN_UVR"{ae168191-e8f9-4056-828f-89b3733e5a01}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_DIA"{edcd8ab9-c78c-4df1-a5c3-59c0fb503a9d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO_FINAL"{d34c2336-999a-455d-a75d-7bfa511d29af}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO"{aab2666e-20e0-45e3-8e5b-9fa14e0ed860}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO"{e375a9dc-50da-4f1e-9971-271b89423757}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="a1564319-7ee9-40fd-bd07-4817278c6703" valueType="string"/>
+                    <property name="name" value="TIPO_SEXO" valueType="string"/>
+                    <property name="description" value="TIPO_SEXO" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TIPO_SEXO"{69d2983e-4f25-46f1-84ed-a2a064980616}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{e5bc090a-cb6f-4c25-bbd5-355fdd9af684}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["FRENTE_INFO"{ec738dd2-a41c-45e6-9b8f-e34adae47ab7}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_ID"{bd46ab5b-7925-4bbf-a29e-8b9472c1c285}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_TYPE"{c23eacdf-20d3-4dd6-ace4-ee7c550c3fa3}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NUMERO_ID"{c41db4cc-15e5-45fa-b683-592ac925e970}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_ID"{8398bb9e-8653-4583-a45e-e721fa10ebad}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NOMBRE_CLIENTE"{35c115f3-b405-487a-a9f2-b8562df04c84}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["CNNAME"{b046bc74-6fd2-4126-b687-10549d05bd99}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_SEXO"{32c93971-7e2f-4e5a-b3b6-cccde4daf69c}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["VARIABLE"{6f725bec-5055-470f-a581-3d046cdff732}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MONTO_DESEMBOLSADO"{2534067c-8d03-4fa7-b40d-823fc980c45e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DISB_AMT"{1c472e5b-e010-4575-b43a-fa2bb9ca98b4}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TASA_PONDERADA"{0070c873-a52f-4eca-9662-91f7c9da211f}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["TASA_PONDERADA"{0004b445-b202-46b0-8879-c67f6435e275}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MARGEN_UVR"{f31083fa-5df0-4b73-b95f-be8c6a3b5cbf}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["MARGEN_UVR"{ae168191-e8f9-4056-828f-89b3733e5a01}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_DIA"{edcd8ab9-c78c-4df1-a5c3-59c0fb503a9d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO_FINAL"{d34c2336-999a-455d-a75d-7bfa511d29af}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO"{aab2666e-20e0-45e3-8e5b-9fa14e0ed860}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO"{e375a9dc-50da-4f1e-9971-271b89423757}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="d43ead06-3811-4e20-9945-cedb089938bc" valueType="string"/>
+                    <property name="name" value="TIPO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TIPO_CREDITO"{279d3480-17df-4d74-a434-a87d829bf8c5}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{e5bc090a-cb6f-4c25-bbd5-355fdd9af684}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["FRENTE_INFO"{ec738dd2-a41c-45e6-9b8f-e34adae47ab7}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_ID"{bd46ab5b-7925-4bbf-a29e-8b9472c1c285}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_TYPE"{c23eacdf-20d3-4dd6-ace4-ee7c550c3fa3}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NUMERO_ID"{c41db4cc-15e5-45fa-b683-592ac925e970}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_ID"{8398bb9e-8653-4583-a45e-e721fa10ebad}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NOMBRE_CLIENTE"{35c115f3-b405-487a-a9f2-b8562df04c84}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["CNNAME"{b046bc74-6fd2-4126-b687-10549d05bd99}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_CREDITO"{9873ff7a-e6a9-4105-95a2-c17ca9b7dde4}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["VARIABLE"{6f725bec-5055-470f-a581-3d046cdff732}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MONTO_DESEMBOLSADO"{2534067c-8d03-4fa7-b40d-823fc980c45e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DISB_AMT"{1c472e5b-e010-4575-b43a-fa2bb9ca98b4}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TASA_PONDERADA"{0070c873-a52f-4eca-9662-91f7c9da211f}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["TASA_PONDERADA"{0004b445-b202-46b0-8879-c67f6435e275}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MARGEN_UVR"{f31083fa-5df0-4b73-b95f-be8c6a3b5cbf}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["MARGEN_UVR"{ae168191-e8f9-4056-828f-89b3733e5a01}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_DIA"{edcd8ab9-c78c-4df1-a5c3-59c0fb503a9d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO_FINAL"{d34c2336-999a-455d-a75d-7bfa511d29af}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO"{aab2666e-20e0-45e3-8e5b-9fa14e0ed860}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO"{e375a9dc-50da-4f1e-9971-271b89423757}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="8dbc6644-33df-467f-8337-c6d3b201b629" valueType="string"/>
+                    <property name="name" value="TIPO_GARANTIA" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TIPO_GARANTIA"{66b9cd15-25db-4ee2-a67e-cb967b9b29b0}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{e5bc090a-cb6f-4c25-bbd5-355fdd9af684}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["FRENTE_INFO"{ec738dd2-a41c-45e6-9b8f-e34adae47ab7}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_ID"{bd46ab5b-7925-4bbf-a29e-8b9472c1c285}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_TYPE"{c23eacdf-20d3-4dd6-ace4-ee7c550c3fa3}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NUMERO_ID"{c41db4cc-15e5-45fa-b683-592ac925e970}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_ID"{8398bb9e-8653-4583-a45e-e721fa10ebad}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NOMBRE_CLIENTE"{35c115f3-b405-487a-a9f2-b8562df04c84}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["CNNAME"{b046bc74-6fd2-4126-b687-10549d05bd99}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_GARANTIA"{42546b78-4bfb-4170-9d4f-516beef43e86}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["VARIABLE"{6f725bec-5055-470f-a581-3d046cdff732}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MONTO_DESEMBOLSADO"{2534067c-8d03-4fa7-b40d-823fc980c45e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DISB_AMT"{1c472e5b-e010-4575-b43a-fa2bb9ca98b4}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TASA_PONDERADA"{0070c873-a52f-4eca-9662-91f7c9da211f}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["TASA_PONDERADA"{0004b445-b202-46b0-8879-c67f6435e275}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MARGEN_UVR"{f31083fa-5df0-4b73-b95f-be8c6a3b5cbf}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["MARGEN_UVR"{ae168191-e8f9-4056-828f-89b3733e5a01}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_DIA"{edcd8ab9-c78c-4df1-a5c3-59c0fb503a9d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO_FINAL"{d34c2336-999a-455d-a75d-7bfa511d29af}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO"{aab2666e-20e0-45e3-8e5b-9fa14e0ed860}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO"{e375a9dc-50da-4f1e-9971-271b89423757}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="8da10314-cb0d-46b6-a4e8-9625352077bf" valueType="string"/>
+                    <property name="name" value="PRODUCTO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_PRODUCTO_CREDITO"{d43f1c88-5f0d-4485-baed-d3c5f8aefa3a}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{e5bc090a-cb6f-4c25-bbd5-355fdd9af684}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["FRENTE_INFO"{ec738dd2-a41c-45e6-9b8f-e34adae47ab7}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_ID"{bd46ab5b-7925-4bbf-a29e-8b9472c1c285}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_TYPE"{c23eacdf-20d3-4dd6-ace4-ee7c550c3fa3}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NUMERO_ID"{c41db4cc-15e5-45fa-b683-592ac925e970}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DOCUMENT_ID"{8398bb9e-8653-4583-a45e-e721fa10ebad}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NOMBRE_CLIENTE"{35c115f3-b405-487a-a9f2-b8562df04c84}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["CNNAME"{b046bc74-6fd2-4126-b687-10549d05bd99}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PRODUCTO_CREDITO"{5dbe3cde-14fa-4f6d-b669-469b990b64c8}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["VARIABLE"{6f725bec-5055-470f-a581-3d046cdff732}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MONTO_DESEMBOLSADO"{2534067c-8d03-4fa7-b40d-823fc980c45e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["DISB_AMT"{1c472e5b-e010-4575-b43a-fa2bb9ca98b4}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TASA_PONDERADA"{0070c873-a52f-4eca-9662-91f7c9da211f}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["TASA_PONDERADA"{0004b445-b202-46b0-8879-c67f6435e275}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MARGEN_UVR"{f31083fa-5df0-4b73-b95f-be8c6a3b5cbf}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["MARGEN_UVR"{ae168191-e8f9-4056-828f-89b3733e5a01}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_DIA"{edcd8ab9-c78c-4df1-a5c3-59c0fb503a9d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO_FINAL"{d34c2336-999a-455d-a75d-7bfa511d29af}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO"{aab2666e-20e0-45e3-8e5b-9fa14e0ed860}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}].hierarchy["Aggregation"{684ba1f6-51da-44b7-b2ca-cd877705d965}].dataSource.layout["PLAZO"{e375a9dc-50da-4f1e-9971-271b89423757}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="4289b086-ffe1-4232-87ab-598ee04d69b6" valueType="string"/>
+                    <property name="name" value="PLAZO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_PLAZO_CREDITO"{87841b9e-7008-4810-b398-e212c3c8ee47}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{e5bc090a-cb6f-4c25-bbd5-355fdd9af684}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["FRENTE_INFO"{471c1cef-e5ef-41a7-af8d-8e248d229d8a}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_ID"{bd46ab5b-7925-4bbf-a29e-8b9472c1c285}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["DOCUMENT_TYPE"{c0f8cd80-bba4-40e9-8b75-3af22c979f2c}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NUMERO_ID"{c41db4cc-15e5-45fa-b683-592ac925e970}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["DOCUMENT_ID"{2917d4a4-c587-492b-8b80-43d34cee1ba5}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NOMBRE_CLIENTE"{35c115f3-b405-487a-a9f2-b8562df04c84}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["CNNAME"{77caa5e1-205d-4284-8b4f-96380b28fe51}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_CREDITO"{f1d8fd10-9190-40c4-ab15-dcc51497e101}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["VALOR"{82f74c27-b5b5-4db5-902a-9e203270f1eb}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MONTO_DESEMBOLSADO"{2534067c-8d03-4fa7-b40d-823fc980c45e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["DISB_AMT"{e964ffd3-8eda-4ebe-8c8e-462dc4a1add2}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TASA_PONDERADA"{0070c873-a52f-4eca-9662-91f7c9da211f}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["TASA_PONDERADA"{4ae339c9-8249-44c5-9f6f-35ac9c247fe0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MARGEN_UVR"{f31083fa-5df0-4b73-b95f-be8c6a3b5cbf}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["MARGEN_UVR"{b75af5ec-4e97-4b39-9d52-a5fcaccaf0b4}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_DIA"{edcd8ab9-c78c-4df1-a5c3-59c0fb503a9d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["PLAZO_FINAL"{3e497ee7-c62b-4049-b272-a087c0627c5e}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO"{aab2666e-20e0-45e3-8e5b-9fa14e0ed860}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["PLAZO"{7a3a67b5-a9d8-4a26-ac8f-a28e3b73a6be}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="0903c4a6-8ff1-4ca3-8e17-d0e4171efdb9" valueType="string"/>
+                    <property name="name" value="TAMANO_EMPRESA" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TAMANO_EMPRESA"{fb55df05-7979-4264-aeed-bce717e20f84}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{e5bc090a-cb6f-4c25-bbd5-355fdd9af684}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["FRENTE_INFO"{471c1cef-e5ef-41a7-af8d-8e248d229d8a}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_ID"{bd46ab5b-7925-4bbf-a29e-8b9472c1c285}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["DOCUMENT_TYPE"{c0f8cd80-bba4-40e9-8b75-3af22c979f2c}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NUMERO_ID"{c41db4cc-15e5-45fa-b683-592ac925e970}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["DOCUMENT_ID"{2917d4a4-c587-492b-8b80-43d34cee1ba5}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["NOMBRE_CLIENTE"{35c115f3-b405-487a-a9f2-b8562df04c84}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["CNNAME"{77caa5e1-205d-4284-8b4f-96380b28fe51}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TAMANO_EMPRESA"{31a36cd0-c3f1-468c-8d85-645ef18edee7}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["VARIABLE"{577c29b4-cd82-404e-907a-f16f646bcf85}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MONTO_DESEMBOLSADO"{2534067c-8d03-4fa7-b40d-823fc980c45e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["DISB_AMT"{e964ffd3-8eda-4ebe-8c8e-462dc4a1add2}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TASA_PONDERADA"{0070c873-a52f-4eca-9662-91f7c9da211f}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["TASA_PONDERADA"{4ae339c9-8249-44c5-9f6f-35ac9c247fe0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["MARGEN_UVR"{f31083fa-5df0-4b73-b95f-be8c6a3b5cbf}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["MARGEN_UVR"{b75af5ec-4e97-4b39-9d52-a5fcaccaf0b4}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_DIA"{edcd8ab9-c78c-4df1-a5c3-59c0fb503a9d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["PLAZO_FINAL"{3e497ee7-c62b-4049-b272-a087c0627c5e}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO"{aab2666e-20e0-45e3-8e5b-9fa14e0ed860}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_PLAZO]"{Aggregation[4382a655-57e2-46cc-a604-782a89bf91d3]}].hierarchy["Aggregation"{4382a655-57e2-46cc-a604-782a89bf91d3}].dataSource.layout["PLAZO"{7a3a67b5-a9d8-4a26-ac8f-a28e3b73a6be}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI]"{Aggregation[684ba1f6-51da-44b7-b2ca-cd877705d965]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="c7ae65c8-3614-41f7-a2d9-eae06de7cc2a" valueType="string"/>
+                    <property name="name" value="Huerfanos" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:freehandExpression" version="1.0">
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="1=2" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="executeDataModelsInParallel" value="false" valueType="boolean"/>
+    <property name="useDistinctForFinalInsert" value="true" valueType="boolean"/>
+    <property name="allowExternalDataPermissions" value="false" valueType="boolean"/>
+    <property name="translateConditionsOnLevels" value="false" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación:&#x9;05-apr-2022&#xa;Analista:&#x9;caalmosq&#xa;Objetivo:&#x9;Clasificar información por nodo&#xa;&#xa;==========================================================================================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

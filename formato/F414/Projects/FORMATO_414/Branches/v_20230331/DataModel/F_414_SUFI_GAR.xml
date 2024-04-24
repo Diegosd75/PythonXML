@@ -1,0 +1,228 @@
+﻿<object stamp="e9656c24-28c1-4d5f-9cf1-78e44224a514_1691084820070" type="DataModel" version="2.0">
+    <property name="objectId" value="f07a5252-215a-445a-b176-10b5c68e1002" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_SUFI_GAR" valueType="string"/>
+    <property name="description" value="Modelo de cruce para las garantias SUFI" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="db29117e-81f1-4287-b780-67ffd563eae5" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_SUFI_PER_SEX" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_SUFI_PER_SEX]"{Aggregation[0c014c7c-550e-4a5b-aed6-28da1c8af316]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="154a2901-9501-48ff-8b3b-bc78f626c045" valueType="string"/>
+                    <property name="name" value="XXGAR" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TIPO_GARANTIA" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TIPO_GARANTIA]"{Aggregation[c6ed61f5-816e-4368-91e3-3619db546b35]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table">
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["XXGAR"{154a2901-9501-48ff-8b3b-bc78f626c045}].dataSource.layout["xxnoan"{c98940e4-d773-4858-811e-3178c9530fca}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = LTRIM( " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{db29117e-81f1-4287-b780-67ffd563eae5}].dataSource.layout["L01NPR"{fd48f984-53a8-4a8c-bc5a-7f2e901eb467}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'0')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table"/>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="fa487dde-a865-4ec3-a1ab-016850fb2ec2" valueType="string"/>
+                    <property name="name" value="CEGASV" valueType="string"/>
+                    <property name="description" value="Archivo de Garantías idóneas asignadas en detalle (obligaciones vs garantías). En este archivo está el detalle de la distribución de las garantías entre las diferentes obligaciones." valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:VISIONR_CEGASV"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:02344969-59e8-4890-8668-05a2db461742}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="LTRIM( " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{db29117e-81f1-4287-b780-67ffd563eae5}].dataSource.layout["L01NPR"{fd48f984-53a8-4a8c-bc5a-7f2e901eb467}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'0') =  " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["CEGASV"{fa487dde-a865-4ec3-a1ab-016850fb2ec2}].dataSource.layout["CEAC72"{397d6705-5ec7-4ee1-b8c3-3c90cd856fb9}]</property>
+                        </object>
+                    </property>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table"/>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="10b778c7-f638-4290-8070-c3d170ddb8e4" valueType="string"/>
+                    <property name="name" value="XOWBN" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_VISIONR_CEXOWBN" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_VISIONR_CEXOWBN]"{Aggregation[807a3d74-5acd-4346-b666-ce93f21c9d17]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_VISIONR_CEXOWBN]"{Aggregation[807a3d74-5acd-4346-b666-ce93f21c9d17]}].layout["AX_XONOTX"{e6783743-c845-4902-9b3a-8d0eff112d4c}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_SUFI_PER_SEX]"{Aggregation[0c014c7c-550e-4a5b-aed6-28da1c8af316]}].layout["CNNOSS"{164342ae-4666-4df3-ba36-e0165aaa0a59}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="2afe5ce4-7191-46c3-aa09-78dd710306d5" valueType="string"/>
+                    <property name="name" value="TR_PARAMETROS_F414" valueType="string"/>
+                    <property name="description" value="Tabla parametrica para identificar: Tipo persona, sexo, plazo, prodcuto crédito, garantía, entre otros" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8c728223-60bd-4f5e-bf97-e882d690bcc7}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8c728223-60bd-4f5e-bf97-e882d690bcc7}].layout["entity"{eefd15ab-8f5d-41ae-bf9e-75db4698572e}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_SUFI_PER_SEX]"{Aggregation[0c014c7c-550e-4a5b-aed6-28da1c8af316]}].layout["entity"{945afeff-30d7-43e6-9b84-1b2f9ed14417}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 30/06/2022 - dasierra&#xa;Descripción:&#xa;- Modelo de datos que cruza la tabla parametrica con el frente Sufi" valueType="string"/>
+        </object>
+    </property>
+</object>

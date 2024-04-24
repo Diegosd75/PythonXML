@@ -1,0 +1,185 @@
+﻿<object stamp="0aa2e307-f674-4a43-a306-bcfba9b98d5c_1691085853367" type="DataModel" version="2.0">
+    <property name="objectId" value="ff244326-d921-429e-b95d-2649fc16b684" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_CONTROL_TASA_USURA_TARJETAS" valueType="string"/>
+    <property name="description" value="Cruce para calcular las Tasas de Usura" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="66e7af46-3a27-4e11-bebf-98bfa3aba8ed" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_TARJETAS_DETALLE" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TARJETAS_DETALLE]"{Aggregation[b1a3801c-adf8-4bde-86fe-e18b99862ca2]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="96fb2257-5c94-4863-9baf-883950d6fea3" valueType="string"/>
+                    <property name="name" value="TR_F414_TASA_USURA" valueType="string"/>
+                    <property name="description" value="Tabla de referencia para las tasas de usura del formato 414" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_USURA_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:4f23d059-fb17-4f02-bfa9-f26d22196ec5}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="(TO_CHAR(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["PRODUCTO_CREDITO"{a5988972-5f6d-4c3c-8f89-50f8e754a281}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=") =  " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_F414_TASA_USURA"{96fb2257-5c94-4863-9baf-883950d6fea3}].dataSource.layout["PRODUCTO_CREDITO"{94e3b0b2-e2e2-438c-a2cc-8fd1b904003a}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" and  " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_F414_TASA_USURA"{96fb2257-5c94-4863-9baf-883950d6fea3}].dataSource.layout["OPERADOR"{1cfb3e10-d304-4b11-a789-5bb9265b6706}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = 'IGUAL') OR (TO_CHAR(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["PRODUCTO_CREDITO"{a5988972-5f6d-4c3c-8f89-50f8e754a281}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=")  !=  " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_F414_TASA_USURA"{96fb2257-5c94-4863-9baf-883950d6fea3}].dataSource.layout["PRODUCTO_CREDITO"{94e3b0b2-e2e2-438c-a2cc-8fd1b904003a}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" and  " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_F414_TASA_USURA"{96fb2257-5c94-4863-9baf-883950d6fea3}].dataSource.layout["OPERADOR"{1cfb3e10-d304-4b11-a789-5bb9265b6706}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = 'DIFERENTE') OR (" valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_F414_TASA_USURA"{96fb2257-5c94-4863-9baf-883950d6fea3}].dataSource.layout["PRODUCTO_CREDITO"{94e3b0b2-e2e2-438c-a2cc-8fd1b904003a}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="='N/A')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table"/>
+                    <children>
+                        <objectNode type="DataModel:node" version="1.0">
+                            <property name="id" value="1bd83067-698d-46ec-ab3f-7373fa691513" valueType="string"/>
+                            <property name="name" value="LCHG" valueType="string"/>
+                            <property name="description" value="Contiene las tasas Usura" valueType="string"/>
+                            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:LCHG"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a44fef1c-8514-438c-889a-513950cd11c9}]</property>
+                            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                            <property name="additionalConstraint" valueType="table"/>
+                            <property name="additionalJoinExpression" valueType="table"/>
+                            <property name="instanceSelectionRule" valueType="object">
+                                <object type="InstanceSelectionRule" version="1.0">
+                                    <property name="instanceDateRule" valueType="object">
+                                        <object type="InstanceSelectionRule:rule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                    <property name="instanceKeyRules" valueType="table">
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="version" valueType="string"/>
+                                        </object>
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="join" valueType="table">
+                                <object type="DataModel:node:join" version="1.0">
+                                    <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:LCHG"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:a44fef1c-8514-438c-889a-513950cd11c9}].layout["LCCDLC"{d6938aaa-5926-4846-bc78-0c0f812665b5}]</property>
+                                    <property name="parentField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_USURA_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:4f23d059-fb17-4f02-bfa9-f26d22196ec5}].layout["COD_TASA"{9f2f4cbe-5273-48f2-8c89-d33ae893b565}]</property>
+                                </object>
+                            </property>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 04/08/2022 - dasierra&#xa;Descripción:&#xa;Se hace el cruce para calcular las Tasas de Usura de tarjetas&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

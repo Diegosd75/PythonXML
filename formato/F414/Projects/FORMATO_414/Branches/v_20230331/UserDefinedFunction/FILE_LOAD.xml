@@ -1,0 +1,17 @@
+<object stamp="85a60884-681c-4db4-ae17-9d09e8516488_1649282302753" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="4ea9fbad-7ed7-4dda-a328-e64d7a1052bf" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="FILE_LOAD" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="arguments" valueType="table"/>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="FileFolderService_1('FILE_LOAD').getRootPath()" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="libraries" valueType="table"/>
+</object>

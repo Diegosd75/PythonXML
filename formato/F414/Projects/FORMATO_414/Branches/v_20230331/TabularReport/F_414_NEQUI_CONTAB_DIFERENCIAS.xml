@@ -1,0 +1,316 @@
+﻿<object stamp="bfd6b765-62fd-4597-aa99-4da80005ec88_1650987533970" type="TabularReport" version="8.0">
+    <property name="objectId" value="36dd7aeb-540e-4d4b-bb08-716edfa9ff5c" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_NEQUI_CONTAB_DIFERENCIAS" valueType="string"/>
+    <property name="description" value="salida con las diferencias de la contabiñidad de nequi" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}]</property>
+        </object>
+    </property>
+    <property name="keyVariables" valueType="table"/>
+    <property name="includeNewModelsInExecution" value="false" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="asOfDate" value="2021-02-24 00:00:00.0" valueType="date"/>
+    <property name="modelDates" valueType="table"/>
+    <property name="streams" valueType="table"/>
+    <property name="fields" valueType="table">
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="79ba0250-753f-4b18-b8c1-3bd93eba9380" valueType="string"/>
+            <property name="name" value="Aggregation_FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="18" valueType="integer"/>
+            <property name="sortOrder" value="ASCENDING" valueType="string"/>
+            <property name="sortingSequenceNumber" value="0" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="d991559e-9fc2-4868-9535-057c93675bd2" valueType="string"/>
+            <property name="name" value="Aggregation_MONTO" valueType="string"/>
+            <property name="description" value="monto desembolsado en el prestamo" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="37" valueType="integer"/>
+            <property name="valueFormat" value="#,##0.00;(#,##0.00)" valueType="string"/>
+            <property name="sortOrder" value="NONE" valueType="string"/>
+            <property name="sortingSequenceNumber" value="-1" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="c97906f2-06b0-4510-bc50-d3f4506d740a" valueType="string"/>
+            <property name="name" value="Aggregation_CONTABILIDAD_NEQUI" valueType="string"/>
+            <property name="description" value="CONTABILIDAD_NEQUI" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="25" valueType="integer"/>
+            <property name="valueFormat" value="#,##0.00;(#,##0.00)" valueType="string"/>
+            <property name="sortOrder" value="NONE" valueType="string"/>
+            <property name="sortingSequenceNumber" value="-1" valueType="integer"/>
+        </object>
+        <object type="TabularReport:field" version="1.0">
+            <property name="id" value="a8fa65da-4414-48c4-90fe-45209241dafc" valueType="string"/>
+            <property name="name" value="Aggregation_DIFERENCIA" valueType="string"/>
+            <property name="description" value="DIFERENCIA" valueType="string"/>
+            <property name="aggrType" value="NA" valueType="string"/>
+            <property name="calcFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+            <property name="displayNullAs" value="[NULL]" valueType="string"/>
+            <property name="autoWidth" value="true" valueType="boolean"/>
+            <property name="columnWidth" value="16" valueType="integer"/>
+            <property name="valueFormat" value="#,##0.00;(#,##0.00)" valueType="string"/>
+            <property name="sortOrder" value="NONE" valueType="string"/>
+            <property name="sortingSequenceNumber" value="-1" valueType="integer"/>
+        </object>
+    </property>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="subTotalFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="mappings" valueType="table">
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["Aggregation_FRENTE_INFO"{79ba0250-753f-4b18-b8c1-3bd93eba9380}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}].hierarchy["Aggregation"{da42e86f-59aa-4e96-b1ae-155d1b7eaa23}].dataSource.layout["FRENTE_INFO"{5fcfb7f1-cf9d-4939-8032-8afe2db55104}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["Aggregation_MONTO"{d991559e-9fc2-4868-9535-057c93675bd2}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}].hierarchy["Aggregation"{da42e86f-59aa-4e96-b1ae-155d1b7eaa23}].dataSource.layout["MONTO"{15a035ab-b58f-4dd4-bdf6-4dd5f55103d9}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["Aggregation_CONTABILIDAD_NEQUI"{c97906f2-06b0-4510-bc50-d3f4506d740a}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}].hierarchy["Aggregation"{da42e86f-59aa-4e96-b1ae-155d1b7eaa23}].dataSource.layout["CONTABILIDAD_NEQUI"{d747c4cd-9894-4d21-9477-e8e38651da33}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="TabularReport:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="TabularReport:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">TabularReport[this].fields["Aggregation_DIFERENCIA"{a8fa65da-4414-48c4-90fe-45209241dafc}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}].hierarchy["Aggregation"{da42e86f-59aa-4e96-b1ae-155d1b7eaa23}].dataSource.layout["DIFERENCIA"{b4475a56-deb5-4c64-b61e-66ae32163a4e}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="TabularReportCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="Condition:singularConcrete" version="1.0">
+                            <property name="field" valueType="object">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_NEQUI_VALID_CONTA]"{Aggregation[da42e86f-59aa-4e96-b1ae-155d1b7eaa23]}].hierarchy["Aggregation"{da42e86f-59aa-4e96-b1ae-155d1b7eaa23}].dataSource.layout["DIFERENCIA"{b4475a56-deb5-4c64-b61e-66ae32163a4e}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="operation" value=">" valueType="string"/>
+                            <property name="value" value="0.0" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="xslTransformationFile" value="" valueType="string"/>
+    <property name="postProcessingCode" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table"/>
+        </object>
+    </property>
+    <property name="stringSubstitutions" valueType="table"/>
+    <property name="additionalStringSubstitutionsScript" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table"/>
+        </object>
+    </property>
+    <property name="xmlHeader" value="" valueType="string"/>
+    <property name="xmlHeaderIsExpression" value="false" valueType="boolean"/>
+    <property name="totalsBeforeDetails" value="false" valueType="boolean"/>
+    <property name="groupHeadersOnEachPage" value="true" valueType="boolean"/>
+    <property name="aggregateRecords" value="true" valueType="boolean"/>
+    <property name="subtotalsInData" value="false" valueType="boolean"/>
+    <property name="printSetup" valueType="object">
+        <object type="TabularReport:printSetup" version="1.0">
+            <property name="fonts" valueType="table">
+                <object type="PrintSetup:font" version="1.0">
+                    <property name="name" value="body" valueType="string"/>
+                    <property name="type" value="PLAIN" valueType="string"/>
+                    <property name="fontName" value="Arial" valueType="string"/>
+                    <property name="size" value="10" valueType="integer"/>
+                </object>
+                <object type="PrintSetup:font" version="1.0">
+                    <property name="name" value="grpHeader" valueType="string"/>
+                    <property name="type" value="PLAIN" valueType="string"/>
+                    <property name="fontName" value="Arial" valueType="string"/>
+                    <property name="size" value="10" valueType="integer"/>
+                </object>
+            </property>
+            <property name="pageSetup" valueType="object">
+                <object type="PrintSetup:pageSetup" version="1.0">
+                    <property name="orientation" value="1" valueType="integer"/>
+                    <property name="size" value="9" valueType="integer"/>
+                    <property name="lm" value="1.0" valueType="double"/>
+                    <property name="rm" value="1.0" valueType="double"/>
+                    <property name="tm" value="2.463155110677083" valueType="double"/>
+                    <property name="bm" value="1.7874755859375" valueType="double"/>
+                </object>
+            </property>
+            <property name="shading" value="true" valueType="boolean"/>
+            <property name="headers" valueType="table">
+                <object type="PrintSetup:header" version="1.0">
+                    <property name="name" value="header1" valueType="string"/>
+                    <property name="font" valueType="object">
+                        <object type="PrintSetup:font" version="1.0">
+                            <property name="name" value="header1" valueType="string"/>
+                            <property name="type" value="BOLD" valueType="string"/>
+                            <property name="fontName" value="Arial" valueType="string"/>
+                            <property name="size" value="9" valueType="integer"/>
+                        </object>
+                    </property>
+                    <property name="align" value="CENTER" valueType="string"/>
+                    <property name="margin" value="1.0" valueType="double"/>
+                    <property name="text" value="" valueType="string"/>
+                </object>
+                <object type="PrintSetup:header" version="1.0">
+                    <property name="name" value="header" valueType="string"/>
+                    <property name="font" valueType="object">
+                        <object type="PrintSetup:font" version="1.0">
+                            <property name="name" value="header" valueType="string"/>
+                            <property name="type" value="BOLD" valueType="string"/>
+                            <property name="fontName" value="Arial" valueType="string"/>
+                            <property name="size" value="9" valueType="integer"/>
+                        </object>
+                    </property>
+                    <property name="align" value="CENTER" valueType="string"/>
+                    <property name="margin" value="1.0" valueType="double"/>
+                    <property name="text" value="Report $report_name as of $exec_date" valueType="string"/>
+                </object>
+                <object type="PrintSetup:header" version="1.0">
+                    <property name="name" value="footer" valueType="string"/>
+                    <property name="font" valueType="object">
+                        <object type="PrintSetup:font" version="1.0">
+                            <property name="name" value="footer" valueType="string"/>
+                            <property name="type" value="ITALIC" valueType="string"/>
+                            <property name="fontName" value="Times New Roman" valueType="string"/>
+                            <property name="size" value="9" valueType="integer"/>
+                        </object>
+                    </property>
+                    <property name="align" value="RIGHT" valueType="string"/>
+                    <property name="margin" value="1.0" valueType="double"/>
+                    <property name="text" value="Report generated on $today\nPage $page" valueType="string"/>
+                </object>
+                <object type="PrintSetup:header" version="1.0">
+                    <property name="name" value="title" valueType="string"/>
+                    <property name="font" valueType="object">
+                        <object type="PrintSetup:font" version="1.0">
+                            <property name="name" value="title" valueType="string"/>
+                            <property name="type" value="PLAIN" valueType="string"/>
+                            <property name="fontName" value="Arial" valueType="string"/>
+                            <property name="size" value="10" valueType="integer"/>
+                        </object>
+                    </property>
+                    <property name="align" value="LEFT" valueType="string"/>
+                    <property name="margin" value="1.64373779296875" valueType="double"/>
+                    <property name="text" value="Report:\t$report_name\nAs of:\t$exec_date" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="variableValuesForPreview" valueType="table"/>
+    <property name="xmlSubmissionFileEncoding" value="UTF8" valueType="string"/>
+    <property name="textSubmissionFileEncoding" value="UTF8" valueType="string"/>
+    <property name="disableDataTypeValidation" value="false" valueType="boolean"/>
+    <property name="schemaBasedXMLGeneration" value="false" valueType="boolean"/>
+    <property name="readyToSignOffVariable" value="" valueType="string"/>
+    <property name="readyToSignOffCompleteValue" value="OK" valueType="string"/>
+    <property name="enableTxtFileDelimiter" value="false" valueType="boolean"/>
+    <property name="loaderBufferSize" value="200" valueType="integer"/>
+    <property name="lineSeparator" value="system" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="false" valueType="boolean"/>
+</object>

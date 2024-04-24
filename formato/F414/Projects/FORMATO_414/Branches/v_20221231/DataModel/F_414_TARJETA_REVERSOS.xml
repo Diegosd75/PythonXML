@@ -1,0 +1,123 @@
+﻿<object stamp="890b0dbb-9c5a-4beb-be03-ce7af563a4e0_1654012704333" type="DataModel" version="2.0">
+    <property name="objectId" value="db707328-1097-46d1-bf56-011a0e737be3" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_TARJETA_REVERSOS" valueType="string"/>
+    <property name="description" value="Modelo para reversos de tarjetas" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="d135024c-eb09-48b7-8961-c71de7192478" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_TARJETAS_REVERSOS_1" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_1]"{Aggregation[b9867bdf-8675-4f93-adea-fc403a24f130]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="fd7efddd-5096-47ae-860d-f150fe2063ce" valueType="string"/>
+                    <property name="name" value="REVERSOS_2" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TARJETAS_REVERSOS_2" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_2]"{Aggregation[909de4be-0736-40aa-8761-a6bf473477da]}]</property>
+                    <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_2]"{Aggregation[909de4be-0736-40aa-8761-a6bf473477da]}].layout["ATPT1_001"{d8222b9a-f029-41aa-9233-d07dd59fe270}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_1]"{Aggregation[b9867bdf-8675-4f93-adea-fc403a24f130]}].layout["ATPT1_001"{d8222b9a-f029-41aa-9233-d07dd59fe270}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_2]"{Aggregation[909de4be-0736-40aa-8761-a6bf473477da]}].layout["ATPT1_002"{6e64702b-57b8-49cf-925b-10db48e85af3}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_1]"{Aggregation[b9867bdf-8675-4f93-adea-fc403a24f130]}].layout["ATPT1_002"{6e64702b-57b8-49cf-925b-10db48e85af3}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_2]"{Aggregation[909de4be-0736-40aa-8761-a6bf473477da]}].layout["ATPT1_006"{f3d0eb0b-3a5b-4be9-9b99-291aa09d9194}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_1]"{Aggregation[b9867bdf-8675-4f93-adea-fc403a24f130]}].layout["ATPT1_006"{f3d0eb0b-3a5b-4be9-9b99-291aa09d9194}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_2]"{Aggregation[909de4be-0736-40aa-8761-a6bf473477da]}].layout["ATPT1_011"{d4d5ef7e-204f-4758-88bd-8eaa63f53ec8}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_1]"{Aggregation[b9867bdf-8675-4f93-adea-fc403a24f130]}].layout["ATPT1_011"{d4d5ef7e-204f-4758-88bd-8eaa63f53ec8}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_2]"{Aggregation[909de4be-0736-40aa-8761-a6bf473477da]}].layout["ATPT1_014"{28b177f1-526c-40ab-a753-c0e18c2de382}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_REVERSOS_1]"{Aggregation[b9867bdf-8675-4f93-adea-fc403a24f130]}].layout["ATPT1_014"{28b177f1-526c-40ab-a753-c0e18c2de382}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 31/05/2022 - sergigon&#xa;Descripción:&#xa;- Se crea modelo para el cruce de la información de los reversos 1 y 2, " valueType="string"/>
+        </object>
+    </property>
+</object>

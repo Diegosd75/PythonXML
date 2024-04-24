@@ -1,0 +1,238 @@
+﻿<object stamp="594ca4a6-d307-41f0-b220-d9516d6f24f7_1657224270938" type="Aggregation" version="7.0">
+    <property name="objectId" value="b9867bdf-8675-4f93-adea-fc403a24f130" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_TARJETAS_REVERSOS_1" valueType="string"/>
+    <property name="description" value="Realizar un conteo de los reversos por el campo ATPT1_007" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="d8222b9a-f029-41aa-9233-d07dd59fe270" valueType="string"/>
+            <property name="name" value="ATPT1_001" valueType="string"/>
+            <property name="description" value="Organización (pesos, dolares)" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="ATPT1_001" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="6e64702b-57b8-49cf-925b-10db48e85af3" valueType="string"/>
+            <property name="name" value="ATPT1_002" valueType="string"/>
+            <property name="description" value="Número de cuenta" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="ATPT1_002" valueType="string"/>
+            <property name="overrideNullable" value="NOT_NULLABLE" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="f3d0eb0b-3a5b-4be9-9b99-291aa09d9194" valueType="string"/>
+            <property name="name" value="ATPT1_006" valueType="string"/>
+            <property name="description" value="Fecha efectiva de la transacción" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="ATPT1_006" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="d4d5ef7e-204f-4758-88bd-8eaa63f53ec8" valueType="string"/>
+            <property name="name" value="ATPT1_011" valueType="string"/>
+            <property name="description" value="Valor transacción" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="ATPT1_011" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="28b177f1-526c-40ab-a753-c0e18c2de382" valueType="string"/>
+            <property name="name" value="ATPT1_014" valueType="string"/>
+            <property name="description" value="Autorización" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="ATPT1_014" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="f473ed1c-7444-4cb9-9193-a045d820a7a2" valueType="string"/>
+            <property name="name" value="CONTEO_REVERSOS_1" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="aggrMethod" value="COUNT" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ATPT1_001"{d8222b9a-f029-41aa-9233-d07dd59fe270}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}].hierarchy["Aggregation"{fdbab66d-8d46-4486-a108-dfb951460805}].dataSource.layout["ATPT1_001"{bd19310b-de29-4a17-aa9b-92b958d65d1e}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ATPT1_002"{6e64702b-57b8-49cf-925b-10db48e85af3}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}].hierarchy["Aggregation"{fdbab66d-8d46-4486-a108-dfb951460805}].dataSource.layout["ATPT1_002"{c4cdd6de-f1c6-4907-82ca-d45a92ceaf88}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ATPT1_006"{f3d0eb0b-3a5b-4be9-9b99-291aa09d9194}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}].hierarchy["Aggregation"{fdbab66d-8d46-4486-a108-dfb951460805}].dataSource.layout["ATPT1_006"{139602ae-ca3c-4a89-9021-4a9c4d8f7e77}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ATPT1_011"{d4d5ef7e-204f-4758-88bd-8eaa63f53ec8}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}].hierarchy["Aggregation"{fdbab66d-8d46-4486-a108-dfb951460805}].dataSource.layout["ATPT1_011"{331fa7cd-baa4-4c8d-be80-ada5503bc5e0}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ATPT1_014"{28b177f1-526c-40ab-a753-c0e18c2de382}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}].hierarchy["Aggregation"{fdbab66d-8d46-4486-a108-dfb951460805}].dataSource.layout["ATPT1_014"{14398cb1-5e95-4545-be45-50b369f7a2a4}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["CONTEO_REVERSOS_1"{f473ed1c-7444-4cb9-9193-a045d820a7a2}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_TARJETAS_TDCFFATPT1]"{Aggregation[fdbab66d-8d46-4486-a108-dfb951460805]}].hierarchy["Aggregation"{fdbab66d-8d46-4486-a108-dfb951460805}].dataSource.layout["ATPT1_007"{14cb9783-21a3-40a8-82e2-c8438ab40c2b}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 31/05/2022 - sergigon&#xa;Descripción:&#xa;- Agrupar por los campos (ATPT1_001,ATPT1_002, ATPT1_006, ATPT1_011, ATPT1_014, ATPT1_007) y realizar un conteo por cada registros con el fin de identificar operaciones dobles.&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

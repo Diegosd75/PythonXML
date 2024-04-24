@@ -1,0 +1,166 @@
+﻿<object stamp="8e065662-a5ee-420f-af4d-3b6cbfda981a_1691084753806" type="DataModel" version="2.0">
+    <property name="objectId" value="62573adc-5e40-494c-b5c0-b7be66ea53ff" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_SUFI_SIIL13" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="07b2a51e-ad75-48d6-a0e9-0b01c525dc9a" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Fuente conexión directa SUFI_SF7_SIIL13" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:SF7_SIIL13"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:28f9a279-3a02-4734-a973-5f2cb6dc0f5e}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="f65d12fb-5e3a-4f84-862c-97ca6120e521" valueType="string"/>
+                    <property name="name" value="SIIL13_MIN_L13FEF" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_SUFI_SIIL13_MIN_L13FEF" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_SUFI_SIIL13_MIN_L13FEF]"{Aggregation[5a6ff99e-ee9e-41fe-88e1-f9c76082e51b]}]</property>
+                    <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_SUFI_SIIL13_MIN_L13FEF]"{Aggregation[5a6ff99e-ee9e-41fe-88e1-f9c76082e51b]}].layout["L13NPR"{8ca4d4ad-d646-412e-a5f5-734f4d2594a3}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:SF7_SIIL13"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:28f9a279-3a02-4734-a973-5f2cb6dc0f5e}].layout["L13NPR"{26c39c5a-327d-4a9d-9b93-1d8ae1c96445}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_SUFI_SIIL13_MIN_L13FEF]"{Aggregation[5a6ff99e-ee9e-41fe-88e1-f9c76082e51b]}].layout["L13NUM"{27409fbf-9194-4246-abed-5b9b8ea5c146}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:SF7_SIIL13"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:28f9a279-3a02-4734-a973-5f2cb6dc0f5e}].layout["L13NUM"{6e796666-9ab2-4fea-a0ef-ffabb63d6008}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_SUFI_SIIL13_MIN_L13FEF]"{Aggregation[5a6ff99e-ee9e-41fe-88e1-f9c76082e51b]}].layout["L13FEF"{f7d54417-45c6-4f5a-aefc-cb3283a645c4}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:SF7_SIIL13"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:28f9a279-3a02-4734-a973-5f2cb6dc0f5e}].layout["L13FEF"{40a3be36-f3b8-4157-b819-a06047557b2c}]</property>
+                        </object>
+                    </property>
+                    <children>
+                        <objectNode type="DataModel:node" version="1.0">
+                            <property name="id" value="c8970d83-957d-4775-9803-6d385de7a0bd" valueType="string"/>
+                            <property name="name" value="SF7_SIIL04" valueType="string"/>
+                            <property name="description" value="Fuente de conexión directa SUFI_SF7_SIIL04" valueType="string"/>
+                            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:SF7_SIIL04"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:447b07ce-8fa3-4b43-8078-0c5a2c36f3ce}]</property>
+                            <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                            <property name="additionalConstraint" valueType="table"/>
+                            <property name="additionalJoinExpression" valueType="table"/>
+                            <property name="instanceSelectionRule" valueType="object">
+                                <object type="InstanceSelectionRule" version="1.0">
+                                    <property name="instanceDateRule" valueType="object">
+                                        <object type="InstanceSelectionRule:rule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                    <property name="instanceKeyRules" valueType="table">
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="version" valueType="string"/>
+                                        </object>
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="join" valueType="table">
+                                <object type="DataModel:node:join" version="1.0">
+                                    <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:SF7_SIIL04"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:447b07ce-8fa3-4b43-8078-0c5a2c36f3ce}].layout["L04NPR"{06aebe9b-300d-4269-9c50-cec601beda17}]</property>
+                                    <property name="parentField" valueType="url">DataSource["Aggregation[F_414_SUFI_SIIL13_MIN_L13FEF]"{Aggregation[5a6ff99e-ee9e-41fe-88e1-f9c76082e51b]}].layout["L13NPR"{8ca4d4ad-d646-412e-a5f5-734f4d2594a3}]</property>
+                                </object>
+                                <object type="DataModel:node:join" version="1.0">
+                                    <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:SF7_SIIL04"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:447b07ce-8fa3-4b43-8078-0c5a2c36f3ce}].layout["L04SEC"{260fc800-99f6-49e4-8c05-d2e57968150e}]</property>
+                                    <property name="parentField" valueType="url">DataSource["Aggregation[F_414_SUFI_SIIL13_MIN_L13FEF]"{Aggregation[5a6ff99e-ee9e-41fe-88e1-f9c76082e51b]}].layout["L13NUM"{27409fbf-9194-4246-abed-5b9b8ea5c146}]</property>
+                                </object>
+                            </property>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table">
+        <object type="DataModel:streamKey" version="1.0">
+            <property name="streamKeyName" value="entity" valueType="string"/>
+            <property name="streamKeyColumn" valueType="object">
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{07b2a51e-ad75-48d6-a0e9-0b01c525dc9a}].dataSource.layout["entity"{3c0b822d-0eff-44ec-8d68-6f72434a49a5}]</property>
+                </object>
+            </property>
+            <property name="additionalStreamColumns" valueType="table"/>
+        </object>
+    </property>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 07/07/2022 - dasierra&#xa;Descripción: &#xa;- Se cruza información del frente Sufi con diferentes fuentes de información tales como SF7_SIIL13 (Tasas) y cruzar con las tasas minimos.&#xa;&#xa;===============================================================================================================&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

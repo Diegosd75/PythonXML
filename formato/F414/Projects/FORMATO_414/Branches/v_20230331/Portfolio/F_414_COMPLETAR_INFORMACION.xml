@@ -1,0 +1,418 @@
+﻿<object stamp="8da82842-1f79-4418-8dd1-8a6511b88f23_1678207026687" type="Portfolio" version="5.0">
+    <property name="objectId" value="40c2aebf-1876-4a30-ad3f-dbb596879dea" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_COMPLETAR_INFORMACION" valueType="string"/>
+    <property name="description" value="Control validaciones proforma" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_DETALLE_CONSOLIDADO]"{Aggregation[d670a52d-5f25-43a0-80bc-8dce04fc50d1]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="detailSet" valueType="url"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="createIndexesOnStreamColumns" value="false" valueType="boolean"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Portfolio:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="portfolioResultAlias" value="" valueType="string"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="producingIsRoot" value="false" valueType="boolean"/>
+    <property name="sequence" valueType="table"/>
+    <property name="ignoreErrorsInAggregatedConditoinPlacement" value="false" valueType="boolean"/>
+    <property name="makeAsOfDateColumnNullable" value="false" valueType="boolean"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="allowMultipleNodesPerRecord" value="false" valueType="boolean"/>
+    <property name="executionAlgorithm" value="optimized_for_few_aggregations" valueType="string"/>
+    <property name="levels" valueType="table">
+        <object type="Portfolio:level" version="1.0">
+            <property name="id" value="83265d1e-73fd-4950-a20f-201765a5715d" valueType="string"/>
+            <property name="name" value="unidad_01" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="defaultValue" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="additionalFields" valueType="table"/>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="Portfolio:rootnode" version="2.0">
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+            <property name="actions" valueType="table"/>
+            <children>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="a5d4f790-46d7-4e45-b647-5e450f7eddb1" valueType="string"/>
+                    <property name="name" value="TIPO_PERSONA" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DETALLE_CONSOLIDADO]"{Aggregation[d670a52d-5f25-43a0-80bc-8dce04fc50d1]}].hierarchy["Aggregation"{d670a52d-5f25-43a0-80bc-8dce04fc50d1}].dataSource.layout["TIPO_PERSONA"{8953e23e-5e0a-466b-a44e-a3420e981799}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="NOT IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VALIDADOR_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_PERSONA' AND PARAMETRO IN ('PERSONA_JURIDICA', 'PERSONA_NATURAL'))" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="0b18e59e-e06f-461a-8181-1a04b59805bf" valueType="string"/>
+                    <property name="name" value="TIPO_SEXO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DETALLE_CONSOLIDADO]"{Aggregation[d670a52d-5f25-43a0-80bc-8dce04fc50d1]}].hierarchy["Aggregation"{d670a52d-5f25-43a0-80bc-8dce04fc50d1}].dataSource.layout["TIPO_SEXO"{58c8367f-4006-41a3-a975-f1408c74d6b0}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="NOT IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VALIDADOR_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_SEXO' AND PARAMETRO IN ('SEXO_FEMENINO', 'SEXO_MASCULINO', 'NO_APLICA'))" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="eecd8ed2-391e-4a29-8fa7-4ff42e2e9122" valueType="string"/>
+                    <property name="name" value="TIPO_EMPRESA" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DETALLE_CONSOLIDADO]"{Aggregation[d670a52d-5f25-43a0-80bc-8dce04fc50d1]}].hierarchy["Aggregation"{d670a52d-5f25-43a0-80bc-8dce04fc50d1}].dataSource.layout["TAMANO_EMPRESA"{bac02c3b-3b3d-4ebf-887e-fa8dcfc4c21c}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="NOT IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VALIDADOR_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TAMANO_EMPRESA' AND PARAMETRO IN ('MICROEMPRESA', 'PEQUENA_EMPRESA', 'MEDIANA_EMPRESA', 'GRAN_EMPRESA', 'NO APLICA'))" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="93de2cff-c25c-4bdb-989b-ee8bbd3983ab" valueType="string"/>
+                    <property name="name" value="TIPO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DETALLE_CONSOLIDADO]"{Aggregation[d670a52d-5f25-43a0-80bc-8dce04fc50d1]}].hierarchy["Aggregation"{d670a52d-5f25-43a0-80bc-8dce04fc50d1}].dataSource.layout["TIPO_CREDITO"{07df2157-8d16-4f55-a25f-a001bd36de5b}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="NOT IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VALIDADOR_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_CREDITO' AND PARAMETRO IN ('CRED_CONSUMO', 'CRED_VIVIENDA', 'CRED_COMER_ORD', 'CRED_COMER_PRE', 'CRED_COMER_TES', 'CRED_COMER_ESP', 'CRE_MICROCRED'))" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="f6d677af-6972-400d-b956-7e7ca9038b22" valueType="string"/>
+                    <property name="name" value="TIPO_GARANTIA" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DETALLE_CONSOLIDADO]"{Aggregation[d670a52d-5f25-43a0-80bc-8dce04fc50d1]}].hierarchy["Aggregation"{d670a52d-5f25-43a0-80bc-8dce04fc50d1}].dataSource.layout["TIPO_GARANTIA"{8b9fb241-8b71-49a6-84fb-a9f6094caa9f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="NOT IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VALIDADOR_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_GARANTIA' AND PARAMETRO IN ('GARANTIA_SNG', 'GARANTIA_GINI', 'GARANTIA_FNG', 'GARANTIA_FAG'))" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="97685ce2-4e16-425b-8f05-f272647d2032" valueType="string"/>
+                    <property name="name" value="PRODUCTO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DETALLE_CONSOLIDADO]"{Aggregation[d670a52d-5f25-43a0-80bc-8dce04fc50d1]}].hierarchy["Aggregation"{d670a52d-5f25-43a0-80bc-8dce04fc50d1}].dataSource.layout["PRODUCTO_CREDITO"{281a9588-873e-4afa-9980-ccc0e40d5b78}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="NOT IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VALIDADOR_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FORMATO='FORMATO_414' AND FUENTE = 'PRODUCTO_CREDITO')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="9a7c9dd5-3c31-4ca4-9e6f-1e401f5e7e08" valueType="string"/>
+                    <property name="name" value="PLAZO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_DETALLE_CONSOLIDADO]"{Aggregation[d670a52d-5f25-43a0-80bc-8dce04fc50d1]}].hierarchy["Aggregation"{d670a52d-5f25-43a0-80bc-8dce04fc50d1}].dataSource.layout["PLAZO_CREDITO"{8e9d178f-8f85-4545-a4be-ccdffe14699f}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="NOT IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VALIDADOR_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FORMATO='FORMATO_414' AND FUENTE = 'PLAZO_CREDITO')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="executeDataModelsInParallel" value="false" valueType="boolean"/>
+    <property name="useDistinctForFinalInsert" value="true" valueType="boolean"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="translateConditionsOnLevels" value="false" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="&#xa;Fecha Creación: 19/12/2022 - mruenes&#xa;Descripción: Se crea Portfolio encargado del primer control de errores de los campos de la plataforma&#xa;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" valueType="string"/>
+        </object>
+    </property>
+</object>

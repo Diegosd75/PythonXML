@@ -1,0 +1,222 @@
+﻿<object stamp="c35b18a1-0dd8-4681-a6e0-319d75abd27b_1657320678708" type="DataModel" version="2.0">
+    <property name="objectId" value="1555d7ce-058d-47cf-9d0d-cd597f74f55c" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_FACTORING_PROVEEDOR" valueType="string"/>
+    <property name="description" value="modelo con el cruce de informacion del frente factoring pagador y proveedor" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="1209c20d-15df-43c3-8882-ae3989405d2f" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="FACTORING_MCCOL" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCCOL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:afc4d8d3-dfce-4e55-a86d-b67c04cae3f1}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="a73fb6dc-7808-4a3a-b692-86be01b899fe" valueType="string"/>
+                    <property name="name" value="MCFDC" valueType="string"/>
+                    <property name="description" value="FACTORING_MCFDC" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCFDC"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:03f2e876-b02d-4e66-a665-d7a14488ece4}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCFDC"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:03f2e876-b02d-4e66-a665-d7a14488ece4}].layout["NITDPFC"{722f35c4-b77a-4d15-9dc9-e341e95583ca}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCCOL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:afc4d8d3-dfce-4e55-a86d-b67c04cae3f1}].layout["GNIT"{67d9efc0-c649-43bf-a032-6f476fc9fd03}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCFDC"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:03f2e876-b02d-4e66-a665-d7a14488ece4}].layout["AMCHEQUE"{7395187d-5ec3-4f33-873b-44175c1689ff}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCCOL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:afc4d8d3-dfce-4e55-a86d-b67c04cae3f1}].layout["GDOCTO"{4d97a3e4-8dd6-4199-b153-9aab51d16530}]</property>
+                        </object>
+                    </property>
+                    <children>
+                        <objectNode type="DataModel:node" version="1.0">
+                            <property name="id" value="750d3157-0654-4199-b3d3-b972903f76d7" valueType="string"/>
+                            <property name="name" value="SCGNI2" valueType="string"/>
+                            <property name="description" value="FACTORING_SCGNI" valueType="string"/>
+                            <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:FACTORING_SCGNI"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:66d87549-125e-4205-9683-0d3cedecf564}]</property>
+                            <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                            <property name="additionalConstraint" valueType="table"/>
+                            <property name="additionalJoinExpression" valueType="table"/>
+                            <property name="instanceSelectionRule" valueType="object">
+                                <object type="InstanceSelectionRule" version="1.0">
+                                    <property name="instanceDateRule" valueType="object">
+                                        <object type="InstanceSelectionRule:rule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                    <property name="instanceKeyRules" valueType="table">
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="version" valueType="string"/>
+                                        </object>
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="join" valueType="table">
+                                <object type="DataModel:node:join" version="1.0">
+                                    <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:FACTORING_SCGNI"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:66d87549-125e-4205-9683-0d3cedecf564}].layout["ORNITDPFC"{7bd767b6-73c5-4df4-9fdf-46b398986947}]</property>
+                                    <property name="parentField" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCFDC"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:03f2e876-b02d-4e66-a665-d7a14488ece4}].layout["GNIT"{734b41ef-d2ab-429c-a422-9c6b7e08bf81}]</property>
+                                </object>
+                            </property>
+                        </objectNode>
+                    </children>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="bf340757-28fe-4cb7-a316-59ed47784b35" valueType="string"/>
+                    <property name="name" value="MCHOB" valueType="string"/>
+                    <property name="description" value="Las obligaciones de factoring en su aplicativo tienen un número de operació diferente all mostrado en banco" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:MAESTRAS_FACTORING_MCHOB"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:2fcd2c2a-a81f-4452-b16d-82e0a63aa960}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:MAESTRAS_FACTORING_MCHOB"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:2fcd2c2a-a81f-4452-b16d-82e0a63aa960}].layout["GNIT"{d8c62539-6f47-4afc-aff4-6a846a551b35}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCCOL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:afc4d8d3-dfce-4e55-a86d-b67c04cae3f1}].layout["GNIT"{67d9efc0-c649-43bf-a032-6f476fc9fd03}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:MAESTRAS_FACTORING_MCHOB"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:2fcd2c2a-a81f-4452-b16d-82e0a63aa960}].layout["DOCBCO"{2733ee70-a124-4efc-a919-10e40fb4fd9b}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCCOL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:afc4d8d3-dfce-4e55-a86d-b67c04cae3f1}].layout["GDOCTO"{4d97a3e4-8dd6-4199-b153-9aab51d16530}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="caf5356c-a51f-4bbe-bd67-428ea9a86bbc" valueType="string"/>
+                    <property name="name" value="SCGNI" valueType="string"/>
+                    <property name="description" value="FACTORING_SCGNI" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:FACTORING_SCGNI"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:66d87549-125e-4205-9683-0d3cedecf564}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:FACTORING_SCGNI"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:66d87549-125e-4205-9683-0d3cedecf564}].layout["ORNITDPFC"{7bd767b6-73c5-4df4-9fdf-46b398986947}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m:fd_w:MAESTRA_FACTORING_MCCOL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:afc4d8d3-dfce-4e55-a86d-b67c04cae3f1}].layout["GNIT"{67d9efc0-c649-43bf-a032-6f476fc9fd03}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: &#x9;10-MAY-2022&#xa;Analista:&#x9;CAALMOSQ&#xa;Objetivo:&#x9;modelo con el cruce de informacion del frente factoring " valueType="string"/>
+        </object>
+    </property>
+</object>

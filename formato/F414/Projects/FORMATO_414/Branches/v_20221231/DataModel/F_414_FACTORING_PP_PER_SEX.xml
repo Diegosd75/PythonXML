@@ -1,0 +1,111 @@
+﻿<object stamp="3ebfbff2-b9db-4c86-a5d8-0105c554a716_1656964114812" type="DataModel" version="2.0">
+    <property name="objectId" value="f3595e88-f803-403e-9fc4-aa6e7c5b9a41" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_FACTORING_PP_PER_SEX" valueType="string"/>
+    <property name="description" value="modelo con el cruce de informacion del frente factoring de PAGADOR" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="1209c20d-15df-43c3-8882-ae3989405d2f" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_FACTORING_PP" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_FACTORING_PP]"{Aggregation[3542b6ec-0139-4b9a-9b60-42ac2fe93747]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="a73fb6dc-7808-4a3a-b692-86be01b899fe" valueType="string"/>
+                    <property name="name" value="CNAME" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TIPO_PER_SEX_FACT" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TIPO_PER_SEX_FACT]"{Aggregation[a5c6bcf7-8c83-4372-8f54-9eac596dc25a]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PER_SEX_FACT]"{Aggregation[a5c6bcf7-8c83-4372-8f54-9eac596dc25a]}].layout["CNCDTI"{c2ea18f0-9200-47ce-83f8-fe40ee69ccf2}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_FACTORING_PP]"{Aggregation[3542b6ec-0139-4b9a-9b60-42ac2fe93747]}].layout["TIPIDEN"{490df903-5a6b-4267-a6ac-7434b9bbcee4}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PER_SEX_FACT]"{Aggregation[a5c6bcf7-8c83-4372-8f54-9eac596dc25a]}].layout["CNNOSS"{8ac41641-a84d-4a65-b7d3-314fcc7261dd}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_FACTORING_PP]"{Aggregation[3542b6ec-0139-4b9a-9b60-42ac2fe93747]}].layout["GNIT_NODV"{b08da274-bebf-4048-8a35-84bbc05f6dc8}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: &#x9;10-MAY-2022&#xa;Analista:&#x9;CAALMOSQ&#xa;Objetivo:&#x9;modelo con el cruce de informacion del frente factoring de PAGADOR Y PROVEEDOR" valueType="string"/>
+        </object>
+    </property>
+</object>

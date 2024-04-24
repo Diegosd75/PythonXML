@@ -1,0 +1,21 @@
+<object stamp="216e9fde-1e64-417c-9099-754b87669707_1613647675406" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="7fbc704a-06a1-4928-851f-2fd097a63b7d" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_JBookReference" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="JBR_object" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Get JBook reference&#xa;Input variables:&#xa;JBR_object - &#xa;-->&#xa;var JBR_ObjectIsJBook = true;&#xa;&lt;!-- For v10 Start -->&#xa;JBR_ObjectIsJBook = &quot;com.axiomsl.free_form_report.util.ui.JBook_Fixed&quot;.equals(getClassName(JBR_object));&#xa;&lt;!-- For v10 Finish -->&#x9;&#xa;&#xa;var JBR_jbook;&#xa;&lt;if> JBR_ObjectIsJBook&#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;JBR_jbook = JBR_object;&#xa;&#x9;&lt;/then>&#xa;&#x9;&lt;else>&#xa;&lt;!-- For v10 Start -->&#xa;&#x9;&#x9;var JBR_axiomVersion = AxiomVersion;&#xa;&#x9;&#x9;JBR_jbook = if((JBR_axiomVersion.split(&quot;.&quot;).size() &amp;gt;= 2) and (JBR_axiomVersion.split(&quot;.&quot;).get(1).matches(&quot;[0-9]*&quot;)) and (class(&quot;java.lang.Integer&quot;).parseInt(JBR_axiomVersion.split(&quot;.&quot;).get(1)) &amp;gt; 1), JBR_object.getBookModel(), JBR_object.getJBook().getBookModel());&#xa;&lt;!-- For v10 Finish -->&#x9;&#xa;&#x9;&lt;/else>&#xa;&lt;/if>&#x9;&#xa;; JBR_jbook&#xa;" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

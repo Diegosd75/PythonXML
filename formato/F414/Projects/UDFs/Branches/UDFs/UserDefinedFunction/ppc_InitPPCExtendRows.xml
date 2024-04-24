@@ -1,0 +1,37 @@
+<object stamp="8d02a5a6-a685-4888-8291-90aecc290d34_1643782058992" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="ffdde1c2-e1ba-4d69-9682-034c3ac89e76" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_InitPPCExtendRows" valueType="string"/>
+    <property name="description" value="2022.02.01" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="IPPCER_task" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="IPPCER_jbook" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2022.02.01&#xa;Uploading table PPC_ExtendRows&#xa;Input variables:&#xa;IPPCER_task - &#xa;IPPCER_jbook - &#xa;-->&#xa;var IPPCER_listRowPPCTable = " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_InitPPCTable"{1373985a-c6a7-4179-858a-6b774df6a31f}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(IPPCER_jbook, 1);&#xa;" valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_CheckPPCTable"{e8e8061a-6a08-4847-9897-5cef0d8d2147}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(IPPCER_jbook, IPPCER_listRowPPCTable, 1);&#xa;&#xa;var IPPCER_PPCTable = Map();&#xa;IPPCER_PPCTable.put(&quot;PPCTABLE&quot;, IPPCER_listRowPPCTable);&#xa;&#xa;&lt;!-- Fix for OLD version -->&#xa;&lt;for> var index = 0 &lt;comma/> index &amp;lt; IPPCER_listRowPPCTable.size() &lt;comma/> index++&#xa;&#x9;&lt;do>&#xa;&#x9;&#x9;IPPCER_PPCTable.put(index, IPPCER_listRowPPCTable.get(index));&#xa;&#x9;&lt;/do>&#xa;&lt;/for>&#xa;; IPPCER_PPCTable" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

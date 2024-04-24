@@ -1,0 +1,328 @@
+﻿<object stamp="c0b0e1f7-f0f5-4c0b-9744-39c1d7dbb246_1657289456152" type="Aggregation" version="7.0">
+    <property name="objectId" value="4d0b2178-a0fd-4a3a-b796-a194ada2a1c1" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_SUFI_CONTABILIDAD" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="e4123305-741a-4409-96aa-61c675be3692" valueType="string"/>
+            <property name="name" value="G17NCT" valueType="string"/>
+            <property name="description" value="NUMERO DE LA CUENTA" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="8fdec702-5355-4330-9c08-eb8058954578" valueType="string"/>
+            <property name="name" value="G17VMT" valueType="string"/>
+            <property name="description" value="VALOR DEL MOVIMIENTO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="88446360-5016-4422-b404-11e5dd65df4d" valueType="string"/>
+            <property name="name" value="G17FEP" valueType="string"/>
+            <property name="description" value="FECHA DE PROCESO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="d491cd49-f820-47c1-8753-001c3735428a" valueType="string"/>
+            <property name="name" value="G17FAC" valueType="string"/>
+            <property name="description" value="FACTURA" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="cf7577bf-bbfd-41a2-a369-28d76f789808" valueType="string"/>
+            <property name="name" value="G17NOT" valueType="string"/>
+            <property name="description" value="NRO OPERACION TIPIFICADA" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["G17NCT"{e4123305-741a-4409-96aa-61c675be3692}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["G17NCT"{edf67555-430d-468e-9178-7c5afe8d600a}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["G17VMT"{8fdec702-5355-4330-9c08-eb8058954578}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["G17VMT"{6dcec12f-acd9-4ced-98ac-5032a40f4ee8}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["G17FEP"{88446360-5016-4422-b404-11e5dd65df4d}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["G17FEP"{4c6c8c29-d027-40da-9400-5028386028b5}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["G17FAC"{d491cd49-f820-47c1-8753-001c3735428a}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["G17FAC"{9c25f67f-b959-4a89-8fbd-051731c339cf}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["G17NOT"{cf7577bf-bbfd-41a2-a369-28d76f789808}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["G17NOT"{be97e236-68e9-4279-a639-3fe423dadd69}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="Condition:freehandExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["G17NCT"{edf67555-430d-468e-9178-7c5afe8d600a}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["CUENTAS_CONTABLES"{efe41246-8779-40df-b019-bb48f3b060ad}].dataSource.layout["G17NCT"{7d263f53-7d24-4cfc-ac1b-d7cd57f85fea}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </objectNode>
+                        <objectNode type="Condition:freehandExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="TO_DATE(" valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["G17FEP"{4c6c8c29-d027-40da-9400-5028386028b5}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=", 'yyyyMMdd') >= (" valueType="string"/>
+                                </object>
+                                <object type="SQLConstant" version="1.0">
+                                    <property name="name" value="ASOF_DATE" valueType="string"/>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" - 6)" valueType="string"/>
+                                </object>
+                            </property>
+                        </objectNode>
+                        <objectNode type="Condition:freehandExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="TO_DATE(" valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["root"{6b671f59-bc7d-4136-b621-23e21ad1e030}].dataSource.layout["G17FEP"{4c6c8c29-d027-40da-9400-5028386028b5}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=", 'yyyyMMdd') &lt;= (" valueType="string"/>
+                                </object>
+                                <object type="SQLConstant" version="1.0">
+                                    <property name="name" value="ASOF_DATE" valueType="string"/>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=")" valueType="string"/>
+                                </object>
+                            </property>
+                        </objectNode>
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:list" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["SUFSDAAS_SIIF07"{dc4f3e32-a751-4d82-9c7b-b9b016675031}].dataSource.layout["S07TTR"{2fabe486-1feb-4909-b3e6-47bd6237d807}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="values" valueType="table">
+                                                <object type="Condition:list:value" version="1.0">
+                                                    <property name="value" value="D" valueType="string"/>
+                                                </object>
+                                                <object type="Condition:list:value" version="1.0">
+                                                    <property name="value" value="U" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:list" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTABILIDAD"{d8d126e1-5507-4350-9e21-7b8e4dc1a5e9}].hierarchy["SUFSDAAS_SIIF07"{dc4f3e32-a751-4d82-9c7b-b9b016675031}].dataSource.layout["S07NTR"{fbf2ec00-2412-425c-a208-060adf51a0cc}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="values" valueType="table">
+                                                <object type="Condition:list:value" version="1.0">
+                                                    <property name="value" value="56" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="true" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 07/07/2022 - dasierra&#xa;Descripción: &#xa;- Se cruza información del frente Sufi con los diferentes movimientos contables. &#xa;&#xa;===============================================================================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

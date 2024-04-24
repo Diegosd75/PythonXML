@@ -1,0 +1,205 @@
+﻿<object stamp="4eaeb7b3-4119-41f9-9184-5cd28cc7c8de_1657289547767" type="Aggregation" version="7.0">
+    <property name="objectId" value="cc8c5d98-5ad3-49e4-84e8-f4a4f39e3bf9" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_SUFI_CONTAB_DIFERENCIA" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="c2ac4df5-abef-4f96-81b0-e7974b53f708" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="Frente de información" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="77588d8e-eadb-4c76-a07c-c0b3404cac3c" valueType="string"/>
+            <property name="name" value="L01NPR" valueType="string"/>
+            <property name="description" value="Número de Colocación" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="L01NPR" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="78f33a36-deeb-44a4-bf91-e901f5773162" valueType="string"/>
+            <property name="name" value="L36VDE" valueType="string"/>
+            <property name="description" value="Valor desembolso" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="L36VDE" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="4ffcaaf7-a6e1-4c24-93be-b0d3c72c01ed" valueType="string"/>
+            <property name="name" value="G17VMT" valueType="string"/>
+            <property name="description" value="VALOR DEL MOVIMIENTO" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="G17VMT" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="76b81cb4-2392-4f5a-888a-40dee8623a96" valueType="string"/>
+            <property name="name" value="DIFERENCIA" valueType="string"/>
+            <property name="description" value="DIFERENCIA" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["L36VDE"{78f33a36-deeb-44a4-bf91-e901f5773162}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" - " valueType="string"/>
+                </object>
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["G17VMT"{4ffcaaf7-a6e1-4c24-93be-b0d3c72c01ed}]</property>
+                </object>
+            </property>
+            <property name="valueType" value="FLOAT" valueType="string"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="DIFERENCIA" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INFO"{c2ac4df5-abef-4f96-81b0-e7974b53f708}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}].hierarchy["root"{252cec7a-96d4-4b91-bc3a-7463808c4396}].dataSource.layout["FRENTE_INFO"{c8cd22c7-16cc-4ade-838f-d0f038b9eb67}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["L01NPR"{77588d8e-eadb-4c76-a07c-c0b3404cac3c}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}].hierarchy["root"{252cec7a-96d4-4b91-bc3a-7463808c4396}].dataSource.layout["L01NPR"{5dd59ec4-72a9-463e-9ba5-03de2473c1f0}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["L36VDE"{78f33a36-deeb-44a4-bf91-e901f5773162}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}].hierarchy["root"{252cec7a-96d4-4b91-bc3a-7463808c4396}].dataSource.layout["L36VDE"{0132af47-3836-4c7b-bb73-cc1a67a51f7d}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["G17VMT"{4ffcaaf7-a6e1-4c24-93be-b0d3c72c01ed}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_CONTAB_CRUCE"{3c571a65-32fc-45a2-a2a4-c4e32668e24e}].hierarchy["SUFI_CONTABILIDAD"{ec464861-fc0a-465a-aa75-c1b399129837}].dataSource.layout["G17VMT"{ba1f3817-a096-4386-888c-825318aa2da6}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 07/07/2022 - dasierra&#xa;Descripción: &#xa;- Se muestra información del frente Sufi con las diferencias en los movimientos contables. &#xa;&#xa;===============================================================================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

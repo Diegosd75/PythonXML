@@ -1,0 +1,1613 @@
+﻿<object stamp="d3419397-a208-4fcb-9856-35aec98a1e7d_1683213697049" type="Portfolio" version="5.0">
+    <property name="objectId" value="0ae96c34-6c74-4eaf-9c44-19d5137957c3" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_VARIACION_LEASING" valueType="string"/>
+    <property name="description" value="Control reglas de Razonabilidad de tasas para LEASING" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="detailSet" valueType="url"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="createIndexesOnStreamColumns" value="false" valueType="boolean"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Portfolio:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="portfolioResultAlias" value="" valueType="string"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="producingIsRoot" value="false" valueType="boolean"/>
+    <property name="sequence" valueType="table"/>
+    <property name="ignoreErrorsInAggregatedConditoinPlacement" value="false" valueType="boolean"/>
+    <property name="makeAsOfDateColumnNullable" value="false" valueType="boolean"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="allowMultipleNodesPerRecord" value="false" valueType="boolean"/>
+    <property name="executionAlgorithm" value="optimized_for_few_aggregations" valueType="string"/>
+    <property name="levels" valueType="table">
+        <object type="Portfolio:level" version="1.0">
+            <property name="id" value="83265d1e-73fd-4950-a20f-201765a5715d" valueType="string"/>
+            <property name="name" value="Regla" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="defaultValue" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="additionalFields" valueType="table"/>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="Portfolio:rootnode" version="2.0">
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+            <property name="actions" valueType="table"/>
+            <children>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="a5d4f790-46d7-4e45-b647-5e450f7eddb1" valueType="string"/>
+                    <property name="name" value="001" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tipo_credito"{cd35b044-b385-4ef2-95f1-2243a9a015ba}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_CREDITO' AND PARAMETRO = 'CRED_CONSUMO')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["producto_credito"{4e59fc7b-8b23-48db-91f1-5b2b65ece7cd}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'PRODUCTO_CREDITO' AND PARAMETRO = 'VEHÍCULO')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:compositeCondition" version="1.0">
+                                            <property name="isNegated" value="false" valueType="boolean"/>
+                                            <property name="groupingOperator" value="OR" valueType="string"/>
+                                            <children>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_TASA_CONSUMO_108')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_TASA_CONSUMO_108')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_MONTO_CONSUMO_108')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_MONTO_CONSUMO_108')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_DESEMBOLSOS_CONSUMO_108')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_DESEMBOLSOS_CONSUMO_108')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                            </children>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="c4c36678-a8a7-47a5-b1bd-2f2d2be605d9" valueType="string"/>
+                    <property name="name" value="002" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tipo_credito"{cd35b044-b385-4ef2-95f1-2243a9a015ba}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_CREDITO' AND PARAMETRO = 'CRED_COMER_ORD')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["producto_credito"{4e59fc7b-8b23-48db-91f1-5b2b65ece7cd}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'PRODUCTO_CREDITO' AND PARAMETRO = 'LEASING FINANCIERO - INMUEBLES &lt;> HABITACIONAL')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:compositeCondition" version="1.0">
+                                            <property name="isNegated" value="false" valueType="boolean"/>
+                                            <property name="groupingOperator" value="OR" valueType="string"/>
+                                            <children>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_TASA_COMERCIAL_318')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_TASA_COMERCIAL_318')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_MONTO_COMERCIAL_318')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_MONTO_COMERCIAL_318')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_DESEMBOLSOS_COMERCIAL_318')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_DESEMBOLSOS_COMERCIAL_318')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                            </children>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="9f6c4d54-c1fb-473d-aa9b-e3bda642873f" valueType="string"/>
+                    <property name="name" value="003" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tipo_credito"{cd35b044-b385-4ef2-95f1-2243a9a015ba}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_CREDITO' AND PARAMETRO = 'CRED_COMER_ORD')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["producto_credito"{4e59fc7b-8b23-48db-91f1-5b2b65ece7cd}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'PRODUCTO_CREDITO' AND PARAMETRO = 'LEASING FINANCIERO - VEÍCULOS')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:compositeCondition" version="1.0">
+                                            <property name="isNegated" value="false" valueType="boolean"/>
+                                            <property name="groupingOperator" value="OR" valueType="string"/>
+                                            <children>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_TASA_COMERCIAL_319')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_TASA_COMERCIAL_319')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_MONTO_COMERCIAL_319')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_MONTO_COMERCIAL_319')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_DESEMBOLSOS_COMERCIAL_319')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_DESEMBOLSOS_COMERCIAL_319')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                            </children>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="014b5029-200e-456c-b6bd-7b3a477a58d5" valueType="string"/>
+                    <property name="name" value="004" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tipo_credito"{cd35b044-b385-4ef2-95f1-2243a9a015ba}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_CREDITO' AND PARAMETRO = 'CRED_COMER_ORD')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["producto_credito"{4e59fc7b-8b23-48db-91f1-5b2b65ece7cd}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'PRODUCTO_CREDITO' AND PARAMETRO = 'LEASING FINANCIERO - MAQUINARIA Y EQUIPO')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:compositeCondition" version="1.0">
+                                            <property name="isNegated" value="false" valueType="boolean"/>
+                                            <property name="groupingOperator" value="OR" valueType="string"/>
+                                            <children>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_TASA_COMERCIAL_320')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_TASA_COMERCIAL_320')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_MONTO_COMERCIAL_320')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_MONTO_COMERCIAL_320')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_DESEMBOLSOS_COMERCIAL_320')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_DESEMBOLSOS_COMERCIAL_320')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                            </children>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="63234c61-414c-4657-b0c2-5bdd1df97d7e" valueType="string"/>
+                    <property name="name" value="005" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tipo_credito"{cd35b044-b385-4ef2-95f1-2243a9a015ba}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'TIPO_CREDITO' AND PARAMETRO = 'CRED_COMER_ORD')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["producto_credito"{4e59fc7b-8b23-48db-91f1-5b2b65ece7cd}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="IN" valueType="string"/>
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                </object>
+                                                <object type="SQLFormula" version="1.0">
+                                                    <property name="expression" valueType="object">
+                                                        <object type="ASLExpression" version="1.0">
+                                                            <property name="expression" valueType="table">
+                                                                <object type="ASLExpression:part" version="1.0">
+                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value=" where FUENTE = 'PRODUCTO_CREDITO' AND PARAMETRO = 'LEASING FINANCIERO - OTROS')" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                        <objectNode type="Condition:compositeCondition" version="1.0">
+                                            <property name="isNegated" value="false" valueType="boolean"/>
+                                            <property name="groupingOperator" value="OR" valueType="string"/>
+                                            <children>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_TASA_COMERCIAL_321')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_TASA_COMERCIAL_321')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_MONTO_COMERCIAL_321')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_MONTO_COMERCIAL_321')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value=">" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_SUP_DESEMBOLSOS_COMERCIAL_321')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                                    <children>
+                                                        <objectNode type="Condition:singularExpression" version="1.0">
+                                                            <property name="field" valueType="object">
+                                                                <object type="DataModel:fieldMap" version="1.0">
+                                                                    <property name="map" valueType="table">
+                                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_CONSOLIDADO_VARIACION]"{Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                            </property>
+                                                            <property name="operation" value="&lt;" valueType="string"/>
+                                                            <property name="expression" valueType="table">
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value="(select CAMPO from " valueType="string"/>
+                                                                </object>
+                                                                <object type="SQLFormula" version="1.0">
+                                                                    <property name="expression" valueType="object">
+                                                                        <object type="ASLExpression" version="1.0">
+                                                                            <property name="expression" valueType="table">
+                                                                                <object type="ASLExpression:part" version="1.0">
+                                                                                    <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_VARIACIONES_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                                                </object>
+                                                                            </property>
+                                                                        </object>
+                                                                    </property>
+                                                                </object>
+                                                                <object type="SQLExpressionPart" version="1.0">
+                                                                    <property name="value" value=" where FUENTE = 'LEASING' AND PARAMETRO = 'LIM_INF_DESEMBOLSOS_COMERCIAL_321')" valueType="string"/>
+                                                                </object>
+                                                            </property>
+                                                        </objectNode>
+                                                    </children>
+                                                </objectNode>
+                                            </children>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="executeDataModelsInParallel" value="false" valueType="boolean"/>
+    <property name="useDistinctForFinalInsert" value="true" valueType="boolean"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="translateConditionsOnLevels" value="false" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="&#xa;Fecha Creación: 03/04/2023 - mruenes&#xa;Descripción:Se crea Portfolio encargado del control reglas de Razonabilidad de tasas para Leasing&#xa;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" valueType="string"/>
+        </object>
+    </property>
+</object>

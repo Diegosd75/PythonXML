@@ -1,0 +1,300 @@
+﻿<object stamp="c2509496-0b61-4c5d-ac1b-0fb5d4db8740_1683303981685" type="Aggregation" version="7.0">
+    <property name="objectId" value="7d82bd30-96f5-46e6-9c72-d465a12435cc" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_VARIACION_SUFI" valueType="string"/>
+    <property name="description" value="Agg que contiene los resultados de los filtros del portfolio de VARIACION_SUFI" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="4e327937-d50a-4f59-930a-2652cec8653c" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="fc6fc0bc-7171-40c0-80ab-f65f40432da9" valueType="string"/>
+            <property name="name" value="tipo_credito" valueType="string"/>
+            <property name="description" value="tipo_credito" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="63dcf8f7-675b-4b9f-8ef0-08da68437c78" valueType="string"/>
+            <property name="name" value="producto_credito" valueType="string"/>
+            <property name="description" value="producto_credito" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="4d8483d3-876d-4add-b2e9-910ae27f7040" valueType="string"/>
+            <property name="name" value="margen_adicional" valueType="string"/>
+            <property name="description" value="margen_adicional" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="2ff45a8b-7d96-43d3-ac58-4fa2651d68e4" valueType="string"/>
+            <property name="name" value="montos_desembolsados" valueType="string"/>
+            <property name="description" value="montos_desembolsados" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="36e5a91e-5e5d-4221-90c5-4d0d7c304173" valueType="string"/>
+            <property name="name" value="tasa_por_monto" valueType="string"/>
+            <property name="description" value="tasa_por_monto" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="8d6be8a8-b9c4-4940-8f59-ef14d8daf850" valueType="string"/>
+            <property name="name" value="numero_desembolsados" valueType="string"/>
+            <property name="description" value="numero_desembolsados" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table">
+        <object type="Aggregation:syntheticField" version="3.0">
+            <property name="id" value="ce1a0088-1e8e-4307-9fe0-0c6bccaba274" valueType="string"/>
+            <property name="name" value="tasa_ponderada" valueType="string"/>
+            <property name="description" value="tasa_ponderada" valueType="string"/>
+            <property name="formula" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["tasa_por_monto"{36e5a91e-5e5d-4221-90c5-4d0d7c304173}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" / " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["montos_desembolsados"{2ff45a8b-7d96-43d3-ac58-4fa2651d68e4}]</property>
+                </object>
+            </property>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="valueType" value="FLOAT" valueType="string"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INFO"{4e327937-d50a-4f59-930a-2652cec8653c}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["FRENTE_INFO"{9a7fc7da-83eb-4fb2-a972-32fdf84d4f38}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["tipo_credito"{fc6fc0bc-7171-40c0-80ab-f65f40432da9}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tipo_credito"{cd35b044-b385-4ef2-95f1-2243a9a015ba}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["producto_credito"{63dcf8f7-675b-4b9f-8ef0-08da68437c78}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["producto_credito"{4e59fc7b-8b23-48db-91f1-5b2b65ece7cd}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["margen_adicional"{4d8483d3-876d-4add-b2e9-910ae27f7040}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["margen_adicional"{6b5f25da-41de-4fd2-9f9c-53fe57398b0c}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["montos_desembolsados"{2ff45a8b-7d96-43d3-ac58-4fa2651d68e4}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["tasa_por_monto"{36e5a91e-5e5d-4221-90c5-4d0d7c304173}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["tasa_ponderada_calculo"{9267986d-b973-4fb8-b59f-bc387de5cc7c}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["numero_desembolsados"{8d6be8a8-b9c4-4940-8f59-ef14d8daf850}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["numero_desembolsados"{50264906-93e7-4eb2-a556-316c52bc6d0e}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="Condition:singularConcrete" version="1.0">
+                            <property name="field" valueType="object">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Portfolio[F_414_VARIACION_SUFI].Aggregation[F_414_CONSOLIDADO_VARIACION]"{Portfolio[b1056d58-8884-45b8-a55d-395e50ef765a].Aggregation[4b8f10ae-f929-46be-82e9-65a6f2523489]}].hierarchy["Aggregation"{4b8f10ae-f929-46be-82e9-65a6f2523489}].dataSource.layout["FRENTE_INFO"{9a7fc7da-83eb-4fb2-a972-32fdf84d4f38}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="operation" value="=" valueType="string"/>
+                            <property name="value" value="SUFI" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="true" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="&#xa;Fecha Creación: 03/04/2023 - mruenes&#xa;Descripción:Se crea Agg que contiene los resultados de los filtros del portfolio de VARIACION_SUFI&#xa;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" valueType="string"/>
+        </object>
+    </property>
+</object>

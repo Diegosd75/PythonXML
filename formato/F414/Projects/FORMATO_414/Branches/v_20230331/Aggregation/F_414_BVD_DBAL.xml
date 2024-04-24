@@ -1,0 +1,290 @@
+﻿<object stamp="139a598b-3d9c-4785-b823-85ec27c017d3_1691084786123" type="Aggregation" version="7.0">
+    <property name="objectId" value="e56aba89-1054-49b7-837f-164e26edc60b" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_BVD_DBAL" valueType="string"/>
+    <property name="description" value="Fuente que trae desde el Daily la información de depósitos del Banco a corte semanal" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+        </object>
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="936b9421-3c04-435e-82df-f0afcdc082cc" valueType="string"/>
+            <property name="name" value="DMACCT" valueType="string"/>
+            <property name="description" value="Número de Cuenta" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="75fb4b73-ceba-4bde-badb-1e57a50ebc05" valueType="string"/>
+            <property name="name" value="DMUSR6" valueType="string"/>
+            <property name="description" value="TIPO_CARTERA" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="dfba3b12-50f3-4d4b-aa30-56aed235dc8e" valueType="string"/>
+            <property name="name" value="DMAPCD" valueType="string"/>
+            <property name="description" value="Código de Aplicación" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="4e38ad80-510a-4e43-9d65-03f1a9aadb65" valueType="string"/>
+            <property name="name" value="PLAZO_SOBREGIRO_DIAS" valueType="string"/>
+            <property name="description" value="Dias Plazo sobregiro" valueType="string"/>
+            <property name="aggrMethod" value="MAX" valueType="string"/>
+            <property name="calcTotal" value="false" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DMACCT"{936b9421-3c04-435e-82df-f0afcdc082cc}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["DMACCT"{eb94fd6d-6189-47ed-84d6-8f080d97562a}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["DMACCT"{eb94fd6d-6189-47ed-84d6-8f080d97562a}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DMUSR6"{75fb4b73-ceba-4bde-badb-1e57a50ebc05}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["DMUSR6"{99376071-201c-4ec8-a950-9a64d0b565f6}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["DMUSR6"{99376071-201c-4ec8-a950-9a64d0b565f6}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DMAPCD"{dfba3b12-50f3-4d4b-aa30-56aed235dc8e}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["DMAPCD"{3cec812a-442d-49b0-b1a1-8e0e8063bf27}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["DMAPCD"{3cec812a-442d-49b0-b1a1-8e0e8063bf27}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["PLAZO_SOBREGIRO_DIAS"{4e38ad80-510a-4e43-9d65-03f1a9aadb65}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["PLAZO_SOBREGIRO_DIAS"{f1ec2744-e747-4fc7-97b3-23278cc4297a}]</property>
+                        </object>
+                    </property>
+                </object>
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["PLAZO_SOBREGIRO_DIAS"{f1ec2744-e747-4fc7-97b3-23278cc4297a}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="Condition:freehandExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["asof_date"{cb52626e-5770-4680-9ed3-88eefa906f3c}]</property>
+                                        </object>
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["asof_date"{cb52626e-5770-4680-9ed3-88eefa906f3c}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="  &lt;= " valueType="string"/>
+                                </object>
+                                <object type="SQLConstant" version="1.0">
+                                    <property name="name" value="EXEC_DATE" valueType="string"/>
+                                </object>
+                            </property>
+                        </objectNode>
+                        <objectNode type="Condition:freehandExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["asof_date"{cb52626e-5770-4680-9ed3-88eefa906f3c}]</property>
+                                        </object>
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["asof_date"{cb52626e-5770-4680-9ed3-88eefa906f3c}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="  >= " valueType="string"/>
+                                </object>
+                                <object type="SQLConstant" version="1.0">
+                                    <property name="name" value="EXEC_DATE" valueType="string"/>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="-7" valueType="string"/>
+                                </object>
+                            </property>
+                        </objectNode>
+                        <objectNode type="Condition:singularConcrete" version="1.0">
+                            <property name="field" valueType="object">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["fd_m:fd_w:fd_d:BVD_DBAL"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["DMAPCD"{3cec812a-442d-49b0-b1a1-8e0e8063bf27}]</property>
+                                        </object>
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["prev_f414:fd_m:fd_w:fd_d:BVD_DBAL"{36e4b463-866f-49b6-8c90-b991aae603ad:7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6c209707-d979-4b7e-9723-5648d869470d}].hierarchy["root"{359fea9c-e3b4-4f56-8b4a-1d245a4d4a0b}].dataSource.layout["DMAPCD"{3cec812a-442d-49b0-b1a1-8e0e8063bf27}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="operation" value="=" valueType="string"/>
+                            <property name="value" value="D" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: &#x9;22-03-2023 - mruenes&#xa;Descripción:&#x9;se crea AGG BVD_DBAL que trae desde el daily la información de depósitos del Banco a corte semanal" valueType="string"/>
+        </object>
+    </property>
+</object>

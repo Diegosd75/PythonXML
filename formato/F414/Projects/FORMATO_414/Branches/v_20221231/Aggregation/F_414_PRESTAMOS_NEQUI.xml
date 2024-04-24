@@ -1,0 +1,989 @@
+﻿<object stamp="b92737fa-8bf4-4eb7-b823-ab9e8a5689f5_1657669864164" type="Aggregation" version="7.0">
+    <property name="objectId" value="8ca6edaf-3c1f-4ce5-9884-26ee3f5c79d4" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_PRESTAMOS_NEQUI" valueType="string"/>
+    <property name="description" value="se crea agregacion para poder realizar cruce con modelo adicional" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="1b3f23a7-4213-4ad9-9945-1975cc3ddd78" valueType="string"/>
+            <property name="name" value="entity" valueType="string"/>
+            <property name="description" value="entity" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="75a40636-5e0b-4ff9-a0dc-e78e0ceeca07" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="f12c834e-8094-4bcb-8fd6-89031e9809ff" valueType="string"/>
+            <property name="name" value="DOCUMENT_ID" valueType="string"/>
+            <property name="description" value="Identificacion del cliente" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="DOCUMENT_ID" valueType="string"/>
+            <property name="overrideNullable" value="NOT_NULLABLE" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="0b3c52b3-a1ae-4558-ae6d-42c58e2bedcb" valueType="string"/>
+            <property name="name" value="CIF_ID" valueType="string"/>
+            <property name="description" value="identificador del cliente" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="CIF_ID" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="c59bfe4c-6b7f-4ae2-a61d-b54eb85d9ffc" valueType="string"/>
+            <property name="name" value="BANK_ID" valueType="string"/>
+            <property name="description" value="identificador del banco" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="BANK_ID" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="8e935db5-4630-42ab-96b4-db38900c5fea" valueType="string"/>
+            <property name="name" value="FORACID" valueType="string"/>
+            <property name="description" value="Numero de  prestamo asociado al cliente" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="FORACID" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="9fa0f5fe-0d2c-47c8-88af-f9b10dd2a320" valueType="string"/>
+            <property name="name" value="DISB_DATE" valueType="string"/>
+            <property name="description" value="fecha de desembolso" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="DISB_DATE" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="d619be54-df6e-4635-b8cd-5c6a0cc2daa4" valueType="string"/>
+            <property name="name" value="MATURITY_DATE" valueType="string"/>
+            <property name="description" value="fecha fin del plazo del prestamo" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="MATURITY_DATE" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="eaf4b237-c7b7-4fce-a980-e4cbb84fca8f" valueType="string"/>
+            <property name="name" value="NRML_INT_EFF_RATE" valueType="string"/>
+            <property name="description" value="Tasa de interes  %EA" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="NRML_INT_EFF_RATE" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="ba3221ae-914e-484c-aca7-a3895602a953" valueType="string"/>
+            <property name="name" value="DEL_FLG" valueType="string"/>
+            <property name="description" value="indica si el registro esta o no borrado logicamente" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="DEL_FLG" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="2062ca1a-11e7-4645-b4af-1d4e665be167" valueType="string"/>
+            <property name="name" value="SCHM_CODE" valueType="string"/>
+            <property name="description" value="Tipo de crédito" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="SCHM_CODE" valueType="string"/>
+            <property name="overrideNullable" value="NOT_NULLABLE" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="f9e2d850-1881-47ac-bf20-6754eecfd899" valueType="string"/>
+            <property name="name" value="REPORT_DATE" valueType="string"/>
+            <property name="description" value="Fecha de registro" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="REPORT_DATE" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="55d948e7-ddd6-48e2-bd26-2199564d0429" valueType="string"/>
+            <property name="name" value="ACCT_CLS_DATE" valueType="string"/>
+            <property name="description" value="Fecha de cierre del prestamo" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="ACCT_CLS_DATE" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="124787f7-efcd-48d9-8399-5327960e3396" valueType="string"/>
+            <property name="name" value="ACCT_OPN_DATE" valueType="string"/>
+            <property name="description" value="Fecha de apertura del credito" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="ACCT_OPN_DATE" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="fbb809a8-afe4-414d-9c8e-f203e36cd168" valueType="string"/>
+            <property name="name" value="ACID" valueType="string"/>
+            <property name="description" value="Llave de cruce" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="ad985fd7-f3d1-4dab-ab63-8d37da9ef349" valueType="string"/>
+            <property name="name" value="DOCUMENT_TYPE" valueType="string"/>
+            <property name="description" value="Tipo de documento" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="NOT_NULLABLE" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="3eb852a4-fa8f-42f7-9df2-15ea1fd40a28" valueType="string"/>
+            <property name="name" value="ORGKEY" valueType="string"/>
+            <property name="description" value="identificador del cliente" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="8fdebf64-048c-4a54-b87e-14236546a059" valueType="string"/>
+            <property name="name" value="GENDER" valueType="string"/>
+            <property name="description" value="Tipo de sexo" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="fdd8ea7b-d30e-43fb-8beb-87ba4ece3dc1" valueType="string"/>
+            <property name="name" value="NUM_OF_FLOWS" valueType="string"/>
+            <property name="description" value="Plazo en meses" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="049e3d77-3c30-4a43-bd2a-31856c23e1bf" valueType="string"/>
+            <property name="name" value="SHDL_NUM" valueType="string"/>
+            <property name="description" value="shdl_num" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="c3b7e73d-a45a-464d-af3d-60aa0b06c4f0" valueType="string"/>
+            <property name="name" value="FLOW_ID" valueType="string"/>
+            <property name="description" value="flow_id" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="fc364ad8-8f25-4fc6-861a-5c1a7ba2b07b" valueType="string"/>
+            <property name="name" value="DISB_AMT" valueType="string"/>
+            <property name="description" value="monto desembolsado en el prestamo" valueType="string"/>
+            <property name="aggrMethod" value="MAX" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="MONTO_DESEMBOLSADO" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="204a9942-c289-4c08-af1a-5141a5cb55c1" valueType="string"/>
+            <property name="name" value="TASA_PONDERADA" valueType="string"/>
+            <property name="description" value="TASA_PONDERADA" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["DISB_AMT"{fc364ad8-8f25-4fc6-861a-5c1a7ba2b07b}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" * " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NRML_INT_EFF_RATE"{eaf4b237-c7b7-4fce-a980-e4cbb84fca8f}]</property>
+                </object>
+            </property>
+            <property name="valueType" value="FLOAT" valueType="string"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="TASA_PONDERADA" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="9bc0f146-e347-4f22-b7bc-2e4eea7cc8a8" valueType="string"/>
+            <property name="name" value="PLAZO" valueType="string"/>
+            <property name="description" value="PLAZO" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["MATURITY_DATE"{d619be54-df6e-4635-b8cd-5c6a0cc2daa4}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" - " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DISB_DATE"{9fa0f5fe-0d2c-47c8-88af-f9b10dd2a320}]</property>
+                </object>
+            </property>
+            <property name="valueType" value="INTEGER" valueType="string"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="PLAZO" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="a838b861-0b07-497f-9983-cb3ab0f16361" valueType="string"/>
+            <property name="name" value="MARGEN_UVR" valueType="string"/>
+            <property name="description" value="MARGEN_ADICIONAL_UVR" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="MARGEN_ADICIONAL_UVR" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table">
+        <object type="Aggregation:syntheticField" version="3.0">
+            <property name="id" value="129b38be-acca-4fce-ae3b-c5e93cf981c8" valueType="string"/>
+            <property name="name" value="PLAZO_DIA" valueType="string"/>
+            <property name="description" value="PLAZO_DIA" valueType="string"/>
+            <property name="formula" valueType="table">
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value="CASE WHEN " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NUM_OF_FLOWS"{fdd8ea7b-d30e-43fb-8beb-87ba4ece3dc1}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" != 0 OR " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NUM_OF_FLOWS"{fdd8ea7b-d30e-43fb-8beb-87ba4ece3dc1}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" != '' THEN (" valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NUM_OF_FLOWS"{fdd8ea7b-d30e-43fb-8beb-87ba4ece3dc1}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" * 30) ELSE " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["MATURITY_DATE"{d619be54-df6e-4635-b8cd-5c6a0cc2daa4}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" - " valueType="string"/>
+                </object>
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DISB_DATE"{9fa0f5fe-0d2c-47c8-88af-f9b10dd2a320}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" END" valueType="string"/>
+                </object>
+            </property>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="valueType" value="INTEGER" valueType="string"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="title" value="PLAZO_DIA" valueType="string"/>
+        </object>
+    </property>
+    <property name="additionalIndices" valueType="table">
+        <object type="Aggregation:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["GENDER"{8fdebf64-048c-4a54-b87e-14236546a059}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DOCUMENT_TYPE"{ad985fd7-f3d1-4dab-ab63-8d37da9ef349}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["SCHM_CODE"{2062ca1a-11e7-4645-b4af-1d4e665be167}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DOCUMENT_ID"{f12c834e-8094-4bcb-8fd6-89031e9809ff}]</property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["entity"{1b3f23a7-4213-4ad9-9945-1975cc3ddd78}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["entity"{43015549-eb08-4709-865e-120d09957b7f}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INFO"{75a40636-5e0b-4ff9-a0dc-e78e0ceeca07}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="'NEQUI'" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="10" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DOCUMENT_ID"{f12c834e-8094-4bcb-8fd6-89031e9809ff}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["DOCUMENT_ID"{e8f56475-e64d-4ffb-8749-aef74f6739b5}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["CIF_ID"{0b3c52b3-a1ae-4558-ae6d-42c58e2bedcb}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["CIF_ID"{f6f9a5c8-55e1-44cf-a4cd-d7c1b4bd27f5}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["BANK_ID"{c59bfe4c-6b7f-4ae2-a61d-b54eb85d9ffc}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["BANK_ID"{3a34d981-8b03-44d3-aced-3a5048b37fb4}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FORACID"{8e935db5-4630-42ab-96b4-db38900c5fea}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["FORACID"{53b7cf42-b859-4b79-8041-b18a1166ce91}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DISB_DATE"{9fa0f5fe-0d2c-47c8-88af-f9b10dd2a320}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["DISB_DATE"{665733fb-172a-4604-b001-96cf37cbb280}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["MATURITY_DATE"{d619be54-df6e-4635-b8cd-5c6a0cc2daa4}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["MATURITY_DATE"{2e89d9ea-8217-450a-bfd0-be87cb08d0f2}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NRML_INT_EFF_RATE"{eaf4b237-c7b7-4fce-a980-e4cbb84fca8f}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["NRML_INT_EFF_RATE"{1c9b91d8-a2d5-4493-865d-eecc9e80736b}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DEL_FLG"{ba3221ae-914e-484c-aca7-a3895602a953}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["DEL_FLG"{f0fbb06e-c420-415b-858f-f39fd2f25eeb}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["SCHM_CODE"{2062ca1a-11e7-4645-b4af-1d4e665be167}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["SCHM_CODE"{5c2727ca-187f-4b28-9bcf-94e247750b25}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["REPORT_DATE"{f9e2d850-1881-47ac-bf20-6754eecfd899}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["REPORT_DATE"{73a5a024-272a-421c-bc3d-c518d9af6f82}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ACCT_CLS_DATE"{55d948e7-ddd6-48e2-bd26-2199564d0429}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["ACCT_CLS_DATE"{e135f88b-50fd-4a73-bc57-06269852f401}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ACCT_OPN_DATE"{124787f7-efcd-48d9-8399-5327960e3396}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["ACCT_OPN_DATE"{8cac59f1-3a5f-496c-80bf-8f1c1794437d}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ACID"{fbb809a8-afe4-414d-9c8e-f203e36cd168}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["ACID"{5345310f-0e45-46ab-98d6-489dc08a2c5d}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["DOCUMENT_TYPE"{ad985fd7-f3d1-4dab-ab63-8d37da9ef349}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["DOCUMENT_TYPE"{1f2ccdc5-d9f9-408c-a055-5aeb2a551232}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["ORGKEY"{3eb852a4-fa8f-42f7-9df2-15ea1fd40a28}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["ACCOUNTS"{82d2c099-4ce7-42c4-b5e8-eb786ccff285}].dataSource.layout["ORGKEY"{b5475c71-6ff8-4c7c-8158-5246d903890a}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["GENDER"{8fdebf64-048c-4a54-b87e-14236546a059}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["ACCOUNTS"{82d2c099-4ce7-42c4-b5e8-eb786ccff285}].dataSource.layout["GENDER"{3aa4a47a-1f41-408e-80be-9108440a6249}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["NUM_OF_FLOWS"{fdd8ea7b-d30e-43fb-8beb-87ba4ece3dc1}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["NUM_OF_FLOWS"{b0038d5b-e4f7-4375-861f-3be07df1d21e}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" IS NULL AND " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["SHDL_NUM"{50617dbb-768f-482a-a148-2b420f07b64f}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != 1  OR " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["NUM_OF_FLOWS"{b0038d5b-e4f7-4375-861f-3be07df1d21e}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != 0 AND " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["SHDL_NUM"{50617dbb-768f-482a-a148-2b420f07b64f}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != 1  OR " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["NUM_OF_FLOWS"{b0038d5b-e4f7-4375-861f-3be07df1d21e}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" IS NULL AND " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["SHDL_NUM"{50617dbb-768f-482a-a148-2b420f07b64f}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" IS NULL THEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRSH"{29ad366e-f90e-4b2c-b2f9-e5a539d37989}].dataSource.layout["NUM_OF_FLOWS"{3e7cd93c-6d11-4d05-bf6e-90b78f6c9ce9}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" ELSE " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["NUM_OF_FLOWS"{b0038d5b-e4f7-4375-861f-3be07df1d21e}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="INTEGER" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["SHDL_NUM"{049e3d77-3c30-4a43-bd2a-31856c23e1bf}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["SHDL_NUM"{50617dbb-768f-482a-a148-2b420f07b64f}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" IS NULL OR " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["SHDL_NUM"{50617dbb-768f-482a-a148-2b420f07b64f}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != 1 THEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRSH"{29ad366e-f90e-4b2c-b2f9-e5a539d37989}].dataSource.layout["SHDL_NUM"{87c2d2ab-c25c-4f48-886a-e6ba17de03a0}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" ELSE " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["SHDL_NUM"{50617dbb-768f-482a-a148-2b420f07b64f}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="INTEGER" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FLOW_ID"{c3b7e73d-a45a-464d-af3d-60aa0b06c4f0}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["FLOW_ID"{73517e94-1f43-485c-9067-d79570dbef3b}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" IS NULL THEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRSH"{29ad366e-f90e-4b2c-b2f9-e5a539d37989}].dataSource.layout["FLOW_ID"{d63e9e4c-902b-4d61-8b4f-4364c8e7fead}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" ELSE " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["FLOW_ID"{73517e94-1f43-485c-9067-d79570dbef3b}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueSize" value="40" valueType="integer"/>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="VARCHAR" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["DISB_AMT"{fc364ad8-8f25-4fc6-861a-5c1a7ba2b07b}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["DISB_AMT"{3e0163de-4936-4df1-97fc-bfccdadc1c10}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["MARGEN_UVR"{a838b861-0b07-497f-9983-cb3ab0f16361}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="0" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="FLOAT" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                            <property name="shorthand" valueType="url">Shorthand["F_414_C_LA_ACCT_RPT_DET"{0020cfd1-045f-481b-a018-055319bc8abb}]</property>
+                            <property name="operation" value="=" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: se crea agregacion para poder realizar cruce con modelo adicional&#xa;&#xa;======================================================================================================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

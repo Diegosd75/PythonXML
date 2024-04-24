@@ -1,0 +1,25 @@
+<object stamp="c4c293d6-c3ad-4d0e-a30f-b774d60a647e_1614022880646" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="30abcc8f-7bf6-447f-9915-aa980f28def5" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_GetColumnChar" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="GCC_jbook" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="GCC_indexColumn" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Get char column&#xa;Input variables:&#xa;GCC_jbook - system variable &quot;jbook&quot;;&#xa;GCC_indexColumn - index column;&#xa;-->&#xa;; class(&quot;com.axiomsl.free_form_report.setup.ReportDataSet&quot;).getCellRef(GCC_jbook.getSheetName(0), 0, GCC_indexColumn, true).split(&quot;\$&quot;).get(1)&#xa;" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

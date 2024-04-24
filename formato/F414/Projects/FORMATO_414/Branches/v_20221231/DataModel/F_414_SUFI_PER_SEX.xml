@@ -1,0 +1,124 @@
+﻿<object stamp="f1918154-446a-4a4b-8372-b028f0c52d00_1657045003270" type="DataModel" version="2.0">
+    <property name="objectId" value="9ee19952-fa3c-4981-a6bb-7267b1fed023" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_SUFI_PER_SEX" valueType="string"/>
+    <property name="description" value="Modelo para obtener tipo persona y sexo de clientes de SUFI" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="b65e3ca0-777c-42e4-b60f-99237dfa1bae" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_DETALLE_SUFI" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_DETALLE_SUFI]"{Aggregation[78df28d6-d8a7-4b0f-bd38-e5afe37dd7c7]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="30fa5a86-947b-4fda-a3f9-5de28524e654" valueType="string"/>
+                    <property name="name" value="TIPO_PERSONA_SEXO" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TIPO_PERSONA_SEXO" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}]</property>
+                    <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table">
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TIPO_PERSONA_SEXO"{30fa5a86-947b-4fda-a3f9-5de28524e654}].dataSource.layout["CXNOAC"{82676aba-f252-4ff2-85e2-ab3fb30bdb86}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = LTRIM(" valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{b65e3ca0-777c-42e4-b60f-99237dfa1bae}].dataSource.layout["L01NPR"{3d0e575d-3e2d-4250-bc67-08ecb84ebf64}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",'0')" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CNCDTI"{c2ea18f0-9200-47ce-83f8-fe40ee69ccf2}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_DETALLE_SUFI]"{Aggregation[78df28d6-d8a7-4b0f-bd38-e5afe37dd7c7]}].layout["CNCDTI"{c7d09ac4-886e-4eb8-8a57-d12fd5f6d53e}]</property>
+                        </object>
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CNNOSS"{8ac41641-a84d-4a65-b7d3-314fcc7261dd}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_DETALLE_SUFI]"{Aggregation[78df28d6-d8a7-4b0f-bd38-e5afe37dd7c7]}].layout["CNNOSS"{4bd4f848-fcdf-45d8-bbdc-6bc24feee1a2}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 30/06/2022 - dasierra&#xa;Descripción:&#xa;- Modelo de datos para obtener el tipo y sexo del cliente para el frente Sufi" valueType="string"/>
+        </object>
+    </property>
+</object>

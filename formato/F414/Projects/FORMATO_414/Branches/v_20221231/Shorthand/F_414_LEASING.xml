@@ -1,0 +1,240 @@
+﻿<object stamp="7e9b8423-789b-4e38-9258-99762ad72cf3_1664806404106" type="Shorthand" version="2.0">
+    <property name="objectId" value="e81e7124-cb17-468d-a163-dac92c7753c4" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_LEASING" valueType="string"/>
+    <property name="description" value="Se cra filtro para el frente leasing" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: Se cra filtro para el frente leasing" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="LEASING" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPICTIPCA"{fb248a9f-4d43-4b30-ac56-eeecf22f5318}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="!=" valueType="string"/>
+                                    <property name="value" value="90" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPTIPCON"{08b8735c-0122-4a2b-a149-89976a4799f2}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="0" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLPattern" version="1.0">
+                                            <property name="name" value="subStr" valueType="string"/>
+                                            <property name="parameters" valueType="table">
+                                                <object type="SQLPattern:parameter" version="1.0">
+                                                    <property name="expressions" valueType="table">
+                                                        <object type="DataModel:fieldMap" version="1.0">
+                                                            <property name="map" valueType="table">
+                                                                <object type="DataModel:fieldReference" version="1.0">
+                                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPNOPER"{6b4d9b20-7a7f-41a5-910f-e27c94d77620}]</property>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLPattern:parameter" version="1.0">
+                                                    <property name="expressions" valueType="table">
+                                                        <object type="SQLExpressionPart" version="1.0">
+                                                            <property name="value" value="-2" valueType="string"/>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                                <object type="SQLPattern:parameter" version="1.0">
+                                                    <property name="expressions" valueType="table">
+                                                        <object type="SQLExpressionPart" version="1.0">
+                                                            <property name="value" value="2" valueType="string"/>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" = '00'" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["AX_PMPFINIC"{e8c655dc-dc51-4453-95fc-4065e0db855d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" >= (" valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" - 6) " valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" " valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["AX_PMPFINIC"{e8c655dc-dc51-4453-95fc-4065e0db855d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" &lt;= (" valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="ASOF_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" )" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPNROAUX"{9f053c48-5f4c-4bda-b00d-831b892b653d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" = " valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["SBMAECLBF"{9534b2c5-8744-42c7-a37b-914b534a5272}].dataSource.layout["SCLNCLAVE"{ffecb1ea-8b41-4f16-9c3a-b32d107f15c1}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPNOPER"{6b4d9b20-7a7f-41a5-910f-e27c94d77620}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" = " valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["LSMAEPRBF1"{55b4483c-0585-48e4-9653-0f08944a6830}].dataSource.layout["PMPNOPER1"{b13b5ac4-8bad-4578-b053-df88eb471cd3}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPNOPERAN"{3eef24c2-ae18-4eae-a5ad-0190d1928771}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" = " valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["LSMAEPRBF"{c54fc6cd-2b61-47ca-8bc5-02854d0f7d57}].dataSource.layout["PMPNOPER"{6b4d9b20-7a7f-41a5-910f-e27c94d77620}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:list" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPESTADO"{3c342e1c-0613-4c66-ad75-84b8fb3c5352}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="NOT IN" valueType="string"/>
+                                    <property name="values" valueType="table">
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="9" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="23" valueType="string"/>
+                                        </object>
+                                        <object type="Condition:list:value" version="1.0">
+                                            <property name="value" value="80" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

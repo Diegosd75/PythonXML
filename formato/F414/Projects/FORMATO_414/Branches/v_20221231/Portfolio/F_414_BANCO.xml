@@ -1,0 +1,990 @@
+﻿<object stamp="fbe1c1aa-da62-497d-a399-0b1f3f607c37_1666995537470" type="Portfolio" version="5.0">
+    <property name="objectId" value="15fab3b6-a1eb-433b-8da3-962c82693e21" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_BANCO" valueType="string"/>
+    <property name="description" value="Clasificar información de banco por nodo" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_BANCO_EMPRESA]"{Aggregation[f48f32fd-6db6-48f6-bd6e-094129861e9e]}]</property>
+        </object>
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}]</property>
+        </object>
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="detailSet" valueType="url"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="createIndexesOnStreamColumns" value="false" valueType="boolean"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Portfolio:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="portfolioResultAlias" value="" valueType="string"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="producingIsRoot" value="false" valueType="boolean"/>
+    <property name="sequence" valueType="table"/>
+    <property name="ignoreErrorsInAggregatedConditoinPlacement" value="false" valueType="boolean"/>
+    <property name="makeAsOfDateColumnNullable" value="false" valueType="boolean"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="allowMultipleNodesPerRecord" value="true" valueType="boolean"/>
+    <property name="executionAlgorithm" value="optimized_for_few_aggregations" valueType="string"/>
+    <property name="levels" valueType="table">
+        <object type="Portfolio:level" version="1.0">
+            <property name="id" value="2834c2a6-2677-4a24-b03d-fbc2c1796b69" valueType="string"/>
+            <property name="name" value="unidad_captura_nivel" valueType="string"/>
+            <property name="description" value="unidad_captura_nivel" valueType="string"/>
+            <property name="defaultValue" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="additionalFields" valueType="table">
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="51ce0556-fa8d-4e74-8829-dd470a855d68" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="100" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="119e9d04-5b7b-45a1-83d2-f088a590054e" valueType="string"/>
+            <property name="name" value="TIPO_PERSONA" valueType="string"/>
+            <property name="description" value="TIPO_PERSONA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="7764ab21-c797-467a-aff7-e755d8030a90" valueType="string"/>
+            <property name="name" value="TIPO_GARANTIA" valueType="string"/>
+            <property name="description" value="TIPO_GARANTIA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="18cb2bf5-d898-44fa-90a4-7607331f5d2d" valueType="string"/>
+            <property name="name" value="TIPO_SEXO" valueType="string"/>
+            <property name="description" value="TIPO_SEXO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="75a522e2-cf50-4199-bd6d-e202b339267e" valueType="string"/>
+            <property name="name" value="TIPO_CREDITO" valueType="string"/>
+            <property name="description" value="TIPO_CREDITO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="60a63373-ec6c-46c7-9574-c349aa3915b9" valueType="string"/>
+            <property name="name" value="PRODUCTO_CREDITO" valueType="string"/>
+            <property name="description" value="PRODUCTO_CREDITO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="dfb8b600-fdcf-414d-bca0-6bac9c3184d4" valueType="string"/>
+            <property name="name" value="PLAZO_CREDITO" valueType="string"/>
+            <property name="description" value="PLAZO_CREDITO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+        <object type="Portfolio:additionalField" version="2.0">
+            <property name="id" value="46f5334d-8e9f-4252-9a56-1f8de55c008a" valueType="string"/>
+            <property name="name" value="TAMANO_EMPRESA" valueType="string"/>
+            <property name="description" value="TAMANO_EMPRESA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowNullsFixed" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="showTotal" value="false" valueType="boolean"/>
+            <property name="lookupSource" valueType="url"/>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="Portfolio:rootnode" version="2.0">
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+            <property name="actions" valueType="table"/>
+            <children>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="8a7da982-a136-491e-9a91-1b5bf3d76d18" valueType="string"/>
+                    <property name="name" value="TIPO_PERSONA" valueType="string"/>
+                    <property name="description" value="TIPO_PERSONA" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TIPO_PERSONA"{6abaa111-38bd-4034-af46-0a0e06da7fa3}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{51ce0556-fa8d-4e74-8829-dd470a855d68}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="'BANCO'" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_PERSONA"{119e9d04-5b7b-45a1-83d2-f088a590054e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_EMPRESA]"{Aggregation[f48f32fd-6db6-48f6-bd6e-094129861e9e]}]</property>
+                        </object>
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="9deafee2-d9ab-4c19-a26e-7472d2d34ece" valueType="string"/>
+                    <property name="name" value="TIPO_SEXO" valueType="string"/>
+                    <property name="description" value="TIPO_SEXO" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TIPO_SEXO"{69d2983e-4f25-46f1-84ed-a2a064980616}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{51ce0556-fa8d-4e74-8829-dd470a855d68}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="'BANCO'" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_SEXO"{18cb2bf5-d898-44fa-90a4-7607331f5d2d}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_EMPRESA]"{Aggregation[f48f32fd-6db6-48f6-bd6e-094129861e9e]}]</property>
+                        </object>
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="419a5b6f-efba-4849-9293-562b38d94cce" valueType="string"/>
+                    <property name="name" value="TIPO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TIPO_CREDITO"{279d3480-17df-4d74-a434-a87d829bf8c5}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_CREDITO"{75a522e2-cf50-4199-bd6d-e202b339267e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{51ce0556-fa8d-4e74-8829-dd470a855d68}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="'BANCO'" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_EMPRESA]"{Aggregation[f48f32fd-6db6-48f6-bd6e-094129861e9e]}]</property>
+                        </object>
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="0d134aed-ff1d-445a-b397-69a06e5406a9" valueType="string"/>
+                    <property name="name" value="TIPO_GARANTIA" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TIPO_GARANTIA"{66b9cd15-25db-4ee2-a67e-cb967b9b29b0}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_GARANTIA"{7764ab21-c797-467a-aff7-e755d8030a90}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="CASE WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}].hierarchy["Aggregation"{88284fd5-e7cc-4159-b130-2501f6a2d4c6}].dataSource.layout["PARAMETRO"{c05e1c77-a5fe-42f5-9ad8-4e7a5466b236}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'GARANTIA_SNG' OR (" valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}].hierarchy["Aggregation"{88284fd5-e7cc-4159-b130-2501f6a2d4c6}].dataSource.layout["PARAMETRO"{c05e1c77-a5fe-42f5-9ad8-4e7a5466b236}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'GARANTIA_GINI' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}].hierarchy["Aggregation"{88284fd5-e7cc-4159-b130-2501f6a2d4c6}].dataSource.layout["CAMPO"{7632bb48-b230-4186-96bf-bdf77dce6f9f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'CEAC72') THEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}].hierarchy["Aggregation"{88284fd5-e7cc-4159-b130-2501f6a2d4c6}].dataSource.layout["VALOR"{d0546f5c-8e64-4081-b67c-8ead52b52367}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" ELSE " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}].hierarchy["Aggregation"{88284fd5-e7cc-4159-b130-2501f6a2d4c6}].dataSource.layout["VARIABLE"{87b18afa-1495-4118-9725-681c37a87588}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" END" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{51ce0556-fa8d-4e74-8829-dd470a855d68}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="'BANCO'" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_EMPRESA]"{Aggregation[f48f32fd-6db6-48f6-bd6e-094129861e9e]}]</property>
+                        </object>
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="ea90b9d7-6d22-4c76-a8f5-eed17ee9ce10" valueType="string"/>
+                    <property name="name" value="PRODUCTO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_PRODUCTO_CREDITO"{d43f1c88-5f0d-4485-baed-d3c5f8aefa3a}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{51ce0556-fa8d-4e74-8829-dd470a855d68}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="'BANCO'" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PRODUCTO_CREDITO"{60a63373-ec6c-46c7-9574-c349aa3915b9}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="CASE WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'PRODUCTO_CREDITO' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN ('CONSUMO_EMPLEADOS', 'VIVIENDA_NOVIS_ADQUI_COP', 'VIVIENDA_VIS_ADQUI_COP', 'COMERCIAL_SEGUNDO_PISO', 'COMERCIAL_CORPORATIVO', 'COMERCIAL_EMPRESARIAL', 'COMERCIAL_FACTORING', 'COMERCIAL_GOBIERNO', 'COMERCIAL_FINANCIERO', 'COMERCIAL_VIAL','MICROCREDITO_&lt;_R','MICROCREDITO_>_R') AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN('LMCDU7', 'LMCDPL', 'CNCDBI','LMCDTY') THEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="  WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'PRODUCTO_CREDITO' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN( 'MICROCREDITO_&lt;_SMMLV','MICROCREDITO_>_SMMLV') AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'LMCDTY' THEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VALOR"{32f040dd-d8bc-42e8-9bcc-7b48f66b8f32}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="  WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'TIPO_CREDITO' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'CRED_CONSUMO' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'LMCDTY' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VALOR_MIN"{873b40eb-685b-4ec7-bf72-de9ae068855f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN ('CONSUMO_ROTATIVO', 'CONSUMO_LIBRE_INVERSION', 'CONSUMO_LIBRANZA', 'CONSUMO_VEHICULO', 'CONSUMO_BAJOMONTO', 'CONSUMO_OTROS')  THEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VALOR_MAX"{2e49ae9d-ea4e-4d61-93b4-43e1ad62b21f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="  WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'TIPO_PERSONA' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'OTROSCOMERCIAL' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'CNCDTY' THEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VALOR_MIN"{873b40eb-685b-4ec7-bf72-de9ae068855f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="  WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["LMCDPL"{32c9e87d-bfe1-4741-9309-90c86ce89a77}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CODIGO_VIVI"{75206e2f-0eea-4dd3-9b9d-db29512a4714}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" THEN TO_CHAR(" valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VALOR_VIVI"{e71f5e1c-eb26-4e01-a90f-965f33bfcd67}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=")   &#x9;ELSE '10000' &#x9; END" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TIPO_CREDITO"{75a522e2-cf50-4199-bd6d-e202b339267e}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="CASE WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN('PRODUCTO_CREDITO') AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN('COMERCIAL_SEGUNDO_PISO','COMERCIAL_FACTORING', 'COMERCIAL_VIAL', 'COMERCIAL_CORPORATIVO', 'COMERCIAL_EMPRESARIAL', 'COMERCIAL_GOBIERNO', 'COMERCIAL_FINANCIERO') AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN('LMCDU7', 'LMCDPL', 'CNCDBI') THEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VALOR_MIN"{873b40eb-685b-4ec7-bf72-de9ae068855f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="  WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'TIPO_CREDITO' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'CRED_COMER_ESP' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'CNCDST' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VALOR_MIN"{873b40eb-685b-4ec7-bf72-de9ae068855f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = 'PRODUCTO_CREDITO' AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["LMCDTY"{8fbbfe1c-617c-44f6-922e-25e7fdb9fa79}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="=2 THEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" WHEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN('TIPO_PERSONA') AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["PARAMETRO"{7abb94b2-d8b0-486a-9f19-f49e8a7b527b}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN('OTROSCOMERCIAL') AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" IN('CNCDTY') AND " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["LMCDTY"{8fbbfe1c-617c-44f6-922e-25e7fdb9fa79}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" = '2' THEN " valueType="string"/>
+                                </object>
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" ELSE TO_CHAR(" valueType="string"/>
+                                </object>
+                                <object type="Portfolio:localAdditionalFieldReference" version="1.0">
+                                    <property name="value" valueType="url">Portfolio[this].additionalFields["TIPO_CREDITO"{75a522e2-cf50-4199-bd6d-e202b339267e}]</property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=") END" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_EMPRESA]"{Aggregation[f48f32fd-6db6-48f6-bd6e-094129861e9e]}]</property>
+                        </object>
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="2251d1b8-c731-42a0-b3d9-d9f04484ac86" valueType="string"/>
+                    <property name="name" value="PLAZO_CREDITO" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_PLAZO_CREDITO"{87841b9e-7008-4810-b398-e212c3c8ee47}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["PLAZO_CREDITO"{dfb8b600-fdcf-414d-bca0-6bac9c3184d4}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].hierarchy["Aggregation"{7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6}].dataSource.layout["VALOR"{32f040dd-d8bc-42e8-9bcc-7b48f66b8f32}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{51ce0556-fa8d-4e74-8829-dd470a855d68}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="'BANCO'" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_EMPRESA]"{Aggregation[f48f32fd-6db6-48f6-bd6e-094129861e9e]}]</property>
+                        </object>
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="f855d13e-0c20-43dc-9285-2873ea9efbe7" valueType="string"/>
+                    <property name="name" value="TAMANO_EMPRESA" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                                            <property name="shorthand" valueType="url">Shorthand["F_414_TAMANO_EMPRESA"{fb55df05-7979-4264-aeed-bce717e20f84}]</property>
+                                            <property name="operation" value="=" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table">
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["FRENTE_INFO"{51ce0556-fa8d-4e74-8829-dd470a855d68}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value="'BANCO'" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                        <object type="Portfolio:node:actionUpdatePortfolioSource" version="1.0">
+                            <property name="actionType" value="SET" valueType="string"/>
+                            <property name="destinationField" valueType="url">Portfolio[this].additionalFields["TAMANO_EMPRESA"{46f5334d-8e9f-4252-9a56-1f8de55c008a}]</property>
+                            <property name="sourceExpression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_EMPRESA]"{Aggregation[f48f32fd-6db6-48f6-bd6e-094129861e9e]}].hierarchy["Aggregation"{f48f32fd-6db6-48f6-bd6e-094129861e9e}].dataSource.layout["VARIABLE"{f3e64ac1-5ae3-4f4a-95fe-88da8b99fbd0}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="actionCondition" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="modelRemoved" valueType="table">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}]</property>
+                        </object>
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANCO_GARANTIA]"{Aggregation[88284fd5-e7cc-4159-b130-2501f6a2d4c6]}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="Portfolio:node" version="2.0">
+                    <property name="id" value="1d4f21b5-dd87-4540-8054-e51f6e3920d1" valueType="string"/>
+                    <property name="name" value="Huerfanos" valueType="string"/>
+                    <property name="description" value="" valueType="string"/>
+                    <property name="condition" valueType="object">
+                        <object type="DataModelCondition" version="1.0">
+                            <property name="conditionTree" valueType="tree">
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="AND" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:freehandExpression" version="1.0">
+                                            <property name="expression" valueType="table">
+                                                <object type="SQLExpressionPart" version="1.0">
+                                                    <property name="value" value="1=2" valueType="string"/>
+                                                </object>
+                                            </property>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="actions" valueType="table"/>
+                    <property name="modelRemoved" valueType="table"/>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="executeDataModelsInParallel" value="false" valueType="boolean"/>
+    <property name="useDistinctForFinalInsert" value="true" valueType="boolean"/>
+    <property name="allowExternalDataPermissions" value="false" valueType="boolean"/>
+    <property name="translateConditionsOnLevels" value="false" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación:&#x9;05-apr-2022&#xa;Analista:&#x9;caalmosq&#xa;Objetivo:&#x9;Clasificar información de banco por nodo&#xa;&#xa;&#xa;------------------------------------------------------------------------------------------------------------------------------------------------&#xa;Fecha Creación: 04/08/2022 - dasierra&#xa;Descripción:&#xa;Se modifican los nodos Producto Credito y Tipo credito" valueType="string"/>
+        </object>
+    </property>
+</object>

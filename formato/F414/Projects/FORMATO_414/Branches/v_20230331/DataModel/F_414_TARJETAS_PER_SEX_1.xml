@@ -1,0 +1,144 @@
+﻿<object stamp="4a3d05c9-6d9f-450f-a07e-6e81a6d23cab_1656428529908" type="DataModel" version="2.0">
+    <property name="objectId" value="b877986c-9c3b-42b3-b7a0-3c05f266a1d2" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_TARJETAS_PER_SEX_1" valueType="string"/>
+    <property name="description" value="Modelo para obtener tipo persona y sexo de clientes de TDC" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="b65e3ca0-777c-42e4-b60f-99237dfa1bae" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_DETALLE_TARJETAS" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_DETALLE_TARJETAS]"{Aggregation[2e392a59-4761-4f06-b55d-4e69343b19a8]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="bcb7d300-40ae-4256-8213-e9ff06c85c6a" valueType="string"/>
+                    <property name="name" value="TARJETAS_PER_SEX_DUP" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TARJETAS_PER_SEX_DUP" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TARJETAS_PER_SEX_DUP]"{Aggregation[c1a6f627-be1f-4d08-9709-678bf7cd4b0c]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_PER_SEX_DUP]"{Aggregation[c1a6f627-be1f-4d08-9709-678bf7cd4b0c]}].layout["ATPT1_002"{a07a03b5-dba0-40f6-a9f3-ed4f418d72c8}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_DETALLE_TARJETAS]"{Aggregation[2e392a59-4761-4f06-b55d-4e69343b19a8]}].layout["ATPT1_002"{84eeb639-2966-44f0-8b82-4e01b3a73f58}]</property>
+                        </object>
+                    </property>
+                    <children>
+                        <objectNode type="DataModel:node" version="1.0">
+                            <property name="id" value="30fa5a86-947b-4fda-a3f9-5de28524e654" valueType="string"/>
+                            <property name="name" value="TIPO_PERSONA_SEXO" valueType="string"/>
+                            <property name="description" value="Resulting data source for aggregation F_414_TIPO_PERSONA_SEXO" valueType="string"/>
+                            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}]</property>
+                            <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                            <property name="additionalConstraint" valueType="table"/>
+                            <property name="additionalJoinExpression" valueType="table"/>
+                            <property name="instanceSelectionRule" valueType="object">
+                                <object type="InstanceSelectionRule" version="1.0">
+                                    <property name="instanceDateRule" valueType="object">
+                                        <object type="InstanceSelectionRule:rule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                    <property name="instanceKeyRules" valueType="table">
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="version" valueType="string"/>
+                                        </object>
+                                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                            <property name="type" value="EQUAL" valueType="string"/>
+                                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="join" valueType="table">
+                                <object type="DataModel:node:join" version="1.0">
+                                    <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TIPO_PERSONA_SEXO]"{Aggregation[13582e4c-1fd8-48b0-a355-619d4f516b21]}].layout["CXNOAC"{82676aba-f252-4ff2-85e2-ab3fb30bdb86}]</property>
+                                    <property name="parentField" valueType="url">DataSource["Aggregation[F_414_TARJETAS_PER_SEX_DUP]"{Aggregation[c1a6f627-be1f-4d08-9709-678bf7cd4b0c]}].layout["CTATJ_002"{7e154215-b7aa-49c8-bb12-6d257999df3f}]</property>
+                                </object>
+                            </property>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 16/06/2022 - sergigon&#xa;Descripción:&#xa;- Modelo de datos para obtener el tipo y sexo del cliente.&#xa;- Se cruza la información de tarjetas con la AGG F_414_TARJETAS_PER_SEX_DUP, la cual identifica la cantidad de llave del nombre que tiene asociado a una trajeta.&#xa;- Se filtra el cruce por aquellas tarjetas que tienen asociada solo una llave del nombre en CXREF." valueType="string"/>
+        </object>
+    </property>
+</object>

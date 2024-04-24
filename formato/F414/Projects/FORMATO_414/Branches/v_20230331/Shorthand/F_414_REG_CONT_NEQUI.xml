@@ -1,0 +1,132 @@
+﻿<object stamp="0096313b-6b24-4dac-a10a-c911ba84ab6f_1654599895400" type="Shorthand" version="2.0">
+    <property name="objectId" value="6773ece0-a3cc-4cee-8707-f73702164b22" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_REG_CONT_NEQUI" valueType="string"/>
+    <property name="description" value="SE CREA FILTRO PARA OBTENER EL REGISTRO CONTABLE DE NEQUI" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_NEQUI_GL_SUB_HEAD_TRAN_TABLE"{05282691-1dfc-42b6-b039-e2aafc82ab9f}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción:&#xa;SE CREA FILTRO PARA OBTENER EL REGISTRO CONTABLE DE NEQUI" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="NEQUI" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_NEQUI_GL_SUB_HEAD_TRAN_TABLE"{05282691-1dfc-42b6-b039-e2aafc82ab9f}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_NEQUI_GL_SUB_HEAD_TRAN_TABLE"{05282691-1dfc-42b6-b039-e2aafc82ab9f}].hierarchy["root"{9b872810-374d-4199-a959-f259db904f38}].dataSource.layout["END_BAL_DATE"{8c008bc2-ca4e-4a40-91a5-e5aca074c27e}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" >= (" valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="EXEC_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" - 6)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_NEQUI_GL_SUB_HEAD_TRAN_TABLE"{05282691-1dfc-42b6-b039-e2aafc82ab9f}].hierarchy["root"{9b872810-374d-4199-a959-f259db904f38}].dataSource.layout["END_BAL_DATE"{8c008bc2-ca4e-4a40-91a5-e5aca074c27e}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" &lt;= (" valueType="string"/>
+                                        </object>
+                                        <object type="SQLConstant" version="1.0">
+                                            <property name="name" value="EXEC_DATE" valueType="string"/>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=")   " valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:singularExpression" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_NEQUI_GL_SUB_HEAD_TRAN_TABLE"{05282691-1dfc-42b6-b039-e2aafc82ab9f}].hierarchy["root"{9b872810-374d-4199-a959-f259db904f38}].dataSource.layout["GL_SUB_HEAD_CODE"{f2a3847c-0cd8-4ede-9c32-23a05c228808}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IN" valueType="string"/>
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="(select VALOR from " valueType="string"/>
+                                        </object>
+                                        <object type="SQLFormula" version="1.0">
+                                            <property name="expression" valueType="object">
+                                                <object type="ASLExpression" version="1.0">
+                                                    <property name="expression" valueType="table">
+                                                        <object type="ASLExpression:part" version="1.0">
+                                                            <property name="expression" value="sourceTableLatest('fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414', CreateTimeTag(@EXEC_DATE))" valueType="string"/>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" where FUENTE = 'NEQUI' AND PARAMETRO ='CONTABILIDAD_NEQUI' AND CAMPO = 'GL_SUB_HEAD_CODE')" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_NEQUI_GL_SUB_HEAD_TRAN_TABLE"{05282691-1dfc-42b6-b039-e2aafc82ab9f}].hierarchy["root"{9b872810-374d-4199-a959-f259db904f38}].dataSource.layout["DEL_FLG"{9ab9a7bc-b067-4c86-9c2a-75ee91e224d5}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="N" valueType="string"/>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

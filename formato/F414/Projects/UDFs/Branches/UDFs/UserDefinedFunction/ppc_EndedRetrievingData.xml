@@ -1,0 +1,35 @@
+<object stamp="69053ee2-3c3e-4717-b4cc-ce1abcfbe90b_1616174478641" type="UserDefinedFunction" version="2.0">
+    <property name="objectId" value="13db822d-2f1d-4e29-8a0f-ef79c4852a7c" valueType="string"/>
+    <property name="branchId" value="UDFs" valueType="string"/>
+    <property name="name" value="ppc_EndedRetrievingData" valueType="string"/>
+    <property name="description" value="2021.02.14" valueType="string"/>
+    <property name="arguments" valueType="table">
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="ERD_task" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="ERD_jbook" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+        <object type="UserDefinedFunction:argument" version="1.0">
+            <property name="name" value="ERD_object" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+        </object>
+    </property>
+    <property name="body" valueType="object">
+        <object type="ASLExpression" version="1.0">
+            <property name="expression" valueType="table">
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="&lt;!--&#xa;Copyright by AXIOM SL, Igor Kirilyuk&#xa;Version of 2021.02.14&#xa;Ended retrieving data&#xa;Input variables:&#xa;ERD_task - system variable &quot;task&quot;;&#xa;ERD_jbook - system variable &quot;jbook&quot;;&#xa;ERD_object - dataSet - CV9; dataLoadingStatus - CV10&#xa;-->&#xa;trace(&quot;#!#!#! ppc_EndedRetrievingData. Started #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_EndedRetrievingData. Copyright by AXIOM SL, Igor Kirilyuk, 2021.02.14 #!#!#!&quot;);&#xa;&#xa;var ERD_startDate = new(&quot;java.util.Date&quot;);&#xa;&#xa;&lt;if> ERD_task != null&#xa;&#x9;&lt;then>&#xa;&#x9;&#x9;trace(&quot;#!#!#! ppc_EndedRetrievingData. Run recalculation ... #!#!#!&quot;);&#xa;&#x9;&#x9;ERD_jbook.recalc();&#xa;&#x9;&#x9;&lt;for> &lt;comma/> ERD_object.isRetrievingData() &lt;comma/>&#xa;&#x9;&#x9;&#x9;&lt;do>&#xa;&#x9;&#x9;&#x9;&#x9;sleep(500);&#xa;&#x9;&#x9;&#x9;&lt;/do>&#xa;&#x9;&#x9;&lt;/for>&#xa;&#x9;&lt;/then>&#xa;&lt;/if>&#x9;&#xa;trace(&quot;#!#!#! ppc_EndedRetrievingData. &quot; + " valueType="string"/>
+                </object>
+                <object type="ASLExpression:udfReference" version="1.0">
+                    <property name="value" valueType="url">UserDefinedFunction["ppc_RunTime"{01bdef00-6989-424b-84f9-c81ca2885e47}]</property>
+                </object>
+                <object type="ASLExpression:part" version="1.0">
+                    <property name="expression" value="(ERD_startDate, new(&quot;java.util.Date&quot;)) + &quot; #!#!#!&quot;);&#xa;trace(&quot;#!#!#! ppc_EndedRetrievingData. Finished #!#!#!&quot;);&#xa;" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

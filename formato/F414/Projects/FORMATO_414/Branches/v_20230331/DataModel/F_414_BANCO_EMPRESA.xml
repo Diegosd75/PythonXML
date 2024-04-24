@@ -1,0 +1,167 @@
+﻿<object stamp="3071d098-0e94-4586-abb3-09dfd732f04e_1691084812758" type="DataModel" version="2.0">
+    <property name="objectId" value="f4a4ad2f-0094-46bf-bd43-76bf45db116e" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_BANCO_EMPRESA" valueType="string"/>
+    <property name="description" value="cruce de informacion para obtener el tamaño empresa de banco" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="970f853d-e3e7-4d25-9c3d-8c48165bfd84" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Resulting data source for aggregation F_414_OBLIGACIONES_BANCO" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="098cd788-8057-4bbf-911c-2a23802a7e7a" valueType="string"/>
+                    <property name="name" value="TAMANO_EMPRESA" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_TAMANO_EMPRESA" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_TAMANO_EMPRESA]"{Aggregation[5f7ec74c-d7a0-4f8a-bc71-92f1a40c92d4]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_TAMANO_EMPRESA]"{Aggregation[5f7ec74c-d7a0-4f8a-bc71-92f1a40c92d4]}].layout["AX_NUM_DOC"{453417f7-56d8-475c-82e3-d00db9cca895}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].layout["CNNOSS"{bd361c3b-986f-4217-ae8e-5ed2d6a6d3ef}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="8b36f272-afc3-4a3b-a268-bde04ed8e8c2" valueType="string"/>
+                    <property name="name" value="TR_PARAMETROS_F414" valueType="string"/>
+                    <property name="description" value="Tabla parametrica para identificar: Tipo persona, sexo, plazo, prodcuto crédito, garantía, entre otros" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8c728223-60bd-4f5e-bf97-e882d690bcc7}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table">
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["FUENTE"{b4ea567a-97e8-43ab-b847-bcdea61d7d4f}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = 'TIPO_PERSONA' AND " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["CAMPO"{c12b098d-5ed9-4c0d-8f5e-347b02753338}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = 'CNCDTY' AND " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" != 'N/A' AND " valueType="string"/>
+                        </object>
+                        <object type="DataModel:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel[this].hierarchy["TR_PARAMETROS_F414"{8b36f272-afc3-4a3b-a268-bde04ed8e8c2}].dataSource.layout["FUENTE"{d80c5604-565a-4b84-b1ee-d18d791e411f}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" = 'TAMANO_EMPRESA'&#xa;" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table">
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="version" valueType="string"/>
+                                </object>
+                                <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                    <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                                </object>
+                            </property>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["fd_m:fd_w:fd_d:ref_data:TR_PARAMETROS_F414"{7e8578ab-536c-4c4e-9fc2-b5d4a8891bc5:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:5afae726-4ad9-4490-9508-98d6d9efd57f:8c728223-60bd-4f5e-bf97-e882d690bcc7}].layout["VALOR"{25fe2ff2-f416-496a-a441-330fddacc070}]</property>
+                            <property name="parentField" valueType="url">DataSource["Aggregation[F_414_OBLIGACIONES_BANCO]"{Aggregation[7cacd597-d5c7-4f3d-a6eb-6a1f8f96f3a6]}].layout["VARIABLE"{3342ac9b-7c66-4b43-bb93-374a365c26a0}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: cruce de informacion para obtener el tamaño empresa de banco" valueType="string"/>
+        </object>
+    </property>
+</object>

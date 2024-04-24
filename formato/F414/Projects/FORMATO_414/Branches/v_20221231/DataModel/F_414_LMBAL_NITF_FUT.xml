@@ -1,0 +1,68 @@
+﻿<object stamp="cef07ceb-d5e5-4689-98c1-29fbc9321e02_1664829846789" type="DataModel" version="2.0">
+    <property name="objectId" value="500b5e4c-3b53-44b4-adad-7714f564ab59" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_LMBAL_NITF_FUT" valueType="string"/>
+    <property name="description" value="Se crea modelo para poder cruzar los nit de los plane (ER2 ER6)" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table"/>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="b2b84765-1e46-41ed-a623-8655125b85b1" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="LMBAL" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["fd_m_dinamic_fut:fd_w:fd_d:LMBAL"{fa9a2d4e-cf9e-40ed-8cb1-1a36191d6101:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6bac62ed-267a-496b-add7-9bed9d35a8ba}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table"/>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+            <children>
+                <objectNode type="DataModel:node" version="1.0">
+                    <property name="id" value="dc79d0d8-f924-444f-9426-d7b50987c972" valueType="string"/>
+                    <property name="name" value="F_414_NIT_FACTORING" valueType="string"/>
+                    <property name="description" value="Resulting data source for aggregation F_414_NIT_FACTORING" valueType="string"/>
+                    <property name="dataSource" valueType="url">DataSource["Aggregation[F_414_NIT_FACTORING]"{Aggregation[d2bf5534-c747-4302-b598-d2ca9fc64fae]}]</property>
+                    <property name="relationshipToParent" value="ONE_OR_ZERO_TO_ONE" valueType="string"/>
+                    <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+                    <property name="additionalConstraint" valueType="table"/>
+                    <property name="additionalJoinExpression" valueType="table"/>
+                    <property name="instanceSelectionRule" valueType="object">
+                        <object type="InstanceSelectionRule" version="1.0">
+                            <property name="instanceDateRule" valueType="object">
+                                <object type="InstanceSelectionRule:rule" version="1.0">
+                                    <property name="type" value="EQUAL" valueType="string"/>
+                                </object>
+                            </property>
+                            <property name="instanceKeyRules" valueType="table"/>
+                        </object>
+                    </property>
+                    <property name="join" valueType="table">
+                        <object type="DataModel:node:join" version="1.0">
+                            <property name="sourceField" valueType="url">DataSource["Aggregation[F_414_NIT_FACTORING]"{Aggregation[d2bf5534-c747-4302-b598-d2ca9fc64fae]}].layout["VALOR"{f63daceb-5e6b-49eb-8ab9-ad901ac341c6}]</property>
+                            <property name="parentField" valueType="url">DataSource["fd_m_dinamic_fut:fd_w:fd_d:LMBAL"{fa9a2d4e-cf9e-40ed-8cb1-1a36191d6101:9b3a5bfc-70ab-4ffd-97c7-e0ffc427524f:828aa465-78de-4fac-9564-23c0d5ce56ac:6bac62ed-267a-496b-add7-9bed9d35a8ba}].layout["LMCDPL"{b9c428e6-0bb2-4528-bd55-6b19d7c4f74d}]</property>
+                        </object>
+                    </property>
+                </objectNode>
+            </children>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="false" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: 17-06-2022&#xa;Analista: caalmosq&#xa;Objetivo: Se crea modelo para poder cruzar los nit de los plane (ER2 ER6)" valueType="string"/>
+        </object>
+    </property>
+</object>

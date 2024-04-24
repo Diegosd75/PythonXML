@@ -1,0 +1,229 @@
+﻿<object stamp="815058ed-f610-4026-a631-7c6ff514a627_1664806474748" type="Aggregation" version="7.0">
+    <property name="objectId" value="27284fcf-4a9e-4dcd-8420-9abdb43de831" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_LEASING_AOPERATIVO" valueType="string"/>
+    <property name="description" value="se crea agrgacion para filtrar las operaciones de leasing" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="false" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="d6635a0d-ebc5-4148-becd-8506a62b328c" valueType="string"/>
+            <property name="name" value="PMPLINEA" valueType="string"/>
+            <property name="description" value="TIPO DE PRODUCTO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="fe54d294-ccd5-4cce-a04c-d629871ddf17" valueType="string"/>
+            <property name="name" value="PMPNOPER" valueType="string"/>
+            <property name="description" value="NUMERO DE CONTRATO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="53c3a1f6-b30d-4dab-ad9a-5c537809e214" valueType="string"/>
+            <property name="name" value="PMPNROAUX" valueType="string"/>
+            <property name="description" value="NIT DEL CLIENTE" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="61e9b366-2509-4a56-8f25-26b2740961f0" valueType="string"/>
+            <property name="name" value="FRCLASIF" valueType="string"/>
+            <property name="description" value="Clasificación" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PMPLINEA"{d6635a0d-ebc5-4148-becd-8506a62b328c}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPLINEA"{be995160-9e99-43a7-a20f-9f54b8aedf41}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PMPNOPER"{fe54d294-ccd5-4cce-a04c-d629871ddf17}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPNOPER"{6b4d9b20-7a7f-41a5-910f-e27c94d77620}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["PMPNROAUX"{53c3a1f6-b30d-4dab-ad9a-5c537809e214}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPNROAUX"{9f053c48-5f4c-4bda-b00d-831b892b653d}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRCLASIF"{61e9b366-2509-4a56-8f25-26b2740961f0}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["LSFR473SBF"{61b28994-0fff-45ca-9fe3-206be7439080}].dataSource.layout["FRCLASIF"{096e3d3d-4de6-47e8-92d3-30cb294898a4}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                            <property name="shorthand" valueType="url">Shorthand["F_414_LEASING"{e81e7124-cb17-468d-a163-dac92c7753c4}]</property>
+                            <property name="operation" value="=" valueType="string"/>
+                        </objectNode>
+                        <objectNode type="Condition:singularConcrete" version="1.0">
+                            <property name="field" valueType="object">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["root"{1abd7844-3709-462c-90c0-a3c6e4f061b8}].dataSource.layout["PMPLINEA"{be995160-9e99-43a7-a20f-9f54b8aedf41}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                            <property name="operation" value="=" valueType="string"/>
+                            <property name="value" value="400" valueType="string"/>
+                        </objectNode>
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="OR" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularWildcard" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["LSFR473SBF"{61b28994-0fff-45ca-9fe3-206be7439080}].dataSource.layout["FRCLASIF"{096e3d3d-4de6-47e8-92d3-30cb294898a4}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="LIKE" valueType="string"/>
+                                    <property name="value" value="%A.Operativo%" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:singularExpression" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_INFORMACION_LEASING"{5db30201-7435-4efe-9d4b-2dad40df0671}].hierarchy["LSFR473SBF"{61b28994-0fff-45ca-9fe3-206be7439080}].dataSource.layout["FRCLASIF"{096e3d3d-4de6-47e8-92d3-30cb294898a4}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="IS" valueType="string"/>
+                                    <property name="expression" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NULL" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="true" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creacion: 04-06-2022  caalmos&#xa;Descripción: se crea agrgacion para filtrar las operaciones de leasing&#xa;&#xa;&#xa;------------------------------------------------------------------------------------------------------------------------------------------------&#xa;Fecha Creación: 04/08/2022 - dasierra&#xa;Descripción:&#xa;Se agrega el modelo INFORMACION_LEASING_PREV" valueType="string"/>
+        </object>
+    </property>
+</object>

@@ -1,0 +1,180 @@
+﻿<object stamp="7dc1864c-8cfd-418b-bc6b-c5246fcf96dd_1654601381425" type="Aggregation" version="7.0">
+    <property name="objectId" value="4510c147-8c2a-4441-ad7f-0ced8cc399db" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_DEPOSITOS_LCHG" valueType="string"/>
+    <property name="description" value="Generar la sabana de información con origen en la tabla lchg" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="422fe456-559d-45fa-ae5b-2f21e317a93b" valueType="string"/>
+            <property name="name" value="LCCDLC" valueType="string"/>
+            <property name="description" value="Código de Cargo/Mora" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="LCCDLC" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="3e7cf2c7-3aef-41b1-9827-8f73b2c6626c" valueType="string"/>
+            <property name="name" value="LCRTMU" valueType="string"/>
+            <property name="description" value="Tasa de interes Anual Efectiva" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="LCRTMU" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="e02eb678-d458-4397-ac2a-214747819b9d" valueType="string"/>
+            <property name="name" value="LCDTLM" valueType="string"/>
+            <property name="description" value="Fecha de Corte Ultimo Mantenimiento" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="LCDTLM" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="e726005a-a811-46bd-a247-564e014b3a5d" valueType="string"/>
+            <property name="name" value="AX_LCDTLM" valueType="string"/>
+            <property name="description" value="Fecha de Corte Ultimo Mantenimiento" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="AX_LCDTLM" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table"/>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LCCDLC"{422fe456-559d-45fa-ae5b-2f21e317a93b}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}].hierarchy["root"{96f87f5c-8edc-4c5e-a80c-11dca532097e}].dataSource.layout["LCCDLC"{d6938aaa-5926-4846-bc78-0c0f812665b5}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LCRTMU"{3e7cf2c7-3aef-41b1-9827-8f73b2c6626c}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}].hierarchy["root"{96f87f5c-8edc-4c5e-a80c-11dca532097e}].dataSource.layout["LCRTMU"{f9c12590-b8f2-47d5-b3ba-c7eca01a7882}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LCDTLM"{e02eb678-d458-4397-ac2a-214747819b9d}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}].hierarchy["root"{96f87f5c-8edc-4c5e-a80c-11dca532097e}].dataSource.layout["LCDTLM"{3998b48d-168b-40ea-ae86-616fab7d0d2f}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["AX_LCDTLM"{e726005a-a811-46bd-a247-564e014b3a5d}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_DEPOSITOS_LCHG"{32adc25a-d1c9-49e3-88c5-9fcaa76a5fdf}].hierarchy["root"{96f87f5c-8edc-4c5e-a80c-11dca532097e}].dataSource.layout["AX_LCDTLM"{a769c73f-a9f2-41f2-afe2-056fee81b5f6}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="DataModelCondition:shorthand" version="1.0">
+                            <property name="shorthand" valueType="url">Shorthand["F_414_LCHG"{c47d8054-3569-45d9-872d-dbb225197f6e}]</property>
+                            <property name="operation" value="=" valueType="string"/>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: &#x9;10-may-2022&#xa;Analista:&#x9;caalmosq&#xa;Objetivo:&#x9;Generar la sabana de información con origen en la tabla lchg,&#xa;=======================================================================================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

@@ -1,0 +1,2614 @@
+﻿<object stamp="396973b2-255a-460a-bf09-49d483fdb452_1713967327403" type="DataSource" version="9.0">
+    <property name="objectId" value="be7e0a80-cf38-4cd9-9d56-e2d58b7e5adb" valueType="string"/>
+    <property name="branchId" value="21eb2d81-16b6-431f-abb4-cdd012d29fee" valueType="string"/>
+    <property name="name" value="CLIENTES_CNAME" valueType="string"/>
+    <property name="description" value="Información con la identificación de los clientes" valueType="string"/>
+    <property name="hosting" value="INTERNAL" valueType="string"/>
+    <property name="dbSource" valueType="url">DBSource["SHMIGRAP"{8fd66b4e-bd84-4509-8eaf-10fad0fa2e33}]</property>
+    <property name="defaultVisibilityInModel" value="true" valueType="boolean"/>
+    <property name="dataStructure" value="FLAT" valueType="string"/>
+    <property name="layout" valueType="table">
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="316bbb90-565f-4b64-8b54-2a110ab4202b" valueType="string"/>
+            <property name="name" value="asof_date" valueType="string"/>
+            <property name="description" value="Instance Date" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="83f0f66f-af52-4af1-8a2c-375401d57937" valueType="string"/>
+            <property name="name" value="axiom_index" valueType="string"/>
+            <property name="description" value="Axiom Index" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="21e27c9c-a0e4-472b-8b17-5a8cb64c42f6" valueType="string"/>
+            <property name="name" value="CNCDTI" valueType="string"/>
+            <property name="description" value="Tipo de Identificación" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="2" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="2970f3db-aaf6-4d48-bfa4-3430bdb021e2" valueType="string"/>
+            <property name="name" value="CNNOSS" valueType="string"/>
+            <property name="description" value="Núm. Identificación." valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="15" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="d9331566-ed12-46b9-8841-dbef3fb098bb" valueType="string"/>
+            <property name="name" value="CNNAMK" valueType="string"/>
+            <property name="description" value="Llave del Nombre" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="15" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="371a20ed-6ac6-4d33-b3cb-24eaee4deaa5" valueType="string"/>
+            <property name="name" value="CNNAME" valueType="string"/>
+            <property name="description" value="Nombre del Cliente" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="100" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="9649590d-434e-4119-b65f-1f55b42ca81c" valueType="string"/>
+            <property name="name" value="CNNAME_CLN" valueType="string"/>
+            <property name="description" value="Nombre del Cliente (nuevo)" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="60" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="e5ef8286-dff4-4700-a8af-4778188d71c4" valueType="string"/>
+            <property name="name" value="CNNOBC" valueType="string"/>
+            <property name="description" value="Relación con el BANCOLOMBIA" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="50" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="09b4e4b0-26d3-4ed0-ae0f-a2d9b276a809" valueType="string"/>
+            <property name="name" value="CNCDBI" valueType="string"/>
+            <property name="description" value="Segmento de Mercado" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="5" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="74ac6926-2477-4f03-993d-37adce2073d3" valueType="string"/>
+            <property name="name" value="CNCDLO" valueType="string"/>
+            <property name="description" value="Gerente Cuenta / Asesor" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="5" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="cc81317e-1a60-4762-9734-ab51550ee704" valueType="string"/>
+            <property name="name" value="CNCDU2" valueType="string"/>
+            <property name="description" value="Naturaleza Jurídica" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="5" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="175ea72b-4536-4232-82bf-100aa595833d" valueType="string"/>
+            <property name="name" value="CNNOCT" valueType="string"/>
+            <property name="description" value="CIIU" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="50" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="bae3753b-ddf2-432d-91f8-7efb997f30f2" valueType="string"/>
+            <property name="name" value="CNCDTY" valueType="string"/>
+            <property name="description" value="Tipo de Cliente" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="10" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="c1b408d3-1e96-49d4-80e4-05d41b726e89" valueType="string"/>
+            <property name="name" value="CNNOOB" valueType="string"/>
+            <property name="description" value="Oficina Vinculación" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="20" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="4b0a67cc-cbd9-4aa9-8e7e-2c8fede8e910" valueType="string"/>
+            <property name="name" value="NIT_TEXTO" valueType="string"/>
+            <property name="description" value="NIT TEXTO" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="12" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="70cc6681-ddc2-41db-a3b1-46943885351a" valueType="string"/>
+            <property name="name" value="DV" valueType="string"/>
+            <property name="description" value="Digito de Verificación" valueType="string"/>
+            <property name="title" value="DV" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="2ce17e3d-6edd-4130-88d8-75b2afc76a17" valueType="string"/>
+            <property name="name" value="DIGITO_CHEQUEO" valueType="string"/>
+            <property name="description" value="Digito de Chequeo" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="10" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="8c0f2fef-cdb5-404f-ac85-9f60942ff625" valueType="string"/>
+            <property name="name" value="CNLFN1" valueType="string"/>
+            <property name="description" value="Longitud primer nombre" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="c23dd01a-82dd-4793-b13e-a016c010cd9d" valueType="string"/>
+            <property name="name" value="CNLFN2" valueType="string"/>
+            <property name="description" value="Longitud segundo nombre" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="415e16e1-2857-4207-a571-12027dd82c42" valueType="string"/>
+            <property name="name" value="CNLLN1" valueType="string"/>
+            <property name="description" value="Longitud primer apellido" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="392c01a9-f23e-4af1-ab9e-9833e933c97a" valueType="string"/>
+            <property name="name" value="CNLLN2" valueType="string"/>
+            <property name="description" value="Longitud segundo apellido" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="08219d65-ac03-40cb-a84c-e9277f9bb4b1" valueType="string"/>
+            <property name="name" value="CNCDVP" valueType="string"/>
+            <property name="description" value="COdigo de Importancia" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="1" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="f3c8da04-120f-4622-ac45-bc503dc9790b" valueType="string"/>
+            <property name="name" value="CNCDCC" valueType="string"/>
+            <property name="description" value="Control Terceros" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="1" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="3b1d2214-623d-4db6-a2cf-b582e135e8af" valueType="string"/>
+            <property name="name" value="CNAMU1" valueType="string"/>
+            <property name="description" value="Ingresos del cliente" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="0fe12c10-4ce0-42b1-af33-5d23ac7e1ba3" valueType="string"/>
+            <property name="name" value="CNCDST" valueType="string"/>
+            <property name="description" value="Estado" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="1" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="a30ed9b6-35bc-48e9-8dd4-caf62cc6e2c8" valueType="string"/>
+            <property name="name" value="CNCOU1" valueType="string"/>
+            <property name="description" value="Grupo Economico" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="20" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="bf9ade83-cf48-4782-bb66-a933d26dfc29" valueType="string"/>
+            <property name="name" value="CNAMLI" valueType="string"/>
+            <property name="description" value="Valor reportado por el cliente de sus ventas anuales (Persona Juridica)" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="FLOAT" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0.0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="0802164c-ea2b-4460-8317-6fcd520be839" valueType="string"/>
+            <property name="name" value="AX_NOMBRE_1" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="50" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="c8c4959b-7b54-4d42-b536-491875458655" valueType="string"/>
+            <property name="name" value="AX_NOMBRE_2" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="50" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="f933cebd-1bb6-44b3-8f86-d1c7c76733fb" valueType="string"/>
+            <property name="name" value="AX_APELLIDO_1" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="50" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="36c7cefd-0cff-4a93-85b5-37893d0c16bd" valueType="string"/>
+            <property name="name" value="AX_APELLIDO_2" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="50" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="c9ebd392-e4ff-4d42-972c-95eb69b60535" valueType="string"/>
+            <property name="name" value="AX_CNNOCT" valueType="string"/>
+            <property name="description" value="CIIU" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="50" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="bb10be54-8886-45e0-ac0f-a06dcbe5acc1" valueType="string"/>
+            <property name="name" value="AX_CIIU_2DIG" valueType="string"/>
+            <property name="description" value="Codigo Ciiu" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="10" valueType="integer"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="''" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="8b95f698-3dbf-451d-816a-d60dc60a0888" valueType="string"/>
+            <property name="name" value="entity" valueType="string"/>
+            <property name="description" value="Entidad" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="10" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="'Banco'" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="56784e8e-9e14-4f44-b1b1-9d814b10311c" valueType="string"/>
+            <property name="name" value="source_name" valueType="string"/>
+            <property name="description" value="Nombre De Fuente" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="VARCHAR" valueType="string"/>
+            <property name="size" value="14" valueType="integer"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="'CNAME_DIARIO'" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="c1dcc0a7-44e0-4e25-be99-48a75f008596" valueType="string"/>
+            <property name="name" value="CNDTFS" valueType="string"/>
+            <property name="description" value="Fecha de ventas" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="12464381-16d3-448b-9523-c0f12cacece7" valueType="string"/>
+            <property name="name" value="AX_FECHA_VENTAS" valueType="string"/>
+            <property name="description" value="AX_FECHA_VENTAS" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="DATE" valueType="string"/>
+            <property name="allowNulls" value="true" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="isAutoUniqueId" value="false" valueType="boolean"/>
+            <property name="defaultValue" value="{ts '1990-01-01 00:00:00'}" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="3f811ad9-65ef-46a7-a166-2aac4a6d35ec" valueType="string"/>
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="Versiones" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="ebe801b4-6684-4186-aa40-c8d2257621ab" valueType="string"/>
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="Numero Versiones" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="keyFields" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{83f0f66f-af52-4af1-8a2c-375401d57937}]</property>
+        </object>
+    </property>
+    <property name="index" valueType="table">
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CNNAMK"{d9331566-ed12-46b9-8841-dbef3fb098bb}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CNNOSS"{2970f3db-aaf6-4d48-bfa4-3430bdb021e2}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CNCDTI"{21e27c9c-a0e4-472b-8b17-5a8cb64c42f6}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CNCDBI"{09b4e4b0-26d3-4ed0-ae0f-a2d9b276a809}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CNNOCT"{175ea72b-4536-4232-82bf-100aa595833d}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["DIGITO_CHEQUEO"{2ce17e3d-6edd-4130-88d8-75b2afc76a17}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["asof_date"{316bbb90-565f-4b64-8b54-2a110ab4202b}]</property>
+                </object>
+            </property>
+        </object>
+        <object type="DataSource:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="DataSource:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataSource[this].layout["CNAMLI"{bf9ade83-cf48-4782-bb66-a933d26dfc29}]</property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="createIndexOnKeyFields" value="true" valueType="boolean"/>
+    <property name="indexOnKeyFieldsClustered" value="true" valueType="boolean"/>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="columnStorage" value="true" valueType="boolean"/>
+    <property name="internalSourceTablePrefix" value="CNAME_DAY_" valueType="string"/>
+    <property name="asOfDateField" valueType="url">DataSource[this].layout["asof_date"{316bbb90-565f-4b64-8b54-2a110ab4202b}]</property>
+    <property name="instanceKeys" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["version"{3f811ad9-65ef-46a7-a166-2aac4a6d35ec}]</property>
+        </object>
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["filing_version"{ebe801b4-6684-4186-aa40-c8d2257621ab}]</property>
+        </object>
+    </property>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="validations" valueType="table"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="readOnlyAdjustment" value="false" valueType="boolean"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="loaders" valueType="table">
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="3c877fcd-ad93-48d9-a09c-9c62784ad2c2" valueType="string"/>
+            <property name="name" value="New_Scenario_1" valueType="string"/>
+            <property name="loaderType" value="tableLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="TableLoaderParameters" version="2.0">
+                    <property name="loaderEnumerationField" valueType="object">
+                        <object type="DataSource:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{83f0f66f-af52-4af1-8a2c-375401d57937}]</property>
+                        </object>
+                    </property>
+                    <property name="loaderSelectDistinct" value="false" valueType="boolean"/>
+                    <property name="loaderCondition" valueType="table"/>
+                    <property name="dbSourceToLoadFrom" valueType="url">DBSource["BANKVISION_NACIONAL_VISIONR"{ad5dc5bb-1a09-4db2-aaec-adfb0f68a49f}]</property>
+                    <property name="tableLoadingMethod" value="direct" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDTI"{21e27c9c-a0e4-472b-8b17-5a8cb64c42f6}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDTI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOSS"{2970f3db-aaf6-4d48-bfa4-3430bdb021e2}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOSS" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNAMK"{d9331566-ed12-46b9-8841-dbef3fb098bb}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNAMK" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNAME"{371a20ed-6ac6-4d33-b3cb-24eaee4deaa5}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNAME" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOBC"{e5ef8286-dff4-4700-a8af-4778188d71c4}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOBC" valueType="string"/>
+                            <property name="format" value="TRIM(:CNNOBC)" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDBI"{09b4e4b0-26d3-4ed0-ae0f-a2d9b276a809}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDBI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDLO"{74ac6926-2477-4f03-993d-37adce2073d3}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDLO" valueType="string"/>
+                            <property name="format" value="TRIM(:CNCDLO)" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDU2"{cc81317e-1a60-4762-9734-ab51550ee704}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDU2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOCT"{175ea72b-4536-4232-82bf-100aa595833d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOCT" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDTY"{bae3753b-ddf2-432d-91f8-7efb997f30f2}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDTY" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOOB"{c1b408d3-1e96-49d4-80e4-05d41b726e89}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOOB" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLFN1"{8c0f2fef-cdb5-404f-ac85-9f60942ff625}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLFN1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLFN2"{c23dd01a-82dd-4793-b13e-a016c010cd9d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLFN2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLLN1"{415e16e1-2857-4207-a571-12027dd82c42}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLLN1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLLN2"{392c01a9-f23e-4af1-ab9e-9833e933c97a}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLLN2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDVP"{08219d65-ac03-40cb-a84c-e9277f9bb4b1}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDVP" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDCC"{f3c8da04-120f-4622-ac45-bc503dc9790b}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDCC" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNAMU1"{3b1d2214-623d-4db6-a2cf-b582e135e8af}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNAMU1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDST"{0fe12c10-4ce0-42b1-af33-5d23ac7e1ba3}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDST" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCOU1"{a30ed9b6-35bc-48e9-8dd4-caf62cc6e2c8}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCOU1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNAMLI"{bf9ade83-cf48-4782-bb66-a933d26dfc29}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNAMLI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNDTFS"{c1dcc0a7-44e0-4e25-be99-48a75f008596}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNDTFS" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="loadingStatement" value="APPEND" valueType="string"/>
+                </object>
+            </property>
+            <property name="loaderActions" valueType="table">
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="bbcdd847-9bf1-4748-9335-9887cf5e33c5" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" delete from " valueType="string"/>
+                        </object>
+                        <object type="SQLConstant" version="1.0">
+                            <property name="name" value="TABLE_NAME" valueType="string"/>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" WHERE NOT  REGEXP_LIKE(CNNOSS, '^[[:digit:]]+$')" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="c383cdc9-5e55-47a8-824d-9f52ad0da409" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="update " valueType="string"/>
+                        </object>
+                        <object type="SQLConstant" version="1.0">
+                            <property name="name" value="table_name" valueType="string"/>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="  SET  &#xa;NIT_TEXTO=" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNNOSS" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="4" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="15" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",&#xa;AX_NOMBRE_1=" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNNAME" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNLFN1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",&#xa;AX_NOMBRE_2=" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNNAME" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="(CASE WHEN CNLFN2 &lt;> 0 THEN CNLFN1+2 ELSE CNLFN1+1 END)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNLFN2" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",&#xa;AX_APELLIDO_1=" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNNAME" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CASE WHEN CNLFN2 &lt;>0 THEN(CNLFN1+CNLFN2+3)ELSE (CNLFN1+CNLFN2+2) END" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNLLN1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",&#xa;AX_APELLIDO_2=" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNNAME" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CASE WHEN CNLFN2 &lt;>0 THEN (CNLFN1+CNLFN2+CNLLN1+4) ELSE (CNLFN1+CNLFN2+CNLLN1+3) END" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNLLN2" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",&#xa;AX_CNNOCT  = LPAD(CNNOCT,4, '0'),&#xa;AX_FECHA_VENTAS = CASE&#xa;   WHEN ((LENGTH(CNDTFS) != 8) OR (CNDTFS IS NULL)) THEN TO_DATE('19000101','YYYYMMDD')&#xa;   WHEN (SUBSTR(CNDTFS,5,2) = '02') THEN&#xa;      CASE &#xa;         WHEN (MOD(SUBSTR(CNDTFS,1,4),4) != 0 AND SUBSTR(CNDTFS,7,2) > 28) THEN TO_DATE(SUBSTR(CNDTFS,1,4)||'0228','YYYYMMDD')&#xa;         WHEN (MOD(SUBSTR(CNDTFS,1,4),4) != 0 AND SUBSTR(CNDTFS,7,2) > 29) THEN TO_DATE(SUBSTR(CNDTFS,1,4)||'0229','YYYYMMDD')&#xa;         ELSE TO_DATE(CNDTFS,'YYYYMMDD')&#xa;      END&#xa;   WHEN (SUBSTR(CNDTFS,5,2) IN('04','06','09','11')) THEN&#xa;      CASE&#xa;         WHEN (SUBSTR(CNDTFS,7,2) > 30) THEN TO_DATE(SUBSTR(CNDTFS,1,4)||SUBSTR(CNDTFS,5,2)||'30', 'YYYYMMDD')&#xa;         ELSE TO_DATE(CNDTFS,'YYYYMMDD')                               &#xa;      END&#xa;   WHEN (SUBSTR(CNDTFS,5,2) IN ('01','03','05','07','08','10','12')) THEN&#xa;      CASE&#xa;         WHEN (SUBSTR(CNDTFS,7,2) > 31) THEN  TO_DATE(SUBSTR(CNDTFS,1,4)||SUBSTR(CNDTFS,5,2)||'31', 'YYYYMMDD')&#xa;         ELSE TO_DATE(CNDTFS,'YYYYMMDD')&#xa;      END&#xa;   ELSE TO_DATE('19000101','YYYYMMDD')  &#xa;END" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="369e014a-d9ac-4a88-a194-40ab48af934c" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="UPDATE " valueType="string"/>
+                        </object>
+                        <object type="SQLConstant" version="1.0">
+                            <property name="name" value="table_name" valueType="string"/>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" SET&#xa;CNNAME_CLN=TRIM(regexp_replace(regexp_replace(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(TRANSLATE(UPPER(CNNAME),'ÀÁÂÃÄÅàáâãÿåÇçÐÈÉÊËÿéêëÌÍÎÏìíîïÑñÒÓÔÕÖØòóÿõöŠšÙÚÛÜùúûÿ×¿Ýÿÿ!#$%&amp;()*+-./:;&lt;=>?[]\^_{}|~¡¢£€¥§©ª«¬­®¯°±²³µ¶·¹º»Œœ¿ÆÞßÿð÷ÿÿ','AAAAAAAAAAAACCDEEEEEEEEIIIIIIIINNOOOOOOOOOOOSSUUUUUUUUXYYYY'),CHR(64)),CHR(147)),CHR(9),''),CHR(26)),CHR(32),''),CHR(10)),CHR(127)),CHR(148)),CHR(150)),'[[:punct:]]'),'\W','')),&#xa;AX_NOMBRE_1=TRIM(regexp_replace(regexp_replace(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(TRANSLATE(UPPER(AX_NOMBRE_1),'ÀÁÂÃÄÅàáâãÿåÇçÐÈÉÊËÿéêëÌÍÎÏìíîïÑñÒÓÔÕÖØòóÿõöŠšÙÚÛÜùúûÿ×¿Ýÿÿ!#$%&amp;()*+-./:;&lt;=>?[]\^_{}|~¡¢£€¥§©ª«¬­®¯°±²³µ¶·¹º»Œœ¿ÆÞßÿð÷ÿÿ','AAAAAAAAAAAACCDEEEEEEEEIIIIIIIINNOOOOOOOOOOOSSUUUUUUUUXYYYY'),CHR(64)),CHR(147)),CHR(9),''),CHR(26)),CHR(32),''),CHR(10)),CHR(127)),CHR(148)),CHR(150)),'[[:punct:]]'),'\W','')),&#xa;AX_NOMBRE_2=TRIM(regexp_replace(regexp_replace(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(TRANSLATE(UPPER(AX_NOMBRE_2),'ÀÁÂÃÄÅàáâãÿåÇçÐÈÉÊËÿéêëÌÍÎÏìíîïÑñÒÓÔÕÖØòóÿõöŠšÙÚÛÜùúûÿ×¿Ýÿÿ!#$%&amp;()*+-./:;&lt;=>?[]\^_{}|~¡¢£€¥§©ª«¬­®¯°±²³µ¶·¹º»Œœ¿ÆÞßÿð÷ÿÿ','AAAAAAAAAAAACCDEEEEEEEEIIIIIIIINNOOOOOOOOOOOSSUUUUUUUUXYYYY'),CHR(64)),CHR(147)),CHR(9),''),CHR(26)),CHR(32),''),CHR(10)),CHR(127)),CHR(148)),CHR(150)),'[[:punct:]]'),'\W','')),&#xa;AX_APELLIDO_1=TRIM(regexp_replace(regexp_replace(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(TRANSLATE(UPPER(AX_APELLIDO_1),'ÀÁÂÃÄÅàáâãÿåÇçÐÈÉÊËÿéêëÌÍÎÏìíîïÑñÒÓÔÕÖØòóÿõöŠšÙÚÛÜùúûÿ×¿Ýÿÿ!#$%&amp;()*+-./:;&lt;=>?[]\^_{}|~¡¢£€¥§©ª«¬­®¯°±²³µ¶·¹º»Œœ¿ÆÞßÿð÷ÿÿ','AAAAAAAAAAAACCDEEEEEEEEIIIIIIIINNOOOOOOOOOOOSSUUUUUUUUXYYYY'),CHR(64)),CHR(147)),CHR(9),''),CHR(26)),CHR(32),''),CHR(10)),CHR(127)),CHR(148)),CHR(150)),'[[:punct:]]'),'\W','')),&#xa;AX_APELLIDO_2=TRIM(regexp_replace(regexp_replace(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(TRANSLATE(UPPER(AX_APELLIDO_2),'ÀÁÂÃÄÅàáâãÿåÇçÐÈÉÊËÿéêëÌÍÎÏìíîïÑñÒÓÔÕÖØòóÿõöŠšÙÚÛÜùúûÿ×¿Ýÿÿ!#$%&amp;()*+-./:;&lt;=>?[]\^_{}|~¡¢£€¥§©ª«¬­®¯°±²³µ¶·¹º»Œœ¿ÆÞßÿð÷ÿÿ','AAAAAAAAAAAACCDEEEEEEEEIIIIIIIINNOOOOOOOOOOOSSUUUUUUUUXYYYY'),CHR(64)),CHR(147)),CHR(9),''),CHR(26)),CHR(32),''),CHR(10)),CHR(127)),CHR(148)),CHR(150)),'[[:punct:]]'),'\W','')),&#xa;DV =" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*53+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="2" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*47)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="3" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*43)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="4" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*41)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="5" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*37)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="6" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*29)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="7" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*23)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="8" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*19)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="9" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*17)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="10" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*13)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="11" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*7)+(" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="subStr" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="NIT_TEXTO" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="12" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="1" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*3) " valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+                <object type="LoaderAction:actionStatement" version="2.0">
+                    <property name="id" value="057c7692-5075-4b19-bb12-06b010de4fea" valueType="string"/>
+                    <property name="statement" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="UPDATE " valueType="string"/>
+                        </object>
+                        <object type="SQLConstant" version="1.0">
+                            <property name="name" value="table_name" valueType="string"/>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="&#xa;SET DIGITO_CHEQUEO= CASE WHEN CNCDTI='3' THEN CASE WHEN MOD(DV,11)>1 THEN " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="numberToChar" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="11-MOD(DV,11)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" ELSE " valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="numberToChar" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="MOD(DV,11)" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" END ELSE 'N' END,&#xa;CNNOSS=" valueType="string"/>
+                        </object>
+                        <object type="SQLPattern" version="1.0">
+                            <property name="name" value="toNumber" valueType="string"/>
+                            <property name="parameters" valueType="table">
+                                <object type="SQLPattern:parameter" version="1.0">
+                                    <property name="expressions" valueType="table">
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value="CNNOSS" valueType="string"/>
+                                        </object>
+                                    </property>
+                                </object>
+                            </property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=",&#xa;CNCDBI= CASE WHEN CNCDBI LIKE ' %' THEN CNCDBI ELSE TRIM(CNCDBI) END,&#xa;AX_CIIU_2DIG = CASE WHEN (CNNOCT &lt; 100) THEN CNNOCT || '_'  WHEN (LENGTH(CNNOCT) = 3) THEN SUBSTR(CNNOCT,1,1) WHEN (LENGTH(CNNOCT) = 4) THEN SUBSTR(CNNOCT,1,2) END" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="8c4f45d9-46a1-4c60-9e35-97b2fc5a16de" valueType="string"/>
+            <property name="name" value="ConexionDirectaMigracion" valueType="string"/>
+            <property name="loaderType" value="tableLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="TableLoaderParameters" version="2.0">
+                    <property name="loaderSelectDistinct" value="false" valueType="boolean"/>
+                    <property name="loaderCondition" valueType="table"/>
+                    <property name="dbSourceToLoadFrom" valueType="url">DBSource["CV9_PROD_CNXREPLP"{cf52ab4b-cbab-40f6-97d4-57749cd0811f}]</property>
+                    <property name="tableLoadingMethod" value="direct" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["axiom_index"{83f0f66f-af52-4af1-8a2c-375401d57937}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="axiom_index" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDTI"{21e27c9c-a0e4-472b-8b17-5a8cb64c42f6}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDTI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOSS"{2970f3db-aaf6-4d48-bfa4-3430bdb021e2}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOSS" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNAMK"{d9331566-ed12-46b9-8841-dbef3fb098bb}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNAMK" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNAME"{371a20ed-6ac6-4d33-b3cb-24eaee4deaa5}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNAME" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNAME_CLN"{9649590d-434e-4119-b65f-1f55b42ca81c}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNAME_CLN" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOBC"{e5ef8286-dff4-4700-a8af-4778188d71c4}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOBC" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDBI"{09b4e4b0-26d3-4ed0-ae0f-a2d9b276a809}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDBI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDLO"{74ac6926-2477-4f03-993d-37adce2073d3}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDLO" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDU2"{cc81317e-1a60-4762-9734-ab51550ee704}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDU2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOCT"{175ea72b-4536-4232-82bf-100aa595833d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOCT" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDTY"{bae3753b-ddf2-432d-91f8-7efb997f30f2}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDTY" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOOB"{c1b408d3-1e96-49d4-80e4-05d41b726e89}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOOB" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["NIT_TEXTO"{4b0a67cc-cbd9-4aa9-8e7e-2c8fede8e910}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="NIT_TEXTO" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["DV"{70cc6681-ddc2-41db-a3b1-46943885351a}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="DV" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["DIGITO_CHEQUEO"{2ce17e3d-6edd-4130-88d8-75b2afc76a17}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="DIGITO_CHEQUEO" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLFN1"{8c0f2fef-cdb5-404f-ac85-9f60942ff625}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLFN1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLFN2"{c23dd01a-82dd-4793-b13e-a016c010cd9d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLFN2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLLN1"{415e16e1-2857-4207-a571-12027dd82c42}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLLN1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLLN2"{392c01a9-f23e-4af1-ab9e-9833e933c97a}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLLN2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDVP"{08219d65-ac03-40cb-a84c-e9277f9bb4b1}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDVP" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDCC"{f3c8da04-120f-4622-ac45-bc503dc9790b}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDCC" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNAMU1"{3b1d2214-623d-4db6-a2cf-b582e135e8af}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNAMU1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDST"{0fe12c10-4ce0-42b1-af33-5d23ac7e1ba3}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDST" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCOU1"{a30ed9b6-35bc-48e9-8dd4-caf62cc6e2c8}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCOU1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNAMLI"{bf9ade83-cf48-4782-bb66-a933d26dfc29}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNAMLI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_NOMBRE_1"{0802164c-ea2b-4460-8317-6fcd520be839}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_NOMBRE_1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_NOMBRE_2"{c8c4959b-7b54-4d42-b536-491875458655}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_NOMBRE_2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_APELLIDO_1"{f933cebd-1bb6-44b3-8f86-d1c7c76733fb}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_APELLIDO_1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_APELLIDO_2"{36c7cefd-0cff-4a93-85b5-37893d0c16bd}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_APELLIDO_2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_CNNOCT"{c9ebd392-e4ff-4d42-972c-95eb69b60535}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_CNNOCT" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_CIIU_2DIG"{bb10be54-8886-45e0-ac0f-a06dcbe5acc1}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_CIIU_2DIG" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["entity"{8b95f698-3dbf-451d-816a-d60dc60a0888}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="entity" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["source_name"{56784e8e-9e14-4f44-b1b1-9d814b10311c}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="source_name" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNDTFS"{c1dcc0a7-44e0-4e25-be99-48a75f008596}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNDTFS" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_FECHA_VENTAS"{12464381-16d3-448b-9523-c0f12cacece7}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_FECHA_VENTAS" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="true" valueType="boolean"/>
+        </object>
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="4f3fd3df-0e45-44a8-80cc-873c115e052e" valueType="string"/>
+            <property name="name" value="ConexionDirectaMIgracionCV10" valueType="string"/>
+            <property name="loaderType" value="tableLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="TableLoaderParameters" version="2.0">
+                    <property name="loaderSelectDistinct" value="false" valueType="boolean"/>
+                    <property name="loaderCondition" valueType="table"/>
+                    <property name="dbSourceToLoadFrom" valueType="url">DBSource["CV10_PROD_SHDATASP"{f39eacb9-bc3b-4e29-bcee-14d7c5834e79}]</property>
+                    <property name="tableLoadingMethod" value="direct" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["axiom_index"{83f0f66f-af52-4af1-8a2c-375401d57937}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="axiom_index" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDTI"{21e27c9c-a0e4-472b-8b17-5a8cb64c42f6}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDTI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOSS"{2970f3db-aaf6-4d48-bfa4-3430bdb021e2}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOSS" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNAMK"{d9331566-ed12-46b9-8841-dbef3fb098bb}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNAMK" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNAME"{371a20ed-6ac6-4d33-b3cb-24eaee4deaa5}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNAME" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNAME_CLN"{9649590d-434e-4119-b65f-1f55b42ca81c}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNAME_CLN" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOBC"{e5ef8286-dff4-4700-a8af-4778188d71c4}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOBC" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDBI"{09b4e4b0-26d3-4ed0-ae0f-a2d9b276a809}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDBI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDLO"{74ac6926-2477-4f03-993d-37adce2073d3}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDLO" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDU2"{cc81317e-1a60-4762-9734-ab51550ee704}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDU2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOCT"{175ea72b-4536-4232-82bf-100aa595833d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOCT" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDTY"{bae3753b-ddf2-432d-91f8-7efb997f30f2}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDTY" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNNOOB"{c1b408d3-1e96-49d4-80e4-05d41b726e89}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNNOOB" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["NIT_TEXTO"{4b0a67cc-cbd9-4aa9-8e7e-2c8fede8e910}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="NIT_TEXTO" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["DV"{70cc6681-ddc2-41db-a3b1-46943885351a}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="DV" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["DIGITO_CHEQUEO"{2ce17e3d-6edd-4130-88d8-75b2afc76a17}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="DIGITO_CHEQUEO" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLFN1"{8c0f2fef-cdb5-404f-ac85-9f60942ff625}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLFN1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLFN2"{c23dd01a-82dd-4793-b13e-a016c010cd9d}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLFN2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLLN1"{415e16e1-2857-4207-a571-12027dd82c42}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLLN1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNLLN2"{392c01a9-f23e-4af1-ab9e-9833e933c97a}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNLLN2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDVP"{08219d65-ac03-40cb-a84c-e9277f9bb4b1}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDVP" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDCC"{f3c8da04-120f-4622-ac45-bc503dc9790b}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDCC" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNAMU1"{3b1d2214-623d-4db6-a2cf-b582e135e8af}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNAMU1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCDST"{0fe12c10-4ce0-42b1-af33-5d23ac7e1ba3}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCDST" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNCOU1"{a30ed9b6-35bc-48e9-8dd4-caf62cc6e2c8}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNCOU1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNAMLI"{bf9ade83-cf48-4782-bb66-a933d26dfc29}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNAMLI" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_NOMBRE_1"{0802164c-ea2b-4460-8317-6fcd520be839}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_NOMBRE_1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_NOMBRE_2"{c8c4959b-7b54-4d42-b536-491875458655}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_NOMBRE_2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_APELLIDO_1"{f933cebd-1bb6-44b3-8f86-d1c7c76733fb}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_APELLIDO_1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_APELLIDO_2"{36c7cefd-0cff-4a93-85b5-37893d0c16bd}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_APELLIDO_2" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_CNNOCT"{c9ebd392-e4ff-4d42-972c-95eb69b60535}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_CNNOCT" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_CIIU_2DIG"{bb10be54-8886-45e0-ac0f-a06dcbe5acc1}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_CIIU_2DIG" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["entity"{8b95f698-3dbf-451d-816a-d60dc60a0888}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="entity" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["source_name"{56784e8e-9e14-4f44-b1b1-9d814b10311c}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="source_name" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["CNDTFS"{c1dcc0a7-44e0-4e25-be99-48a75f008596}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="CNDTFS" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["AX_FECHA_VENTAS"{12464381-16d3-448b-9523-c0f12cacece7}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="AX_FECHA_VENTAS" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="2019_03_29: drgomez&#xa;conexion con la LZ para carga de fuente cname &#xa;nombre de la tabla en la LZ  : bvclegados_visionr_cname&#xa;variables de carga ejemplo : &#xa;ANO: 2018&#xa;MES: 3&#x9;&#xa;DIA: 6&#xa;_______________________________________&#xa;2019_07_10: drgomez&#xa;se realiza el cambio de conexion de LZ a Conexion directa contra el Nacional &#xa;&#xa;________________________________________&#xa;&#xa;2020_08_15: &#xa;user: cfreyes&#xa;Nombre: Cristian Reyes&#xa;Descripcion: &#xa;Se adicionan dos campos AX (AX_CNNOCT, AX_CIIU_2DIG) con modificación en los loader action 002 y el 004, campos necesitados para cruces y filtros en el formato de variaciones de cartera, son codigos CIIU&#xa;&#xa;===============================================================================================================&#xa;&#xa;Fecha Creación: 07/07/2022 - dasierra&#xa;Descripción: &#xa;- Se adiciona el campo CNAMLI para el formato 414&#xa;&#xa;===============================================================================================================&#xa;&#xa;===============================================================================================================&#xa;&#xa;Fecha Creación: 23/01/2023 - ileal&#xa;Descripción: Se adiciona el campo CNDTFS y AX_FECHA_VENTAS, ademas se adiciona el loader action del AX fecha ventas (ActionStatement_002)" valueType="string"/>
+        </object>
+    </property>
+</object>

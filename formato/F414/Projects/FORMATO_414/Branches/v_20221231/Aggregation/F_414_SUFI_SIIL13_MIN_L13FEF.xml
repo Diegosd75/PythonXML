@@ -1,0 +1,176 @@
+﻿<object stamp="5e035aee-7512-4b2a-9747-62935af59f99_1657287738729" type="Aggregation" version="7.0">
+    <property name="objectId" value="5a6ff99e-ee9e-41fe-88e1-f9c76082e51b" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_SUFI_SIIL13_MIN_L13FEF" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_SUFI_SIIL13_MIN_L13FEF"{dcc61310-a214-4551-adba-c04100867794}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="8ca4d4ad-d646-412e-a5f5-734f4d2594a3" valueType="string"/>
+            <property name="name" value="L13NPR" valueType="string"/>
+            <property name="description" value="Número de Préstamo" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="27409fbf-9194-4246-abed-5b9b8ea5c146" valueType="string"/>
+            <property name="name" value="L13NUM" valueType="string"/>
+            <property name="description" value="Número Utilizaciones" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="f7d54417-45c6-4f5a-aefc-cb3283a645c4" valueType="string"/>
+            <property name="name" value="L13FEF" valueType="string"/>
+            <property name="description" value="Fecha Efectiva Tasa" valueType="string"/>
+            <property name="aggrMethod" value="MIN" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["L13NPR"{8ca4d4ad-d646-412e-a5f5-734f4d2594a3}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_SIIL13_MIN_L13FEF"{dcc61310-a214-4551-adba-c04100867794}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_SIIL13_MIN_L13FEF"{dcc61310-a214-4551-adba-c04100867794}].hierarchy["root"{9f2cead4-6d05-410e-ad61-0acd2c904d16}].dataSource.layout["L13NPR"{26c39c5a-327d-4a9d-9b93-1d8ae1c96445}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["L13NUM"{27409fbf-9194-4246-abed-5b9b8ea5c146}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_SIIL13_MIN_L13FEF"{dcc61310-a214-4551-adba-c04100867794}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_SIIL13_MIN_L13FEF"{dcc61310-a214-4551-adba-c04100867794}].hierarchy["root"{9f2cead4-6d05-410e-ad61-0acd2c904d16}].dataSource.layout["L13NUM"{6e796666-9ab2-4fea-a0ef-ffabb63d6008}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["L13FEF"{f7d54417-45c6-4f5a-aefc-cb3283a645c4}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_SIIL13_MIN_L13FEF"{dcc61310-a214-4551-adba-c04100867794}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_SUFI_SIIL13_MIN_L13FEF"{dcc61310-a214-4551-adba-c04100867794}].hierarchy["root"{9f2cead4-6d05-410e-ad61-0acd2c904d16}].dataSource.layout["L13FEF"{40a3be36-f3b8-4157-b819-a06047557b2c}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                    <children>
+                        <objectNode type="Condition:freehandExpression" version="1.0">
+                            <property name="expression" valueType="table">
+                                <object type="DataModel:fieldMap" version="1.0">
+                                    <property name="map" valueType="table">
+                                        <object type="DataModel:fieldReference" version="1.0">
+                                            <property name="value" valueType="url">DataModel["F_414_SUFI_SIIL13_MIN_L13FEF"{dcc61310-a214-4551-adba-c04100867794}].hierarchy["root"{9f2cead4-6d05-410e-ad61-0acd2c904d16}].dataSource.layout["L13FEF"{40a3be36-f3b8-4157-b819-a06047557b2c}]</property>
+                                        </object>
+                                    </property>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" BETWEEN TO_CHAR((" valueType="string"/>
+                                </object>
+                                <object type="SQLConstant" version="1.0">
+                                    <property name="name" value="ASOF_DATE" valueType="string"/>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=" -6), 'yyyyMMdd') AND TO_CHAR(" valueType="string"/>
+                                </object>
+                                <object type="SQLConstant" version="1.0">
+                                    <property name="name" value="ASOF_DATE" valueType="string"/>
+                                </object>
+                                <object type="SQLExpressionPart" version="1.0">
+                                    <property name="value" value=", 'yyyyMMdd')" valueType="string"/>
+                                </object>
+                            </property>
+                        </objectNode>
+                    </children>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: 28-OCT-2020&#xa;Analista: JUGALVIS.&#xa;Objetivo: Obtener la fecha minima de tasa efectiva MIN(L13FEF) por cada operación &#xa;&#xa;SELECT L13NPR, L13NUM, MIN(L13FEF) FEF &#xa;FROM SF7.SIIL13 &#xa;GROUP BY L13NPR, L13NUM&#xa;&#xa;===============================================================================================================&#xa;&#xa;Fecha Creación: 07/07/2022 - dasierra&#xa;Descripción: &#xa;- Se cruza información del frente Sufi con diferentes fuentes de información tales como SF7_SIIL13 (Tasas) y cruzar con las tasas minimos.&#xa;&#xa;===============================================================================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

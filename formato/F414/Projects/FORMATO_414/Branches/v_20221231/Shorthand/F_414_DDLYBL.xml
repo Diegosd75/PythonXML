@@ -1,0 +1,171 @@
+﻿<object stamp="6fb06f81-68c7-4bc1-b6d4-241bb354123e_1652893053708" type="Shorthand" version="2.0">
+    <property name="objectId" value="5b5831eb-1c77-44ca-a54c-f41503500cc8" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_DDLYBL" valueType="string"/>
+    <property name="description" value="SE CREA FILTRO PARA OBTENER LA INFORMACION DE DEPOSITOS" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: SE CREA FILTRO PARA OBTENER LA INFORMACION DE DEPOSITOS" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="DEPOSITOS_DDLYBL" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBAPCD"{30da3311-b891-465e-a478-d941de0d355e}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="D" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="OR" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBCU01"{d507c5a3-5a0d-4d01-b540-974ae3ddcd73}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="&lt;" valueType="string"/>
+                                            <property name="value" value="0.0" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBCU02"{dc97ea56-7861-4886-8c00-78f2851925fb}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="&lt;" valueType="string"/>
+                                            <property name="value" value="0.0" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBCU03"{83f810fd-3044-4cbf-8fee-7f16809f8788}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="&lt;" valueType="string"/>
+                                            <property name="value" value="0.0" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBCU04"{56ce08a8-de29-4c11-8216-a159e16e2a3d}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="&lt;" valueType="string"/>
+                                            <property name="value" value="0.0" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBCU05"{7faab923-149c-4c43-9e19-478917e3ff90}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="&lt;" valueType="string"/>
+                                            <property name="value" value="0.0" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBCU06"{2ade939e-e535-4bbc-8a8f-1edf46e00912}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="&lt;" valueType="string"/>
+                                            <property name="value" value="0.0" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBCU07"{36d0f7be-1e3c-453a-a867-83551d35b642}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="&lt;" valueType="string"/>
+                                            <property name="value" value="0.0" valueType="string"/>
+                                        </objectNode>
+                                        <objectNode type="Condition:singularConcrete" version="1.0">
+                                            <property name="field" valueType="object">
+                                                <object type="DataModel:fieldMap" version="1.0">
+                                                    <property name="map" valueType="table">
+                                                        <object type="DataModel:fieldReference" version="1.0">
+                                                            <property name="value" valueType="url">DataModel["F_414_DDLYBL"{6eaa3b6f-bb55-4c39-a299-0d716a5ddb49}].hierarchy["root"{970f853d-e3e7-4d25-9c3d-8c48165bfd84}].dataSource.layout["DBCU08"{4575dc2e-a803-4817-a522-9ac00ecbe145}]</property>
+                                                        </object>
+                                                    </property>
+                                                </object>
+                                            </property>
+                                            <property name="operation" value="&lt;" valueType="string"/>
+                                            <property name="value" value="0.0" valueType="string"/>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>

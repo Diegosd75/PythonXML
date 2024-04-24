@@ -1,0 +1,299 @@
+﻿<object stamp="eace5739-8180-4801-bc52-41a5b2dfe3aa_1659649534696" type="Aggregation" version="7.0">
+    <property name="objectId" value="fdf8dd54-4a25-40df-bd67-eb81870e70b7" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_CONTROL_TASA_USURA" valueType="string"/>
+    <property name="description" value="Control para la tasa de usura del formato 414" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="7fcff74c-7808-4123-8fe4-b79f6ec2a449" valueType="string"/>
+            <property name="name" value="FechaCorte" valueType="string"/>
+            <property name="description" value="FECHA CORTE" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="73556902-6c26-488b-bd45-e237fdc10199" valueType="string"/>
+            <property name="name" value="FRENTE_INFO" valueType="string"/>
+            <property name="description" value="FRENTE_INFO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="7ce0a2ae-bea6-4f4b-ab9b-055d0f21aacd" valueType="string"/>
+            <property name="name" value="TIPO_CREDITO" valueType="string"/>
+            <property name="description" value="TIPO_CREDITO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="6600cf45-75d5-45df-b4bd-89861b46cebb" valueType="string"/>
+            <property name="name" value="MONTO" valueType="string"/>
+            <property name="description" value="MONTO" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="f5583a3f-5cc0-496e-8425-71bb473c7e52" valueType="string"/>
+            <property name="name" value="TASA_PONDE" valueType="string"/>
+            <property name="description" value="TASA EFECTIVA PROMEDIO PONDERADA" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="2fd88b9a-f3f8-42a2-9169-72cbaf5fb678" valueType="string"/>
+            <property name="name" value="TASA_USURA" valueType="string"/>
+            <property name="description" value="TASA_USURA" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="6ec520c7-647b-4c94-b017-9379f7dbf544" valueType="string"/>
+            <property name="name" value="DIF_TPONDE_TUSURA" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FechaCorte"{7fcff74c-7808-4123-8fe4-b79f6ec2a449}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["asof_date"{asofdate_ea45f5fb-cb50-407c-8625-90960f50eb8f}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INFO"{73556902-6c26-488b-bd45-e237fdc10199}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["FRENTE_INFO"{9a7fc7da-83eb-4fb2-a972-32fdf84d4f38}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["TIPO_CREDITO"{7ce0a2ae-bea6-4f4b-ab9b-055d0f21aacd}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["tipo_credito"{cd35b044-b385-4ef2-95f1-2243a9a015ba}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["MONTO"{6600cf45-75d5-45df-b4bd-89861b46cebb}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["montos_desembolsados"{a44610a9-d13b-4929-8c40-47f73a603ece}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["TASA_PONDE"{f5583a3f-5cc0-496e-8425-71bb473c7e52}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["TASA_USURA"{2fd88b9a-f3f8-42a2-9169-72cbaf5fb678}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["LCHG"{1bd83067-698d-46ec-ab3f-7373fa691513}].dataSource.layout["LCRTMU"{f9c12590-b8f2-47d5-b3ba-c7eca01a7882}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*100" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="FLOAT" valueType="string"/>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["DIF_TPONDE_TUSURA"{6ec520c7-647b-4c94-b017-9379f7dbf544}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="CASE WHEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" > (" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["LCHG"{1bd83067-698d-46ec-ab3f-7373fa691513}].dataSource.layout["LCRTMU"{f9c12590-b8f2-47d5-b3ba-c7eca01a7882}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*100) THEN " valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["root"{66e7af46-3a27-4e11-bebf-98bfa3aba8ed}].dataSource.layout["tasa_ponderada"{adaf57d5-339d-4152-bf51-142c1e3d8566}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value=" - (" valueType="string"/>
+                        </object>
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_CONTROL_TASA_USURA"{03054fe9-d640-44b2-874f-ccbf4ddd67ed}].hierarchy["LCHG"{1bd83067-698d-46ec-ab3f-7373fa691513}].dataSource.layout["LCRTMU"{f9c12590-b8f2-47d5-b3ba-c7eca01a7882}]</property>
+                        </object>
+                        <object type="SQLExpressionPart" version="1.0">
+                            <property name="value" value="*100) ELSE 0 END" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="valueNullable" value="false" valueType="boolean"/>
+                    <property name="valueType" value="FLOAT" valueType="string"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 04/08/2022 - dasierra&#xa;Descripción:&#xa;Se consolida el cruce para calcular las Tasas de Usura" valueType="string"/>
+        </object>
+    </property>
+</object>

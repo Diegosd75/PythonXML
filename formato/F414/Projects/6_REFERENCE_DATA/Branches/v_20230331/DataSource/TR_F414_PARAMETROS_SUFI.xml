@@ -1,0 +1,178 @@
+﻿<object stamp="698f5bc2-a77b-4767-964a-c18dab28bb4a_1676939818918" type="DataSource" version="9.0">
+    <property name="objectId" value="bb0c38cb-cda0-499c-891c-a9e0f2da77e9" valueType="string"/>
+    <property name="branchId" value="d815d827-3160-4110-8313-d0cc75d0231f" valueType="string"/>
+    <property name="name" value="TR_F414_PARAMETROS_SUFI" valueType="string"/>
+    <property name="description" value="" valueType="string"/>
+    <property name="hosting" value="INTERNAL" valueType="string"/>
+    <property name="dbSource" valueType="url">DBSource["SHMIGRAP"{8fd66b4e-bd84-4509-8eaf-10fad0fa2e33}]</property>
+    <property name="defaultVisibilityInModel" value="true" valueType="boolean"/>
+    <property name="dataStructure" value="FLAT" valueType="string"/>
+    <property name="layout" valueType="table">
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="15057a28-598a-4caf-ac50-046275cfa782" valueType="string"/>
+            <property name="name" value="axiom_index" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="false" valueType="boolean"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="7d263f53-7d24-4cfc-ac1b-d7cd57f85fea" valueType="string"/>
+            <property name="name" value="G17NCT" valueType="string"/>
+            <property name="description" value="Número de cuenta" valueType="string"/>
+            <property name="title" value="G17NCT" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:field" version="3.0">
+            <property name="id" value="82766474-efea-45fa-9ff1-3176dee85f55" valueType="string"/>
+            <property name="name" value="S08NTR" valueType="string"/>
+            <property name="description" value="Número de producto" valueType="string"/>
+            <property name="title" value="S08NTR" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="allowNulls" value="false" valueType="boolean"/>
+            <property name="allowDefault" value="true" valueType="boolean"/>
+            <property name="defaultValue" value="0" valueType="string"/>
+            <property name="syntheticContent" valueType="table"/>
+            <property name="lookupSource" valueType="url"/>
+            <property name="parentFields" valueType="table"/>
+            <property name="aggregatedFunction" value="" valueType="string"/>
+            <property name="isCountFieldFor" valueType="url"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="showSubtotal" value="false" valueType="boolean"/>
+            <property name="isHidden" value="false" valueType="boolean"/>
+        </object>
+    </property>
+    <property name="keyFields" valueType="table">
+        <object type="DataSource:localFieldReference" version="1.0">
+            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{15057a28-598a-4caf-ac50-046275cfa782}]</property>
+        </object>
+    </property>
+    <property name="index" valueType="table"/>
+    <property name="createIndexOnKeyFields" value="true" valueType="boolean"/>
+    <property name="indexOnKeyFieldsClustered" value="true" valueType="boolean"/>
+    <property name="storageType" value="PERMANENT" valueType="string"/>
+    <property name="internalSourceTablePrefix" value="TR_F414_SUFI_CONTABILIDAD" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="keyVariables" valueType="table"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="computeStatistics" value="NONE" valueType="string"/>
+    <property name="validations" valueType="table"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="readOnlyAdjustment" value="false" valueType="boolean"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="loaders" valueType="table">
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="4dde6d44-6d99-46d4-a1f1-324a783ec1c2" valueType="string"/>
+            <property name="name" value="New_Scenario_1" valueType="string"/>
+            <property name="loaderType" value="fileLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="FileLoaderParameters" version="3.0">
+                    <property name="delimiter" value="\t" valueType="string"/>
+                    <property name="skipRows" value="1" valueType="integer"/>
+                    <property name="newlineConversion" value="none" valueType="string"/>
+                    <property name="targetEncoding" value="utf8" valueType="string"/>
+                    <property name="convertEncoding" value="false" valueType="boolean"/>
+                    <property name="loaderEnumerationField" valueType="object">
+                        <object type="DataSource:localFieldReference" version="1.0">
+                            <property name="value" valueType="url">DataSource[this].layout["axiom_index"{15057a28-598a-4caf-ac50-046275cfa782}]</property>
+                        </object>
+                    </property>
+                    <property name="trailingNullCols" value="true" valueType="boolean"/>
+                    <property name="loadSheetName" value="" valueType="string"/>
+                    <property name="columnHeadersFromFile" value="false" valueType="boolean"/>
+                    <property name="maxErrors" value="1" valueType="integer"/>
+                    <property name="maxMessagesInTaskLog" value="100" valueType="integer"/>
+                    <property name="doNotFailIfRejected" value="false" valueType="boolean"/>
+                    <property name="parameterIsNotAFile" value="false" valueType="boolean"/>
+                    <property name="codeWillCreateFile" value="false" valueType="boolean"/>
+                    <property name="loaderControlFile" value="" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="FileLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["G17NCT"{7d263f53-7d24-4cfc-ac1b-d7cd57f85fea}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="1" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="withJournal" value="false" valueType="boolean"/>
+                    <property name="loadingStatement" value="APPEND" valueType="string"/>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="false" valueType="boolean"/>
+        </object>
+        <object type="DataSource:scenario" version="3.0">
+            <property name="id" value="2ea78198-d1fc-4be7-8967-3bf7c9c761c8" valueType="string"/>
+            <property name="name" value="ConexionDirectaMigracion" valueType="string"/>
+            <property name="loaderType" value="tableLoader" valueType="string"/>
+            <property name="keepTableContent" value="false" valueType="boolean"/>
+            <property name="parameters" valueType="object">
+                <object type="TableLoaderParameters" version="2.0">
+                    <property name="loaderSelectDistinct" value="false" valueType="boolean"/>
+                    <property name="loaderCondition" valueType="table"/>
+                    <property name="dbSourceToLoadFrom" valueType="url">DBSource["CV9_PROD_CNXREPLP"{cf52ab4b-cbab-40f6-97d4-57749cd0811f}]</property>
+                    <property name="tableLoadingMethod" value="direct" valueType="string"/>
+                    <property name="loaderConfigFields" valueType="table">
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["axiom_index"{15057a28-598a-4caf-ac50-046275cfa782}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="axiom_index" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["G17NCT"{7d263f53-7d24-4cfc-ac1b-d7cd57f85fea}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="G17NCT" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                        <object type="TableLoaderParameters:loaderConfigField" version="1.0">
+                            <property name="sourceField" valueType="object">
+                                <object type="DataSource:localFieldReference" version="1.0">
+                                    <property name="value" valueType="url">DataSource[this].layout["S08NTR"{82766474-efea-45fa-9ff1-3176dee85f55}]</property>
+                                </object>
+                            </property>
+                            <property name="origColumn" value="S08NTR" valueType="string"/>
+                            <property name="format" value="" valueType="string"/>
+                            <property name="position" value="" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="reapplyAdjustmentsAfterDataLoad" value="true" valueType="boolean"/>
+        </object>
+    </property>
+</object>

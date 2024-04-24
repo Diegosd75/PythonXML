@@ -1,0 +1,128 @@
+﻿<object stamp="636a9be9-af20-4513-afc8-7ec280c868b8_1654704152735" type="Aggregation" version="7.0">
+    <property name="objectId" value="0d9ce09a-5051-4870-8b85-4ce5d2527470" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_BANKVISON_SUM_LPHIS" valueType="string"/>
+    <property name="description" value="agg con la suma del total de la fuente lphis" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["Aggregation[F_414_BANKVISION_LPHIS]"{Aggregation[bff8933d-efe3-4b06-99d1-229ef2b2d41e]}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="42265eb5-8f03-43f9-924c-4a260117c36a" valueType="string"/>
+            <property name="name" value="LPHNAC" valueType="string"/>
+            <property name="description" value="LPHNAC" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="NOT_NULLABLE" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="3f6d8b8f-e5fe-4de7-8a7e-f8c8ad8ba170" valueType="string"/>
+            <property name="name" value="LPHAPD" valueType="string"/>
+            <property name="description" value="LPHAPD" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table">
+        <object type="Aggregation:index" version="1.0">
+            <property name="clustered" value="false" valueType="boolean"/>
+            <property name="unique" value="false" valueType="boolean"/>
+            <property name="fields" valueType="table">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LPHNAC"{42265eb5-8f03-43f9-924c-4a260117c36a}]</property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["LPHNAC"{42265eb5-8f03-43f9-924c-4a260117c36a}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANKVISION_LPHIS]"{Aggregation[bff8933d-efe3-4b06-99d1-229ef2b2d41e]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANKVISION_LPHIS]"{Aggregation[bff8933d-efe3-4b06-99d1-229ef2b2d41e]}].hierarchy["Aggregation"{bff8933d-efe3-4b06-99d1-229ef2b2d41e}].dataSource.layout["LPHNAC"{bba2cd7f-0d01-4902-8990-d96fc662b56d}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["LPHAPD"{3f6d8b8f-e5fe-4de7-8a7e-f8c8ad8ba170}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANKVISION_LPHIS]"{Aggregation[bff8933d-efe3-4b06-99d1-229ef2b2d41e]}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["Aggregation[F_414_BANKVISION_LPHIS]"{Aggregation[bff8933d-efe3-4b06-99d1-229ef2b2d41e]}].hierarchy["Aggregation"{bff8933d-efe3-4b06-99d1-229ef2b2d41e}].dataSource.layout["LPHAPD"{f2e02f80-3fef-4cd1-8927-7fbdf01e52c7}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación: 17-may-2020&#xa;Analista: caalmosq&#xa;Objetivo: &#xa;Realizar un distinct por los campos LPHNAC y sumar el campo LPHAPD por LPHNAC (Obligación)&#xa;&#xa;============================================================================================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

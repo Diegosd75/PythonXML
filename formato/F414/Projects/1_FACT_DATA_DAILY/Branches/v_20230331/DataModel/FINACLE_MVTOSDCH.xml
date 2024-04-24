@@ -1,0 +1,80 @@
+﻿<object stamp="61b11763-8030-4961-9e29-667c226e8fe3_1676939760756" type="DataModel" version="2.0">
+    <property name="objectId" value="9920030f-4360-4bfe-b02f-fe414871ee7e" valueType="string"/>
+    <property name="branchId" value="21eb2d81-16b6-431f-abb4-cdd012d29fee" valueType="string"/>
+    <property name="name" value="FINACLE_MVTOSDCH" valueType="string"/>
+    <property name="description" value="Sabana de movimientos Hipotecario" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table">
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+        <object type="InstanceKey" version="1.0">
+            <property name="name" value="filing_version" valueType="string"/>
+            <property name="description" value="" valueType="string"/>
+            <property name="type" value="INTEGER" valueType="string"/>
+            <property name="defaultInstanceKeyValueFormula" valueType="object">
+                <object type="ASLExpression" version="1.0">
+                    <property name="expression" valueType="table"/>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="c15b3bd4-b22c-4582-917b-4516617a94a1" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Sabana de movimientos Hipotecario" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["FINACLE_MVTOSDCH"{0eab870a-6854-4524-9a63-3f44dd5c3862}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table"/>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table">
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="version" valueType="string"/>
+                        </object>
+                        <object type="InstanceSelectionRule:instanceKeyRule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                            <property name="instanceKeyName" value="filing_version" valueType="string"/>
+                        </object>
+                    </property>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table">
+        <object type="DataModel:streamKey" version="1.0">
+            <property name="streamKeyName" value="entity" valueType="string"/>
+            <property name="streamKeyColumn" valueType="object">
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{c15b3bd4-b22c-4582-917b-4516617a94a1}].dataSource.layout["entity"{291b0965-31b3-4d69-8ee2-fee328132e25}]</property>
+                </object>
+            </property>
+            <property name="additionalStreamColumns" valueType="table"/>
+        </object>
+    </property>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Creación:&#x9;ENE-2021&#xa;Analista:&#x9;JUGALVIS&#xa;Descripción:&#x9;Sabana de movimientos Hipotecario.&#xa;Información de Origen: //app/interfaces/FINACLE_SALDOSDCH_YYYY-MM-DD.TXT&#xa;Carga: diaria&#xa;Entidad: Banco&#xa;&#xa;=============================================================================================" valueType="string"/>
+        </object>
+    </property>
+</object>

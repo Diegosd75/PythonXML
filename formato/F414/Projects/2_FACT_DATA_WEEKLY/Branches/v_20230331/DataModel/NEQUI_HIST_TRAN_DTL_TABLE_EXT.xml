@@ -1,0 +1,86 @@
+﻿<object stamp="2d963314-9d9e-4034-8df1-dfb2ddcb61e9_1668524744050" type="DataModel" version="2.0">
+    <property name="objectId" value="3672079b-2ba6-42ef-b100-633534db7fc6" valueType="string"/>
+    <property name="branchId" value="63fa0e79-2f54-410a-b939-634c9e9fc492" valueType="string"/>
+    <property name="name" value="NEQUI_HIST_TRAN_DTL_TABLE_EXT" valueType="string"/>
+    <property name="description" value="Modelo del historico de Nequi por external" valueType="string"/>
+    <property name="isPermanent" value="false" valueType="boolean"/>
+    <property name="instanceKeys" valueType="table"/>
+    <property name="hierarchy" valueType="tree">
+        <objectNode type="DataModel:node" version="1.0">
+            <property name="id" value="3b2b668e-8b0a-4f13-877b-c85a590048d1" valueType="string"/>
+            <property name="name" value="root" valueType="string"/>
+            <property name="description" value="Nequi - Tabla maestra de transacciones" valueType="string"/>
+            <property name="dataSource" valueType="url">DataSource["NEQUI_HIST_TRAN_DTL_TABLE_EXT"{7c7292dc-f568-4661-b222-fd7117ea0bb6}]</property>
+            <property name="relationshipToParent" value="ONE_TO_ONE" valueType="string"/>
+            <property name="mandatoryInJoin" value="false" valueType="boolean"/>
+            <property name="additionalConstraint" valueType="table">
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value="TRAN_DATE  BETWEEN (" valueType="string"/>
+                </object>
+                <object type="SQLConstant" version="1.0">
+                    <property name="name" value="ASOF_DATE" valueType="string"/>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" - 6) AND  (" valueType="string"/>
+                </object>
+                <object type="SQLConstant" version="1.0">
+                    <property name="name" value="ASOF_DATE" valueType="string"/>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" )  AND (" valueType="string"/>
+                </object>
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{3b2b668e-8b0a-4f13-877b-c85a590048d1}].dataSource.layout["BANK_ID"{43250acb-a395-4330-807d-430f3f8ca0c4}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" = '1500' AND  " valueType="string"/>
+                </object>
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{3b2b668e-8b0a-4f13-877b-c85a590048d1}].dataSource.layout["PART_TRAN_TYPE"{6d113baa-9fc3-4e15-9615-58163e3248a1}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" = 'D' AND " valueType="string"/>
+                </object>
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{3b2b668e-8b0a-4f13-877b-c85a590048d1}].dataSource.layout["GL_SUB_HEAD_CODE"{ef41b90f-bbcc-4d72-9a32-aaae762288df}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" IN ('B29G5','B29G6') AND (" valueType="string"/>
+                </object>
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{3b2b668e-8b0a-4f13-877b-c85a590048d1}].dataSource.layout["USER_PART_TRAN_CODE"{98e3fdeb-c301-4810-8ea3-798d785c7c1b}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" NOT LIKE 'LD%' OR " valueType="string"/>
+                </object>
+                <object type="DataModel:localFieldReference" version="1.0">
+                    <property name="value" valueType="url">DataModel[this].hierarchy["root"{3b2b668e-8b0a-4f13-877b-c85a590048d1}].dataSource.layout["USER_PART_TRAN_CODE"{98e3fdeb-c301-4810-8ea3-798d785c7c1b}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" IS NULL))   " valueType="string"/>
+                </object>
+            </property>
+            <property name="additionalJoinExpression" valueType="table"/>
+            <property name="instanceSelectionRule" valueType="object">
+                <object type="InstanceSelectionRule" version="1.0">
+                    <property name="instanceDateRule" valueType="object">
+                        <object type="InstanceSelectionRule:rule" version="1.0">
+                            <property name="type" value="EQUAL" valueType="string"/>
+                        </object>
+                    </property>
+                    <property name="instanceKeyRules" valueType="table"/>
+                </object>
+            </property>
+            <property name="join" valueType="table"/>
+        </objectNode>
+    </property>
+    <property name="streamKeys" valueType="table"/>
+    <property name="freezeLevel" value="1" valueType="integer"/>
+    <property name="performJoinOnAllStreamColumns" value="false" valueType="boolean"/>
+    <property name="mustInheritSourceIKs" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 11/15/2022 - Dasierra&#xa;Descripción: DataModel external de nequi historico&#xa;" valueType="string"/>
+        </object>
+    </property>
+</object>

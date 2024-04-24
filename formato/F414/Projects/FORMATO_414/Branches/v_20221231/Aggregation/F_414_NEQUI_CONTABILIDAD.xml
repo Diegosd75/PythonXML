@@ -1,0 +1,175 @@
+﻿<object stamp="eed22ce3-3a5a-4c2b-981a-cefc0e75dfb2_1654601662090" type="Aggregation" version="7.0">
+    <property name="objectId" value="1f760b7c-6431-4a00-8803-ed6d1985ebe0" valueType="string"/>
+    <property name="branchId" value="4d11a90c-cc80-4bd0-9e4e-5d7d712c3675" valueType="string"/>
+    <property name="name" value="F_414_NEQUI_CONTABILIDAD" valueType="string"/>
+    <property name="description" value="contabilidad de nequi" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="ModelBasedObject:modelEntry" version="1.0">
+            <property name="dataModel" valueType="url">DataModel["F_414_NEQUI_CONTABILIDAD"{b5c80ad4-abc2-42a5-9534-ee8c6d18377d}]</property>
+        </object>
+    </property>
+    <property name="includeNewModelsInExecution" value="true" valueType="boolean"/>
+    <property name="nonKeyVariables" valueType="table"/>
+    <property name="details" valueType="table">
+        <object type="Aggregation:detail" version="1.0">
+            <property name="id" value="bf4ee522-f94e-4436-9e2a-fe882c672fc2" valueType="string"/>
+            <property name="name" value="FRENTE_INF" valueType="string"/>
+            <property name="description" value="Frente de información" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="calcFields" valueType="table">
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="ed49d54c-9f2c-470a-b403-db6d58d635eb" valueType="string"/>
+            <property name="name" value="SUM_REGISTROS_CONTABLES_NEQUI" valueType="string"/>
+            <property name="description" value="REGISTROS_CONTABLES_NEQUI" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="87cf4e1c-83f4-4260-940a-b703c524f98e" valueType="string"/>
+            <property name="name" value="SUM_REVERSOS_CONTABLES_NEQUI" valueType="string"/>
+            <property name="description" value="REVERSOS_CONTABLES_NEQUI" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+        <object type="Aggregation:calcField" version="2.0">
+            <property name="id" value="5ccc66bc-0930-490c-b0a7-aa7a84dc0d5d" valueType="string"/>
+            <property name="name" value="CONTABILIDAD_NEQUI" valueType="string"/>
+            <property name="description" value="CONTABILIDAD_NEQUI" valueType="string"/>
+            <property name="aggrMethod" value="SUM" valueType="string"/>
+            <property name="calcTotal" value="true" valueType="boolean"/>
+            <property name="calcFormula" valueType="table">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["SUM_REGISTROS_CONTABLES_NEQUI"{ed49d54c-9f2c-470a-b403-db6d58d635eb}]</property>
+                </object>
+                <object type="SQLExpressionPart" version="1.0">
+                    <property name="value" value=" - " valueType="string"/>
+                </object>
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["SUM_REVERSOS_CONTABLES_NEQUI"{87cf4e1c-83f4-4260-940a-b703c524f98e}]</property>
+                </object>
+            </property>
+            <property name="valueType" value="FLOAT" valueType="string"/>
+            <property name="valueNullable" value="false" valueType="boolean"/>
+            <property name="displayFormat" value="" valueType="string"/>
+            <property name="overrideLookupInformation" value="false" valueType="boolean"/>
+            <property name="title" value="" valueType="string"/>
+            <property name="overrideNullable" value="DEFAULT" valueType="string"/>
+        </object>
+    </property>
+    <property name="auxFields" valueType="table"/>
+    <property name="syntheticFields" valueType="table"/>
+    <property name="additionalIndices" valueType="table"/>
+    <property name="distributionStyle" valueType="object">
+        <object type="Aggregation:distributionStyle" version="1.0">
+            <property name="distStyle" value="INHERIT" valueType="string"/>
+        </object>
+    </property>
+    <property name="mappings" valueType="table">
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localDetailReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].details["FRENTE_INF"{bf4ee522-f94e-4436-9e2a-fe882c672fc2}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_NEQUI_CONTABILIDAD"{b5c80ad4-abc2-42a5-9534-ee8c6d18377d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_NEQUI_CONTABILIDAD"{b5c80ad4-abc2-42a5-9534-ee8c6d18377d}].hierarchy["root"{c4c114e3-5efa-42ae-922a-f69e9d879fb4}].dataSource.layout["FRENTE_INF"{4060a606-fb83-4a52-b20b-d93395c5705a}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["SUM_REGISTROS_CONTABLES_NEQUI"{ed49d54c-9f2c-470a-b403-db6d58d635eb}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_NEQUI_CONTABILIDAD"{b5c80ad4-abc2-42a5-9534-ee8c6d18377d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_NEQUI_CONTABILIDAD"{b5c80ad4-abc2-42a5-9534-ee8c6d18377d}].hierarchy["root"{c4c114e3-5efa-42ae-922a-f69e9d879fb4}].dataSource.layout["VL_REGISTRO_CONTABLE"{bd929a66-6e13-474e-a4ac-10d03105cc3e}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+        <object type="Aggregation:mapping" version="2.0">
+            <property name="field" valueType="object">
+                <object type="Aggregation:localCalcFieldReference" version="1.0">
+                    <property name="value" valueType="url">Aggregation[this].calcFields["SUM_REVERSOS_CONTABLES_NEQUI"{87cf4e1c-83f4-4260-940a-b703c524f98e}]</property>
+                </object>
+            </property>
+            <property name="fieldMapping" valueType="table">
+                <object type="FieldMapping" version="2.0">
+                    <property name="model" valueType="object">
+                        <object type="DataModel:reference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_NEQUI_CONTABILIDAD"{b5c80ad4-abc2-42a5-9534-ee8c6d18377d}]</property>
+                        </object>
+                    </property>
+                    <property name="expression" valueType="table">
+                        <object type="DataModel:fieldReference" version="1.0">
+                            <property name="value" valueType="url">DataModel["F_414_NEQUI_CONTABILIDAD"{b5c80ad4-abc2-42a5-9534-ee8c6d18377d}].hierarchy["HIST_TRAN_DTL_TABLE"{05900118-966c-4f4d-9b7a-518808d50c6a}].dataSource.layout["VL_REVERSO_CONTABLE"{ecf88dd1-d24c-41b3-b5e6-6086384d4db9}]</property>
+                        </object>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+    <property name="storageType" value="CONTINUOUS_PARTITION" valueType="string"/>
+    <property name="postTableCreationStatements" valueType="table"/>
+    <property name="postAdjustmentTableCreationStatements" valueType="table"/>
+    <property name="detailsAsKeys" value="false" valueType="boolean"/>
+    <property name="dbSourceForResults" valueType="url">DBSource["SHLEGALP"{989aedc8-de34-46f9-bc09-198909e09676}]</property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="doNotAggregate" value="false" valueType="boolean"/>
+    <property name="fourEyesCheck" value="false" valueType="boolean"/>
+    <property name="trackDrilldownInformation" value="true" valueType="boolean"/>
+    <property name="trackAllInstancesMode" value="NONE" valueType="string"/>
+    <property name="computeStatistics" value="FOR_ALL_COLUMNS" valueType="string"/>
+    <property name="makeStreamColumnsKey" value="true" valueType="boolean"/>
+    <property name="instanceRebuildRestriction" value="AlterFullRebuild" valueType="string"/>
+    <property name="allowExternalDataPermissions" value="true" valueType="boolean"/>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación: 14/05/2022 - caalmosq&#x9;&#xa;Descripción:contabilidad de nequi" valueType="string"/>
+        </object>
+    </property>
+</object>

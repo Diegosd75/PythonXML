@@ -1,0 +1,192 @@
+﻿<object stamp="bda6de72-7dde-4b6a-855d-3b7a8ca2ac4a_1650994199542" type="Shorthand" version="2.0">
+    <property name="objectId" value="0020cfd1-045f-481b-a018-055319bc8abb" valueType="string"/>
+    <property name="branchId" value="62350a27-4773-438d-b955-096beb78affe" valueType="string"/>
+    <property name="name" value="F_414_C_LA_ACCT_RPT_DET" valueType="string"/>
+    <property name="description" value="Filtros para obtener la información de los desembolsos de Nequi" valueType="string"/>
+    <property name="models" valueType="table">
+        <object type="DataModel:reference" version="1.0">
+            <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+        </object>
+    </property>
+    <property name="docData" valueType="object">
+        <object type="DocData" version="1.0">
+            <property name="comment" value="Fecha Creación:  29/03/2022  - caalmosq&#xa;Descripción: Filtros para obtener la información de los desembolsos de Nequi" valueType="string"/>
+        </object>
+    </property>
+    <property name="condition" valueType="object">
+        <object type="DataModelCondition" version="1.0">
+            <property name="conditionTree" valueType="tree">
+                <objectNode type="Condition:compositeCondition" version="1.0">
+                    <property name="isNegated" value="false" valueType="boolean"/>
+                    <property name="groupingOperator" value="AND" valueType="string"/>
+                </objectNode>
+            </property>
+        </object>
+    </property>
+    <property name="modelConditionOverrides" valueType="table">
+        <object type="Shorthand:modelCondition" version="1.0">
+            <property name="name" value="NEQUI" valueType="string"/>
+            <property name="models" valueType="table">
+                <object type="DataModel:reference" version="1.0">
+                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}]</property>
+                </object>
+            </property>
+            <property name="condition" valueType="object">
+                <object type="DataModelCondition" version="1.0">
+                    <property name="conditionTree" valueType="tree">
+                        <objectNode type="Condition:compositeCondition" version="1.0">
+                            <property name="isNegated" value="false" valueType="boolean"/>
+                            <property name="groupingOperator" value="AND" valueType="string"/>
+                            <children>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["DEL_FLG"{f0fbb06e-c420-415b-858f-f39fd2f25eeb}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="N" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["DISB_AMT"{3e0163de-4936-4df1-97fc-bfccdadc1c10}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value=">" valueType="string"/>
+                                    <property name="value" value="0.0" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                    <property name="field" valueType="object">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["BANK_ID"{3a34d981-8b03-44d3-aced-3a5048b37fb4}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                    <property name="operation" value="=" valueType="string"/>
+                                    <property name="value" value="1500" valueType="string"/>
+                                </objectNode>
+                                <objectNode type="Condition:freehandExpression" version="1.0">
+                                    <property name="expression" valueType="table">
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["REPORT_DATE"{73a5a024-272a-421c-bc3d-c518d9af6f82}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                        <object type="SQLExpressionPart" version="1.0">
+                                            <property name="value" value=" = " valueType="string"/>
+                                        </object>
+                                        <object type="DataModel:fieldMap" version="1.0">
+                                            <property name="map" valueType="table">
+                                                <object type="DataModel:fieldReference" version="1.0">
+                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["root"{ec084f6d-68a9-443d-b3d1-6cb24dc0db55}].dataSource.layout["ACCT_OPN_DATE"{8cac59f1-3a5f-496c-80bf-8f1c1794437d}]</property>
+                                                </object>
+                                            </property>
+                                        </object>
+                                    </property>
+                                </objectNode>
+                                <objectNode type="Condition:compositeCondition" version="1.0">
+                                    <property name="isNegated" value="false" valueType="boolean"/>
+                                    <property name="groupingOperator" value="OR" valueType="string"/>
+                                    <children>
+                                        <objectNode type="Condition:compositeCondition" version="1.0">
+                                            <property name="isNegated" value="false" valueType="boolean"/>
+                                            <property name="groupingOperator" value="AND" valueType="string"/>
+                                            <children>
+                                                <objectNode type="Condition:list" version="1.0">
+                                                    <property name="field" valueType="object">
+                                                        <object type="DataModel:fieldMap" version="1.0">
+                                                            <property name="map" valueType="table">
+                                                                <object type="DataModel:fieldReference" version="1.0">
+                                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["FLOW_ID"{73517e94-1f43-485c-9067-d79570dbef3b}]</property>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                    <property name="operation" value="IN" valueType="string"/>
+                                                    <property name="values" valueType="table">
+                                                        <object type="Condition:list:value" version="1.0">
+                                                            <property name="value" value="EIDEM" valueType="string"/>
+                                                        </object>
+                                                        <object type="Condition:list:value" version="1.0">
+                                                            <property name="value" value="PRDEM" valueType="string"/>
+                                                        </object>
+                                                    </property>
+                                                </objectNode>
+                                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                                    <property name="field" valueType="object">
+                                                        <object type="DataModel:fieldMap" version="1.0">
+                                                            <property name="map" valueType="table">
+                                                                <object type="DataModel:fieldReference" version="1.0">
+                                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRS"{01bff6e8-11e2-4482-a6cd-4ec38a413759}].dataSource.layout["SHDL_NUM"{50617dbb-768f-482a-a148-2b420f07b64f}]</property>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                    <property name="operation" value="=" valueType="string"/>
+                                                    <property name="value" value="1" valueType="string"/>
+                                                </objectNode>
+                                            </children>
+                                        </objectNode>
+                                        <objectNode type="Condition:compositeCondition" version="1.0">
+                                            <property name="isNegated" value="false" valueType="boolean"/>
+                                            <property name="groupingOperator" value="AND" valueType="string"/>
+                                            <children>
+                                                <objectNode type="Condition:list" version="1.0">
+                                                    <property name="field" valueType="object">
+                                                        <object type="DataModel:fieldMap" version="1.0">
+                                                            <property name="map" valueType="table">
+                                                                <object type="DataModel:fieldReference" version="1.0">
+                                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRSH"{29ad366e-f90e-4b2c-b2f9-e5a539d37989}].dataSource.layout["FLOW_ID"{d63e9e4c-902b-4d61-8b4f-4364c8e7fead}]</property>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                    <property name="operation" value="IN" valueType="string"/>
+                                                    <property name="values" valueType="table">
+                                                        <object type="Condition:list:value" version="1.0">
+                                                            <property name="value" value="EIDEM" valueType="string"/>
+                                                        </object>
+                                                        <object type="Condition:list:value" version="1.0">
+                                                            <property name="value" value="PRDEM" valueType="string"/>
+                                                        </object>
+                                                    </property>
+                                                </objectNode>
+                                                <objectNode type="Condition:singularConcrete" version="1.0">
+                                                    <property name="field" valueType="object">
+                                                        <object type="DataModel:fieldMap" version="1.0">
+                                                            <property name="map" valueType="table">
+                                                                <object type="DataModel:fieldReference" version="1.0">
+                                                                    <property name="value" valueType="url">DataModel["F414_PRESTAMOS_NEQUI"{d2ed13e0-efb7-42ea-8ca0-922fa0d26156}].hierarchy["TBAADM_LRSH"{29ad366e-f90e-4b2c-b2f9-e5a539d37989}].dataSource.layout["SHDL_NUM"{87c2d2ab-c25c-4f48-886a-e6ba17de03a0}]</property>
+                                                                </object>
+                                                            </property>
+                                                        </object>
+                                                    </property>
+                                                    <property name="operation" value="=" valueType="string"/>
+                                                    <property name="value" value="1" valueType="string"/>
+                                                </objectNode>
+                                            </children>
+                                        </objectNode>
+                                    </children>
+                                </objectNode>
+                            </children>
+                        </objectNode>
+                    </property>
+                </object>
+            </property>
+        </object>
+    </property>
+</object>
