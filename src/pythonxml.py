@@ -30,7 +30,13 @@ for root, dirs, files in os.walk('C:/REPOSITORIOS/PythonXML'):
                             if name_property is not None:
                                 nombre_campo = name_property.get('value')
                                 tipo_campo = type_property.get('value')
-                                print(f"Nombre campo {nombre_campo} y el tipo {tipo_campo}")
+                                if tipo_campo == "VARCHAR":
+                                    size_property = obj.find(".//property[@name='size']")
+                                    size_campo = size_property.get('value')
+                                    print(f"Nombre campo {nombre_campo} y el tipo {tipo_campo} y el size es {size_campo}")
+                                else:
+                                    print(f"Nombre campo {nombre_campo} y el tipo {tipo_campo}")
+                                
                     
                     except ET.ParseError as e:
                         print(f"Error al procesar el archivo {file}: {e}")
