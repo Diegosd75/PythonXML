@@ -47,6 +47,7 @@ for root, dirs, files in os.walk('C:/REPOSITORIOS/PythonXML'):
                                     dataconsol=dataconsol.copy()
                                     dataconsol['nombreCampo'] = nombre_campo
                                     dataconsol['tipoDeDato'] = tipo_campo
+                                    dataconsol['longitud'] = 'N/A'
                                     datafinal.append(dataconsol)
                                     print(f"Nombre campo {nombre_campo} y el tipo {tipo_campo}")
                                 
