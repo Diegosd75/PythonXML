@@ -4,7 +4,7 @@ import pandas as pd
 
 datafinal=[]
 
-for root, dirs, files in os.walk('C:/REPOSITORIOS/PythonXML'):
+for root, dirs, files in os.walk('./formato'):
     #print(root)-
     if 'DataSource' in root:
         full_path = os.path.join(root)
@@ -22,7 +22,7 @@ for root, dirs, files in os.walk('C:/REPOSITORIOS/PythonXML'):
                         root_xml = tree.getroot()
                         # Buscar todas las etiquetas <name> y extraer su texto
                         nombreDS = root_xml.find(".//property[@name='name']").get('value')
-                        if nombreDS :
+                        if nombreDS:
                             print(f"Nombre encontrado: {nombreDS}")
                             dataconsol ={'nombreDS':nombreDS,'nombreCampo':'','tipoDeDato':'','longitud':''}
                         else:
@@ -56,7 +56,7 @@ for root, dirs, files in os.walk('C:/REPOSITORIOS/PythonXML'):
                         print(f"Error al procesar el archivo {file}: {e}")
 
 # Creamos un Dataframe con los datos obtenidos
-df = pd.DataFrame(datafinal)
+df = pd.DataFrame(datafinal, index=None)
 
 # Generamos la salida en un informe de tipo excel
-df.to_excel('C:/REPOSITORIOS/PythonXML/salidaxmlcv.xlsx')
+df.to_excel('./salidaxmlcv.xlsx')
